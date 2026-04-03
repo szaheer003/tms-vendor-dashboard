@@ -1,5 +1,7 @@
 "use client";
 
+const BP = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { fallbackVendorFilesManifest, VENDOR_SUBMISSION_ORDER } from "@/lib/vendorFilesManifest";
@@ -70,7 +72,7 @@ export default function VendorSubmissionsClient() {
 
   useEffect(() => {
     let cancelled = false;
-    fetch("/vendor-files-manifest.json")
+    fetch(`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/vendor-files-manifest.json`)
       .then((r) => (r.ok ? r.json() : null))
       .then((j: VendorFilesManifest | null) => {
         if (!cancelled && j?.vendors) setRemoteManifest(j);
@@ -180,11 +182,12 @@ export default function VendorSubmissionsClient() {
 
     const fsToggle = () => setFullScreen((f) => !f);
 
+    const docUrl = `${BP}${activeDoc.path}`;
     switch (activeDoc.kind) {
       case "pdf":
         return (
           <PdfDocumentViewer
-            url={activeDoc.path}
+            url={docUrl}
             initialPage={initialPage}
             initialFind={findFromUrl}
             onMeta={(n) => setPdfPages(n)}
@@ -195,7 +198,7 @@ export default function VendorSubmissionsClient() {
       case "spreadsheet":
         return (
           <SpreadsheetViewer
-            url={activeDoc.path}
+            url={docUrl}
             initialTab={tabFromUrl}
             initialRow={activeDoc.kind === "spreadsheet" && initialRow != null ? initialRow : null}
             sheetNamesHint={activeDoc.sheetNames}
@@ -218,7 +221,7 @@ export default function VendorSubmissionsClient() {
                 </button>
               </div>
             )}
-            <HtmlDocViewer url={activeDoc.path} />
+            <HtmlDocViewer url={docUrl} />
           </div>
         );
       case "text":
@@ -236,7 +239,7 @@ export default function VendorSubmissionsClient() {
                 </button>
               </div>
             )}
-            <TextDocViewer url={activeDoc.path} />
+            <TextDocViewer url={docUrl} />
           </div>
         );
       case "docx":
@@ -254,7 +257,7 @@ export default function VendorSubmissionsClient() {
                 </button>
               </div>
             )}
-            <DocxViewer url={activeDoc.path} fullScreenActive={fullScreen} initialFind={findFromUrl} />
+            <DocxViewer url={docUrl} fullScreenActive={fullScreen} initialFind={findFromUrl} />
           </div>
         );
       default:

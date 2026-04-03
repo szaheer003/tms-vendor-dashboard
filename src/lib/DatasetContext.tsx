@@ -10,8 +10,10 @@ export type DatasetValue = {
 
 const Ctx = createContext<DatasetValue | null>(null);
 
+const BP = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const fetchJsonNoCache = (path: string) =>
-  fetch(path, { cache: "no-store", credentials: "same-origin" });
+  fetch(`${BP}${path}`, { cache: "no-store", credentials: "same-origin" });
 
 async function loadDataset(): Promise<DatasetValue> {
   const pr = await fetchJsonNoCache("/data/portfolio.json");

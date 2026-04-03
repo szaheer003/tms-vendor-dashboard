@@ -63,7 +63,7 @@ export default function ScorecardPage() {
   > | null>(null);
 
   useEffect(() => {
-    fetch("/data/evaluatorScores.json", { cache: "no-store" })
+    fetch(`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/data/evaluatorScores.json`, { cache: "no-store" })
       .then((r) => (r.ok ? r.json() : null))
       .then((d) => {
         if (d?.scores) setEvaluatorMatrix(d.scores);

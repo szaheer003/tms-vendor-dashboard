@@ -82,7 +82,7 @@ export function EvaluatorScoresClient({ portfolio }: { portfolio: Portfolio }) {
 
   useEffect(() => {
     let cancelled = false;
-    fetch("/data/evaluatorScores.json", { cache: "no-store" })
+    fetch(`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/data/evaluatorScores.json`, { cache: "no-store" })
       .then((r) => (r.ok ? r.json() : null))
       .then((raw: EvaluatorScoresPayload | null) => {
         if (cancelled || !raw?.scores) return;
