@@ -1,0 +1,13 @@
+node_modules/
+dashboard-right-here.embedded.html
+.next/
+out/
+*.pyc
+__pycache__/
+.env
+.env*.local
+.DS_Store
+Thumbs.db
+*.log
+Folder 1/_exl_converted.xlsx
+Folder 1/_tmp_read.xlsx

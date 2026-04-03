@@ -1,0 +1,437 @@
+{
+  "meta": {
+    "documentTitle": "FIS TMS Managed Services RFP",
+    "subtitle": "Evaluator's Checklist: What Good Looks Like",
+    "sectionNote": "Submission Quality & Critical Thinking Assessment",
+    "purpose": "This document is an internal evaluator tool designed to assess whether vendor resubmissions demonstrate critical thinking, thoroughness, and genuine engagement with the RFP materials (Appendix A through D, Q&A document, and Workshop 1 feedback). It is not a scoring rubric — it is a lens for identifying vendors who are being thoughtful, creative, and realistic versus those who are submitting boilerplate or under-assumed proposals.",
+    "howToUse": "For each evaluation criterion, review the vendor’s submission against the “Signals of a Strong Submission” and “If/Then Logic Checks.” A vendor does not need to hit every item, but the pattern should be clear: they read the data, they understood the constraints, and they designed a solution accordingly — not a generic template with FIS’s name pasted in."
+  },
+  "sourceDocx": "Folder 7/Evaluator_Checklist_Final.docx",
+  "criteria": [
+    {
+      "id": "commercial-attractiveness",
+      "num": 1,
+      "title": "Commercial Attractiveness",
+      "subsections": [
+        {
+          "id": "p-l-assumptions",
+          "title": "P&L Assumptions",
+          "intro": "This is the single most important area for comparability. Evaluators should assess whether the vendor has built their P&L from the actual baseline data provided in Appendix A & D, or whether they appear to have used generic industry assumptions.",
+          "signals": [
+            "The P&L starts from the $144M annual baseline provided in the RFP, not a vendor-estimated baseline. The vendor has reconciled their FTE count to Appendix A & D and called out any discrepancies. The vendor has proposed a deal term that is 5 years.",
+            "Savings are decomposed into at least three distinct levers (e.g., labor arbitrage, AI/digital, process standardization) rather than presented as a single blended number.",
+            "Year-by-Year costs to FIS are shown declining, not flat or increasing, after Year 1. If Year 1 shows an increase, the vendor explains exactly why (one-time costs, dual-run, etc.) and proposes mitigation.",
+            "COLA treatment is explicitly stated: inclusive, exclusive, capped, or formula-based. The vendor does not leave this ambiguous or mark it ‘TBD.’",
+            "One-time costs are itemized (setup, rebadge, training, dual-run, tech migration, licensing) rather than bundled into a single ‘transition’ line. For each cost item, the vendor specifies whether it is to be funded by FIS or funded by the vendor as an investment.",
+            "The vendor has cross-referenced their pricing to the rate card in Tab 6.0 — an evaluator can independently calculate total cost from the rate card and arrive at the same P&L figure.",
+            "Retained FIS costs (if any) are called out separately so the evaluator can see the total cost to FIS, not just the vendor invoice.",
+            "The vendor has clearly documented assumptions around when specific clients migrate and has connected client migration timing directly to the savings schedule — demonstrating that the P&L is built bottom-up from the migration plan, not modeled independently of it."
+          ],
+          "logicChecks": [
+            {
+              "if": "the vendor’s Year 1 cost exceeds the $144M baseline,",
+              "then": "they should explain the drivers (one-time investments, dual-run overlap, rebadge costs) AND propose a financial engineering mechanism (investment credits, deferred charges, gain-share) that makes the P&L work within FIS’s 3-year synergy window."
+            },
+            {
+              "if": "the vendor quotes COLA at 0% or leaves it blank,",
+              "then": "they should explain what happens at renewal/escalation and whether the rates are truly fixed for the full term. Silence on COLA is a red flag for Year 3+ cost surprises."
+            },
+            {
+              "if": "the vendor includes ‘vendor-funded investments,’",
+              "then": "the evaluator should verify: (a) whether these are costs the vendor is incurring purely on their side (e.g., internal tooling, hiring, training their own staff) versus investments that directly benefit FIS (e.g., technology deployed in FIS’s environment, transition credits, upfront payments). The vendor should clearly differentiate between these two categories and provide transparency into what FIS actually receives."
+            },
+            {
+              "if": "the vendor claims a certain efficiency percentage in Tab 9.0,",
+              "then": "the P&L should reflect that efficiency through declining FTE or declining cost — not just as a footnote. The math should tie."
+            },
+            {
+              "if": "the vendor proposes a gain-share or risk/reward model,",
+              "then": "they should show the mechanics: what is the baseline, how is the gain measured, what is the split, and is there a cap? Gain-share without mechanics is a marketing statement, not a commercial offer."
+            }
+          ],
+          "redFlags": [
+            "The vendor references a ‘typical’ or ‘representative’ engagement rather than building from Appendix A & D data.",
+            "The vendor has presented a P&L but has not connected it to the timing of client migrations — savings appear to materialize on a schedule that is independent of when clients actually move, suggesting the financial model and the operational plan were built in isolation."
+          ],
+          "evidenceRead": [],
+          "evidenceCreative": [],
+          "gutCheckQuestions": [],
+          "layout": "standard"
+        },
+        {
+          "id": "commercial-structure",
+          "title": "Commercial Structure",
+          "intro": "Beyond the raw numbers, this section assesses whether the commercial structure is designed to align incentives, create transparency, and flex with the realities of the business (volume fluctuations, client churn, new wins).",
+          "signals": [
+            "The commercial model type is clearly stated (rate card, fixed fee, outcome-based, hybrid) with rationale for why this structure was chosen for this particular engagement.",
+            "Rate cards are segmented by geography, role, language premium, and work type (front office vs. back office) as required by RFP Section 3.2.",
+            "Volume flexibility is addressed conceptually: the vendor has articulated their approach to handling increases, decreases, client attrition, and new client onboarding — and the commercial mechanisms that govern each scenario.",
+            "The vendor has explained the rules behind their pricing model for new client acquisitions and existing client attrition, as requested in the RFP submission checklist."
+          ],
+          "logicChecks": [
+            {
+              "if": "the vendor proposes a fixed-fee model,",
+              "then": "they should explain how the fee adjusts as efficiency gains are realized. Does FIS benefit from productivity improvements, or does the vendor capture all upside? A fixed fee with no mechanism for FIS to share in efficiency gains is effectively a cost-plus model in disguise."
+            },
+            {
+              "if": "the vendor proposes minimum volume commitments,",
+              "then": "the evaluator should assess whether these are realistic given FIS’s client portfolio risk. If FIS loses a top-5 client, does the minimum commitment create a stranded cost problem?"
+            },
+            {
+              "if": "the vendor proposes upfront cash payments to FIS (exclusivity payments, signing bonuses),",
+              "then": "the evaluator should assess whether these are offset by higher rates or less favorable terms elsewhere in the model. An upfront payment funded by inflated rates is not an investment — it’s a loan."
+            },
+            {
+              "if": "the vendor’s pricing assumptions in Tab 6.0 include a ‘billing adjustment’ or similar credit in Year 1,",
+              "then": "the evaluator should check whether this credit reverses in subsequent years (i.e., it’s effectively a loan that gets repaid through higher rates later)."
+            }
+          ],
+          "redFlags": [
+            "The pricing section says ‘does not constitute a commitment or offer’ or similar caveat language. This means the numbers are indicative, not binding.",
+            "The vendor has only provided offshore rates with no onshore or nearshore rate card, making it impossible to model alternative offshoring scenarios."
+          ],
+          "evidenceRead": [],
+          "evidenceCreative": [],
+          "gutCheckQuestions": [],
+          "layout": "standard"
+        },
+        {
+          "id": "investments",
+          "title": "Investments",
+          "intro": "This section assesses whether proposed vendor investments are genuine at-risk capital that accelerates value, or simply marketing labels for costs that are ultimately recovered through rates.",
+          "signals": [
+            "The vendor clearly distinguishes between: (a) true at-risk investment that the vendor does not recover if the engagement ends early, (b) deferred charges that are amortized over the deal term, and (c) operating expenses embedded in rates that are labeled as ‘investments.’",
+            "Investment amounts are tied to specific deliverables (e.g., ‘$X for CCaaS migration, $Y for AI tooling deployment, $Z for transition management’) rather than a single lump sum.",
+            "Conditions attached to the investment are clearly stated: is it contingent on full scope award, a minimum term, exclusivity, or other commitments from FIS?",
+            "The vendor explains how the investment accelerates value realization — not just that it exists, but what it enables and when FIS sees the return."
+          ],
+          "logicChecks": [
+            {
+              "if": "the vendor proposes a large upfront investment but Year 1 costs still exceed baseline,",
+              "then": "the evaluator should check whether the investment is genuinely offsetting transition costs or whether it is simply a separate line item that does not reduce the total P&L impact."
+            },
+            {
+              "if": "the vendor proposes an investment ‘to be determined’ or ‘subject to further discussion,’",
+              "then": "this is not a binding offer. The evaluator should weight the investment at zero when comparing against vendors with committed amounts."
+            },
+            {
+              "if": "the vendor’s investment is described as ‘self-funding,’",
+              "then": "the evaluator should trace the funding source. Self-funding typically means the vendor reduces margins temporarily or offsets costs against future efficiency gains. This is viable but different from a vendor writing a check."
+            }
+          ],
+          "redFlags": [],
+          "evidenceRead": [],
+          "evidenceCreative": [],
+          "gutCheckQuestions": [],
+          "layout": "standard"
+        }
+      ]
+    },
+    {
+      "id": "operational-excellence",
+      "num": 2,
+      "title": "Operational Excellence & Delivery",
+      "subsections": [
+        {
+          "id": "language-locations",
+          "title": "Language & Locations",
+          "intro": "This section assesses whether the vendor has mapped the actual language requirements from Appendix A to their proposed delivery footprint and made thoughtful site-level decisions.",
+          "signals": [
+            "The vendor maps each required language to a specific delivery location with confirmed native-speaker capacity — not just a list of countries where they have offices.",
+            "The vendor has addressed the German and Dutch language requirements with a concrete nearshore solution (e.g., Bulgaria, Poland, Romania) and can articulate the available talent pool size and scalability.",
+            "The vendor distinguishes between voice (requires native or near-native fluency, accent neutrality) and non-voice (may tolerate B2-level language proficiency) when mapping languages to locations."
+          ],
+          "logicChecks": [
+            {
+              "if": "the vendor proposes a location that is not in Appendix A’s current footprint (e.g., Bulgaria, Poland, Dominican Republic, El Salvador),",
+              "then": "they should explain the rationale, confirm they have an operational center there today, and address the talent pool for the specific languages and service types required."
+            },
+            {
+              "if": "the vendor proposes closing or exiting a current FIS location,",
+              "then": "they should address the timeline, employee impact, lease obligations, and any IT/telecom decommissioning required."
+            }
+          ],
+          "redFlags": [],
+          "evidenceRead": [],
+          "evidenceCreative": [],
+          "gutCheckQuestions": [],
+          "layout": "standard"
+        },
+        {
+          "id": "offshoring",
+          "title": "Offshoring",
+          "intro": "This is where realism separates from aspiration. Evaluators should assess whether the vendor’s offshore assumptions are built from the client constraint data in Appendix A or from generic industry benchmarks.",
+          "signals": [
+            "The vendor has reviewed the client constraint tabs in Appendix A and can articulate which clients have geographic restrictions, which are likely to consent, and which are unknown.",
+            "The vendor presents at least two scenarios (conservative and optimistic) with different consent assumptions, each with a fully modeled P&L impact.",
+            "The vendor’s offshoring timeline begins after a stabilization period post-rebadge — they are not proposing to rebadge and geo-relocate simultaneously.",
+            "The vendor articulates a concrete approach to supporting FIS in client consent conversations: joint roadshows, reference sharing, SLA guarantees, pilot programs — not just a generic statement of willingness.",
+            "Natural attrition is positioned as the primary mechanism for initial offshore ramp (backfill offshore as onshore employees attrit), rather than forced geo-relocation.",
+            "The vendor distinguishes between outsourcing consent (client agrees to third-party delivery) and offshoring consent (client agrees to out-of-country delivery). These are two separate gates that must each be addressed."
+          ],
+          "logicChecks": [
+            {
+              "if": "the vendor assumes 90-100% offshoring in their base commercial model,",
+              "then": "the evaluator should assess the commercial impact if only 70% is achieved. Does the business case still work? If not, the model is fragile."
+            },
+            {
+              "if": "the vendor assumes all EMEA work can be offshored within 12-18 months,",
+              "then": "the evaluator should check whether they have accounted for TUPE protections in UK, works council requirements in NL/DE, and individual client contractual restrictions. These are structural barriers, not timing assumptions."
+            },
+            {
+              "if": "the vendor proposes offshoring voice operations for clients that Appendix A flags as requiring in-country delivery,",
+              "then": "this is a direct contradiction of the data provided. The vendor either did not read Appendix A or is deliberately over-assuming."
+            },
+            {
+              "if": "the vendor proposes a ‘client consent workstream’ but does not explain who leads it, what the approach is, or what happens if consent is denied,",
+              "then": "this is performative, not substantive. A strong vendor has a named leader, a methodology, and a fallback plan."
+            }
+          ],
+          "redFlags": [],
+          "evidenceRead": [],
+          "evidenceCreative": [],
+          "gutCheckQuestions": [],
+          "layout": "standard"
+        },
+        {
+          "id": "regulatory",
+          "title": "Regulatory",
+          "intro": "This section assesses the vendor’s compliance posture and readiness to operate in regulated jurisdictions.",
+          "signals": [
+            "The vendor lists all applicable regulatory bodies by geography (FCA for UK, BaFin for Germany, AFM for Netherlands, CFPB/FDCPA for US, provincial regulators for Canada) and confirms their current authorization status against each.",
+            "The vendor addresses PCI DSS compliance at the site level for all proposed delivery locations, including any work-from-home arrangements, and confirms that WFH infrastructure meets clean-desk, no-screen-capture, and monitored-access requirements.",
+            "The vendor addresses GDPR and DORA requirements for EU data processing, including any cross-border data transfer implications for offshore delivery locations.",
+            "Tab 8.0 (Regulatory Compliance) is fully completed with specific certifications, authorization numbers (where applicable), and expiration dates.",
+            "The vendor has addressed state-level licensing requirements for US collections and fraud operations, noting which states restrict offshore delivery."
+          ],
+          "logicChecks": [
+            {
+              "if": "the vendor does not currently hold FCA authorization,",
+              "then": "they should explain the timeline and process to obtain it, name the external advisors they are working with, identify the specific FCA permissions they will need for the services in scope, and explain the interim operating model."
+            },
+            {
+              "if": "the vendor proposes processing EU cardholder data in a non-EU/non-UK jurisdiction,",
+              "then": "they should address GDPR transfer mechanisms (SCCs, adequacy decisions, binding corporate rules) and confirm they have a Data Protection Officer."
+            },
+            {
+              "if": "the vendor serves other FIS competitors (e.g., Fiserv, other processors),",
+              "then": "they should address information barriers, conflict of interest protocols, and data segregation. This is important in a managed services context where operational data may be commercially sensitive."
+            },
+            {
+              "if": "the vendor marks any regulatory requirement as ‘Partial’ or ‘Cannot Commit’ in Tab 8.0,",
+              "then": "they should explain the specific limitation and what mitigation they propose. ‘Cannot Commit’ on a regulatory item without explanation is a disqualifying gap."
+            }
+          ],
+          "redFlags": [],
+          "evidenceRead": [],
+          "evidenceCreative": [],
+          "gutCheckQuestions": [],
+          "layout": "standard"
+        }
+      ]
+    },
+    {
+      "id": "technology-ai",
+      "num": 3,
+      "title": "Technology & AI",
+      "subsections": [
+        {
+          "id": "technology-ai",
+          "title": "Technology & AI",
+          "intro": "The technology section reveals whether a vendor understands the current TMS ecosystem or is proposing a generic platform play. Evaluators should assess awareness of the Avaya/Genesis-to-NICE CXone migration, the mainframe environment (CS1/CS2), the existing PCI compliance requirements, and the distinction between the legacy TSYS stack and the FIS target state.",
+          "signals": [
+            "The vendor addresses the CCaaS migration (Avaya/Genesis to NICE CXone) as an integrated part of their solution, not as an optional add-on or a separate scope item.",
+            "The vendor proposes a coexistence approach — new technology overlaying existing systems during transition, with no requirement to decommission legacy before go-live.",
+            "Tab 5.0 (Technology Governance) is fully completed with clear Commit/Partial/Cannot responses and explanations for any Partial or Cannot items. The vendor explicitly confirms FIS retains ownership of all core platforms and data, and that the vendor’s technology sits on top as an augmentation layer, not a replacement.",
+            "AI overlay technologies are listed individually with deployment timelines, expected impact areas (not just percentages), and dependencies (e.g., requires access to call recordings, requires API integration with mainframe).",
+            "The vendor understands that certain queues are delivered on legacy systems — for example, green screen mainframe environments for select NA and EMEA clients — and has a plan to deliver operational optimizations despite these constraints. The vendor acknowledges where further discovery is needed rather than over-promising."
+          ],
+          "logicChecks": [
+            {
+              "if": "the vendor proposes AI-driven efficiency of 30%+ from a single tool or platform,",
+              "then": "they should show comparable results from a deployed engagement (not a pilot or POC) with a client of similar scale and complexity."
+            },
+            {
+              "if": "the vendor has not gone deep on the CCaaS migration plan,",
+              "then": "they should at minimum comment on their approach to engaging an external implementation partner for this workstream, rather than leaving it unaddressed."
+            },
+            {
+              "if": "the vendor proposes replacing any FIS-owned technology (rather than overlaying),",
+              "then": "they should explain the business case, the migration risk, and how this avoids vendor lock-in."
+            },
+            {
+              "if": "the vendor proposes real-time AI voice translation as a mechanism for offshore delivery of German/Dutch voice operations,",
+              "then": "they should disclose whether this has been deployed at scale in a regulated financial services environment, and acknowledge that FIS client consent would be required."
+            },
+            {
+              "if": "the vendor lists AI tools but marks impact as ‘TBD’ or ‘to be determined post-discovery,’",
+              "then": "the evaluator should weight these tools as aspirational, not committed. A strong vendor provides at least a directional range anchored in comparable deployments."
+            },
+            {
+              "if": "the vendor commits to ‘open APIs and no vendor lock-in’ in Tab 5.0,",
+              "then": "the evaluator should check whether the proposed AI and automation tools are proprietary (vendor-owned) or industry-standard. Proprietary tools create de facto lock-in regardless of the governance commitment."
+            }
+          ],
+          "redFlags": [
+            "Tab 5.0 has multiple ‘Cannot Commit’ entries with no alternative proposed.",
+            "AI tools are described only in marketing language (‘revolutionary,’ ‘industry-leading’) with no deployment history or impact metrics."
+          ],
+          "evidenceRead": [],
+          "evidenceCreative": [],
+          "gutCheckQuestions": [],
+          "layout": "standard"
+        }
+      ]
+    },
+    {
+      "id": "client-workforce-migration",
+      "num": 4,
+      "title": "Client & Workforce Migration",
+      "subsections": [
+        {
+          "id": "client-migration-timing-sequencing",
+          "title": "Client Migration Timing & Sequencing",
+          "intro": "This is where you can see most clearly whether a vendor actually read Appendix A (client constraints, volumes, geographies) or proposed a generic wave plan. A strong vendor demonstrates awareness that not all clients are equal, that consent is a gating factor, and that regulatory processes have real lead times.",
+          "signals": [
+            "The vendor has designed migration waves based on observable client attributes from Appendix A (revenue size, geography, complexity, service mix, constraint flags) and has sequenced those waves in a way that reflects these constraints and facts — not just arbitrary groupings.",
+            "The migration plan explicitly accounts for FCA, BaFin, and AFM regulatory timelines. Works council consultation for Germany and Netherlands is built into the timeline as a discrete workstream with realistic duration (8-10+ months), not treated as a routine administrative task. The vendor demonstrates understanding that these regulatory processes are gating factors for when EMEA clients can be migrated.",
+            "The plan clearly defines what dual-run means in the context of this engagement: the expected duration, what is in scope during dual-run, and the exit criteria to move to steady state. The plan acknowledges that there will be a period of simultaneous FIS-run and vendor-run operations and addresses implications for rebadging, facility utilization, and SLA adherence during this overlap period. The vendor is specific about who owns SLA accountability at each stage.",
+            "There is a fallback or contingency plan for clients who decline consent (outsourcing or offshoring). The vendor has thought about what happens to those clients, not just assumed they all say yes.",
+            "The vendor clearly understands their role versus FIS’s role in client communication and change management. Rather than assuming FIS leads all client engagement, the vendor demonstrates an accretive, value-add approach to the transition."
+          ],
+          "logicChecks": [
+            {
+              "if": "the vendor is proposing to deliver services in regulated jurisdictions (UK, Germany, Netherlands),",
+              "then": "they must demonstrate they have the required regulatory authorizations (FCA, BaFin, AFM) or a credible, time-bound plan to obtain them. If authorization is pending, the migration timeline must reflect the lead time. If the vendor has no current authorization and no stated plan, they have not engaged with the regulatory landscape."
+            },
+            {
+              "if": "the vendor’s savings schedule is out of sync with their client migration plan (i.e., savings begin materializing before clients have actually migrated),",
+              "then": "the vendor must explain what improvements they are making that do not require client consent — for example, back-office automation, process standardization, or AI overlays on already-migrated operations. Savings without a corresponding operational change should be challenged."
+            },
+            {
+              "if": "the vendor groups clients by geography only (e.g., ‘all NA in Wave 1’),",
+              "then": "they may not have thought through the nuances of individual client complexity, service line mix, or the effort required to obtain consent. A geography-only approach suggests the vendor hasn’t evaluated which clients are more or less likely to consent, or which service lines within a client can be migrated independently."
+            }
+          ],
+          "redFlags": [
+            "No wave plan submitted, or the wave plan is a single timeline with no client-level granularity.",
+            "All clients are assumed to consent by a fixed date with no contingency plan.",
+            "The migration plan does not mention dual-run, hyper-care, or stabilization periods.",
+            "European regulatory requirements (FCA, works council, TUPE) are not mentioned anywhere in the migration section."
+          ],
+          "evidenceRead": [],
+          "evidenceCreative": [],
+          "gutCheckQuestions": [],
+          "layout": "standard"
+        },
+        {
+          "id": "workforce-rebadge",
+          "title": "Workforce Rebadge",
+          "intro": "Rebadging is the highest-risk operational element of this program. Evaluators should assess whether the vendor treats rebadging as a people-first change management exercise or as a transactional HR event.",
+          "signals": [
+            "The vendor articulates a phased communication plan — when employees are told, in what order, by whom, and what supporting materials (FAQs, town halls, 1:1s) are provided.",
+            "The vendor has a contingency plan for employees who decline: backfill from existing vendor staff, accelerated hiring, or a wave-zero team that is pre-trained and ready to step in.",
+            "The vendor distinguishes between TUPE transfer (UK), works council consultation (NL/DE), and at-will rehire (US/Canada/Philippines) and has tailored their approach to each jurisdiction.",
+            "The vendor understands that rebadging is linked to client consent and has clarified the timing of when 100% (or the maximum achievable) rebadge will be completed. The vendor has a clear plan for how management, QA, WFM, and support roles are handled given that a partial workforce will be split between the vendor and FIS during transition — including span of control, reporting lines, and performance governance for each group."
+          ],
+          "logicChecks": [
+            {
+              "if": "the vendor proposes rebadging across multiple geographies simultaneously,",
+              "then": "they should explain how they achieve physical presence in each location at the same time. If they plan to stagger, the timeline should reflect that."
+            },
+            {
+              "if": "the vendor proposes that FIS retains certain employees (e.g., onshore for restricted clients),",
+              "then": "they should explain the operating model for those retained employees: who manages them, who sets KPIs, how is performance governed, and what happens if the retained population shrinks over time."
+            },
+            {
+              "if": "100% of the workforce is not retained through the rebadge process,",
+              "then": "the vendor should propose clear severance terms and transition support for the workforce that would not be retained — addressing how those employees are treated fairly and in compliance with local labor law."
+            }
+          ],
+          "redFlags": [
+            "The vendor does not tie client migration timing to the rebadge plan — rebadge appears to happen on a standalone schedule that is disconnected from when clients actually transition.",
+            "The vendor is underestimating the risk of knowledge transfer — no mention of how institutional knowledge from long-tenured FIS employees is captured, documented, and preserved through the transition."
+          ],
+          "evidenceRead": [],
+          "evidenceCreative": [],
+          "gutCheckQuestions": [],
+          "layout": "standard"
+        }
+      ]
+    },
+    {
+      "id": "partnership-readiness",
+      "num": 5,
+      "title": "Partnership Readiness",
+      "subsections": [
+        {
+          "id": "overview",
+          "title": "Overview",
+          "intro": "This final criterion provides a holistic assessment lens. The best vendors will exhibit a pattern across their entire submission: they read the materials, they understood the constraints, and they designed a solution that is specific to FIS — not a repurposed proposal from another client.",
+          "signals": [],
+          "logicChecks": [],
+          "redFlags": [],
+          "evidenceRead": [],
+          "evidenceCreative": [],
+          "gutCheckQuestions": [],
+          "layout": "standard"
+        },
+        {
+          "id": "what-fis-expects",
+          "title": "What FIS is Expecting",
+          "intro": "",
+          "signals": [],
+          "logicChecks": [],
+          "redFlags": [],
+          "evidenceRead": [
+            "References specific data from Appendix A (client names by code, volume data, SLA thresholds, technology stack elements) rather than speaking in generalities.",
+            "Completed all required tabs in Appendix B with no blank fields, no ‘TBD’ entries in mandatory sections, and no redirections (e.g., ‘see proposal document’).",
+            "SOW redlines (Appendix C) are limited to 12 as instructed, are commercially material, and are constructive — not a rewrite of FIS’s legal framework.",
+            "References the Q&A document (Appendix D) and has incorporated answers into their revised assumptions."
+          ],
+          "evidenceCreative": [],
+          "gutCheckQuestions": [],
+          "layout": "holistic"
+        },
+        {
+          "id": "what-fis-encourages",
+          "title": "What FIS is Encouraging Vendors to Do",
+          "intro": "",
+          "signals": [],
+          "logicChecks": [],
+          "redFlags": [],
+          "evidenceRead": [],
+          "evidenceCreative": [
+            "The vendor has proposed something that goes beyond the minimum requirements — a go-to-market partnership, a shared risk model, a technology innovation that is specific to the TMS use case.",
+            "The vendor has identified a risk or constraint that FIS did not explicitly state in the RFP but that a knowledgeable partner would anticipate (e.g., fraud volume spikes, seasonal patterns, regulatory changes on the horizon).",
+            "The vendor’s case studies are genuinely comparable in scale, complexity, and regulatory environment — not the largest engagement they’ve ever won, but the most relevant one.",
+            "Named delivery leaders with relevant backgrounds are assigned to specific roles, not generic ‘TBD’ organizational charts.",
+            "The vendor has proposed a governance model that goes beyond quarterly business reviews — joint steering committees, shared KPI dashboards, embedded vendor leadership within FIS operations.",
+            "The vendor has addressed how they would support FIS in selling the managed services offering to new clients — not just running the existing book, but growing it."
+          ],
+          "gutCheckQuestions": [],
+          "layout": "holistic"
+        },
+        {
+          "id": "gut-check",
+          "title": "Final evaluator gut-check",
+          "intro": "",
+          "signals": [],
+          "logicChecks": [],
+          "redFlags": [],
+          "evidenceRead": [],
+          "evidenceCreative": [],
+          "gutCheckQuestions": [
+            "Does this submission feel like it was built for FIS, or could the vendor name be swapped with any other financial services client and the content would be the same?",
+            "If I removed all the marketing language, what remains? Are there concrete plans, or just aspirations?",
+            "Has the vendor acknowledged what they don’t know and explained how they plan to close the gaps, or have they glossed over uncertainty?",
+            "Does the commercial model create aligned incentives, or does it incentivize the vendor to over-staff and under-transform?",
+            "Would I be comfortable presenting this vendor’s migration plan to a skeptical FIS client? Would it hold up to scrutiny?",
+            "Has the vendor demonstrated they understand this is a business that FIS wants to grow and sell — not just a cost center to be optimized?"
+          ],
+          "layout": "holistic"
+        }
+      ]
+    }
+  ]
+}
