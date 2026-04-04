@@ -1,5 +1,5 @@
 /**
  * Static export: `redirect()` produces a broken root HTML (`__next_error__`).
- * Re-use Overview so "/" loads real content and data hydrates normally.
+ * Re-use Process so "/" lands on the RFP Plan timeline by default.
  */
-export { default } from "./overview/page";
+export { default } from "./process/page";
