@@ -189,7 +189,7 @@ export function SpreadsheetViewer({
     return (
       <div className="p-8 text-center">
         <div className="skeleton mx-auto mb-3 h-4 w-48 rounded" />
-        <p className="text-caption text-[#64748B]">Loading workbook…</p>
+        <p className="text-caption text-[#475569]">Loading workbook…</p>
       </div>
     );
   }
@@ -198,16 +198,16 @@ export function SpreadsheetViewer({
     <div className="flex min-h-0 min-h-[560px] flex-1 flex-col">
       <div className="flex min-h-10 shrink-0 flex-wrap items-center gap-2 border-b border-[#E2E8F0] bg-[#F8FAFC] px-3 py-2">
         <label className="flex min-w-0 flex-1 flex-wrap items-center gap-2 sm:max-w-[320px]">
-          <span className="text-micro font-medium uppercase tracking-wide text-[#94A3B8] shrink-0">Find</span>
+          <span className="text-micro font-medium uppercase tracking-wide text-[#475569] shrink-0">Find</span>
           <input
             type="search"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Filter cells (yellow highlight)…"
-            className="min-w-0 flex-1 rounded-md border border-[#E2E8F0] bg-white px-2 py-1.5 text-caption text-[#0F172A] placeholder:text-[#94A3B8] transition-colors duration-150"
+            className="min-w-0 flex-1 rounded-md border border-[#E2E8F0] bg-white px-2 py-1.5 text-caption text-[#0F172A] placeholder:text-[#475569] transition-colors duration-150"
           />
         </label>
-        <span className="text-micro font-medium uppercase tracking-wide text-[#94A3B8]">Sheets</span>
+        <span className="text-micro font-medium uppercase tracking-wide text-[#475569]">Sheets</span>
         <div className="flex min-w-0 flex-1 flex-wrap gap-1 overflow-x-auto">
           {data.sheets.map((s, i) => (
             <button
@@ -217,7 +217,7 @@ export function SpreadsheetViewer({
               className={`shrink-0 rounded-full border px-2.5 py-1 text-caption transition-colors duration-150 ${
                 i === sheetIdx
                   ? "border-[#0F172A] bg-white font-medium text-[#0F172A] shadow-sm"
-                  : "border-transparent bg-[#F1F5F9] text-[#64748B] hover:bg-[#E2E8F0]"
+                  : "border-transparent bg-[#F1F5F9] text-[#475569] hover:bg-[#E2E8F0]"
               }`}
             >
               {s.name}
@@ -228,7 +228,7 @@ export function SpreadsheetViewer({
           <button
             type="button"
             onClick={onToggleFullScreen}
-            className="shrink-0 rounded px-2 py-1 text-caption text-[#64748B] transition-colors duration-150 hover:bg-white"
+            className="shrink-0 rounded px-2 py-1 text-caption text-[#475569] transition-colors duration-150 hover:bg-white"
             title="Full screen"
           >
             ⛶
@@ -255,7 +255,7 @@ export function SpreadsheetViewer({
           <thead>
             <tr className="sticky top-0 z-30 bg-[#F8FAFC]">
               <th
-                className="sticky left-0 top-0 z-[60] border border-[#E2E8F0] bg-[#F8FAFC] p-0 text-center text-[10px] font-medium text-[#64748B] w-12"
+                className="sticky left-0 top-0 z-[60] border border-[#E2E8F0] bg-[#F8FAFC] p-0 text-center text-[10px] font-medium text-[#475569] w-12"
                 scope="col"
               >
                 #
@@ -263,7 +263,7 @@ export function SpreadsheetViewer({
               {Array.from({ length: ncols }, (_, ci) => (
                 <th
                   key={ci}
-                  className="sticky top-0 z-50 border border-[#E2E8F0] bg-[#F8FAFC] px-1 py-0.5 text-center text-[10px] font-medium text-[#64748B]"
+                  className="sticky top-0 z-50 border border-[#E2E8F0] bg-[#F8FAFC] px-1 py-0.5 text-center text-[10px] font-medium text-[#475569]"
                   scope="col"
                 >
                   {colLabel(ci)}
@@ -285,7 +285,7 @@ export function SpreadsheetViewer({
                   data-excel-row={excelRow}
                   className={[zebra, highlightRow ? "highlight-row" : ""].filter(Boolean).join(" ")}
                 >
-                  <td className="sticky left-0 z-40 select-none border border-[#E2E8F0] bg-[#F8FAFC] px-1 text-center font-mono text-[10px] text-[#94A3B8]">
+                  <td className="sticky left-0 z-40 select-none border border-[#E2E8F0] bg-[#F8FAFC] px-1 text-center font-mono text-[10px] text-[#475569]">
                     {excelRow}
                   </td>
                   {row.map((cell, ci) => {

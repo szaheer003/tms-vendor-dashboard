@@ -90,7 +90,7 @@ export function WorkshopsClient() {
       <div className="flex flex-wrap items-start justify-between gap-4 print-hide">
         <div>
           <h1 className="text-h1 text-[#0F172A]">Workshops</h1>
-          <p className="text-body text-[#64748B] mt-2 max-w-3xl">
+          <p className="text-body text-[#475569] mt-2 max-w-3xl">
             Executive summaries from stakeholder workshops — structured for reading, not PDF embeds. Use the print control for
             one memo per page.
           </p>
@@ -99,7 +99,7 @@ export function WorkshopsClient() {
       </div>
 
       <nav
-        className="print-hide flex flex-wrap gap-x-8 gap-y-2 border-b border-[#F1F5F9]"
+        className="print-hide flex flex-wrap gap-x-8 gap-y-2 border-b border-[#E2E8F0]"
         aria-label="Workshop selection"
       >
         {W_IDS.map((w) => {
@@ -110,7 +110,7 @@ export function WorkshopsClient() {
               type="button"
               onClick={() => onSelectWorkshop(w)}
               className={`border-b-2 pb-3 text-body -mb-px transition-colors ${
-                on ? "font-medium border-[#0F172A] text-[#0F172A]" : "border-transparent text-[#94A3B8] hover:text-[#64748B]"
+                on ? "font-medium border-[#0F172A] text-[#0F172A]" : "border-transparent text-[#475569] hover:text-[#0F172A]"
               }`}
             >
               Workshop {w}
@@ -128,8 +128,8 @@ export function WorkshopsClient() {
         />
       ) : (
         <>
-          <div className="print-hide flex flex-wrap items-center gap-x-6 gap-y-2 border-b border-[#F1F5F9] pb-4">
-            <span className="text-micro text-[#94A3B8] uppercase tracking-wide w-full sm:w-auto">Vendors</span>
+          <div className="print-hide flex flex-wrap items-center gap-x-6 gap-y-2 border-b border-[#E2E8F0] pb-4">
+            <span className="text-micro text-[#475569] uppercase tracking-wide w-full sm:w-auto">Vendors</span>
             <div className="flex flex-wrap gap-x-6 gap-y-2">
               {WORKSHOP1_FUNNEL_VENDOR_IDS.map((id) => {
                 const pv = vendorMap[id] as PortfolioVendor | undefined;
@@ -141,7 +141,7 @@ export function WorkshopsClient() {
                     type="button"
                     onClick={() => onSelectVendor(id)}
                     className={`pb-1 text-body border-b-2 -mb-px transition-colors ${
-                      on ? "font-medium border-current" : "border-transparent text-[#94A3B8] hover:text-[#64748B]"
+                      on ? "font-medium border-current" : "border-transparent text-[#475569] hover:text-[#0F172A]"
                     }`}
                     style={on ? { color: pv.color } : undefined}
                   >
@@ -155,12 +155,9 @@ export function WorkshopsClient() {
           <div className="print-hide">
             {!memoHasBody(memoById[vendorId]) ? (
               <div className="rounded-lg border border-[#E2E8F0] bg-[#F8FAFC] p-8 max-w-2xl">
-                <p className="text-body text-[#64748B] leading-relaxed">
-                  Workshop 1 memo text is loaded from <code className="text-[13px] bg-white px-1 rounded">src/data/workshop1_memos.json</code>.
-                  Add one combined Workshop 1 <code className="text-[13px] bg-white px-1 rounded">.docx</code> or multiple vendor{" "}
-                  <code className="text-[13px] bg-white px-1 rounded">.docx</code> files under{" "}
-                  <code className="text-[13px] bg-white px-1 rounded">Folder 6</code>, then run{" "}
-                  <code className="text-[13px] bg-white px-1 rounded">python scripts/extract_workshop_memos.py</code> to populate verbatim content.
+                <p className="text-body text-[#475569] leading-relaxed">
+                  Executive summary memos for this vendor are not in the dashboard yet. Add the Workshop 1 memo source documents to the
+                  program content drop and refresh the memo extract so verbatim narrative appears here automatically.
                 </p>
               </div>
             ) : (

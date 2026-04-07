@@ -33,7 +33,7 @@ export function TcvDivergingStrip({
 
   return (
     <div className="space-y-3">
-      <p className="text-caption text-[#94A3B8]">
+      <p className="text-caption text-[#475569]">
         Click a bar to open that vendor&apos;s tear sheet. Shaded band: ~${baselineFiveYearM.toFixed(0)}M baseline (mid × 5).
       </p>
       <div className="relative">
@@ -89,7 +89,7 @@ export function TcvDivergingStrip({
             width: `${baselineLeftPct}%`,
           }}
         />
-        <span className="absolute -top-5 left-0 text-micro text-[#94A3B8] whitespace-nowrap">Baseline (mid × 5)</span>
+        <span className="absolute -top-5 left-0 text-micro text-[#475569] whitespace-nowrap">Baseline (mid × 5)</span>
         <ReferenceAvgLine avgTcv={avgTcv} min={min} span={span} />
       </div>
     </div>

@@ -31,7 +31,7 @@ export function VendorPillarRadar({
   const scoresPending = portfolio.scorecard.dimensions[0]?.scores[vendorId] == null;
   if (scoresPending) {
     return (
-      <div className="h-[280px] flex items-center justify-center rounded-lg border border-dashed border-[#CBD5E1] bg-[#F8FAFC] text-caption text-[#64748B] text-center px-4">
+      <div className="h-[280px] flex items-center justify-center rounded-lg border border-dashed border-[#CBD5E1] bg-[#F8FAFC] text-caption text-[#475569] text-center px-4">
         Scores pending — radar will populate after Workshop 1.
       </div>
     );
@@ -50,7 +50,7 @@ export function VendorPillarRadar({
         <RadarChart data={data} cx="50%" cy="52%" outerRadius="72%">
           <PolarGrid stroke="#CBD5E1" />
           <PolarAngleAxis dataKey="p" tick={{ fill: "#64748B", fontSize: 10 }} />
-          <PolarRadiusAxis angle={30} domain={[0, 9]} tick={{ fontSize: 9, fill: "#94A3B8" }} />
+          <PolarRadiusAxis angle={30} domain={[0, 9]} tick={{ fontSize: 9, fill: "#64748B" }} />
           <Radar
             name="Field avg"
             dataKey="field"

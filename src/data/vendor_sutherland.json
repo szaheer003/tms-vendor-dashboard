@@ -40,7 +40,7 @@
         "location": "Row 120, columns C:V (20 quarters)",
         "valueLabel": "$559.66M",
         "calculation": "Sum of quarterly values on Total Annual Cost row; values already in $M per workbook cells",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 117,
@@ -532,7 +532,7 @@
         "location": "Row 120, Y1 = sum of quarters 1\u20134",
         "valueLabel": "$202.80M",
         "calculation": "Sum of four quarterly cells on same row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 117,
@@ -1024,7 +1024,7 @@
         "location": "Row 120, Y2 = sum of quarters 5\u20138",
         "valueLabel": "$127.07M",
         "calculation": "Sum of four quarterly cells on same row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 117,
@@ -1516,7 +1516,7 @@
         "location": "Row 120, Y3 = sum of quarters 9\u201312",
         "valueLabel": "$80.65M",
         "calculation": "Sum of four quarterly cells on same row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 117,
@@ -2008,7 +2008,7 @@
         "location": "Row 120, Y4 = sum of quarters 13\u201316",
         "valueLabel": "$75.77M",
         "calculation": "Sum of four quarterly cells on same row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 117,
@@ -2500,7 +2500,7 @@
         "location": "Row 120, Y5 = sum of quarters 17\u201320",
         "valueLabel": "$73.37M",
         "calculation": "Sum of four quarterly cells on same row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 117,
@@ -3002,7 +3002,7 @@
         "location": "Section 6.1 rate card, row 11",
         "valueLabel": "Tier 1 Customer Service \u2014 IVR",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 10,
@@ -3265,7 +3265,7 @@
         "location": "Section 6.1 row 13 (US col D, PH col F, DR col G, UK col I)",
         "valueLabel": "CS Live Agent",
         "calculation": "Live Agent row \u2014 DR nearshore vs PH offshore per workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 12,
@@ -3528,7 +3528,7 @@
         "location": "Section 6.1 rate card, row 14",
         "valueLabel": "Tier 1 Customer Service \u2014 Loyalty",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 13,
@@ -3791,7 +3791,7 @@
         "location": "Section 6.1 rate card, row 16",
         "valueLabel": "Tier 1 Customer Service \u2014 After hours",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 15,
@@ -4054,7 +4054,7 @@
         "location": "Section 6.1 rate card, row 17",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Fraud Detection",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 16,
@@ -4317,7 +4317,7 @@
         "location": "Section 6.1 rate card, row 19",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Fraud Strategy",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 18,
@@ -4580,7 +4580,7 @@
         "location": "Section 6.1 rate card, row 21",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Collections",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 20,
@@ -4843,7 +4843,7 @@
         "location": "Section 6.1 rate card, row 23",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Disputes & Chargebacks",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 22,
@@ -5106,7 +5106,7 @@
         "location": "Section 6.1 rate card, row 33",
         "valueLabel": "Back Office \u2014 Account Maintenance",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 32,
@@ -5393,7 +5393,7 @@
             "location": "Cell C8 \u00b7 US & Canada Clients Clients \u00b7 Offshore to Onshore Mix",
             "valueLabel": "95:5",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -5719,7 +5719,7 @@
             "location": "Cell D8 \u00b7 US & Canada Clients Clients \u00b7 Consequent Labor Arbitrage %",
             "valueLabel": "45.00%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -6094,7 +6094,7 @@
             "location": "Cell E8 \u00b7 US & Canada Clients Clients \u00b7 Cost Reduction from AI & Digital Overlays %",
             "valueLabel": "19.30%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -6469,7 +6469,7 @@
             "location": "Cell F8 \u00b7 US & Canada Clients Clients \u00b7 Cost Reduction from Productivity Gains %",
             "valueLabel": "11.70%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -6844,7 +6844,7 @@
             "location": "Cell G8 \u00b7 US & Canada Clients Clients \u00b7 Commitment to Certainty of Cost Savings as a %",
             "valueLabel": "39.67%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -7231,7 +7231,7 @@
             "location": "Cell C9 \u00b7 Netherlands Clients \u00b7 Offshore to Onshore Mix",
             "valueLabel": "95:5",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 6,
@@ -7557,7 +7557,7 @@
             "location": "Cell D9 \u00b7 Netherlands Clients \u00b7 Consequent Labor Arbitrage %",
             "valueLabel": "5.00%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 6,
@@ -7932,7 +7932,7 @@
             "location": "Cell E9 \u00b7 Netherlands Clients \u00b7 Cost Reduction from AI & Digital Overlays %",
             "valueLabel": "19.30%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 6,
@@ -8307,7 +8307,7 @@
             "location": "Cell F9 \u00b7 Netherlands Clients \u00b7 Cost Reduction from Productivity Gains %",
             "valueLabel": "11.70%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 6,
@@ -8682,7 +8682,7 @@
             "location": "Cell G9 \u00b7 Netherlands Clients \u00b7 Commitment to Certainty of Cost Savings as a %",
             "valueLabel": "39.67%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 6,
@@ -9069,7 +9069,7 @@
             "location": "Cell C10 \u00b7 Germany Clients \u00b7 Offshore to Onshore Mix",
             "valueLabel": "95:5",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 7,
@@ -9395,7 +9395,7 @@
             "location": "Cell D10 \u00b7 Germany Clients \u00b7 Consequent Labor Arbitrage %",
             "valueLabel": "5.00%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 7,
@@ -9770,7 +9770,7 @@
             "location": "Cell E10 \u00b7 Germany Clients \u00b7 Cost Reduction from AI & Digital Overlays %",
             "valueLabel": "19.30%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 7,
@@ -10145,7 +10145,7 @@
             "location": "Cell F10 \u00b7 Germany Clients \u00b7 Cost Reduction from Productivity Gains %",
             "valueLabel": "11.70%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 7,
@@ -10520,7 +10520,7 @@
             "location": "Cell G10 \u00b7 Germany Clients \u00b7 Commitment to Certainty of Cost Savings as a %",
             "valueLabel": "39.67%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 7,
@@ -10907,7 +10907,7 @@
             "location": "Cell C11 \u00b7 United Kingdom Clients \u00b7 Offshore to Onshore Mix",
             "valueLabel": "95:5",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 8,
@@ -11233,7 +11233,7 @@
             "location": "Cell D11 \u00b7 United Kingdom Clients \u00b7 Consequent Labor Arbitrage %",
             "valueLabel": "5.00%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 8,
@@ -11608,7 +11608,7 @@
             "location": "Cell E11 \u00b7 United Kingdom Clients \u00b7 Cost Reduction from AI & Digital Overlays %",
             "valueLabel": "19.30%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 8,
@@ -11983,7 +11983,7 @@
             "location": "Cell F11 \u00b7 United Kingdom Clients \u00b7 Cost Reduction from Productivity Gains %",
             "valueLabel": "11.70%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 8,
@@ -12358,7 +12358,7 @@
             "location": "Cell G11 \u00b7 United Kingdom Clients \u00b7 Commitment to Certainty of Cost Savings as a %",
             "valueLabel": "39.67%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 8,
@@ -12745,7 +12745,7 @@
             "location": "Cell C12 \u00b7 Philippines Clients \u00b7 Offshore to Onshore Mix",
             "valueLabel": "100:0",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 9,
@@ -13071,7 +13071,7 @@
             "location": "Cell D12 \u00b7 Philippines Clients \u00b7 Consequent Labor Arbitrage %",
             "valueLabel": "45.00%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 9,
@@ -13446,7 +13446,7 @@
             "location": "Cell E12 \u00b7 Philippines Clients \u00b7 Cost Reduction from AI & Digital Overlays %",
             "valueLabel": "19.30%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 9,
@@ -13821,7 +13821,7 @@
             "location": "Cell F12 \u00b7 Philippines Clients \u00b7 Cost Reduction from Productivity Gains %",
             "valueLabel": "11.70%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 9,
@@ -14196,7 +14196,7 @@
             "location": "Cell G12 \u00b7 Philippines Clients \u00b7 Commitment to Certainty of Cost Savings as a %",
             "valueLabel": "39.67%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 9,
@@ -15419,7 +15419,7 @@
       "location": "Rows 6\u201312",
       "valueLabel": "Efficiency assumptions",
       "calculation": "Vendor Tab 9.0 (tab without duplicate)",
-      "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+      "extractionTimestamp": "2026-04-06T23:15:55+00:00",
       "verified": true,
       "snapshot": {
         "minRow": 5,
@@ -16324,7 +16324,7 @@
     }
   ],
   "oneTimeLines": [],
-  "migrationNotes": "Part 1 \u2014 Wave Composition: For each wave, list which client cohorts are included, explaining what criteria drove the grouping; for all clients, specify which client is mapped to each wave.  FIS has intentionally not prescribed a wave structure or grouping methodology. We expect vendors to analyze the client dataset provided and propose the wave design they believe is most operationally sound for an engagement of this complexity. There is no correct number of waves. Responses that demonstrate genuine analytical thinking about client risk, regulatory complexity, volume sequencing, and transition readiness will be evaluated more favorably than generic frameworks.\n\n5% fallout from incumbent team post announcement of Rebadge activity. Sutherland will ensure backfill resources are hired and ready to support for continuity of operations.\n\n5% fallout from incumbent team post announcement of Rebadge activity. Sutherland will ensure backfill resources are hired and ready to support for continuity of operations.\n\n5% fallout from incumbent team post announcement of Rebadge activity. Sutherland will ensure backfill resources are hired and ready to support for continuity of operations.\n\nLoss of key personnel and tribal knowledge once the rebadging annoucement has been made. Sutherland in partnership with FIS will manage the communication and change well to mitigate any fallout\n\nLoss of key personnel and tribal knowledge once the rebadging annoucement has been made. Sutherland in partnership with FIS will manage the communication and change well to mitigate any fallout\n\nLoss of key personnel and tribal knowledge once the rebadging annoucement has been made. Sutherland in partnership with FIS will manage the communication and change well to mitigate any fallout\n\nLow risk. Sutherland will ensure the knowledge transfer is effective between the onsite & offshore teams\n\nLow risk. Sutherland will ensure the knowledge transfer is effective between the onsite & offshore teams\n\nLow risk. Sutherland will ensure the knowledge transfer is effective between the onsite & offshore teams\n\nLow risk. Sutherland will ensure the knowledge transfer is effective between the onsite & offshore teams\n\nImpact in customer experience post migration to the new team. Sutherland will ensure the right resources are hired to deliver quality service\n\nImpact in customer experience post migration to the new team. Sutherland will ensure the right resources are hired to deliver quality service\n\nImpact in customer experience post migration to the new team. Sutherland will ensure the right resources are hired to deliver quality service\n\nLoss of knowledge and continuity of cases while migrating between teams. Sutherland will ensure the documentation and case management is robust.\n\nLoss of knowledge and continuity of cases while migrating between teams. Sutherland will ensure the documentation and case management is robust.\n\nLow risk. Hire and train backfill resources in anticipation of attrition at onshore locations\n\nLow risk. Hire and train backfill resources in anticipation of attrition at onshore locations\n\nLow risk. Hire and train backfill resources in anticipation of attrition at onshore locations\n\nLow risk. Hire and train backfill resources in anticipation of attrition at onshore locations\n\nLow risk. Hire and train backfill resources in anticipation of attrition at onshore locations\n\nLow risk. Hire and train backfill resources in anticipation of attrition at onshore locations\n\nWave 1- Backfill US & PH rebadge (Double run)\n\nVendor documents up to 21 migration waves in Tab 7.0 (enumerated wave list / summary).",
+  "migrationNotes": "Part 1 \u2014 Wave Composition: For each wave, list which client cohorts are included, explaining what criteria drove the grouping; for all clients, specify which client is mapped to each wave.  FIS has intentionally not prescribed a wave structure or grouping methodology. We expect vendors to analyze the client dataset provided and propose the wave design they believe is most operationally sound for an engagement of this complexity. There is no correct number of waves. Responses that demonstrate genuine analytical thinking about client risk, regulatory complexity, volume sequencing, and transition readiness will be evaluated more favorably than generic frameworks.\n\n5% fallout from incumbent team post announcement of Rebadge activity. Sutherland will ensure backfill resources are hired and ready to support for continuity of operations.\n\nLoss of key personnel and tribal knowledge once the rebadging annoucement has been made. Sutherland in partnership with FIS will manage the communication and change well to mitigate any fallout\n\nLow risk. Sutherland will ensure the knowledge transfer is effective between the onsite & offshore teams\n\nImpact in customer experience post migration to the new team. Sutherland will ensure the right resources are hired to deliver quality service\n\nLoss of knowledge and continuity of cases while migrating between teams. Sutherland will ensure the documentation and case management is robust.\n\nLow risk. Hire and train backfill resources in anticipation of attrition at onshore locations\n\nWave 1- Backfill US & PH rebadge (Double run)\n\nWave 2- Backfill CA & UK rebadge (Double run)\n\nWave 3- Backfill GR & NE rebadge (Double run)\n\nStart 17 Aug- End 28 Aug\n\nWave 5- Rebadge CA & UK\n\nWave 6- Rebadge GR & NE\n\nWave 7- Right shoring- US Accounting\n\nWave 8- Right shoring- US Backoffice\n\nWave 9- Right shoring- US IVR/Tech\n\nWave 10- Right shoring- US Off Phone\n\nWave 11- Right shoring- US Customer Service\n\nWave 12- Right shoring- US Collections\n\nWave 13- Right shoring- US & CA Loyalty\n\nWave 14- Right shoring- US & CA disputes\n\nWave 15- Right shoring- US Fraud\n\nWave 17- Backfill- EU Customer Service\n\nVendor documents up to 21 migration waves in Tab 7.0 (enumerated wave list / summary).",
   "flags": [
     "TCV in Section 6.7 financial summary (Tab 6.0) \u2014 not 'rate card only'.",
     "Certainty % mid-high-30s in Tab 9.0 \u2014 lowest explicit certainty among detailed submissions (verify cell)."
@@ -16655,7 +16655,7 @@
             "location": "Cell B10",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 7,
@@ -17204,7 +17204,7 @@
             "location": "Cell B15",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 12,
@@ -17753,7 +17753,7 @@
             "location": "Cell B16",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 13,
@@ -18302,7 +18302,7 @@
             "location": "Cell B20",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 17,
@@ -18851,7 +18851,7 @@
             "location": "Cell B11",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 8,
@@ -19400,7 +19400,7 @@
             "location": "Cell B12",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 9,
@@ -19949,7 +19949,7 @@
             "location": "Cell B13",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 10,
@@ -20498,7 +20498,7 @@
             "location": "Cell B14",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 11,
@@ -21047,7 +21047,7 @@
             "location": "Cell B17",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 14,
@@ -21596,7 +21596,7 @@
             "location": "Cell B21",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 18,
@@ -22145,7 +22145,7 @@
             "location": "Cell B22",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 19,
@@ -22694,7 +22694,7 @@
             "location": "Cell B18",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 15,
@@ -23243,7 +23243,7 @@
             "location": "Cell B19",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 16,
@@ -23896,7 +23896,7 @@
             "location": "Cell F10",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 7,
@@ -24647,7 +24647,7 @@
             "location": "Cell E101",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 98,
@@ -25343,7 +25343,7 @@
             "location": "Cell C82",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 79,
@@ -25990,7 +25990,7 @@
             "location": "Cell C26",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 23,
@@ -26637,7 +26637,7 @@
             "location": "Cell C49",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 46,
@@ -27333,7 +27333,7 @@
             "location": "Cell G25",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 22,
@@ -28078,7 +28078,7 @@
             "location": "Cell F100",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 97,
@@ -28725,7 +28725,7 @@
             "location": "Cell B42",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 39,
@@ -29274,7 +29274,7 @@
             "location": "Cell B82",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 79,
@@ -29823,7 +29823,7 @@
             "location": "Cell B85",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 82,
@@ -30335,7 +30335,7 @@
             "location": "Cell B3",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 1,
@@ -30847,7 +30847,7 @@
             "location": "Cell B8",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -31396,7 +31396,7 @@
             "location": "Cell B36",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 33,
@@ -31945,7 +31945,7 @@
             "location": "Cell B43",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 40,
@@ -32494,7 +32494,7 @@
             "location": "Cell B57",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 54,
@@ -33092,7 +33092,7 @@
             "location": "Cell C76",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 73,
@@ -33418,653 +33418,6 @@
       "tab": "5.0  Technology Solution",
       "missing": false,
       "snippets": [
-        {
-          "ref": "C50",
-          "questionText": "Describe the AI overlay tools you propose to deploy as part of this engagement. For each, describe the capability, quantify the anticipated operational impact, and confirm how it integrates with the existing technology stack. Summarize your total efficiency ambition across all three levers. All figures in USD millions, rounded to one decimal place (e.g. $2.4M). Clearly state which savings are contractually committed.",
-          "text": "Category\n(e.g. NLP, GenAI, RPA, Predictive)\n\nDescription\n\nPrimary Value Lever\n(Digital Efficiencies, Labor Arbitrage, Productivity)\n\nQuantified Impact\n(e.g. X% AHT reduction, Contact Elimination)\n\nTimeline to\nDeploy\n\nIntegration Method\n(API / Native / Other)\n\nProposed Application to Integrate With\n\nKey Assumptions /\nDependencies\n\nTotal Opportunity\n($M relative to Direct Costs)\n\nYear 1\nBenefit ($M)\n\nYear 2\nBenefit ($M)\n\nYear 3\nBenefit ($M)\n\nTTS, STT, NLP, Gen AI, LLM\n\nVirtual voice agents for automated conversations with customers and resolution of requests by registering request or providing required information\n\nDigital efficiency\n\n5 % of the inbound volume will be contained resulting in 75 FTE reduction for NA (from 1283 to 1208 FTE) and 99 FTE for EMEA (from 1096 to 997)\n\n17th month from go-live of the program. With development cycletime of 16 weeks\n\nCRM, Nice CX One, IVR, Core Banking Applications based on automation use cases\n\n1) 6 months for the migration from TSYS to FIS stack of technology\n2) Successful due diligence & feasibility study and requirement confirmation\n\nTo Be shared\n\nTo Be shared\n\nTo Be shared\n\nTo Be shared\n\nGenAI, NLP, Predictive Analytics\n\nUnified agent workspace with real-time transcription, contextual knowledge retrieval (KB), next-best-action prompts, compliance guidance, and auto-summarization\n\nDigital efficiency\n\nAHT saving of 5% for overall volume handled by the human agents with resultant FTE reduction of 51 for NA and 34 for EMEA\n\n8-12 weeks\n\nAPI + Desktop Embed (Chrome Extension / iFrame / Native SDK)\n\nNICE CXOne (Telephony), Knowledge Base, Internal KBs, CRM\n\nRequires access to knowledge sources, historical interaction data for model training, real-time voice stream availability, CRM integration, and defined compliance workflows\n\nTo Be shared\n\nTo Be shared\n\nTo Be shared\n\nTo Be shared\n\nRPA, AI Agent, LLM\n\nAutomation of back office processes using a combination of RPA and AI Agents equipped with NLP, GenAI & LLM capabilities\n\nDigital efficiency\n\n25% consultant effort reduction therefore saving 28 FTE in NA and 10 FTE in EMEA\n\n12th month from go-live of the program. With development cycletime of 6 to 16 weeks based on the complexity of the solution\n\nAPI & UI\n\nCRM & Core Banking Applications based on automation use cases\n\nSuccessful due diligence & feasibility study and requirement confirmation\n\nTo Be shared\n\nTo Be shared\n\nTo Be shared\n\nTo Be shared\n\nNLP + GenAI\n\nDeflect simple, high\u2011volume inquiries from inbound voice into Chatbot with seamless handoff (with full context) to live chat/voice when needed\n\nDigital Efficiencies\n\n~20% of the voice contact can be handled through chat medium (chatbot + human agent) which helps in saving 93 FTE in NA and 21 in EMEA\n\n14th Month from go-live with development cycletime of 12 weeks\n\nCRM, Knowledge Management, Nice CX One, CTI\n\n1) 6 months for the migration from TSYS to FIS stack of technology\n\nTo Be shared\n\nTo Be shared\n\nTo Be shared\n\nTo Be shared\n\nNLP + Messaging (SMS)\n\nAutomating customer requests on WhatsApp\n\nDigital Efficiencies\n\nDeflect 2 % of volume to Text, which will help in saving effort of 26 FTE in NA and 14 FTE in EMEA\n\n4 months\n\nAPI (messaging gateway + CX platform)\n\nNICE Digital (Messaging), SMS gateway (e.g., Twilio), CRM, Core Banking Applications based on automation use cases\n\nOpt\u2011in/consent, opt\u2011out handling; no PAN over SMS (PCI); secure links for authentication; short\u2011code provisioning; coexistence with IVA/voice; client\u2011by\u2011client enablement.\n\nTo Be shared\n\nTo Be shared\n\nTo Be shared\n\nTo Be shared",
-          "snapshot": {
-            "minRow": 47,
-            "maxRow": 53,
-            "minCol": 1,
-            "maxCol": 6,
-            "rows": [
-              [
-                {
-                  "r": 47,
-                  "c": 1,
-                  "col": "A",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 47,
-                  "c": 2,
-                  "col": "B",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 47,
-                  "c": 3,
-                  "col": "C",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 47,
-                  "c": 4,
-                  "col": "D",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 47,
-                  "c": 5,
-                  "col": "E",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 47,
-                  "c": 6,
-                  "col": "F",
-                  "value": "",
-                  "highlight": false
-                }
-              ],
-              [
-                {
-                  "r": 48,
-                  "c": 1,
-                  "col": "A",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 48,
-                  "c": 2,
-                  "col": "B",
-                  "value": "Describe the AI overlay tools you propose to dep\u2026",
-                  "highlight": false
-                },
-                {
-                  "r": 48,
-                  "c": 3,
-                  "col": "C",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 48,
-                  "c": 4,
-                  "col": "D",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 48,
-                  "c": 5,
-                  "col": "E",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 48,
-                  "c": 6,
-                  "col": "F",
-                  "value": "",
-                  "highlight": false
-                }
-              ],
-              [
-                {
-                  "r": 49,
-                  "c": 1,
-                  "col": "A",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 49,
-                  "c": 2,
-                  "col": "B",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 49,
-                  "c": 3,
-                  "col": "C",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 49,
-                  "c": 4,
-                  "col": "D",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 49,
-                  "c": 5,
-                  "col": "E",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 49,
-                  "c": 6,
-                  "col": "F",
-                  "value": "",
-                  "highlight": false
-                }
-              ],
-              [
-                {
-                  "r": 50,
-                  "c": 1,
-                  "col": "A",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 50,
-                  "c": 2,
-                  "col": "B",
-                  "value": "Tooling & AI Overlay Technologies",
-                  "highlight": false
-                },
-                {
-                  "r": 50,
-                  "c": 3,
-                  "col": "C",
-                  "value": "Category (e.g. NLP, GenAI, RPA, Predictive)",
-                  "highlight": true
-                },
-                {
-                  "r": 50,
-                  "c": 4,
-                  "col": "D",
-                  "value": "Description",
-                  "highlight": false
-                },
-                {
-                  "r": 50,
-                  "c": 5,
-                  "col": "E",
-                  "value": "Primary Value Lever (Digital Efficiencies, Labor\u2026",
-                  "highlight": false
-                },
-                {
-                  "r": 50,
-                  "c": 6,
-                  "col": "F",
-                  "value": "Quantified Impact (e.g. X% AHT reduction, Contac\u2026",
-                  "highlight": false
-                }
-              ],
-              [
-                {
-                  "r": 51,
-                  "c": 1,
-                  "col": "A",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 51,
-                  "c": 2,
-                  "col": "B",
-                  "value": "AI enabled Intelligent Virtual Agent (IVA) for v\u2026",
-                  "highlight": false
-                },
-                {
-                  "r": 51,
-                  "c": 3,
-                  "col": "C",
-                  "value": "TTS, STT, NLP, Gen AI, LLM",
-                  "highlight": false
-                },
-                {
-                  "r": 51,
-                  "c": 4,
-                  "col": "D",
-                  "value": "Virtual voice agents for automated conversations\u2026",
-                  "highlight": false
-                },
-                {
-                  "r": 51,
-                  "c": 5,
-                  "col": "E",
-                  "value": "Digital efficiency",
-                  "highlight": false
-                },
-                {
-                  "r": 51,
-                  "c": 6,
-                  "col": "F",
-                  "value": "5 % of the inbound volume will be contained resu\u2026",
-                  "highlight": false
-                }
-              ],
-              [
-                {
-                  "r": 52,
-                  "c": 1,
-                  "col": "A",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 52,
-                  "c": 2,
-                  "col": "B",
-                  "value": "AI enabled Unified Desktop with Knowledge Assist\u2026",
-                  "highlight": false
-                },
-                {
-                  "r": 52,
-                  "c": 3,
-                  "col": "C",
-                  "value": "GenAI, NLP, Predictive Analytics",
-                  "highlight": false
-                },
-                {
-                  "r": 52,
-                  "c": 4,
-                  "col": "D",
-                  "value": "Unified agent workspace with real-time transcrip\u2026",
-                  "highlight": false
-                },
-                {
-                  "r": 52,
-                  "c": 5,
-                  "col": "E",
-                  "value": "Digital efficiency",
-                  "highlight": false
-                },
-                {
-                  "r": 52,
-                  "c": 6,
-                  "col": "F",
-                  "value": "AHT saving of 5% for overall volume handled by t\u2026",
-                  "highlight": false
-                }
-              ],
-              [
-                {
-                  "r": 53,
-                  "c": 1,
-                  "col": "A",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 53,
-                  "c": 2,
-                  "col": "B",
-                  "value": "Agentic AI driven containment of back\u2011office pro\u2026",
-                  "highlight": false
-                },
-                {
-                  "r": 53,
-                  "c": 3,
-                  "col": "C",
-                  "value": "RPA, AI Agent, LLM",
-                  "highlight": false
-                },
-                {
-                  "r": 53,
-                  "c": 4,
-                  "col": "D",
-                  "value": "Automation of back office processes using a comb\u2026",
-                  "highlight": false
-                },
-                {
-                  "r": 53,
-                  "c": 5,
-                  "col": "E",
-                  "value": "Digital efficiency",
-                  "highlight": false
-                },
-                {
-                  "r": 53,
-                  "c": 6,
-                  "col": "F",
-                  "value": "25% consultant effort reduction therefore saving\u2026",
-                  "highlight": false
-                }
-              ]
-            ]
-          },
-          "sourcePreview": {
-            "kind": "workbook",
-            "sourceFile": "Sutherland_Appendix B - TMS RFP - Sutherland Response to FIS.xlsx",
-            "tab": "5.0  Technology Solution",
-            "location": "Cell C50",
-            "valueLabel": "Vendor response cell",
-            "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
-            "verified": true,
-            "snapshot": {
-              "minRow": 47,
-              "maxRow": 53,
-              "minCol": 1,
-              "maxCol": 6,
-              "rows": [
-                [
-                  {
-                    "r": 47,
-                    "c": 1,
-                    "col": "A",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 47,
-                    "c": 2,
-                    "col": "B",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 47,
-                    "c": 3,
-                    "col": "C",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 47,
-                    "c": 4,
-                    "col": "D",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 47,
-                    "c": 5,
-                    "col": "E",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 47,
-                    "c": 6,
-                    "col": "F",
-                    "value": "",
-                    "highlight": false
-                  }
-                ],
-                [
-                  {
-                    "r": 48,
-                    "c": 1,
-                    "col": "A",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 48,
-                    "c": 2,
-                    "col": "B",
-                    "value": "Describe the AI overlay tools you propose to dep\u2026",
-                    "highlight": false
-                  },
-                  {
-                    "r": 48,
-                    "c": 3,
-                    "col": "C",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 48,
-                    "c": 4,
-                    "col": "D",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 48,
-                    "c": 5,
-                    "col": "E",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 48,
-                    "c": 6,
-                    "col": "F",
-                    "value": "",
-                    "highlight": false
-                  }
-                ],
-                [
-                  {
-                    "r": 49,
-                    "c": 1,
-                    "col": "A",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 49,
-                    "c": 2,
-                    "col": "B",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 49,
-                    "c": 3,
-                    "col": "C",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 49,
-                    "c": 4,
-                    "col": "D",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 49,
-                    "c": 5,
-                    "col": "E",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 49,
-                    "c": 6,
-                    "col": "F",
-                    "value": "",
-                    "highlight": false
-                  }
-                ],
-                [
-                  {
-                    "r": 50,
-                    "c": 1,
-                    "col": "A",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 50,
-                    "c": 2,
-                    "col": "B",
-                    "value": "Tooling & AI Overlay Technologies",
-                    "highlight": false
-                  },
-                  {
-                    "r": 50,
-                    "c": 3,
-                    "col": "C",
-                    "value": "Category (e.g. NLP, GenAI, RPA, Predictive)",
-                    "highlight": true
-                  },
-                  {
-                    "r": 50,
-                    "c": 4,
-                    "col": "D",
-                    "value": "Description",
-                    "highlight": false
-                  },
-                  {
-                    "r": 50,
-                    "c": 5,
-                    "col": "E",
-                    "value": "Primary Value Lever (Digital Efficiencies, Labor\u2026",
-                    "highlight": false
-                  },
-                  {
-                    "r": 50,
-                    "c": 6,
-                    "col": "F",
-                    "value": "Quantified Impact (e.g. X% AHT reduction, Contac\u2026",
-                    "highlight": false
-                  }
-                ],
-                [
-                  {
-                    "r": 51,
-                    "c": 1,
-                    "col": "A",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 51,
-                    "c": 2,
-                    "col": "B",
-                    "value": "AI enabled Intelligent Virtual Agent (IVA) for v\u2026",
-                    "highlight": false
-                  },
-                  {
-                    "r": 51,
-                    "c": 3,
-                    "col": "C",
-                    "value": "TTS, STT, NLP, Gen AI, LLM",
-                    "highlight": false
-                  },
-                  {
-                    "r": 51,
-                    "c": 4,
-                    "col": "D",
-                    "value": "Virtual voice agents for automated conversations\u2026",
-                    "highlight": false
-                  },
-                  {
-                    "r": 51,
-                    "c": 5,
-                    "col": "E",
-                    "value": "Digital efficiency",
-                    "highlight": false
-                  },
-                  {
-                    "r": 51,
-                    "c": 6,
-                    "col": "F",
-                    "value": "5 % of the inbound volume will be contained resu\u2026",
-                    "highlight": false
-                  }
-                ],
-                [
-                  {
-                    "r": 52,
-                    "c": 1,
-                    "col": "A",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 52,
-                    "c": 2,
-                    "col": "B",
-                    "value": "AI enabled Unified Desktop with Knowledge Assist\u2026",
-                    "highlight": false
-                  },
-                  {
-                    "r": 52,
-                    "c": 3,
-                    "col": "C",
-                    "value": "GenAI, NLP, Predictive Analytics",
-                    "highlight": false
-                  },
-                  {
-                    "r": 52,
-                    "c": 4,
-                    "col": "D",
-                    "value": "Unified agent workspace with real-time transcrip\u2026",
-                    "highlight": false
-                  },
-                  {
-                    "r": 52,
-                    "c": 5,
-                    "col": "E",
-                    "value": "Digital efficiency",
-                    "highlight": false
-                  },
-                  {
-                    "r": 52,
-                    "c": 6,
-                    "col": "F",
-                    "value": "AHT saving of 5% for overall volume handled by t\u2026",
-                    "highlight": false
-                  }
-                ],
-                [
-                  {
-                    "r": 53,
-                    "c": 1,
-                    "col": "A",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 53,
-                    "c": 2,
-                    "col": "B",
-                    "value": "Agentic AI driven containment of back\u2011office pro\u2026",
-                    "highlight": false
-                  },
-                  {
-                    "r": 53,
-                    "c": 3,
-                    "col": "C",
-                    "value": "RPA, AI Agent, LLM",
-                    "highlight": false
-                  },
-                  {
-                    "r": 53,
-                    "c": 4,
-                    "col": "D",
-                    "value": "Automation of back office processes using a comb\u2026",
-                    "highlight": false
-                  },
-                  {
-                    "r": 53,
-                    "c": 5,
-                    "col": "E",
-                    "value": "Digital efficiency",
-                    "highlight": false
-                  },
-                  {
-                    "r": 53,
-                    "c": 6,
-                    "col": "F",
-                    "value": "25% consultant effort reduction therefore saving\u2026",
-                    "highlight": false
-                  }
-                ]
-              ]
-            }
-          }
-        },
         {
           "ref": "C11",
           "questionText": "Columns D and E show the current TSYS application and the expected future-state application for reference. Where no future-state equivalent exists, the TSYS application will be retained. Provide your proposed solution, migration approach, and costs.",
@@ -34392,7 +33745,7 @@
             "location": "Cell C11",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 8,
@@ -34705,6 +34058,653 @@
                     "c": 6,
                     "col": "F",
                     "value": "Continue deployment and enhance NLP capabilities",
+                    "highlight": false
+                  }
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "ref": "C50",
+          "questionText": "Describe the AI overlay tools you propose to deploy as part of this engagement. For each, describe the capability, quantify the anticipated operational impact, and confirm how it integrates with the existing technology stack. Summarize your total efficiency ambition across all three levers. All figures in USD millions, rounded to one decimal place (e.g. $2.4M). Clearly state which savings are contractually committed.",
+          "text": "Category\n(e.g. NLP, GenAI, RPA, Predictive)\n\nDescription\n\nPrimary Value Lever\n(Digital Efficiencies, Labor Arbitrage, Productivity)\n\nQuantified Impact\n(e.g. X% AHT reduction, Contact Elimination)\n\nTimeline to\nDeploy\n\nIntegration Method\n(API / Native / Other)\n\nProposed Application to Integrate With\n\nKey Assumptions /\nDependencies\n\nTotal Opportunity\n($M relative to Direct Costs)\n\nYear 1\nBenefit ($M)\n\nYear 2\nBenefit ($M)\n\nYear 3\nBenefit ($M)\n\nTTS, STT, NLP, Gen AI, LLM\n\nVirtual voice agents for automated conversations with customers and resolution of requests by registering request or providing required information\n\nDigital efficiency\n\n5 % of the inbound volume will be contained resulting in 75 FTE reduction for NA (from 1283 to 1208 FTE) and 99 FTE for EMEA (from 1096 to 997)\n\n17th month from go-live of the program. With development cycletime of 16 weeks\n\nCRM, Nice CX One, IVR, Core Banking Applications based on automation use cases\n\n1) 6 months for the migration from TSYS to FIS stack of technology\n2) Successful due diligence & feasibility study and requirement confirmation\n\nTo Be shared\n\nGenAI, NLP, Predictive Analytics\n\nUnified agent workspace with real-time transcription, contextual knowledge retrieval (KB), next-best-action prompts, compliance guidance, and auto-summarization\n\nDigital efficiency\n\nAHT saving of 5% for overall volume handled by the human agents with resultant FTE reduction of 51 for NA and 34 for EMEA\n\n8-12 weeks\n\nAPI + Desktop Embed (Chrome Extension / iFrame / Native SDK)\n\nNICE CXOne (Telephony), Knowledge Base, Internal KBs, CRM\n\nRequires access to knowledge sources, historical interaction data for model training, real-time voice stream availability, CRM integration, and defined compliance workflows\n\nTo Be shared\n\nRPA, AI Agent, LLM\n\nAutomation of back office processes using a combination of RPA and AI Agents equipped with NLP, GenAI & LLM capabilities\n\nDigital efficiency\n\n25% consultant effort reduction therefore saving 28 FTE in NA and 10 FTE in EMEA\n\n12th month from go-live of the program. With development cycletime of 6 to 16 weeks based on the complexity of the solution\n\nAPI & UI\n\nCRM & Core Banking Applications based on automation use cases\n\nSuccessful due diligence & feasibility study and requirement confirmation\n\nTo Be shared\n\nNLP + GenAI\n\nDeflect simple, high\u2011volume inquiries from inbound voice into Chatbot with seamless handoff (with full context) to live chat/voice when needed\n\nDigital Efficiencies\n\n~20% of the voice contact can be handled through chat medium (chatbot + human agent) which helps in saving 93 FTE in NA and 21 in EMEA\n\n14th Month from go-live with development cycletime of 12 weeks\n\nCRM, Knowledge Management, Nice CX One, CTI\n\n1) 6 months for the migration from TSYS to FIS stack of technology\n\nTo Be shared\n\nNLP + Messaging (SMS)\n\nAutomating customer requests on WhatsApp\n\nDigital Efficiencies\n\nDeflect 2 % of volume to Text, which will help in saving effort of 26 FTE in NA and 14 FTE in EMEA\n\n4 months\n\nAPI (messaging gateway + CX platform)\n\nNICE Digital (Messaging), SMS gateway (e.g., Twilio), CRM, Core Banking Applications based on automation use cases\n\nOpt\u2011in/consent, opt\u2011out handling; no PAN over SMS (PCI); secure links for authentication; short\u2011code provisioning; coexistence with IVA/voice; client\u2011by\u2011client enablement.\n\nTo Be shared",
+          "snapshot": {
+            "minRow": 47,
+            "maxRow": 53,
+            "minCol": 1,
+            "maxCol": 6,
+            "rows": [
+              [
+                {
+                  "r": 47,
+                  "c": 1,
+                  "col": "A",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 47,
+                  "c": 2,
+                  "col": "B",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 47,
+                  "c": 3,
+                  "col": "C",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 47,
+                  "c": 4,
+                  "col": "D",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 47,
+                  "c": 5,
+                  "col": "E",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 47,
+                  "c": 6,
+                  "col": "F",
+                  "value": "",
+                  "highlight": false
+                }
+              ],
+              [
+                {
+                  "r": 48,
+                  "c": 1,
+                  "col": "A",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 48,
+                  "c": 2,
+                  "col": "B",
+                  "value": "Describe the AI overlay tools you propose to dep\u2026",
+                  "highlight": false
+                },
+                {
+                  "r": 48,
+                  "c": 3,
+                  "col": "C",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 48,
+                  "c": 4,
+                  "col": "D",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 48,
+                  "c": 5,
+                  "col": "E",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 48,
+                  "c": 6,
+                  "col": "F",
+                  "value": "",
+                  "highlight": false
+                }
+              ],
+              [
+                {
+                  "r": 49,
+                  "c": 1,
+                  "col": "A",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 49,
+                  "c": 2,
+                  "col": "B",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 49,
+                  "c": 3,
+                  "col": "C",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 49,
+                  "c": 4,
+                  "col": "D",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 49,
+                  "c": 5,
+                  "col": "E",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 49,
+                  "c": 6,
+                  "col": "F",
+                  "value": "",
+                  "highlight": false
+                }
+              ],
+              [
+                {
+                  "r": 50,
+                  "c": 1,
+                  "col": "A",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 50,
+                  "c": 2,
+                  "col": "B",
+                  "value": "Tooling & AI Overlay Technologies",
+                  "highlight": false
+                },
+                {
+                  "r": 50,
+                  "c": 3,
+                  "col": "C",
+                  "value": "Category (e.g. NLP, GenAI, RPA, Predictive)",
+                  "highlight": true
+                },
+                {
+                  "r": 50,
+                  "c": 4,
+                  "col": "D",
+                  "value": "Description",
+                  "highlight": false
+                },
+                {
+                  "r": 50,
+                  "c": 5,
+                  "col": "E",
+                  "value": "Primary Value Lever (Digital Efficiencies, Labor\u2026",
+                  "highlight": false
+                },
+                {
+                  "r": 50,
+                  "c": 6,
+                  "col": "F",
+                  "value": "Quantified Impact (e.g. X% AHT reduction, Contac\u2026",
+                  "highlight": false
+                }
+              ],
+              [
+                {
+                  "r": 51,
+                  "c": 1,
+                  "col": "A",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 51,
+                  "c": 2,
+                  "col": "B",
+                  "value": "AI enabled Intelligent Virtual Agent (IVA) for v\u2026",
+                  "highlight": false
+                },
+                {
+                  "r": 51,
+                  "c": 3,
+                  "col": "C",
+                  "value": "TTS, STT, NLP, Gen AI, LLM",
+                  "highlight": false
+                },
+                {
+                  "r": 51,
+                  "c": 4,
+                  "col": "D",
+                  "value": "Virtual voice agents for automated conversations\u2026",
+                  "highlight": false
+                },
+                {
+                  "r": 51,
+                  "c": 5,
+                  "col": "E",
+                  "value": "Digital efficiency",
+                  "highlight": false
+                },
+                {
+                  "r": 51,
+                  "c": 6,
+                  "col": "F",
+                  "value": "5 % of the inbound volume will be contained resu\u2026",
+                  "highlight": false
+                }
+              ],
+              [
+                {
+                  "r": 52,
+                  "c": 1,
+                  "col": "A",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 52,
+                  "c": 2,
+                  "col": "B",
+                  "value": "AI enabled Unified Desktop with Knowledge Assist\u2026",
+                  "highlight": false
+                },
+                {
+                  "r": 52,
+                  "c": 3,
+                  "col": "C",
+                  "value": "GenAI, NLP, Predictive Analytics",
+                  "highlight": false
+                },
+                {
+                  "r": 52,
+                  "c": 4,
+                  "col": "D",
+                  "value": "Unified agent workspace with real-time transcrip\u2026",
+                  "highlight": false
+                },
+                {
+                  "r": 52,
+                  "c": 5,
+                  "col": "E",
+                  "value": "Digital efficiency",
+                  "highlight": false
+                },
+                {
+                  "r": 52,
+                  "c": 6,
+                  "col": "F",
+                  "value": "AHT saving of 5% for overall volume handled by t\u2026",
+                  "highlight": false
+                }
+              ],
+              [
+                {
+                  "r": 53,
+                  "c": 1,
+                  "col": "A",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 53,
+                  "c": 2,
+                  "col": "B",
+                  "value": "Agentic AI driven containment of back\u2011office pro\u2026",
+                  "highlight": false
+                },
+                {
+                  "r": 53,
+                  "c": 3,
+                  "col": "C",
+                  "value": "RPA, AI Agent, LLM",
+                  "highlight": false
+                },
+                {
+                  "r": 53,
+                  "c": 4,
+                  "col": "D",
+                  "value": "Automation of back office processes using a comb\u2026",
+                  "highlight": false
+                },
+                {
+                  "r": 53,
+                  "c": 5,
+                  "col": "E",
+                  "value": "Digital efficiency",
+                  "highlight": false
+                },
+                {
+                  "r": 53,
+                  "c": 6,
+                  "col": "F",
+                  "value": "25% consultant effort reduction therefore saving\u2026",
+                  "highlight": false
+                }
+              ]
+            ]
+          },
+          "sourcePreview": {
+            "kind": "workbook",
+            "sourceFile": "Sutherland_Appendix B - TMS RFP - Sutherland Response to FIS.xlsx",
+            "tab": "5.0  Technology Solution",
+            "location": "Cell C50",
+            "valueLabel": "Vendor response cell",
+            "calculation": "Q/A extraction: template question vs vendor answer column",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
+            "verified": true,
+            "snapshot": {
+              "minRow": 47,
+              "maxRow": 53,
+              "minCol": 1,
+              "maxCol": 6,
+              "rows": [
+                [
+                  {
+                    "r": 47,
+                    "c": 1,
+                    "col": "A",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 47,
+                    "c": 2,
+                    "col": "B",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 47,
+                    "c": 3,
+                    "col": "C",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 47,
+                    "c": 4,
+                    "col": "D",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 47,
+                    "c": 5,
+                    "col": "E",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 47,
+                    "c": 6,
+                    "col": "F",
+                    "value": "",
+                    "highlight": false
+                  }
+                ],
+                [
+                  {
+                    "r": 48,
+                    "c": 1,
+                    "col": "A",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 48,
+                    "c": 2,
+                    "col": "B",
+                    "value": "Describe the AI overlay tools you propose to dep\u2026",
+                    "highlight": false
+                  },
+                  {
+                    "r": 48,
+                    "c": 3,
+                    "col": "C",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 48,
+                    "c": 4,
+                    "col": "D",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 48,
+                    "c": 5,
+                    "col": "E",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 48,
+                    "c": 6,
+                    "col": "F",
+                    "value": "",
+                    "highlight": false
+                  }
+                ],
+                [
+                  {
+                    "r": 49,
+                    "c": 1,
+                    "col": "A",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 49,
+                    "c": 2,
+                    "col": "B",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 49,
+                    "c": 3,
+                    "col": "C",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 49,
+                    "c": 4,
+                    "col": "D",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 49,
+                    "c": 5,
+                    "col": "E",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 49,
+                    "c": 6,
+                    "col": "F",
+                    "value": "",
+                    "highlight": false
+                  }
+                ],
+                [
+                  {
+                    "r": 50,
+                    "c": 1,
+                    "col": "A",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 50,
+                    "c": 2,
+                    "col": "B",
+                    "value": "Tooling & AI Overlay Technologies",
+                    "highlight": false
+                  },
+                  {
+                    "r": 50,
+                    "c": 3,
+                    "col": "C",
+                    "value": "Category (e.g. NLP, GenAI, RPA, Predictive)",
+                    "highlight": true
+                  },
+                  {
+                    "r": 50,
+                    "c": 4,
+                    "col": "D",
+                    "value": "Description",
+                    "highlight": false
+                  },
+                  {
+                    "r": 50,
+                    "c": 5,
+                    "col": "E",
+                    "value": "Primary Value Lever (Digital Efficiencies, Labor\u2026",
+                    "highlight": false
+                  },
+                  {
+                    "r": 50,
+                    "c": 6,
+                    "col": "F",
+                    "value": "Quantified Impact (e.g. X% AHT reduction, Contac\u2026",
+                    "highlight": false
+                  }
+                ],
+                [
+                  {
+                    "r": 51,
+                    "c": 1,
+                    "col": "A",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 51,
+                    "c": 2,
+                    "col": "B",
+                    "value": "AI enabled Intelligent Virtual Agent (IVA) for v\u2026",
+                    "highlight": false
+                  },
+                  {
+                    "r": 51,
+                    "c": 3,
+                    "col": "C",
+                    "value": "TTS, STT, NLP, Gen AI, LLM",
+                    "highlight": false
+                  },
+                  {
+                    "r": 51,
+                    "c": 4,
+                    "col": "D",
+                    "value": "Virtual voice agents for automated conversations\u2026",
+                    "highlight": false
+                  },
+                  {
+                    "r": 51,
+                    "c": 5,
+                    "col": "E",
+                    "value": "Digital efficiency",
+                    "highlight": false
+                  },
+                  {
+                    "r": 51,
+                    "c": 6,
+                    "col": "F",
+                    "value": "5 % of the inbound volume will be contained resu\u2026",
+                    "highlight": false
+                  }
+                ],
+                [
+                  {
+                    "r": 52,
+                    "c": 1,
+                    "col": "A",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 52,
+                    "c": 2,
+                    "col": "B",
+                    "value": "AI enabled Unified Desktop with Knowledge Assist\u2026",
+                    "highlight": false
+                  },
+                  {
+                    "r": 52,
+                    "c": 3,
+                    "col": "C",
+                    "value": "GenAI, NLP, Predictive Analytics",
+                    "highlight": false
+                  },
+                  {
+                    "r": 52,
+                    "c": 4,
+                    "col": "D",
+                    "value": "Unified agent workspace with real-time transcrip\u2026",
+                    "highlight": false
+                  },
+                  {
+                    "r": 52,
+                    "c": 5,
+                    "col": "E",
+                    "value": "Digital efficiency",
+                    "highlight": false
+                  },
+                  {
+                    "r": 52,
+                    "c": 6,
+                    "col": "F",
+                    "value": "AHT saving of 5% for overall volume handled by t\u2026",
+                    "highlight": false
+                  }
+                ],
+                [
+                  {
+                    "r": 53,
+                    "c": 1,
+                    "col": "A",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 53,
+                    "c": 2,
+                    "col": "B",
+                    "value": "Agentic AI driven containment of back\u2011office pro\u2026",
+                    "highlight": false
+                  },
+                  {
+                    "r": 53,
+                    "c": 3,
+                    "col": "C",
+                    "value": "RPA, AI Agent, LLM",
+                    "highlight": false
+                  },
+                  {
+                    "r": 53,
+                    "c": 4,
+                    "col": "D",
+                    "value": "Automation of back office processes using a comb\u2026",
+                    "highlight": false
+                  },
+                  {
+                    "r": 53,
+                    "c": 5,
+                    "col": "E",
+                    "value": "Digital efficiency",
+                    "highlight": false
+                  },
+                  {
+                    "r": 53,
+                    "c": 6,
+                    "col": "F",
+                    "value": "25% consultant effort reduction therefore saving\u2026",
                     "highlight": false
                   }
                 ]
@@ -35039,7 +35039,7 @@
             "location": "Cell C31",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 28,
@@ -35735,7 +35735,7 @@
             "location": "Cell F18",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 15,
@@ -36431,7 +36431,7 @@
             "location": "Cell C19",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 16,
@@ -37127,7 +37127,7 @@
             "location": "Cell D39",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 36,
@@ -37872,7 +37872,7 @@
             "location": "Cell D24",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 21,
@@ -38617,7 +38617,7 @@
             "location": "Cell F16",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 13,
@@ -39362,7 +39362,7 @@
             "location": "Cell D23",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 20,
@@ -40107,7 +40107,7 @@
             "location": "Cell D41",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 38,
@@ -40754,7 +40754,7 @@
             "location": "Cell B133",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 130,
@@ -41303,7 +41303,7 @@
             "location": "Cell B136",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 133,
@@ -41852,7 +41852,7 @@
             "location": "Cell B134",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 131,
@@ -42401,7 +42401,7 @@
             "location": "Cell B130",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 127,
@@ -42950,7 +42950,7 @@
             "location": "Cell B128",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 125,
@@ -43499,7 +43499,7 @@
             "location": "Cell B131",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 128,
@@ -44048,7 +44048,7 @@
             "location": "Cell B132",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 129,
@@ -44597,7 +44597,7 @@
             "location": "Cell B135",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 132,
@@ -45146,7 +45146,7 @@
             "location": "Cell B62",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 59,
@@ -45744,7 +45744,7 @@
             "location": "Cell C65",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 62,
@@ -46391,7 +46391,7 @@
             "location": "Cell C66",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 63,
@@ -46952,7 +46952,7 @@
             "location": "Cell B3",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 1,
@@ -47464,7 +47464,7 @@
             "location": "Cell B72",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 69,
@@ -48068,7 +48068,7 @@
             "location": "Cell C8",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -48764,7 +48764,7 @@
             "location": "Cell E88",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 85,
@@ -49509,7 +49509,7 @@
             "location": "Cell E64",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 61,
@@ -50254,7 +50254,7 @@
             "location": "Cell E62",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 59,
@@ -50999,7 +50999,7 @@
             "location": "Cell E65",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 62,
@@ -51744,7 +51744,7 @@
             "location": "Cell F115",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 112,
@@ -52489,7 +52489,7 @@
             "location": "Cell E81",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 78,
@@ -53234,7 +53234,7 @@
             "location": "Cell E61",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 58,
@@ -53979,7 +53979,7 @@
             "location": "Cell E86",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 83,
@@ -54724,7 +54724,7 @@
             "location": "Cell D22",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 19,
@@ -55469,7 +55469,7 @@
             "location": "Cell E67",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 64,
@@ -56214,7 +56214,7 @@
             "location": "Cell E107",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 104,
@@ -56959,7 +56959,7 @@
             "location": "Cell E104",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 101,
@@ -57704,7 +57704,7 @@
             "location": "Cell E92",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 89,
@@ -58449,7 +58449,7 @@
             "location": "Cell E100",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 97,
@@ -59194,7 +59194,7 @@
             "location": "Cell E63",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 60,
@@ -59939,7 +59939,7 @@
             "location": "Cell E34",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 31,
@@ -60684,7 +60684,7 @@
             "location": "Cell E35",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 32,
@@ -61429,7 +61429,7 @@
             "location": "Cell H21",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 18,
@@ -62174,7 +62174,7 @@
             "location": "Cell H23",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 20,
@@ -62919,7 +62919,7 @@
             "location": "Cell H28",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 25,
@@ -63664,7 +63664,7 @@
             "location": "Cell D33",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 30,
@@ -64409,7 +64409,7 @@
             "location": "Cell F45",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 42,
@@ -65154,7 +65154,7 @@
             "location": "Cell G46",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 43,
@@ -65850,7 +65850,7 @@
             "location": "Cell C69",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 66,
@@ -66411,7 +66411,7 @@
             "location": "Cell B3",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 1,
@@ -66923,7 +66923,7 @@
             "location": "Cell B29",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 26,
@@ -67472,7 +67472,7 @@
             "location": "Cell B57",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 54,
@@ -68021,7 +68021,7 @@
             "location": "Cell B112",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 109,
@@ -68570,7 +68570,7 @@
             "location": "Cell B114",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 111,
@@ -69174,7 +69174,7 @@
             "location": "Cell C8",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -69772,7 +69772,7 @@
             "location": "Cell B26",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 23,
@@ -70321,7 +70321,7 @@
             "location": "Cell B15",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 12,
@@ -70870,7 +70870,7 @@
             "location": "Cell B21",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 18,
@@ -71419,7 +71419,7 @@
             "location": "Cell B18",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 15,
@@ -71968,7 +71968,7 @@
             "location": "Cell B24",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 21,
@@ -72517,7 +72517,7 @@
             "location": "Cell B12",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 9,
@@ -73066,7 +73066,7 @@
             "location": "Cell B22",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 19,
@@ -73615,7 +73615,7 @@
             "location": "Cell B10",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 7,

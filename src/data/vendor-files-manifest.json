@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T15:53:30+00:00",
+  "generatedAt": "2026-04-07T02:40:52.196Z",
   "vendors": {
     "cognizant": {
       "id": "cognizant",
@@ -8,30 +8,38 @@
       "proposal": {
         "kind": "pdf",
         "path": "/vendor-files/cognizant/proposal.pdf",
-        "fileName": "Cognizant_FIS TSYS Managed Services Partnership Cognizant Proposal Document.pdf",
+        "fileName": "Cognizant_Presentation_Workshop 1_ FIS TMS Partnership Proposal.pdf",
         "label": "Proposal",
-        "missing": false,
-        "submittedAt": "2026-03-30",
-        "bytes": 2046476
+        "bytes": 2596153,
+        "pages": 33,
+        "submittedAt": "2026-03-30"
       },
       "workbook": {
         "kind": "spreadsheet",
-        "path": "/vendor-files/cognizant/workbook.xlsx",
+        "path": "/vendor-files/cognizant/workbook.json",
         "fileName": "Cognizant_ Appendix B - TMS RFP - Cognizant - Vendor Response Workbook.xlsx",
         "label": "Workbook",
-        "missing": false,
+        "bytes": 245233,
         "submittedAt": "2026-03-30",
-        "bytes": 105457,
-        "sheetNames": []
+        "sheetNames": [
+          "1.0  Table of Contents",
+          "2.0  Industry Experience",
+          "3.0  Relevant Experience",
+          "4.0  Workforce & Delivery",
+          "5.0  Technology Solution",
+          "6.0  Pricing",
+          "7.0  Client Migration",
+          "8.0  Regulatory Compliance",
+          "9.0 Client EfficiencyAssumption"
+        ]
       },
       "sow": {
-        "kind": "docx",
-        "path": "/vendor-files/cognizant/sow.docx",
+        "kind": "html",
+        "path": "/vendor-files/cognizant/sow.html",
         "fileName": "Cognizant_Appendix C - Draft FIS SOW_Cognizant Redline.Docx",
         "label": "SOW Redline",
-        "missing": false,
-        "submittedAt": "2026-03-30",
-        "bytes": 84866
+        "bytes": 5793,
+        "submittedAt": "2026-03-30"
       },
       "supplemental": [
         {
@@ -39,10 +47,9 @@
           "path": "/vendor-files/cognizant/supplemental-0.pdf",
           "fileName": "Cognizant_One page summary - FIS RFP Response Guide.pdf",
           "label": "One page summary",
-          "missing": false,
-          "submittedAt": "2026-03-30",
           "bytes": 179855,
-          "sheetNames": []
+          "pages": 1,
+          "submittedAt": "2026-03-30"
         }
       ]
     },
@@ -55,39 +62,45 @@
         "path": "/vendor-files/genpact/proposal.pdf",
         "fileName": "Genpact_FIS - TMS RFP G Proposal - 20 pager.pdf",
         "label": "Proposal",
-        "missing": false,
-        "submittedAt": "2026-03-30",
-        "bytes": 1846298
+        "bytes": 1846298,
+        "pages": 22,
+        "submittedAt": "2026-03-30"
       },
       "workbook": {
         "kind": "spreadsheet",
-        "path": "/vendor-files/genpact/workbook.xlsx",
+        "path": "/vendor-files/genpact/workbook.json",
         "fileName": "Genpact_Appendix B - TMS RFP - G updated.xlsx",
         "label": "Workbook",
-        "missing": false,
+        "bytes": 262583,
         "submittedAt": "2026-03-30",
-        "bytes": 153013,
-        "sheetNames": []
+        "sheetNames": [
+          "1.0  Table of Contents",
+          "2.0  Industry Experience",
+          "3.0  Relevant Experience",
+          "4.0  Workforce & Delivery",
+          "5.0  Technology Solution",
+          "6.0  Pricing",
+          "7.0  Client Migration",
+          "8.0  Regulatory Compliance",
+          "9.0 Client EfficiencyAssumption"
+        ]
       },
       "sow": {
-        "kind": "docx",
-        "path": "/vendor-files/genpact/sow.docx",
+        "kind": "html",
+        "path": "/vendor-files/genpact/sow.html",
         "fileName": "Genpact_Appendix C - Draft FIS SOW_G updated.docx",
         "label": "SOW Redline",
-        "missing": false,
-        "submittedAt": "2026-03-30",
-        "bytes": 88434
+        "bytes": 7256,
+        "submittedAt": "2026-03-30"
       },
       "supplemental": [
         {
-          "kind": "docx",
-          "path": "/vendor-files/genpact/supplemental-0.docx",
+          "kind": "html",
+          "path": "/vendor-files/genpact/supplemental-0.html",
           "fileName": "Genpact_FIS - TMS RFP G Proposal Exec Summary.docx",
           "label": "Executive summary",
-          "missing": false,
-          "submittedAt": "2026-03-30",
-          "bytes": 631498,
-          "sheetNames": []
+          "bytes": 1231734,
+          "submittedAt": "2026-03-30"
         }
       ]
     },
@@ -100,50 +113,56 @@
           "kind": "pdf",
           "path": "/vendor-files/exl/proposal-0.pdf",
           "fileName": "EXL_FIS Managed Services RFP_EXL-1.pdf",
-          "label": "Proposal \u2014 Part 1",
-          "missing": false,
-          "submittedAt": "2026-03-30",
-          "bytes": 1680268
+          "label": "Proposal — Part 1",
+          "bytes": 1680268,
+          "pages": 22,
+          "submittedAt": "2026-03-30"
         },
         {
           "kind": "pdf",
           "path": "/vendor-files/exl/proposal-1.pdf",
           "fileName": "EXL_FIS Managed Services RFP_EXL-2.pdf",
-          "label": "Proposal \u2014 Part 2",
-          "missing": false,
-          "submittedAt": "2026-03-30",
-          "bytes": 1592392
+          "label": "Proposal — Part 2",
+          "bytes": 1592392,
+          "pages": 26,
+          "submittedAt": "2026-03-30"
         }
       ],
       "workbook": {
         "kind": "spreadsheet",
-        "path": "/vendor-files/exl/workbook.xls",
+        "path": "/vendor-files/exl/workbook.json",
         "fileName": "EXL_APPEND~1.XLS",
         "label": "Workbook",
-        "missing": false,
+        "bytes": 294475,
         "submittedAt": "2026-03-30",
-        "bytes": 140565,
-        "sheetNames": []
+        "sheetNames": [
+          "1.0  Table of Contents",
+          "2.0  Industry Experience",
+          "3.0  Relevant Experience",
+          "4.0  Workforce & Delivery",
+          "6.0  Pricing",
+          "5.0  Technology Solution",
+          "7.0  Client Migration",
+          "8.0  Regulatory Compliance",
+          "9.0 Client EfficiencyAssumption"
+        ]
       },
       "sow": {
-        "kind": "docx",
-        "path": "/vendor-files/exl/sow.docx",
+        "kind": "html",
+        "path": "/vendor-files/exl/sow.html",
         "fileName": "EXL_Draft FIS SOW - EXL Comment.docx",
         "label": "SOW Redline",
-        "missing": false,
-        "submittedAt": "2026-03-30",
-        "bytes": 79348
+        "bytes": 6509,
+        "submittedAt": "2026-03-30"
       },
       "supplemental": [
         {
-          "kind": "docx",
-          "path": "/vendor-files/exl/supplemental-0.docx",
+          "kind": "html",
+          "path": "/vendor-files/exl/supplemental-0.html",
           "fileName": "EXL_Response Guide.docx",
           "label": "Response guide",
-          "missing": false,
-          "submittedAt": "2026-03-30",
-          "bytes": 26002,
-          "sheetNames": []
+          "bytes": 984,
+          "submittedAt": "2026-03-30"
         }
       ]
     },
@@ -154,41 +173,48 @@
       "proposal": {
         "kind": "pdf",
         "path": "/vendor-files/sutherland/proposal.pdf",
-        "fileName": "Sutherland_Response to FIS (TSYS).pdf",
+        "fileName": "Sutherland_response to FIS-updated March 30, 2026.pdf",
         "label": "Proposal",
-        "missing": false,
-        "submittedAt": "2026-03-30",
-        "bytes": 2822280
+        "bytes": 9300384,
+        "pages": 50,
+        "submittedAt": "2026-03-30"
       },
       "workbook": {
         "kind": "spreadsheet",
-        "path": "/vendor-files/sutherland/workbook.xlsx",
+        "path": "/vendor-files/sutherland/workbook.json",
         "fileName": "Sutherland_Appendix B - TMS RFP - Sutherland Response to FIS.xlsx",
         "label": "Workbook",
-        "missing": false,
+        "bytes": 268791,
         "submittedAt": "2026-03-30",
-        "bytes": 719467,
-        "sheetNames": []
+        "sheetNames": [
+          "9.0 Client EfficiencyAssump (2)",
+          "1.0  Table of Contents",
+          "2.0  Industry Experience",
+          "3.0  Relevant Experience",
+          "4.0  Workforce & Delivery",
+          "5.0  Technology Solution",
+          "6.0  Pricing",
+          "7.0  Client Migration",
+          "8.0  Regulatory Compliance",
+          "9.0 Client EfficiencyAssumption"
+        ]
       },
       "sow": {
-        "kind": "docx",
-        "path": "/vendor-files/sutherland/sow.docx",
+        "kind": "html",
+        "path": "/vendor-files/sutherland/sow.html",
         "fileName": "Sutherland_Response to Appendix C - FIS SOW.docx",
         "label": "SOW Redline",
-        "missing": false,
-        "submittedAt": "2026-03-30",
-        "bytes": 74115
+        "bytes": 5955,
+        "submittedAt": "2026-03-30"
       },
       "supplemental": [
         {
-          "kind": "docx",
-          "path": "/vendor-files/sutherland/supplemental-0.docx",
+          "kind": "html",
+          "path": "/vendor-files/sutherland/supplemental-0.html",
           "fileName": "Sutherland_Response Guide.docx",
           "label": "Response guide",
-          "missing": false,
-          "submittedAt": "2026-03-30",
-          "bytes": 61204,
-          "sheetNames": []
+          "bytes": 5359,
+          "submittedAt": "2026-03-30"
         }
       ]
     },
@@ -201,28 +227,28 @@
         "path": "/vendor-files/ubiquity/proposal.pdf",
         "fileName": "Ubiquity_FIS__Ubiquity_Proposal.pdf",
         "label": "Proposal",
-        "missing": false,
-        "submittedAt": "2026-03-30",
-        "bytes": 1984375
+        "bytes": 1984375,
+        "pages": 36,
+        "submittedAt": "2026-03-30"
       },
       "workbook": {
         "kind": "spreadsheet",
-        "path": "/vendor-files/ubiquity/workbook.xlsx",
+        "path": "/vendor-files/ubiquity/workbook.json",
         "fileName": "Ubiquity_Pricing Response for FIS(2).xlsx",
         "label": "Workbook",
-        "missing": false,
+        "bytes": 249042,
         "submittedAt": "2026-03-30",
-        "bytes": 75614,
-        "sheetNames": []
+        "sheetNames": [
+          "6.0  Pricing"
+        ]
       },
       "sow": {
-        "kind": "docx",
-        "path": "/vendor-files/ubiquity/sow.docx",
+        "kind": "html",
+        "path": "/vendor-files/ubiquity/sow.html",
         "fileName": "Ubiquity_Appendix C - Draft FIS SOW RF redliines CB.docx",
         "label": "SOW Redline",
-        "missing": false,
-        "submittedAt": "2026-03-30",
-        "bytes": 56534
+        "bytes": 6368,
+        "submittedAt": "2026-03-30"
       },
       "supplemental": [
         {
@@ -230,30 +256,33 @@
           "path": "/vendor-files/ubiquity/supplemental-0.pdf",
           "fileName": "Ubiquity_Executive Summary_Ubiquity-FIS.pdf",
           "label": "Executive summary",
-          "missing": false,
-          "submittedAt": "2026-03-30",
           "bytes": 97320,
-          "sheetNames": []
+          "pages": 1,
+          "submittedAt": "2026-03-30"
         },
         {
           "kind": "spreadsheet",
-          "path": "/vendor-files/ubiquity/supplemental-1.xlsx",
+          "path": "/vendor-files/ubiquity/supplemental-1.json",
           "fileName": "Ubiquity_Response_Vendor_RFP_Questionnaire_with_Fraud_Supplement_FINAL.xlsx",
           "label": "RFP questionnaire",
-          "missing": false,
+          "bytes": 235686,
           "submittedAt": "2026-03-30",
-          "bytes": 61813,
-          "sheetNames": []
+          "sheetNames": [
+            "Vendor Info",
+            "Guidance",
+            "Questionnaire"
+          ]
         },
         {
           "kind": "spreadsheet",
-          "path": "/vendor-files/ubiquity/supplemental-2.xlsx",
+          "path": "/vendor-files/ubiquity/supplemental-2.json",
           "fileName": "Ubiquity_Pricing Response for FIS.xlsx",
           "label": "Pricing response (alternate)",
-          "missing": false,
+          "bytes": 249042,
           "submittedAt": "2026-03-30",
-          "bytes": 78771,
-          "sheetNames": []
+          "sheetNames": [
+            "6.0  Pricing"
+          ]
         }
       ]
     },
@@ -266,28 +295,36 @@
         "path": "/vendor-files/ibm/proposal.pdf",
         "fileName": "IBM_FIS TMS Managed Services RFP Response_IBM_Mar 26.pdf",
         "label": "Proposal",
-        "missing": false,
-        "submittedAt": "2026-03-30",
-        "bytes": 2230773
+        "bytes": 2230773,
+        "pages": 36,
+        "submittedAt": "2026-03-30"
       },
       "workbook": {
         "kind": "spreadsheet",
-        "path": "/vendor-files/ibm/workbook.xlsx",
+        "path": "/vendor-files/ibm/workbook.json",
         "fileName": "IBM_Appendix B - TMS RFP - Vendor Response Workbook_IBM 26-Mar-2026.xlsx",
         "label": "Workbook",
-        "missing": false,
+        "bytes": 323711,
         "submittedAt": "2026-03-30",
-        "bytes": 139626,
-        "sheetNames": []
+        "sheetNames": [
+          "1.0  Table of Contents",
+          "2.0  Industry Experience",
+          "3.0  Relevant Experience",
+          "4.0  Workforce & Delivery",
+          "5.0  Technology Solution",
+          "6.0  Pricing",
+          "7.0  Client Migration",
+          "8.0  Regulatory Compliance",
+          "9.0 Client EfficiencyAssumption"
+        ]
       },
       "sow": {
-        "kind": "docx",
-        "path": "/vendor-files/ibm/sow.docx",
+        "kind": "html",
+        "path": "/vendor-files/ibm/sow.html",
         "fileName": "IBM_Appendix C - Draft FIS SOW_IBM March 26.docx",
         "label": "SOW Redline",
-        "missing": false,
-        "submittedAt": "2026-03-30",
-        "bytes": 93790
+        "bytes": 7142,
+        "submittedAt": "2026-03-30"
       }
     }
   }

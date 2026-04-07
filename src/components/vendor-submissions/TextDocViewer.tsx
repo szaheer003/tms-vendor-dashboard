@@ -28,7 +28,7 @@ export function TextDocViewer({ url }: { url: string }) {
     return <div className="p-6 text-center text-caption text-[#DC2626]">Could not load document ({err})</div>;
   }
   if (text == null) {
-    return <div className="p-8 text-center text-caption text-[#64748B]">Loading…</div>;
+    return <div className="p-8 text-center text-caption text-[#475569]">Loading…</div>;
   }
 
   return (

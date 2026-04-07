@@ -314,7 +314,7 @@ export function DocxViewer({ url, fullScreenActive, initialFind = null }: Props)
     return (
       <div className="p-8 text-center">
         <div className="skeleton mx-auto mb-3 h-4 w-48 rounded" />
-        <p className="text-caption text-[#64748B]">Loading document…</p>
+        <p className="text-caption text-[#475569]">Loading document…</p>
       </div>
     );
   }
@@ -359,25 +359,25 @@ export function DocxViewer({ url, fullScreenActive, initialFind = null }: Props)
             <button
               type="button"
               aria-label="Previous redline"
-              className="rounded px-2 py-1 text-[#64748B] transition-colors duration-150 hover:bg-[#F1F5F9]"
+              className="rounded px-2 py-1 text-[#475569] transition-colors duration-150 hover:bg-[#F1F5F9]"
               onClick={() => jumpToRedline(-1)}
             >
               ◀
             </button>
-            <span className="tabular-nums text-micro text-[#64748B]">
+            <span className="tabular-nums text-micro text-[#475569]">
               Redline {Math.min(redlineIndex + 1, redlineCount)} of {redlineCount}
             </span>
             <button
               type="button"
               aria-label="Next redline"
-              className="rounded px-2 py-1 text-[#64748B] transition-colors duration-150 hover:bg-[#F1F5F9]"
+              className="rounded px-2 py-1 text-[#475569] transition-colors duration-150 hover:bg-[#F1F5F9]"
               onClick={() => jumpToRedline(1)}
             >
               ▶
             </button>
           </>
         ) : (
-          <span className="text-micro text-[#64748B]">No tracked changes in preview</span>
+          <span className="text-micro text-[#475569]">No tracked changes in preview</span>
         )}
       </div>
     </div>

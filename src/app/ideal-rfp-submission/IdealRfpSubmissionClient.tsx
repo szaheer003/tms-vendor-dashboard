@@ -67,48 +67,18 @@ function subsectionTabLabel(s: Subsection): string {
   return m[s.id] ?? s.title.slice(0, 26) + "…";
 }
 
-function LogicGate({ item, index }: { item: LogicCheck; index: number }) {
+/** Stacked if/then for narrow column (three-column layout). */
+function CompactLogicCheck({ item }: { item: LogicCheck }) {
   return (
-    <div className="group relative">
-      <div
-        className="absolute -left-px top-8 bottom-8 w-px bg-gradient-to-b from-transparent via-[#A5B4FC] to-transparent opacity-60 md:hidden"
-        aria-hidden
-      />
-      <div className="grid gap-3 md:grid-cols-[1fr_52px_1fr] md:items-stretch md:gap-0">
-        <div className="relative overflow-hidden rounded-2xl border border-[#C7D2FE]/90 bg-gradient-to-br from-[#EEF2FF] via-white to-[#F8FAFC] p-5 shadow-sm transition-shadow group-hover:shadow-md md:rounded-r-none md:border-r-0">
-          <div className="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-[#6366F1]/10 blur-2xl" aria-hidden />
-          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#4F46E5]">Condition</p>
-          <p className="mt-2 text-[14px] leading-relaxed text-[#1E293B]">
-            <span className="font-semibold text-[#312E81]">If </span>
-            {item.if}
-          </p>
-        </div>
-
-        <div className="relative hidden md:flex flex-col items-center justify-center bg-[#F8FAFC] border-y border-[#E2E8F0]">
-          <div className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-[#E2E8F0]" aria-hidden />
-          <div className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full border-2 border-[#6366F1] bg-white text-[11px] font-bold text-[#6366F1] shadow-sm">
-            {index + 1}
-          </div>
-          <svg className="mt-1 text-[#94A3B8]" width="28" height="16" viewBox="0 0 28 16" aria-hidden>
-            <path
-              d="M0 8h10m0 0l4-4m-4 4l4 4M14 8h14"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-          </svg>
-        </div>
-
-        <div className="relative overflow-hidden rounded-2xl border border-[#DDD6FE]/90 bg-gradient-to-bl from-[#F5F3FF] via-white to-[#FAF5FF] p-5 shadow-sm transition-shadow group-hover:shadow-md md:rounded-l-none md:border-l-0">
-          <div className="absolute -left-8 -bottom-8 h-24 w-24 rounded-full bg-[#7C3AED]/10 blur-2xl" aria-hidden />
-          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#6D28D9]">Implication</p>
-          <p className="mt-2 text-[14px] leading-relaxed text-[#1E293B]">
-            <span className="font-semibold text-[#5B21B6]">Then </span>
-            {item.then}
-          </p>
-        </div>
-      </div>
+    <div className="rounded-lg border border-[#C7D2FE]/90 bg-white p-3 shadow-sm space-y-2">
+      <p className="text-[12px] leading-relaxed text-[#1E293B]">
+        <span className="font-semibold text-[#312E81]">If </span>
+        {item.if}
+      </p>
+      <p className="text-[12px] leading-relaxed text-[#1E293B]">
+        <span className="font-semibold text-[#5B21B6]">Then </span>
+        {item.then}
+      </p>
     </div>
   );
 }
@@ -221,16 +191,16 @@ export function IdealRfpSubmissionClient() {
         <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[#6366F1]/25 blur-3xl" aria-hidden />
         <div className="absolute -bottom-24 -left-16 h-56 w-56 rounded-full bg-[#059669]/20 blur-3xl" aria-hidden />
         <div className="relative max-w-4xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#94A3B8]">{META.documentTitle}</p>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#CBD5E1]">{META.documentTitle}</p>
           <h1 className="mt-3 text-[clamp(1.75rem,4vw,2.75rem)] font-bold tracking-tight text-white leading-tight">
             The Ideal RFP Submission
           </h1>
           <p className="mt-2 text-[15px] text-[#CBD5E1] font-medium">{META.subtitle}</p>
-          <p className="mt-1 text-[12px] text-[#64748B]">{META.sectionNote}</p>
+          <p className="mt-1 text-[12px] text-[#475569]">{META.sectionNote}</p>
           <p className="mt-6 text-[15px] leading-relaxed text-[#E2E8F0] max-w-3xl border-l-2 border-[#6366F1] pl-5">
             {META.purpose}
           </p>
-          <p className="mt-4 text-[14px] leading-relaxed text-[#94A3B8] max-w-3xl">{META.howToUse}</p>
+          <p className="mt-4 text-[14px] leading-relaxed text-[#CBD5E1] max-w-3xl">{META.howToUse}</p>
         </div>
       </header>
 
@@ -239,7 +209,7 @@ export function IdealRfpSubmissionClient() {
         className="sticky top-[56px] z-30 -mx-4 px-4 sm:-mx-8 sm:px-8 lg:-mx-16 lg:px-16 py-3 bg-[#F8FAFC]/95 backdrop-blur-md border-y border-[#E2E8F0]"
         aria-label="Evaluation criteria"
       >
-        <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#94A3B8] mb-2">Evaluation criteria</p>
+        <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#475569] mb-2">Evaluation criteria</p>
         <div className="flex gap-2 overflow-x-auto no-scrollbar pb-1">
           {criteria.map((c) => {
             const on = c.id === criterion.id;
@@ -251,12 +221,12 @@ export function IdealRfpSubmissionClient() {
                 className={`shrink-0 flex items-center gap-2 rounded-full px-4 py-2 text-left text-[13px] transition-all border ${
                   on
                     ? "bg-[#0F172A] text-white border-[#0F172A] shadow-md scale-[1.02]"
-                    : "bg-white text-[#64748B] border-[#E2E8F0] hover:border-[#CBD5E1] hover:text-[#0F172A]"
+                    : "bg-white text-[#475569] border-[#E2E8F0] hover:border-[#CBD5E1] hover:text-[#0F172A]"
                 }`}
               >
                 <span
                   className={`flex h-6 w-6 items-center justify-center rounded-full text-[11px] font-bold ${
-                    on ? "bg-white/20 text-white" : "bg-[#F1F5F9] text-[#64748B]"
+                    on ? "bg-white/20 text-white" : "bg-[#F1F5F9] text-[#475569]"
                   }`}
                 >
                   {c.num}
@@ -269,7 +239,7 @@ export function IdealRfpSubmissionClient() {
 
         {showInnerNav ? (
           <>
-            <p className="mt-3 text-[10px] font-bold uppercase tracking-[0.2em] text-[#94A3B8]">Within this criterion</p>
+            <p className="mt-3 text-[10px] font-bold uppercase tracking-[0.2em] text-[#475569]">Within this criterion</p>
             <div className="flex gap-2 overflow-x-auto no-scrollbar pb-1 mt-1">
               {criterion.subsections.map((s) => {
                 const on = s.id === subsection.id;
@@ -292,7 +262,7 @@ export function IdealRfpSubmissionClient() {
           </>
         ) : null}
 
-        <p className="mt-2 text-[12px] text-[#94A3B8] hidden sm:block truncate" title={subsection.title}>
+        <p className="mt-2 text-[12px] text-[#475569] hidden sm:block truncate" title={subsection.title}>
           <span className="font-semibold text-[#475569]">
             {criterion.num}.{" "}
             {subsection.title === criterion.title
@@ -312,59 +282,74 @@ export function IdealRfpSubmissionClient() {
         </div>
 
         <div className="px-6 py-8 sm:px-8 space-y-12">
-          {!isHolistic && subsection.signals.length > 0 && (
-            <section>
-              <div className="flex items-center gap-3 mb-5">
-                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#059669] text-white text-[14px] font-bold">
-                  ✓
-                </span>
-                <div>
-                  <h3 className="text-[12px] font-bold uppercase tracking-[0.2em] text-[#059669]">Signals of a strong submission</h3>
-                  <p className="text-[13px] text-[#64748B] mt-0.5">Patterns that indicate the vendor engaged with FIS data and constraints.</p>
+          {!isHolistic && (
+            <section aria-label="Evaluator checklist columns">
+              <p className="text-[14px] text-[#475569] mb-6 max-w-4xl leading-relaxed">
+                Scan all three lenses together:{" "}
+                <span className="font-semibold text-[#047857]">green — positive signals</span>,{" "}
+                <span className="font-semibold text-[#4338CA]">blue — conditional logic</span>,{" "}
+                <span className="font-semibold text-[#B91C1C]">red — warning patterns</span>.
+              </p>
+              <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 items-start">
+                {/* Column 1 — Signals */}
+                <div className="rounded-xl border-2 border-[#86EFAC]/90 bg-gradient-to-b from-[#F0FDF4] to-white p-4 shadow-sm flex flex-col min-h-[200px]">
+                  <div className="flex items-center gap-2 mb-4 pb-3 border-b border-[#BBF7D0]">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#059669] text-white text-[14px] font-bold shrink-0">
+                      ✓
+                    </span>
+                    <div>
+                      <h3 className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#047857]">Signals</h3>
+                      <p className="text-[12px] text-[#475569] mt-0.5 leading-snug">What “good” looks like</p>
+                    </div>
+                  </div>
+                  <div className="space-y-2 flex-1">
+                    {subsection.signals.length === 0 ? (
+                      <p className="text-[13px] text-[#475569] italic">No signal items for this subsection.</p>
+                    ) : (
+                      subsection.signals.map((t, i) => <SignalCard key={i} text={t} i={i} />)
+                    )}
+                  </div>
                 </div>
-              </div>
-              <div className="grid gap-3 sm:grid-cols-1 lg:grid-cols-2">
-                {subsection.signals.map((t, i) => (
-                  <SignalCard key={i} text={t} i={i} />
-                ))}
-              </div>
-            </section>
-          )}
 
-          {!isHolistic && subsection.logicChecks.length > 0 && (
-            <section>
-              <div className="flex items-center gap-3 mb-5">
-                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#6366F1] text-white text-[16px] font-bold">
-                  →
-                </span>
-                <div>
-                  <h3 className="text-[12px] font-bold uppercase tracking-[0.2em] text-[#4F46E5]">If / then logic checks</h3>
-                  <p className="text-[13px] text-[#64748B] mt-0.5">Decision gates — what must follow when a condition appears in the submission.</p>
+                {/* Column 2 — Logic checks */}
+                <div className="rounded-xl border-2 border-[#A5B4FC]/90 bg-gradient-to-b from-[#EEF2FF] to-white p-4 shadow-sm flex flex-col min-h-[200px]">
+                  <div className="flex items-center gap-2 mb-4 pb-3 border-b border-[#C7D2FE]">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#4F46E5] text-white text-[15px] font-bold shrink-0">
+                      →
+                    </span>
+                    <div>
+                      <h3 className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#4338CA]">Logic checks</h3>
+                      <p className="text-[12px] text-[#475569] mt-0.5 leading-snug">If / then gates</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3 flex-1">
+                    {subsection.logicChecks.length === 0 ? (
+                      <p className="text-[13px] text-[#475569] italic">No logic checks for this subsection.</p>
+                    ) : (
+                      subsection.logicChecks.map((item, i) => <CompactLogicCheck key={i} item={item} />)
+                    )}
+                  </div>
                 </div>
-              </div>
-              <div className="space-y-4">
-                {subsection.logicChecks.map((item, i) => (
-                  <LogicGate key={i} item={item} index={i} />
-                ))}
-              </div>
-            </section>
-          )}
 
-          {!isHolistic && subsection.redFlags.length > 0 && (
-            <section>
-              <div className="flex items-center gap-3 mb-5">
-                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#DC2626] text-white text-[18px] font-bold leading-none">
-                  ⚠
-                </span>
-                <div>
-                  <h3 className="text-[12px] font-bold uppercase tracking-[0.2em] text-[#DC2626]">Red flags</h3>
-                  <p className="text-[13px] text-[#64748B] mt-0.5">Warning patterns that suggest boilerplate, gaps, or weak engagement.</p>
+                {/* Column 3 — Red flags */}
+                <div className="rounded-xl border-2 border-[#FCA5A5]/90 bg-gradient-to-b from-[#FEF2F2] to-white p-4 shadow-sm flex flex-col min-h-[200px]">
+                  <div className="flex items-center gap-2 mb-4 pb-3 border-b border-[#FECACA]">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#DC2626] text-white text-[16px] font-bold leading-none shrink-0">
+                      ⚠
+                    </span>
+                    <div>
+                      <h3 className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#B91C1C]">Red flags</h3>
+                      <p className="text-[12px] text-[#475569] mt-0.5 leading-snug">Gaps &amp; boilerplate risk</p>
+                    </div>
+                  </div>
+                  <div className="space-y-2 flex-1">
+                    {subsection.redFlags.length === 0 ? (
+                      <p className="text-[13px] text-[#475569] italic">No red-flag items listed.</p>
+                    ) : (
+                      subsection.redFlags.map((t, i) => <RedFlagCard key={i} text={t} />)
+                    )}
+                  </div>
                 </div>
-              </div>
-              <div className="grid gap-3 sm:grid-cols-1 lg:grid-cols-2">
-                {subsection.redFlags.map((t, i) => (
-                  <RedFlagCard key={i} text={t} />
-                ))}
               </div>
             </section>
           )}
@@ -431,15 +416,8 @@ export function IdealRfpSubmissionClient() {
         </div>
       </article>
 
-      <p className="text-center text-[12px] text-[#94A3B8] max-w-2xl mx-auto leading-relaxed">
-        Internal evaluator lens — not a scoring rubric. Content is generated from{" "}
-        {DATA.sourceDocx ? (
-          <span className="font-mono text-[11px] text-[#64748B]">{DATA.sourceDocx.replace(/\\/g, "/")}</span>
-        ) : (
-          "the Folder&nbsp;7 submission checklist"
-        )}
-        . Rebuild with{" "}
-        <code className="text-[11px] bg-[#F1F5F9] px-1 rounded">npm run ideal-rfp</code>.
+      <p className="text-center text-[12px] text-[#475569] max-w-2xl mx-auto leading-relaxed">
+        Internal evaluator lens — not a scoring rubric. Content reflects the program submission-quality checklist; ask your dashboard owner if an update is needed.
       </p>
     </div>
   );

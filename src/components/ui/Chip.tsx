@@ -51,7 +51,7 @@ export function FilterChip({
       <button
         type="button"
         className={`rounded-full px-3 py-1.5 text-[13px] font-medium transition-fast ${
-          selected ? "bg-[#0F172A] text-white" : "bg-[#F1F5F9] text-[#64748B] hover:text-[#0F172A]"
+          selected ? "bg-[#0F172A] text-white" : "bg-[#F1F5F9] text-[#475569] hover:text-[#0F172A]"
         } ${className}`}
         {...props}
       >
@@ -77,7 +77,7 @@ export function FilterChip({
     <button
       type="button"
       className={`rounded-chip border px-4 py-2 text-caption font-medium transition-all duration-200 ease-out ${
-        selected ? "font-semibold shadow-sm" : "bg-white text-[#64748B] border-[#E2E8F0] hover:text-[#0F172A] hover:border-[#CBD5E1]"
+        selected ? "font-semibold shadow-sm" : "bg-white text-[#475569] border-[#E2E8F0] hover:text-[#0F172A] hover:border-[#CBD5E1]"
       } ${className}`}
       style={
         solidSelected ??

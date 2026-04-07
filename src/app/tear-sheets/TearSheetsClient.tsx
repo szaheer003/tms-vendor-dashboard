@@ -89,11 +89,11 @@ function waveCount(v: VendorRecord): string {
 function GovernanceDetailList({ v }: { v: VendorRecord }) {
   const items = governanceItemsForVendor(v);
   if (!items?.length) {
-    return <p className="text-caption text-[#94A3B8]">No line-item breakdown available.</p>;
+    return <p className="text-caption text-[#475569]">No line-item breakdown available.</p>;
   }
   const icon = (s: string) => (s === "commit" ? "✓" : s === "partial" ? "◐" : "✗");
   return (
-    <ul className="space-y-2 text-caption text-[#64748B]">
+    <ul className="space-y-2 text-caption text-[#475569]">
       {items.map((it) => (
         <li key={it.label.slice(0, 120)} className="flex gap-2">
           <span className="w-5 shrink-0 font-mono">{icon(it.status)}</span>
@@ -109,7 +109,7 @@ function RateCardMini({ v }: { v: VendorRecord }) {
     <div className="max-h-64 overflow-y-auto text-micro">
       <table className="w-full text-left">
         <thead>
-          <tr className="text-[#94A3B8]">
+          <tr className="text-[#475569]">
             <th className="py-1 pr-2 font-medium">Tier</th>
             <th className="py-1 font-medium">On</th>
             <th className="py-1 font-medium">Off</th>
@@ -148,8 +148,10 @@ function MemoBody({
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
       <div className="lg:col-span-8 max-w-[760px] space-y-10">
         <header className="border-b border-[#F1F5F9] pb-6">
-          <h2 className="text-h2 text-[#0F172A] tracking-tight">{v.displayName}</h2>
-          <p className="text-micro text-[#94A3B8] mt-2">TMS RFP Intelligence Center — vendor memo</p>
+          <h2 className="text-[24px] font-bold tracking-tight" style={{ color: v.color }}>
+            {v.displayName}
+          </h2>
+          <p className="text-micro text-[#475569] mt-2">TMS RFP Intelligence Center — vendor memo</p>
         </header>
 
         <div className="flex flex-col gap-6 rounded-lg bg-[#F8FAFC] p-6 sm:flex-row sm:items-start sm:justify-between">
@@ -158,7 +160,7 @@ function MemoBody({
             <ProvenanceTrigger meta={tcvProv} vendorId={v.id}>
               <span className="text-h1 tabular-nums text-[#0F172A] block leading-none">${pv.tcvM.toFixed(2)}M</span>
             </ProvenanceTrigger>
-            <p className="text-micro mt-2 text-[#94A3B8]">5-yr operating TCV</p>
+            <p className="text-micro mt-2 text-[#475569]">5-yr operating TCV</p>
           </div>
         </div>
 
@@ -171,7 +173,7 @@ function MemoBody({
 
       <aside className="lg:col-span-4 space-y-0 divide-y divide-[#F1F5F9] lg:sticky lg:top-24 lg:self-start">
         <div className="pb-6">
-          <p className="text-[11px] font-medium uppercase tracking-[0.06em] text-[#94A3B8]">Quick stats</p>
+          <p className="text-[11px] font-medium uppercase tracking-[0.06em] text-[#475569]">Quick stats</p>
           <dl className="mt-4 space-y-0">
             <QuickRow
               label="TCV"
@@ -218,21 +220,21 @@ function MemoBody({
                 label="COLA assumptions (workbook summary)"
                 value={colaLine(v)}
                 detail={
-                  <dl className="space-y-2 text-caption text-[#64748B]">
+                  <dl className="space-y-2 text-caption text-[#475569]">
                     {v.colaAssumptions ? (
                       <>
                         <div>
-                          <dt className="text-micro text-[#94A3B8]">US</dt>
+                          <dt className="text-micro text-[#475569]">US</dt>
                           <dd>{v.colaAssumptions.us || "—"}</dd>
                         </div>
                         <div>
-                          <dt className="text-micro text-[#94A3B8]">UK / NL / DE</dt>
+                          <dt className="text-micro text-[#475569]">UK / NL / DE</dt>
                           <dd>
                             {v.colaAssumptions.uk || "—"} · {v.colaAssumptions.nl || "—"} · {v.colaAssumptions.de || "—"}
                           </dd>
                         </div>
                         <div>
-                          <dt className="text-micro text-[#94A3B8]">Treatment</dt>
+                          <dt className="text-micro text-[#475569]">Treatment</dt>
                           <dd>{v.colaAssumptions.treatment || v.colaAssumptions.summary || "—"}</dd>
                         </div>
                       </>
@@ -259,16 +261,16 @@ function MemoBody({
         </div>
 
         <div className="py-6">
-          <p className="text-[11px] font-medium uppercase tracking-[0.08em] text-[#94A3B8]">Position vs field average</p>
+          <p className="text-[11px] font-medium uppercase tracking-[0.08em] text-[#475569]">Position vs field average</p>
           <div className="mx-auto mt-4 h-[280px] w-full max-w-[280px]">
             <VendorPillarRadar portfolio={portfolio} vendorId={v.id} color={v.color} />
           </div>
         </div>
 
         <div className="py-6">
-          <p className="text-[11px] font-medium uppercase tracking-[0.08em] text-[#94A3B8]">Data completeness</p>
+          <p className="text-[11px] font-medium uppercase tracking-[0.08em] text-[#475569]">Data completeness</p>
           <p className="mt-2 text-[20px] font-medium tabular-nums text-[#0F172A]">{completenessPct(v.id, portfolio)}%</p>
-          <p className="mt-2 text-micro text-[#94A3B8] leading-relaxed">
+          <p className="mt-2 text-micro text-[#475569] leading-relaxed">
             Scorecard cells pend Workshop 1 — 0% until evaluator scores are entered (target {EVALUATOR_SCORES_TARGET_LINE}).
           </p>
           <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-[#F1F5F9]">
@@ -281,7 +283,7 @@ function MemoBody({
 
         {v.flags.length > 0 && (
           <div className="border-t border-[#F1F5F9] py-6 text-caption text-[#92400E] space-y-2">
-            <p className="text-micro font-medium uppercase tracking-[0.08em] text-[#94A3B8]">Extraction flags</p>
+            <p className="text-micro font-medium uppercase tracking-[0.08em] text-[#475569]">Extraction flags</p>
             {v.flags.map((f) => (
               <p key={f}>{f}</p>
             ))}
@@ -329,7 +331,7 @@ export function TearSheetsClient({
       <div className="flex flex-wrap items-start justify-between gap-4 print-hide">
         <div>
           <h1 className="text-h1 text-[#0F172A]">Tear sheets</h1>
-          <p className="text-body text-[#64748B] mt-2 max-w-3xl">
+          <p className="text-body text-[#475569] mt-2 max-w-3xl">
             Structured synthesis for board-ready review. Numeric TCV and timing trace to workbook extraction; narrative is
             analyst-authored. Select a vendor to view the memo.
           </p>
@@ -346,8 +348,8 @@ export function TearSheetsClient({
                 key={v.id}
                 type="button"
                 onClick={() => setActiveId(v.id)}
-                className={`border-b-2 pb-3 text-body transition-colors duration-[120ms] -mb-px ${
-                  on ? "font-medium border-current" : "border-transparent text-[#94A3B8]"
+                className={`border-b-2 pb-3 text-[14px] transition-colors duration-[120ms] -mb-px ${
+                  on ? "font-semibold border-current" : "border-transparent text-[#475569] font-medium"
                 }`}
                 style={on ? { color: v.color } : undefined}
               >
@@ -386,8 +388,8 @@ export function TearSheetsClient({
 function QuickRow({ label, value }: { label: string; value: ReactNode }) {
   return (
     <div className="py-4 first:pt-0">
-      <dt className="text-[11px] text-[#94A3B8]">{label}</dt>
-      <dd className="mt-1 text-[20px] font-medium tabular-nums text-[#0F172A]">{value}</dd>
+      <dt className="text-[11px] text-[#475569]">{label}</dt>
+      <dd className="mt-1 text-[20px] font-semibold tabular-nums text-[#0F172A]">{value}</dd>
     </div>
   );
 }
@@ -395,12 +397,12 @@ function QuickRow({ label, value }: { label: string; value: ReactNode }) {
 function SectionBullets({ title, items }: { title: string; items: string[] }) {
   return (
     <section>
-      <h3 className="text-[11px] font-medium uppercase tracking-[0.06em] text-[#94A3B8]">{title}</h3>
+      <h3 className="text-[13px] font-medium uppercase tracking-wide text-[#475569]">{title}</h3>
       <ul className="mt-4 list-none space-y-4 pl-0">
         {items.map((x) => (
-          <li key={x} className="border-l-2 border-[#F1F5F9] pl-4 text-body-lg tracking-[-0.01em] text-[#0F172A]">
+          <li key={x} className="border-l-2 border-[#F1F5F9] pl-4 text-[14px] leading-relaxed text-[#1a1a1a]">
             {x}
-            <span className="mt-2 block text-micro text-[#94A3B8]">
+            <span className="mt-2 block text-micro text-[#475569]">
               Source: analyst memo · cross-check Commercial &amp; Drill-Down
             </span>
           </li>
@@ -413,8 +415,8 @@ function SectionBullets({ title, items }: { title: string; items: string[] }) {
 function SectionNumbered({ title, items }: { title: string; items: string[] }) {
   return (
     <section>
-      <h3 className="text-[11px] font-medium uppercase tracking-[0.06em] text-[#94A3B8]">{title}</h3>
-      <ol className="mt-4 list-decimal space-y-4 pl-5 text-body-lg tracking-[-0.01em] text-[#0F172A] marker:text-[#94A3B8]">
+      <h3 className="text-[13px] font-medium uppercase tracking-wide text-[#475569]">{title}</h3>
+      <ol className="mt-4 list-decimal space-y-4 pl-5 text-[14px] leading-relaxed text-[#1a1a1a] marker:text-[#475569]">
         {items.map((x) => (
           <li key={x} className="pl-1">
             {x}

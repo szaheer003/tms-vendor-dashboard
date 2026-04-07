@@ -1,7 +1,7 @@
 {
-  "importedAt": "2026-04-03T21:47:06.554879+00:00",
+  "importedAt": "2026-04-07T02:11:37.530312+00:00",
   "source": "Folder 8 \u2014 Workshop 1 evaluator Google Form exports (xlsx)",
-  "evaluatorSlotCount": 12,
+  "evaluatorSlotCount": 14,
   "vendorsPresent": [
     "cognizant",
     "genpact",
@@ -215,6 +215,40 @@
         "1.1": 3.0,
         "1.2": 3.0,
         "1.3": 3.0
+      },
+      "ev13": {
+        "5.1": 7.0,
+        "5.2": 7.0,
+        "5.3": 7.0,
+        "2.1": 7.0,
+        "2.2": 7.0,
+        "2.3": 7.0,
+        "3.1": 7.0,
+        "3.2": 7.0,
+        "3.3": 7.0,
+        "4.1": 7.0,
+        "4.2": 7.0,
+        "4.3": 7.0,
+        "1.1": 7.0,
+        "1.2": 7.0,
+        "1.3": 7.0
+      },
+      "ev14": {
+        "5.1": 7.0,
+        "5.2": 7.0,
+        "5.3": 7.0,
+        "2.1": 7.0,
+        "2.2": 7.0,
+        "2.3": 7.0,
+        "3.1": 3.0,
+        "3.2": 3.0,
+        "3.3": 3.0,
+        "4.1": 3.0,
+        "4.2": 3.0,
+        "4.3": 3.0,
+        "1.1": 3.0,
+        "1.2": 3.0,
+        "1.3": 3.0
       }
     },
     "genpact": {
@@ -372,40 +406,74 @@
         "1.3": 1.0
       },
       "ev10": {
-        "5.1": null,
-        "5.2": null,
-        "5.3": null,
-        "2.1": null,
-        "2.2": null,
-        "2.3": null,
-        "3.1": null,
-        "3.2": null,
-        "3.3": null,
-        "4.1": null,
-        "4.2": null,
-        "4.3": null,
-        "1.1": null,
-        "1.2": null,
-        "1.3": null
+        "5.1": 7.0,
+        "5.2": 7.0,
+        "5.3": 3.0,
+        "2.1": 3.0,
+        "2.2": 3.0,
+        "2.3": 3.0,
+        "3.1": 3.0,
+        "3.2": 1.0,
+        "3.3": 3.0,
+        "4.1": 3.0,
+        "4.2": 3.0,
+        "4.3": 3.0,
+        "1.1": 7.0,
+        "1.2": 3.0,
+        "1.3": 3.0
       },
       "ev11": {
-        "5.1": null,
-        "5.2": null,
-        "5.3": null,
-        "2.1": null,
-        "2.2": null,
-        "2.3": null,
-        "3.1": null,
-        "3.2": null,
-        "3.3": null,
-        "4.1": null,
-        "4.2": null,
-        "4.3": null,
-        "1.1": null,
-        "1.2": null,
-        "1.3": null
+        "5.1": 3.0,
+        "5.2": 3.0,
+        "5.3": 3.0,
+        "2.1": 3.0,
+        "2.2": 3.0,
+        "2.3": 3.0,
+        "3.1": 3.0,
+        "3.2": 3.0,
+        "3.3": 3.0,
+        "4.1": 3.0,
+        "4.2": 3.0,
+        "4.3": 3.0,
+        "1.1": 3.0,
+        "1.2": 3.0,
+        "1.3": 3.0
       },
       "ev12": {
+        "5.1": 3.0,
+        "5.2": 3.0,
+        "5.3": 3.0,
+        "2.1": 3.0,
+        "2.2": 1.0,
+        "2.3": 1.0,
+        "3.1": 3.0,
+        "3.2": 3.0,
+        "3.3": 3.0,
+        "4.1": 3.0,
+        "4.2": 3.0,
+        "4.3": 3.0,
+        "1.1": 3.0,
+        "1.2": 3.0,
+        "1.3": 3.0
+      },
+      "ev13": {
+        "5.1": 7.0,
+        "5.2": 7.0,
+        "5.3": 7.0,
+        "2.1": 3.0,
+        "2.2": 3.0,
+        "2.3": 3.0,
+        "3.1": 7.0,
+        "3.2": 3.0,
+        "3.3": 1.0,
+        "4.1": 3.0,
+        "4.2": 3.0,
+        "4.3": 3.0,
+        "1.1": 3.0,
+        "1.2": 3.0,
+        "1.3": 3.0
+      },
+      "ev14": {
         "5.1": null,
         "5.2": null,
         "5.3": null,
@@ -612,21 +680,55 @@
         "1.3": 7.0
       },
       "ev12": {
-        "5.1": null,
-        "5.2": null,
-        "5.3": null,
-        "2.1": null,
-        "2.2": null,
-        "2.3": null,
-        "3.1": null,
-        "3.2": null,
-        "3.3": null,
-        "4.1": null,
-        "4.2": null,
-        "4.3": null,
-        "1.1": null,
-        "1.2": null,
-        "1.3": null
+        "5.1": 7.0,
+        "5.2": 3.0,
+        "5.3": 3.0,
+        "2.1": 3.0,
+        "2.2": 3.0,
+        "2.3": 3.0,
+        "3.1": 3.0,
+        "3.2": 3.0,
+        "3.3": 3.0,
+        "4.1": 3.0,
+        "4.2": 3.0,
+        "4.3": 7.0,
+        "1.1": 3.0,
+        "1.2": 3.0,
+        "1.3": 3.0
+      },
+      "ev13": {
+        "5.1": 7.0,
+        "5.2": 7.0,
+        "5.3": 7.0,
+        "2.1": 7.0,
+        "2.2": 7.0,
+        "2.3": 7.0,
+        "3.1": 7.0,
+        "3.2": 7.0,
+        "3.3": 7.0,
+        "4.1": 7.0,
+        "4.2": 7.0,
+        "4.3": 7.0,
+        "1.1": 7.0,
+        "1.2": 7.0,
+        "1.3": 7.0
+      },
+      "ev14": {
+        "5.1": 7.0,
+        "5.2": 7.0,
+        "5.3": 7.0,
+        "2.1": 7.0,
+        "2.2": 7.0,
+        "2.3": 7.0,
+        "3.1": 7.0,
+        "3.2": 7.0,
+        "3.3": 7.0,
+        "4.1": 7.0,
+        "4.2": 7.0,
+        "4.3": 7.0,
+        "1.1": 7.0,
+        "1.2": 7.0,
+        "1.3": 7.0
       }
     },
     "sutherland": {
@@ -801,38 +903,72 @@
         "1.3": 3.0
       },
       "ev11": {
-        "5.1": null,
-        "5.2": null,
-        "5.3": null,
-        "2.1": null,
-        "2.2": null,
-        "2.3": null,
-        "3.1": null,
-        "3.2": null,
-        "3.3": null,
-        "4.1": null,
-        "4.2": null,
-        "4.3": null,
-        "1.1": null,
-        "1.2": null,
-        "1.3": null
+        "5.1": 3.0,
+        "5.2": 3.0,
+        "5.3": 3.0,
+        "2.1": 3.0,
+        "2.2": 3.0,
+        "2.3": 3.0,
+        "3.1": 3.0,
+        "3.2": 3.0,
+        "3.3": 3.0,
+        "4.1": 3.0,
+        "4.2": 3.0,
+        "4.3": 3.0,
+        "1.1": 3.0,
+        "1.2": 3.0,
+        "1.3": 3.0
       },
       "ev12": {
-        "5.1": null,
-        "5.2": null,
-        "5.3": null,
-        "2.1": null,
-        "2.2": null,
-        "2.3": null,
-        "3.1": null,
-        "3.2": null,
-        "3.3": null,
-        "4.1": null,
-        "4.2": null,
-        "4.3": null,
-        "1.1": null,
-        "1.2": null,
-        "1.3": null
+        "5.1": 3.0,
+        "5.2": 7.0,
+        "5.3": 3.0,
+        "2.1": 3.0,
+        "2.2": 3.0,
+        "2.3": 3.0,
+        "3.1": 3.0,
+        "3.2": 3.0,
+        "3.3": 3.0,
+        "4.1": 7.0,
+        "4.2": 3.0,
+        "4.3": 3.0,
+        "1.1": 3.0,
+        "1.2": 3.0,
+        "1.3": 3.0
+      },
+      "ev13": {
+        "5.1": 3.0,
+        "5.2": 3.0,
+        "5.3": 3.0,
+        "2.1": 7.0,
+        "2.2": 3.0,
+        "2.3": 3.0,
+        "3.1": 3.0,
+        "3.2": 1.0,
+        "3.3": 3.0,
+        "4.1": 3.0,
+        "4.2": 3.0,
+        "4.3": 3.0,
+        "1.1": 3.0,
+        "1.2": 3.0,
+        "1.3": 3.0
+      },
+      "ev14": {
+        "5.1": 3.0,
+        "5.2": 3.0,
+        "5.3": 3.0,
+        "2.1": 3.0,
+        "2.2": 3.0,
+        "2.3": 3.0,
+        "3.1": 3.0,
+        "3.2": 3.0,
+        "3.3": 3.0,
+        "4.1": 3.0,
+        "4.2": 3.0,
+        "4.3": 3.0,
+        "1.1": 3.0,
+        "1.2": 3.0,
+        "1.3": 3.0
       }
     },
     "ubiquity": {
@@ -1007,38 +1143,72 @@
         "1.3": 1.0
       },
       "ev11": {
-        "5.1": null,
-        "5.2": null,
-        "5.3": null,
-        "2.1": null,
-        "2.2": null,
-        "2.3": null,
-        "3.1": null,
-        "3.2": null,
-        "3.3": null,
-        "4.1": null,
-        "4.2": null,
-        "4.3": null,
-        "1.1": null,
-        "1.2": null,
-        "1.3": null
+        "5.1": 3.0,
+        "5.2": 3.0,
+        "5.3": 3.0,
+        "2.1": 3.0,
+        "2.2": 3.0,
+        "2.3": 3.0,
+        "3.1": 3.0,
+        "3.2": 3.0,
+        "3.3": 3.0,
+        "4.1": 3.0,
+        "4.2": 3.0,
+        "4.3": 3.0,
+        "1.1": 3.0,
+        "1.2": 3.0,
+        "1.3": 3.0
       },
       "ev12": {
-        "5.1": null,
-        "5.2": null,
-        "5.3": null,
-        "2.1": null,
-        "2.2": null,
-        "2.3": null,
-        "3.1": null,
-        "3.2": null,
-        "3.3": null,
-        "4.1": null,
-        "4.2": null,
-        "4.3": null,
-        "1.1": null,
-        "1.2": null,
-        "1.3": null
+        "5.1": 3.0,
+        "5.2": 1.0,
+        "5.3": 3.0,
+        "2.1": 3.0,
+        "2.2": 3.0,
+        "2.3": 3.0,
+        "3.1": 3.0,
+        "3.2": 3.0,
+        "3.3": 7.0,
+        "4.1": 3.0,
+        "4.2": 3.0,
+        "4.3": 3.0,
+        "1.1": 3.0,
+        "1.2": 3.0,
+        "1.3": 3.0
+      },
+      "ev13": {
+        "5.1": 1.0,
+        "5.2": 1.0,
+        "5.3": 1.0,
+        "2.1": 1.0,
+        "2.2": 1.0,
+        "2.3": 1.0,
+        "3.1": 1.0,
+        "3.2": 1.0,
+        "3.3": 1.0,
+        "4.1": 1.0,
+        "4.2": 1.0,
+        "4.3": 1.0,
+        "1.1": 1.0,
+        "1.2": 1.0,
+        "1.3": 1.0
+      },
+      "ev14": {
+        "5.1": 1.0,
+        "5.2": 1.0,
+        "5.3": 1.0,
+        "2.1": 1.0,
+        "2.2": 1.0,
+        "2.3": 1.0,
+        "3.1": 1.0,
+        "3.2": 1.0,
+        "3.3": 1.0,
+        "4.1": 1.0,
+        "4.2": 1.0,
+        "4.3": 1.0,
+        "1.1": 1.0,
+        "1.2": 1.0,
+        "1.3": 1.0
       }
     },
     "ibm": {
@@ -1162,57 +1332,74 @@
         "1.3": 7.0
       },
       "ev8": {
-        "5.1": null,
-        "5.2": null,
-        "5.3": null,
-        "2.1": null,
-        "2.2": null,
-        "2.3": null,
-        "3.1": null,
-        "3.2": null,
-        "3.3": null,
-        "4.1": null,
-        "4.2": null,
-        "4.3": null,
-        "1.1": null,
-        "1.2": null,
-        "1.3": null
+        "5.1": 3.0,
+        "5.2": 3.0,
+        "5.3": 3.0,
+        "2.1": 3.0,
+        "2.2": 3.0,
+        "2.3": 3.0,
+        "3.1": 3.0,
+        "3.2": 3.0,
+        "3.3": 3.0,
+        "4.1": 3.0,
+        "4.2": 3.0,
+        "4.3": 3.0,
+        "1.1": 3.0,
+        "1.2": 3.0,
+        "1.3": 3.0
       },
       "ev9": {
-        "5.1": null,
-        "5.2": null,
-        "5.3": null,
-        "2.1": null,
-        "2.2": null,
-        "2.3": null,
-        "3.1": null,
-        "3.2": null,
-        "3.3": null,
-        "4.1": null,
-        "4.2": null,
-        "4.3": null,
-        "1.1": null,
-        "1.2": null,
-        "1.3": null
+        "5.1": 3.0,
+        "5.2": 1.0,
+        "5.3": 3.0,
+        "2.1": 3.0,
+        "2.2": 3.0,
+        "2.3": 3.0,
+        "3.1": 7.0,
+        "3.2": 1.0,
+        "3.3": 7.0,
+        "4.1": 1.0,
+        "4.2": 3.0,
+        "4.3": 1.0,
+        "1.1": 3.0,
+        "1.2": 3.0,
+        "1.3": 3.0
       },
       "ev10": {
-        "5.1": null,
-        "5.2": null,
-        "5.3": null,
-        "2.1": null,
-        "2.2": null,
-        "2.3": null,
-        "3.1": null,
-        "3.2": null,
-        "3.3": null,
-        "4.1": null,
-        "4.2": null,
-        "4.3": null,
-        "1.1": null,
-        "1.2": null,
-        "1.3": null
+        "5.1": 3.0,
+        "5.2": 3.0,
+        "5.3": 3.0,
+        "2.1": 3.0,
+        "2.2": 3.0,
+        "2.3": 3.0,
+        "3.1": 3.0,
+        "3.2": 3.0,
+        "3.3": 3.0,
+        "4.1": 3.0,
+        "4.2": 3.0,
+        "4.3": 3.0,
+        "1.1": 3.0,
+        "1.2": 3.0,
+        "1.3": 3.0
       },
       "ev11": {
+        "5.1": 3.0,
+        "5.2": 3.0,
+        "5.3": 3.0,
+        "2.1": 1.0,
+        "2.2": 1.0,
+        "2.3": 1.0,
+        "3.1": 7.0,
+        "3.2": 7.0,
+        "3.3": 7.0,
+        "4.1": 1.0,
+        "4.2": 1.0,
+        "4.3": 1.0,
+        "1.1": 3.0,
+        "1.2": 3.0,
+        "1.3": 3.0
+      },
+      "ev12": {
         "5.1": null,
         "5.2": null,
         "5.3": null,
@@ -1229,7 +1416,24 @@
         "1.2": null,
         "1.3": null
       },
-      "ev12": {
+      "ev13": {
+        "5.1": null,
+        "5.2": null,
+        "5.3": null,
+        "2.1": null,
+        "2.2": null,
+        "2.3": null,
+        "3.1": null,
+        "3.2": null,
+        "3.3": null,
+        "4.1": null,
+        "4.2": null,
+        "4.3": null,
+        "1.1": null,
+        "1.2": null,
+        "1.3": null
+      },
+      "ev14": {
         "5.1": null,
         "5.2": null,
         "5.3": null,
@@ -1333,6 +1537,20 @@
         "Q5": "Offshore",
         "Q6": "Change management timelines and processes",
         "Q7": "N/A"
+      },
+      "ev13": {
+        "Q3": "N/A",
+        "Q4": "Understanding of current WFH model.  Vendor seemed surprised to hear the actual percentage for TMS WFH servicing.\n\nHard for some workshop participants to make full assessments with no access to RFP and vendor responses.",
+        "Q5": "More detailed discussions required to call out risks for certainty.",
+        "Q6": "Need confirmation/clarity if vendor requires licensing for their tools/applications.  Margin concerns if so.\nRebadging proposal needs more discussion, concerns arose during review.",
+        "Q7": "Understanding our current technical landscape and appreciation for the level of complexity in our Client servicing requirements."
+      },
+      "ev14": {
+        "Q3": "Clean, polished, and easy to follow. The proposal was well\u2011structured and executive\u2011friendly, with a coherent narrative across operations, migration, and technology. Some areas would benefit from deeper refinement and sharper differentiation.",
+        "Q4": "Migration - Execution governance and transition controls would need to be proven in greater detail, particularly around how risk is actively managed during parallel migration and transformation across regions.",
+        "Q5": "Elements of the proposal rely on assumed maturity rather than clearly demonstrated controls.",
+        "Q6": "- How delivery discipline is enforced during the most complex migration waves\n- How service stability is protected during concurrent workforce and client transitions\n- Where the model is most fragile and how those risks are mitigated in practice",
+        "Q7": "Assurance on migration planning and risk mitigation"
       }
     },
     "genpact": {
@@ -1400,20 +1618,34 @@
         "Q7": "Nothing"
       },
       "ev10": {
-        "Q3": "",
-        "Q4": "",
-        "Q5": "",
-        "Q6": "",
-        "Q7": ""
+        "Q3": "Clear focus on business process operations, and automation with global delivery presence. Experience in rebadging/transition scenarios, and AI-led transformation.",
+        "Q4": "The savings (e.g., stated run-rate and net savings percentages) must be substantiated with clear baseline, scope assumptions, and a benefits measurement approach. We also need visibility into the required enabling investments into technology/tooling, and change management, and whether the savings are contractually committed or contingent on specific modernization activities.",
+        "Q5": "Potential risk is an incomplete understanding of the current-state legacy product landscape and the effort required to modernize or migrate clients to modern solutions. The proposal also appeared weighted towards IVR-led improvements; we need confirmation their approach covers end-end operations and how benefits will be achieved without creating new operational risk.",
+        "Q6": "Validate the technology/tooling investment and modernization approach. TMS uses several legacy GUI solutions for the fraud and disputes processing that supports TS1 and TS2 card processing; some are built with screen-scarping techniques. TSYS has modernized solutions for TS2 clients, but migration off the legacy GUIs is still pending, and modern solutions for TS1 clients remain limited. The vendor should propose, and a practical plan to 1) accelerate TS2 clients migration and 2) implement alternate solutions for TS1 clients to improve operational efficiency, including timeline, required investments, and shared responsibilities.\n\nGetting clarification on the end-to-end transformation to better understand what is included/excluded in their savings model, and what risks are assumed by Genpact vs retained with FIS/TSYS.",
+        "Q7": "All the vendors should provide transparent assumptions, breakdown of their investment in modernizing technology/tooling, transition cost and so on."
       },
       "ev11": {
-        "Q3": "",
-        "Q4": "",
-        "Q5": "",
-        "Q6": "",
-        "Q7": ""
+        "Q3": "Vocalized their understanding of the complex nature of our servicing.",
+        "Q4": "Additional off-shoring percentages and commercial assessment may want to be done. \n\nHard for some workshop participants to make assessments with no access to RFP and vendor responses.",
+        "Q5": "More detailed discussions required to properly call out risks for certainty. NICE and Pega were the only systems to be called out so consensus is they don't have a true picture of the servicing and current tech stacks.",
+        "Q6": "Need confirmation/clarification if vendor requires licensing for their tools/applications.  Margin concerns if so.",
+        "Q7": "Understanding our current technical landscape and appreciation for the level of complexity in our Client servicing requirements."
       },
       "ev12": {
+        "Q3": "Migration plan did acknowledge a client phased approach",
+        "Q4": "Client agreement.  Assumes 90% offshore",
+        "Q5": "client agreement",
+        "Q6": "N/A",
+        "Q7": "As with all the vendors, the proposal assumes the migration from TSYS legacy systems to FIS systems has occurred.  This migration timeline is not being considered."
+      },
+      "ev13": {
+        "Q3": "Strong domain familiarity and a confident transformation narrative, particularly around AI\u2011enabled operations. Demonstrated deep understanding of regulated financial services environments and scale.",
+        "Q4": "Transformation assumptions: particularly around productivity, offshoring, and AI enablement, they should be validated against client constraints, regulatory realities, and achievable timelines. Aswell as against existing performance and 'incumbency' experience.",
+        "Q5": "Over\u2011reliance on aggressive transformation and offshoring assumptions, with limited evidence of how client consent and regulatory barriers will be systematically resolved.",
+        "Q6": "- How client\u2011by\u2011client consent will be secured and sequenced\n- What happens if offshore or productivity assumptions do not materialise\n- How Year\u20111 cost pressure is practically absorbed",
+        "Q7": "Clear transformation ambition and willingness to commit commercially to outcomes"
+      },
+      "ev14": {
         "Q3": "",
         "Q4": "",
         "Q5": "",
@@ -1500,11 +1732,25 @@
         "Q7": "no"
       },
       "ev12": {
-        "Q3": "",
-        "Q4": "",
-        "Q5": "",
-        "Q6": "",
-        "Q7": ""
+        "Q3": "The proposal as a process-led operator with analytics and automation capabilities; the approach appears towards measurable operational outcomes (productivity, quality and control) rather than only a labor arbitrage.",
+        "Q4": "EXL must demonstrate a clear understanding of the current-state TMS operating model (including TS1/TS2 dependencies, and legacy tooling constraints) and translate that into a realistic transition and stabilization plan with defined assumptions and dependencies.\n\nThe business case must be supported by transparent baselines, a benefit measurement approach, and clear investment breakdown around technology/tooling, training and change management. Any productivity or savings targets should be tied to specific automation levers, governance cadence, and contractual commitments.",
+        "Q5": "The execution risk is primarily around transition realism and scope clarity-specifically, whether EXL's proposed automation/analytics approach can be operationalized in the TMS environment (legacy GUIs, constrained integration positions, and client/regulatory requirements) without disrupting service levels.",
+        "Q6": "Drill into their modernization and automation approach for fraud/disputes tooling (including how they would handle TS1 vs TS2 constraints and any screen-scarping dependencies), and ask for a benefits governance model (KPI definitions, how savings translate into commercial commitments).",
+        "Q7": "All vendors should provide list of assumptions made, and outcomes-based operating model tied to specific process and technology levers."
+      },
+      "ev13": {
+        "Q3": "Vendor acknowledged the uniqueness of our servicing, clients, and complexity & number of applications that are needed.",
+        "Q4": "Complete understanding of internal TMS to FIS system/tools/application migration timelines prior to onboarding. \n\nHard for some workshop participants to make full assessments when there access to the RFP and full responses were missing.",
+        "Q5": "Not understanding the technical effort needed to migrate current TMS applications to FIS applications.  EU footprint lacking. \nDetailed discussions required to call out risks for certainty.",
+        "Q6": "Need confirmation/clarification if vendor requires licensing for their applications/tools.  Margin concerns if so.",
+        "Q7": "Understanding our current technical landscape and appreciation for the level of complexity in our Client servicing requirements."
+      },
+      "ev14": {
+        "Q3": "Thoughtful, consultative positioning with a strong data\u2011 and analytics\u2011led lens. Willingness to challenge assumptions and propose alternative operating models.",
+        "Q4": "Greater clarity on EMEA execution, particularly UK",
+        "Q5": "Migration plan, particularly when considering UK/EMEA",
+        "Q6": "- How alternative models impact risk and delivery certainty\n- What is contractually committed vs. directional",
+        "Q7": "Clarity on EMEA/UK, optimal option/plan for migration"
       }
     },
     "sutherland": {
@@ -1579,18 +1825,32 @@
         "Q7": "Nothing"
       },
       "ev11": {
-        "Q3": "",
-        "Q4": "",
-        "Q5": "",
-        "Q6": "",
-        "Q7": ""
+        "Q3": "Their understanding of our business model and all the different functional servicing areas within TMS.",
+        "Q4": "Proper regulatory EU and FCA approvals.  More detailed discussions required all around. \n\nHard for some workshop participants to make assessments with no access to RFP and vendor responses.",
+        "Q5": "More detailed discussions required to call out risks for certainty.  Sounded as though there may be missing EU regulatory and FCA approvals.",
+        "Q6": "Need confirmation/clarification if vendor requires licensing for their tools/applications.  Margin concerns if so.\nMore detailed discussions required to properly call our risks.",
+        "Q7": "Understanding our current technical landscape and appreciation for the level of complexity in our Client servicing requirements."
       },
       "ev12": {
-        "Q3": "",
-        "Q4": "",
-        "Q5": "",
-        "Q6": "",
-        "Q7": ""
+        "Q3": "The transformation-led operating model anchored in their toolset, with specific productivity ranges by lever and an emphasis on improving both agent experience and compliance outcomes.",
+        "Q4": "The automation approach must be implementable in the TMS environment without creating operational risk or control risk, where integrations limitations are there due to the technology. It requires to have some modernization strategy.",
+        "Q5": "The primary risk is execution and controls risk: achieving the targeted productivity/deflection outcomes depends on successful deployment of new tooling and disciplined process governance.",
+        "Q6": "Sutherland to demonstrate a clear understanding of the current-state of TMS operating model, and translate that into a realistic transition and stabilization plan with defined assumptions, dependencies and outcomes. \n\nDrill into their modernization and automation approach for fraud/disputes tooling, including how they would handle TS1 vs TS2 constraints and any screen-scarping dependencies.",
+        "Q7": "All vendors must provide list of their assumptions, mitigation strategies when risk is identified, and describing or enabling their toolset in a way what is implementation-ready."
+      },
+      "ev13": {
+        "Q3": "Appear to grasp the complexity of what we do.",
+        "Q4": "Client agreement.  Appropriate EMEA compliance",
+        "Q5": "Client agreement to offshore",
+        "Q6": "N/A",
+        "Q7": "All vendors have assume migration from legacy TSYS to FIS systems has occurred.  The timeline for this to occur is not factored into any timelines."
+      },
+      "ev14": {
+        "Q3": "Emphasis on continuity, rebadging, and operational stability. Familiarity with similar environments and execution\u2011first mindset.",
+        "Q4": "Regulatory readiness and client\u2011consent dependencies must be fully resolved and transformation claims need firmer substantiation.",
+        "Q5": "Transformation execution risk not fully evidenced.",
+        "Q6": "- How transformation benefits are governed and enforced\n- Downside scenarios if assumptions fall short",
+        "Q7": "Clear prioritisation of continuity and workforce transition."
       }
     },
     "ubiquity": {
@@ -1665,18 +1925,32 @@
         "Q7": "Nothing"
       },
       "ev11": {
-        "Q3": "",
-        "Q4": "",
-        "Q5": "",
-        "Q6": "",
-        "Q7": ""
+        "Q3": "N/A",
+        "Q4": "Acknowledgement that TMS is more complex and will not be an \"standard\" fit.  Additional discussions would be required.  \n\nHard for some workshop participants to make assessments with no access to RFP and vendor responses.",
+        "Q5": "Were not fully prepared to discuss commercials.  All other presenters came with this info ready to address (even if only at high level).\nEU and FCA accreditations are lacking and are concerning.",
+        "Q6": "Need confirmation/clarification if vendor requires licensing for their tools/applications.  Margin concerns if so.",
+        "Q7": "No"
       },
       "ev12": {
-        "Q3": "",
-        "Q4": "",
-        "Q5": "",
-        "Q6": "",
-        "Q7": ""
+        "Q3": "Ubiquity's modernization strategy and the vision, and the industry knowledge. However, lacks on the details to better understand.",
+        "Q4": "The understanding of TMS technology/toolset, and modernization approach that is implementable in the TMS environment without introducing operational and controls risk, where integration opportunities are limited. \n\nThey should have good geographical presence and experience in managing regulatory requirements, which was not presented in the workshop at detail.",
+        "Q5": "The primary risk is execution and controls risk. Experience in EMEA, and supporting other/global languages where regulatory requirements unavoidable.",
+        "Q6": "The overlay model using unified desktop, AI-driven QA, and the workflow automation. Understanding their technology strategy in detail to bring the confidence in the strategy and approach in managing operational risk, due to the limitations of the current TMS platforms.",
+        "Q7": "All vendors to list their assumptions, mitigation strategies, and detailed execution proposal."
+      },
+      "ev13": {
+        "Q3": "Vendor does not appreciate the complexity of the work.  Vendor did not have commercials available.",
+        "Q4": "Client agreement",
+        "Q5": "client agreement",
+        "Q6": "N/A",
+        "Q7": "As with all vendors, proposal assumes migration from legacy TSYS systems to FIS systems has already occurred.  Timeline for that migration is not included in planning."
+      },
+      "ev14": {
+        "Q3": "Pragmatic, operator\u2011led approach with flexibility and transparency. Avoided over\u2011engineering",
+        "Q4": "Commercial clarity, transformation depth, and scalability would need to materially improve.",
+        "Q5": "Insufficiently quantified outcomes and limited transformation detail.",
+        "Q6": "- What are the committed savings and milestones?\n- How does the model scale across regions and volumes?",
+        "Q7": "Operational pragmatism and adaptability. More detail on each component e.g. Migration, Commercials, Technology etc."
       }
     },
     "ibm": {
@@ -1730,34 +2004,48 @@
         "Q7": "level of automation"
       },
       "ev8": {
-        "Q3": "",
-        "Q4": "",
-        "Q5": "",
-        "Q6": "",
-        "Q7": ""
+        "Q3": "N/A",
+        "Q4": "Hard for some workshop participants to make assessments with no access to RFP and vendor responses.",
+        "Q5": "AI seemed to be a primary focus.  TSYS Issuing is working with AI and actively developing for use within the centers.  Needed more contact center discussions.",
+        "Q6": "More detailed discussed required. AI seemed to be the main focus which TSYS Issuing is also developing.  \nTMS has lost/stolen voice bots developed, as well.",
+        "Q7": "No"
       },
       "ev9": {
-        "Q3": "",
-        "Q4": "",
-        "Q5": "",
-        "Q6": "",
-        "Q7": ""
+        "Q3": "Vendor offered a strong AI overlay.",
+        "Q4": "client agreement.",
+        "Q5": "Vendor is not a strong call center BPO.  Proposal was only focused on AI offering.  No plan for knowledge transfer.",
+        "Q6": "N/A",
+        "Q7": "As with all vendors, proposal assumes migration from TSYS legacy systems to FIS systems has already occurred.  Impact to timeline for that migration is not outlined."
       },
       "ev10": {
-        "Q3": "",
-        "Q4": "",
-        "Q5": "",
-        "Q6": "",
-        "Q7": ""
+        "Q3": "Technology driven transformation model, and conversational AI IVR that was demoed.",
+        "Q4": "IBM is large corporation, and invest in technology innovation but lacking behind in the market as solutions are not robust and advanced when comparing with competitors. \n\nThe transformation approach must be implementable in the TMS environment without creating operational and controls risk, where there are some integration limitations. It's important that they need to understand and come up with mitigation controls.",
+        "Q5": "The primary risk is operational risk; achieving the targeted outcomes on successful deployment of transformation tooling under disciplined process governance. \n\nThe execution risk is another risk, which is primarily transformation realism and scope clarity.",
+        "Q6": "Validation of the technology/tooling investment and transformation approach. TMS uses several legacy GUI solutions for the fraud and disputes processing that supports the TS1 and TS2 cards processing; some are built with screen-scraping techniques. IBM to share or present drill down plan and their investment strategy in migrating clients to existing modern solutions, and transforming and building modernized solutions where remain limited.",
+        "Q7": "All vendors to list out assumptions, detailed modernization strategy, and operational risk management strategies."
       },
       "ev11": {
+        "Q3": "Clear technology and AI differentiation supported by live demonstrations rather than conceptual slides.",
+        "Q4": "Operational delivery model, rebadging approach, and regulatory readiness would require significant rework.",
+        "Q5": "Misalignment with core RFP requirements, particularly workforce transition and regulated delivery. Scale unconvincing",
+        "Q6": "- How rebadging would work commercially and operationally\n- Scalability of AI beyond showcase",
+        "Q7": "Use of live demonstrations to evidence capability."
+      },
+      "ev12": {
         "Q3": "",
         "Q4": "",
         "Q5": "",
         "Q6": "",
         "Q7": ""
       },
-      "ev12": {
+      "ev13": {
+        "Q3": "",
+        "Q4": "",
+        "Q5": "",
+        "Q6": "",
+        "Q7": ""
+      },
+      "ev14": {
         "Q3": "",
         "Q4": "",
         "Q5": "",
@@ -1779,7 +2067,9 @@
       "ev9": "Somewhat confident",
       "ev10": "Very not confident",
       "ev11": "Very confident",
-      "ev12": "Somewhat confident"
+      "ev12": "Somewhat confident",
+      "ev13": "Somewhat confident",
+      "ev14": "Somewhat confident"
     },
     "genpact": {
       "ev1": "Somewhat confident",
@@ -1791,9 +2081,11 @@
       "ev7": "Somewhat confident",
       "ev8": "Somewhat confident",
       "ev9": "Very not confident",
-      "ev10": null,
-      "ev11": null,
-      "ev12": null
+      "ev10": "Somewhat confident",
+      "ev11": "Somewhat not confident",
+      "ev12": "Somewhat not confident",
+      "ev13": "Somewhat confident",
+      "ev14": null
     },
     "exl": {
       "ev1": "Somewhat confident",
@@ -1807,7 +2099,9 @@
       "ev9": "Very confident",
       "ev10": "Somewhat confident",
       "ev11": "Somewhat confident",
-      "ev12": null
+      "ev12": "Somewhat confident",
+      "ev13": "Somewhat confident",
+      "ev14": "Somewhat confident"
     },
     "sutherland": {
       "ev1": "Somewhat not confident",
@@ -1820,8 +2114,10 @@
       "ev8": "Somewhat confident",
       "ev9": "Somewhat confident",
       "ev10": "Somewhat not confident",
-      "ev11": null,
-      "ev12": null
+      "ev11": "Somewhat confident",
+      "ev12": "Somewhat confident",
+      "ev13": "Somewhat confident",
+      "ev14": "Somewhat not confident"
     },
     "ubiquity": {
       "ev1": "Somewhat not confident",
@@ -1834,8 +2130,10 @@
       "ev8": "Very not confident",
       "ev9": "Very confident",
       "ev10": "Somewhat confident",
-      "ev11": null,
-      "ev12": null
+      "ev11": "Somewhat not confident",
+      "ev12": "Somewhat not confident",
+      "ev13": "Very not confident",
+      "ev14": "Very not confident"
     },
     "ibm": {
       "ev1": "Somewhat confident",
@@ -1845,11 +2143,13 @@
       "ev5": "Very confident",
       "ev6": "Somewhat not confident",
       "ev7": "Very confident",
-      "ev8": null,
-      "ev9": null,
-      "ev10": null,
-      "ev11": null,
-      "ev12": null
+      "ev8": "Very not confident",
+      "ev9": "Somewhat not confident",
+      "ev10": "Somewhat confident",
+      "ev11": "Somewhat not confident",
+      "ev12": null,
+      "ev13": null,
+      "ev14": null
     }
   },
   "proceed": {
@@ -1865,7 +2165,9 @@
       "ev9": true,
       "ev10": false,
       "ev11": true,
-      "ev12": false
+      "ev12": false,
+      "ev13": true,
+      "ev14": true
     },
     "genpact": {
       "ev1": true,
@@ -1877,9 +2179,11 @@
       "ev7": true,
       "ev8": true,
       "ev9": false,
-      "ev10": null,
-      "ev11": null,
-      "ev12": null
+      "ev10": true,
+      "ev11": false,
+      "ev12": false,
+      "ev13": true,
+      "ev14": null
     },
     "exl": {
       "ev1": true,
@@ -1893,7 +2197,9 @@
       "ev9": true,
       "ev10": true,
       "ev11": true,
-      "ev12": null
+      "ev12": true,
+      "ev13": true,
+      "ev14": true
     },
     "sutherland": {
       "ev1": false,
@@ -1906,8 +2212,10 @@
       "ev8": true,
       "ev9": true,
       "ev10": false,
-      "ev11": null,
-      "ev12": null
+      "ev11": true,
+      "ev12": true,
+      "ev13": true,
+      "ev14": false
     },
     "ubiquity": {
       "ev1": false,
@@ -1920,8 +2228,10 @@
       "ev8": false,
       "ev9": true,
       "ev10": true,
-      "ev11": null,
-      "ev12": null
+      "ev11": false,
+      "ev12": true,
+      "ev13": false,
+      "ev14": false
     },
     "ibm": {
       "ev1": true,
@@ -1931,19 +2241,21 @@
       "ev5": true,
       "ev6": false,
       "ev7": true,
-      "ev8": null,
-      "ev9": null,
-      "ev10": null,
-      "ev11": null,
-      "ev12": null
+      "ev8": false,
+      "ev9": false,
+      "ev10": true,
+      "ev11": false,
+      "ev12": null,
+      "ev13": null,
+      "ev14": null
     }
   },
   "filesImported": {
-    "cognizant": "Vendor Scoring - Vendor 1_ Cognizant(1-12).xlsx",
-    "genpact": "Vendor Scoring - Vendor 2_ Genpact(1-9).xlsx",
-    "exl": "Vendor Scoring - Vendor 3_ EXL(1-11) (1).xlsx",
-    "sutherland": "Vendor Scoring - Vendor 4_ Sutherland(1-10).xlsx",
-    "ubiquity": "Vendor Scoring - Vendor 5_ Ubiquity(1-10).xlsx",
-    "ibm": "Vendor Scoring - Vendor 6_ IBM(1-7).xlsx"
+    "cognizant": "Vendor Scoring - Vendor 1_ Cognizant(1-14).xlsx",
+    "genpact": "Vendor Scoring - Vendor 2_ Genpact(1-13).xlsx",
+    "exl": "Vendor Scoring - Vendor 3_ EXL(1-14).xlsx",
+    "sutherland": "Vendor Scoring - Vendor 4_ Sutherland(1-14).xlsx",
+    "ubiquity": "Vendor Scoring - Vendor 5_ Ubiquity(1-14).xlsx",
+    "ibm": "Vendor Scoring - Vendor 6_ IBM(1-11).xlsx"
   }
 }

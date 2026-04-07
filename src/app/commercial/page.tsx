@@ -8,7 +8,6 @@ import {
   CumulativeSavingsChart,
   OneTimeCostsByCategoryChart,
   RateCardHeatmap,
-  TcvBarSorted,
 } from "@/components/CommercialCharts";
 import { InterpretationPanel } from "@/components/InterpretationPanel";
 import { PrintButton } from "@/components/PrintButton";
@@ -27,7 +26,7 @@ function fmtUsdM(n: number | null | undefined) {
 /** Normalize workbook rate cells: hourly $ with 2 decimals, or return note-style text. */
 function formatRateCell(raw: string): { display: string; isNote: boolean } {
   const t = raw.trim();
-  if (!t) return { display: "—", isNote: false };
+  if (!t) return { display: "Declined", isNote: true };
   const lower = t.toLowerCase();
   if (
     lower.includes("declin") ||
@@ -89,7 +88,7 @@ function efficiencyCellTint(val: string, header: string): string {
   const tgt = fisTargetPctForEffHeader(header);
   if (tgt == null) return "";
   const p = parseEfficiencyPercent(val);
-  if (p == null) return `${EFF_HASH} text-[#64748B]`;
+  if (p == null) return `${EFF_HASH} text-[#475569]`;
   if (p < 0) return "bg-red-50 text-red-700";
   if (p >= tgt) return "bg-emerald-50 text-emerald-900";
   return "bg-amber-50 text-amber-900";
@@ -131,7 +130,6 @@ function CommercialPageInner() {
   const vendors = allVendors(portfolio, vendorMap);
   const mid = portfolio.baselineAnnualM.mid;
   const low = portfolio.baselineAnnualM.low;
-  const fiveYearBaseline = mid * 5;
   const [highlightVendorId, setHighlightVendorId] = useState<string | null>(null);
   const highlighted = highlightVendorId ? portfolio.vendors.find((x) => x.id === highlightVendorId) : null;
 
@@ -153,14 +151,14 @@ function CommercialPageInner() {
   }, [vendors]);
 
   return (
-    <div className="space-y-12 commercial-print relative">
+    <div className="space-y-8 commercial-print relative">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <h1 className="text-h1 text-[#0F172A]">Commercial</h1>
-          <p className="text-body text-[#64748B] mt-2 max-w-3xl">
+          <p className="text-body text-[#475569] mt-2 max-w-3xl">
             Vendors converge by Y3 — Genpact steepest decline; Ubiquity rises with no efficiency overlay. Each ● opens source preview with workbook mini-grid.
           </p>
-          <p className="text-caption text-[#94A3B8] mt-1">
+          <p className="text-caption text-[#475569] mt-1">
             Headline TCV mixes fixed-fee and rate-card mechanics — normalize COLA, exclusions, and scope before comparing vendors.
           </p>
         </div>
@@ -183,14 +181,20 @@ function CommercialPageInner() {
         </div>
       )}
 
-      <section className="print-hide space-y-4">
+      <section className="print-hide print:break-before-page space-y-4">
         <div className="overflow-x-auto py-2">
-        <h2 className="text-h2 text-[#0F172A]">
+        <h2 className="text-[18px] font-bold text-[#0F172A]">
+          1. Five-year TCV comparison
+        </h2>
+        <p className="text-[14px] text-[#475569] mt-1 mb-4 max-w-3xl">
+          Who offers the lowest total cost of ownership over the contract term on a comparable 5-year operating basis?
+        </p>
+        <h3 className="text-h2 text-[#0F172A] mt-4">
           Genpact leads at ${[...portfolio.vendors].sort((a, b) => a.tcvM - b.tcvM)[0]?.tcvM.toFixed(0)}M — but TBD certainty means the floor
           isn&apos;t locked
-        </h2>
-        <p className="text-caption text-[#94A3B8] mt-1 mb-6">Certainty and structural badges — compare apples-to-apples only after COLA and exclusions normalize.</p>
-        <div className="flex gap-4 min-w-max pb-2">
+        </h3>
+        <p className="text-caption text-[#475569] mt-1 mb-6">Certainty and structural badges — normalize COLA and exclusions before comparing.</p>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 pb-2">
           {[...portfolio.vendors]
             .sort((a, b) => a.tcvM - b.tcvM)
             .map((pv) => {
@@ -207,18 +211,18 @@ function CommercialPageInner() {
                       setHighlightVendorId((cur) => (cur === pv.id ? null : pv.id));
                     }
                   }}
-                  className={`min-w-[180px] rounded-card bg-white p-4 shadow-subtle cursor-pointer transition-all duration-150 card-interactive ${
+                  className={`min-w-0 rounded-card bg-white p-2 shadow-subtle cursor-pointer transition-all duration-150 card-interactive max-h-[100px] overflow-hidden ${
                     highlightVendorId === pv.id ? "ring-2 ring-accent ring-offset-2" : ""
                   }`}
                   style={{ borderTopWidth: 3, borderTopColor: pv.color }}
                 >
-                  <p className="text-caption font-semibold uppercase tracking-[0.05em]" style={{ color: pv.color }}>
+                  <p className="text-[11px] font-bold uppercase tracking-wide" style={{ color: pv.color }}>
                     {pv.displayName}
                   </p>
                   <ProvenanceTrigger meta={prov} vendorId={pv.id}>
-                    <span className="text-display text-[#0F172A] tabular-nums block mt-2">${pv.tcvM.toFixed(1)}M</span>
+                    <span className="text-[22px] font-bold text-[#0F172A] tabular-nums block mt-1 leading-tight max-h-[32px]">${pv.tcvM.toFixed(1)}M</span>
                   </ProvenanceTrigger>
-                  <div className="flex flex-wrap gap-1 mt-3">
+                  <div className="flex flex-wrap gap-1 mt-2">
                     {vendorBadges(pv.id).map((b) => (
                       <Chip key={b.label} label={b.label} color={b.color} size="sm" />
                     ))}
@@ -242,12 +246,14 @@ function CommercialPageInner() {
         </div>
       </section>
 
-      <section className="space-y-4">
+      <section className="print:break-before-page space-y-4">
         <div className="space-y-4">
-        <h2 className="text-h2 text-[#0F172A]">
+        <h2 className="text-[18px] font-bold text-[#0F172A]">2. Annual fee trajectory</h2>
+        <p className="text-[14px] text-[#475569] mt-1 mb-4">How do fees change year-over-year — and what does that imply for run-rate?</p>
+        <h3 className="text-h2 text-[#0F172A] mt-2">
           High Y1 fees (Sutherland, Ubiquity) front-load transition; IBM&apos;s low Y1 bills partial scope — FIS still funds the rest
-        </h2>
-        <p className="text-caption text-[#94A3B8]">Dashed grey: ~$144M/yr lower bound; dark: mid-case ~${mid}M/yr.</p>
+        </h3>
+        <p className="text-caption text-[#475569]">Dashed grey: ~$144M/yr lower bound; dark: mid-case ~${mid}M/yr.</p>
         <AnnualFeeChart vendors={vendors} baselineMid={mid} baselineAnnualLow={low} {...chartHighlight} />
         <InterpretationPanel>
           <p>
@@ -259,12 +265,14 @@ function CommercialPageInner() {
         </div>
       </section>
 
-      <section className="space-y-4">
+      <section className="print:break-before-page space-y-4">
         <div className="space-y-4">
-        <h2 className="text-h2 text-[#0F172A]">
+        <h2 className="text-[18px] font-bold text-[#0F172A]">3. Cumulative savings vs baseline</h2>
+        <p className="text-[14px] text-[#475569] mt-1 mb-4">Which trajectories approach the ${portfolio.synergyTargetM}M/yr synergy envelope?</p>
+        <h3 className="text-h2 text-[#0F172A] mt-2">
           Cumulative savings vs baseline — who approaches the ${portfolio.synergyTargetM}M/yr FY28 test?
-        </h2>
-        <p className="text-caption text-[#94A3B8]">Positive = cumulative spend below mid baseline through that year (workbook fees). Green dashed: 3-year proxy at target run-rate.</p>
+        </h3>
+        <p className="text-caption text-[#475569]">Positive = cumulative spend below mid baseline through that year (workbook fees). Green dashed: 3-year proxy at target run-rate.</p>
         <CumulativeSavingsChart
           vendors={vendors}
           baselineAnnual={mid}
@@ -282,100 +290,86 @@ function CommercialPageInner() {
         </div>
       </section>
 
-      <section className="space-y-3">
-        <div className="space-y-3 rounded-lg border border-[#F1F5F9] bg-[#F8FAFC] p-6 shadow-subtle">
-        <h2 className="text-h2 text-[#0F172A]">What if COLA is applied to IBM?</h2>
-        <p className="text-body text-[#64748B]">
-          IBM states 0% COLA pending mutual agreement — the ${portfolio.vendors.find((x) => x.id === "ibm")?.tcvM.toFixed(1)}M headline is therefore a{" "}
-          <strong>floor</strong>. Illustrative stress (compound on operating TCV, not legal advice): +3%/yr ≈{" "}
-          <strong>${ibmColaStress(portfolio, 0.03).toFixed(0)}M</strong> 5-yr; +5%/yr ≈{" "}
-          <strong>${ibmColaStress(portfolio, 0.05).toFixed(0)}M</strong> 5-yr.
-        </p>
-        <p className="text-caption text-[#64748B]">Scenario math: TCV × ((1+r)^5 − 1) / (5r) style uplift proxy — use for directional workshop discussion only.</p>
-        </div>
-      </section>
-
-      <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div className="lg:col-span-2 space-y-4">
-          <h2 className="text-h2 text-[#0F172A]">
+      <section className="print:break-before-page grid grid-cols-1 gap-8">
+        <div className="space-y-4">
+          <h2 className="text-[18px] font-bold text-[#0F172A]">4. Rate card comparison</h2>
+          <p className="text-[14px] text-[#475569] mt-1 mb-4">
+            Lower rates indicate competitive pricing. Blank cells = vendor declined to provide.
+          </p>
+          <h3 className="text-[16px] font-semibold text-[#0F172A]">
+            Rate card comparison — Tier 1 Customer Service, onshore &amp; offshore ($/hr)
+          </h3>
+          <h3 className="text-h2 text-[#0F172A] mt-3">
             EXL&apos;s India rate (~$11.95/hr) is far below field — onshore blanks block hybrid queue modeling
-          </h2>
-          <p className="text-caption text-[#94A3B8]">Sparse cells mean vendor declined or used fixed-price bands — IBM typically declines granular 6.1 lines.</p>
-          <div className="overflow-x-auto text-body">
+          </h3>
+          <p className="text-caption text-[#475569]">Sample rows per vendor; IBM typically declines granular 6.1 lines.</p>
+          <div className="overflow-x-auto">
             <table className="min-w-full">
               <thead>
-                <tr className="text-left text-caption text-[#94A3B8] border-b border-[#F1F5F9]">
-                  <th className="pb-2">Tier / row</th>
-                  <th className="pb-2">Onshore</th>
-                  <th className="pb-2">Offshore</th>
+                <tr className="bg-[#0F172A] text-white text-[12px] font-semibold">
+                  <th className="px-3 py-2 text-left rounded-tl-lg">Tier / row</th>
+                  <th className="px-3 py-2 text-left">Onshore</th>
+                  <th className="px-3 py-2 text-left rounded-tr-lg">Offshore</th>
                 </tr>
               </thead>
               <tbody>
                 {vendors.flatMap((v) =>
-                  v.rateCard.slice(0, 4).map((r) => (
-                    <tr key={`${v.id}-${r.label}`} className="border-b border-[#F1F5F9]">
-                      <td className="py-2 font-semibold text-caption" style={{ color: v.color }}>
-                        {v.displayName}: {r.label}
-                      </td>
-                      <td className="py-2">
-                        <ProvenanceTrigger meta={r.sourcePreview as SourcePreviewMeta} vendorId={v.id}>
-                          <span>{r.onshore || "—"}</span>
-                        </ProvenanceTrigger>
-                      </td>
-                      <td className="py-2">
-                        <ProvenanceTrigger meta={r.sourcePreview as SourcePreviewMeta} vendorId={v.id}>
-                          <span>{r.offshore || "—"}</span>
-                        </ProvenanceTrigger>
-                      </td>
-                    </tr>
-                  )),
+                  v.rateCard.slice(0, 4).map((r) => {
+                    const on = formatRateCell(r.onshore || "");
+                    const off = formatRateCell(r.offshore || "");
+                    return (
+                      <tr key={`${v.id}-${r.label}`} className="border-b border-[#F1F5F9] even:bg-[#F8FAFC]">
+                        <td className="py-2 px-3 font-semibold text-[13px] text-[#0F172A]" style={{ color: v.color }}>
+                          {v.displayName}: {r.label}
+                        </td>
+                        <td className={`py-2 px-3 text-[13px] ${on.isNote ? "text-[#DC2626] italic text-[12px]" : "text-[#0F172A]"}`}>
+                          <ProvenanceTrigger meta={r.sourcePreview as SourcePreviewMeta} vendorId={v.id}>
+                            <span>{on.display}</span>
+                          </ProvenanceTrigger>
+                        </td>
+                        <td className={`py-2 px-3 text-[13px] ${off.isNote ? "text-[#DC2626] italic text-[12px]" : "text-[#0F172A]"}`}>
+                          <ProvenanceTrigger meta={r.sourcePreview as SourcePreviewMeta} vendorId={v.id}>
+                            <span>{off.display}</span>
+                          </ProvenanceTrigger>
+                        </td>
+                      </tr>
+                    );
+                  }),
                 )}
               </tbody>
             </table>
           </div>
-          <div className="mt-6 border-l-2 border-[#E2E8F0] bg-[#F8FAFC] pl-4 pr-4 py-3 text-body text-[#64748B]">
+          <div className="mt-6 border-l-2 border-[#E2E8F0] bg-[#F8FAFC] pl-4 pr-4 py-3 text-body text-[#475569]">
             Rate comparison context: the spread between lowest offshore tiles (e.g. India CS near $12/hr where quoted) and premium onshore fraud
             or specialty rows (often $50+/hr) encodes delivery model choices — India-first vs US-retained specialists — not spreadsheet noise. IBM
             often declines granular rate lines; treat narrative pricing as a different instrument than unit rates.
           </div>
-        </div>
-        <div className="space-y-4">
-          <h2 className="text-h2 text-[#0F172A]">5-year TCV sort</h2>
-          <p className="text-caption text-[#94A3B8] mt-1 mb-4">Workbook operating TCV.</p>
-          <TcvBarSorted portfolio={portfolio} {...chartHighlight} />
+          <h3 className="text-h2 text-[#0F172A] mt-8">
+            IBM declined granular 6.1 rates — the heatmap shows where EXL onshore gaps block hybrid queue TCO
+          </h3>
+          <p className="text-caption text-[#475569] mb-4">
+            Greener = lower quoted $/hr where numeric; gray = blank or narrative; IBM shows Declined (fixed-price model).
+          </p>
+          <RateCardHeatmap vendors={vendors} {...chartHighlight} />
           <InterpretationPanel>
             <p>
-              Sorted 5-year operating TCV from Tab 6.0 — use with certainty and COLA context from Tab 9.0 and vendor caveats; lowest bar is not
-              automatically &quot;best&quot; until scope and commitment language align.
+              Where onshore cells are empty (notably EXL), FIS cannot model blended-shore economics without follow-up. Offshore concentration explains
+              headline TCV compression — workshop validation should tie each tier to contractual runbooks and surge rules, not spreadsheet aesthetics alone.
             </p>
           </InterpretationPanel>
         </div>
       </section>
 
-      <section className="space-y-4">
+      <section className="print:break-before-page space-y-4">
         <div className="space-y-4">
-        <h2 className="text-h2 text-[#0F172A]">
-          IBM declined granular 6.1 rates — the heatmap shows where EXL onshore gaps block hybrid queue TCO
-        </h2>
-        <p className="text-caption text-[#94A3B8]">
-          Greener = lower quoted $/hr where numeric; gray = blank or narrative; IBM shows Declined (fixed-price model).
+        <h2 className="text-[18px] font-bold text-[#0F172A]">5. Operational efficiency (Tab 9.0)</h2>
+        <p className="text-[14px] text-[#475569] mt-1 mb-4">
+          Transformation levers vendors modeled in Tab 9.0 — read each percentage beside certainty language before treating savings as bankable.
         </p>
-        <RateCardHeatmap vendors={vendors} {...chartHighlight} />
-        <InterpretationPanel>
-          <p>
-            Where onshore cells are empty (notably EXL), FIS cannot model blended-shore economics without follow-up. Offshore concentration explains
-            headline TCV compression — workshop validation should tie each tier to contractual runbooks and surge rules, not spreadsheet aesthetics alone.
-          </p>
-        </InterpretationPanel>
-        </div>
-      </section>
-
-      <section className="space-y-4">
-        <div className="space-y-4">
-        <h2 className="text-h2 text-[#0F172A]">
-          Tab 9.0 efficiency grid — hover cells for workbook coordinates (where cell-level provenance exists)
-        </h2>
-        <p className="text-caption text-[#94A3B8]">Post-extraction rebuild: per-cell source previews attach to populated Tab 9.0 cells.</p>
+        <h3 className="text-h2 text-[#0F172A] mt-3">
+          Tab 9.0 efficiency grid — hover ● for source preview where available
+        </h3>
+        <p className="text-caption text-[#475569]">Per-cell previews attach where populated in the workbook extract.</p>
         <div className="overflow-x-auto space-y-8">
           {vendors.map((v) => {
             const rows = v.efficiency?.rows ?? [];
@@ -386,7 +380,7 @@ function CommercialPageInner() {
                   <p className="text-h3 mb-2" style={{ color: v.color }}>
                     {v.displayName}
                   </p>
-                  <p className="text-caption text-[#94A3B8]">No Tab 9.0 grid extracted.</p>
+                  <p className="text-caption text-[#475569]">No Tab 9.0 grid extracted.</p>
                 </div>
               );
             }
@@ -401,9 +395,9 @@ function CommercialPageInner() {
                 <table className="min-w-[640px] w-full border-collapse text-caption">
                   <thead>
                     <tr className="border-b border-[#E2E8F0] bg-[#F8FAFC]">
-                      <th className="p-2 text-left font-semibold text-[#64748B]">Geo</th>
+                      <th className="p-2 text-left font-semibold text-[#475569]">Geo</th>
                       {headers.map((h) => (
-                        <th key={h} className="p-2 text-left font-semibold text-[#64748B]">
+                        <th key={h} className="p-2 text-left font-semibold text-[#475569]">
                           {h}
                         </th>
                       ))}
@@ -434,11 +428,11 @@ function CommercialPageInner() {
           })}
         </div>
         {efficiencyRefHeaders.length > 0 ? (
-          <div className="overflow-x-auto rounded-lg border border-[#F1F5F9] bg-[#F8FAFC] p-4 text-caption text-[#64748B]">
+          <div className="overflow-x-auto rounded-lg border border-[#F1F5F9] bg-[#F8FAFC] p-4 text-caption text-[#475569]">
             <p className="font-semibold text-[#0F172A] mb-2">FIS planning targets (reference — Tab 9.0 comparison)</p>
             <table className="min-w-[480px] w-full border-collapse">
               <thead>
-                <tr className="text-left text-micro text-[#94A3B8]">
+                <tr className="text-left text-micro text-[#475569]">
                   <th className="p-2">Row</th>
                   {efficiencyRefHeaders.map((h) => (
                     <th key={h} className="p-2">
@@ -458,7 +452,7 @@ function CommercialPageInner() {
                 </tr>
               </tbody>
             </table>
-            <p className="mt-2 text-micro text-[#94A3B8]">
+            <p className="mt-2 text-micro text-[#475569]">
               Labor arbitrage 34% (28:72 on:off) · Digitization 7.8% · Productivity 3.0%. Cell tint: green ≥ target, amber below but positive, red
               negative, hashed TBD/blank.
             </p>
@@ -470,16 +464,11 @@ function CommercialPageInner() {
             negotiation space until contract text matches the model. IBM&apos;s sparse grid pushes diligence to non-binding proposal language.
           </p>
         </InterpretationPanel>
-        </div>
-      </section>
-
-      <section className="space-y-4">
-        <div className="space-y-4">
-        <h2 className="text-h2 text-[#0F172A]">
+        <h3 className="text-h2 text-[#0F172A] mt-6">
           Three vendors claim 30%+ modeled savings — certainty language separates bankable from aspirational
-        </h2>
-        <p className="text-caption text-[#94A3B8]">TBD = hatched treatment; solid = stated commitment language in Tab 9.0.</p>
-        <div className="space-y-6">
+        </h3>
+        <p className="text-caption text-[#475569]">TBD = hatched treatment; solid = stated commitment language in Tab 9.0.</p>
+        <div className="space-y-4">
           {vendors.map((v) => {
             const tr = effTreatment(v);
             const effPv = v.efficiency?.sourcePreview as SourcePreviewMeta | undefined;
@@ -489,7 +478,7 @@ function CommercialPageInner() {
                   <span className="text-h3 uppercase tracking-[0.05em]" style={{ color: v.color }}>
                     {v.displayName}
                   </span>
-                  <span className="text-micro px-2 py-0.5 rounded-badge bg-[#F1F5F9] text-[#64748B]">{tr.badge}</span>
+                  <span className="text-micro px-2 py-0.5 rounded-badge bg-[#F1F5F9] text-[#475569]">{tr.badge}</span>
                 </div>
                 <VendorCaveatStrip vendorId={v.id} context="commercial" />
                 <ProvenanceTrigger meta={effPv} vendorId={v.id}>
@@ -506,7 +495,7 @@ function CommercialPageInner() {
             );
           })}
         </div>
-        <div className="mt-6 border-l-2 border-[#E2E8F0] bg-[#F8FAFC] pl-4 pr-4 py-3 text-body text-[#64748B]">
+        <div className="mt-6 border-l-2 border-[#E2E8F0] bg-[#F8FAFC] pl-4 pr-4 py-3 text-body text-[#475569]">
           Efficiency claims need to be read beside certainty language in Tab 9.0. Where certainty is TBD, modeled labor-arb and productivity
           percentages describe ambition, not enforceable commitment — the workshop should trace each lever to contract text. IBM&apos;s blank grid
           pushes proof to proposal language until populated.
@@ -520,42 +509,16 @@ function CommercialPageInner() {
         </div>
       </section>
 
-      <section>
-        <div className="space-y-6">
-        <h2 className="text-h2 text-[#0F172A] mb-6">Cumulative vs 5-year baseline (mid)</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-          {vendors.map((v) => {
-            const sum5 = v.pricing.years.reduce((s, y) => s + (y.valueM ?? 0), 0);
-            const delta = sum5 - fiveYearBaseline;
-            const prov = v.pricing?.provenance?.tcvM as SourcePreviewMeta | undefined;
-            return (
-              <div key={v.id} className="rounded-card border border-[#F1F5F9] bg-[#FAFAFA] p-4">
-                <p className="font-semibold text-caption uppercase tracking-wide" style={{ color: v.color }}>
-                  {v.displayName}
-                </p>
-                <ProvenanceTrigger meta={prov} vendorId={v.id}>
-                  <p className="text-h1 text-[#0F172A] tabular-nums mt-2">${sum5.toFixed(1)}M</p>
-                </ProvenanceTrigger>
-                <p className={`text-caption font-semibold mt-2 ${delta <= 0 ? "text-[#059669]" : "text-[#DC2626]"}`}>
-                  {delta <= 0 ? "" : "+"}
-                  {delta.toFixed(1)}M vs mid-baseline
-                </p>
-                {v.pricing.tcv7M != null && (
-                  <p className="text-caption text-[#64748B] mt-1">7-yr TCV: ${v.pricing.tcv7M.toFixed(1)}M</p>
-                )}
-              </div>
-            );
-          })}
-        </div>
-        </div>
-      </section>
-
-      <section className="space-y-4">
+      <section className="print:break-before-page space-y-4">
         <div className="space-y-4">
-        <h2 className="text-h2 text-[#0F172A]">
+        <h2 className="text-[18px] font-bold text-[#0F172A]">6. One-time transition costs</h2>
+        <p className="text-[14px] text-[#475569] mt-1 mb-4">
+          Upfront transition and investment cash (workbook Section 6.4, summed quarters) — use to stress-test Year-1 funding alongside operating TCV.
+        </p>
+        <h3 className="text-h2 text-[#0F172A] mt-3">
           Ubiquity shows no extracted one-time lines — peers cluster training, dual-run, and tech migration in transition cash
-        </h2>
-        <p className="text-caption text-[#94A3B8]">
+        </h3>
+        <p className="text-caption text-[#475569]">
           Rows mapped heuristically from 6.4 labels (training, dual-run, tech/migration, professional services, setup/rebadging, investment/other).
         </p>
         <OneTimeCostsByCategoryChart vendors={vendors} {...chartHighlight} />
@@ -566,12 +529,7 @@ function CommercialPageInner() {
             provenance.
           </p>
         </InterpretationPanel>
-        </div>
-      </section>
-
-      <section>
-        <div className="space-y-6">
-        <h2 className="text-h2 text-[#0F172A] mb-6">One-time costs (Section 6.4, summed quarters)</h2>
+        <h3 className="text-[17px] font-semibold text-[#0F172A] mb-4 mt-8">Line items (Section 6.4, summed quarters)</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {vendors.map((v) => (
             <div key={v.id} className="rounded-card border border-[#F1F5F9] p-4">
@@ -579,9 +537,9 @@ function CommercialPageInner() {
                 {v.displayName}
               </p>
               {v.oneTimeLines.length === 0 ? (
-                <p className="text-caption text-[#94A3B8] italic">No labeled one-time rows extracted.</p>
+                <p className="text-caption text-[#475569] italic">No labeled one-time rows extracted.</p>
               ) : (
-                <ul className="text-body space-y-2 text-[#64748B]">
+                <ul className="text-body space-y-2 text-[#0F172A]">
                   {v.oneTimeLines.map((o) => (
                     <li key={o.label}>
                       <ProvenanceTrigger meta={o.sourcePreview as SourcePreviewMeta} vendorId={v.id}>
@@ -599,7 +557,29 @@ function CommercialPageInner() {
         </div>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+      <section className="print:break-before-page space-y-4 rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] p-6 shadow-subtle">
+        <h2 className="text-[18px] font-bold text-[#0F172A]">7. COLA &amp; cost escalation sensitivity</h2>
+        <p className="text-[14px] text-[#475569] mt-1 mb-4">
+          Long-term cost risk if inflation or indexation clauses apply — illustrative math only; normalize with legal and procurement before decisions.
+        </p>
+        <details className="mt-0 group rounded-lg border border-[#E2E8F0] bg-white p-4">
+          <summary className="cursor-pointer text-[15px] font-semibold text-[#0F172A] list-none flex items-center justify-between">
+            <span>IBM COLA sensitivity (illustrative)</span>
+            <span className="text-caption text-[#475569] group-open:rotate-180 transition-transform">▾</span>
+          </summary>
+          <div className="mt-3 space-y-3 text-body text-[#475569]">
+            <p>
+              <span className="font-semibold text-[#0F172A]">IBM COLA stress:</span> IBM states 0% COLA pending mutual agreement — the $
+              {portfolio.vendors.find((x) => x.id === "ibm")?.tcvM.toFixed(1)}M headline is a <strong>floor</strong>. Illustrative compound on
+              operating TCV: +3%/yr ≈ <strong>${ibmColaStress(portfolio, 0.03).toFixed(0)}M</strong> over 5 years; +5%/yr ≈{" "}
+              <strong>${ibmColaStress(portfolio, 0.05).toFixed(0)}M</strong>.
+            </p>
+            <p className="text-caption text-[#475569]">Scenario math is directional only — not legal or contractual guidance.</p>
+          </div>
+        </details>
+      </section>
+
+      <section className="print:break-before-page grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {vendors.map((v) => (
           <div
             key={v.id}
@@ -608,19 +588,19 @@ function CommercialPageInner() {
             <p className="text-h3 uppercase tracking-[0.05em]" style={{ color: v.color }}>
               {v.displayName}
             </p>
-            <ul className="text-caption text-[#64748B] space-y-2">
+            <ul className="text-caption text-[#475569] space-y-2">
               <li>
-                <span className="text-[#94A3B8]">TCV (5-yr): </span>
+                <span className="text-[#475569]">TCV (5-yr): </span>
                 <ProvenanceTrigger meta={v.pricing?.provenance?.tcvM as SourcePreviewMeta} vendorId={v.id}>
                   <span className="font-semibold text-[#0F172A]">${v.pricing.tcvM.toFixed(1)}M</span>
                 </ProvenanceTrigger>
               </li>
               <li>
-                <span className="text-[#94A3B8]">Certainty (US&CA): </span>
+                <span className="text-[#475569]">Certainty (US&CA): </span>
                 {certaintySnippet(v)}
               </li>
               <li>
-                <span className="text-[#94A3B8]">Governance (auto-count): </span>
+                <span className="text-[#475569]">Governance (auto-count): </span>
                 {v.governance.commit ?? 0}C / {v.governance.partial ?? 0}P / {v.governance.cannotCommit ?? 0}X
               </li>
             </ul>
@@ -647,7 +627,7 @@ function CommercialPageInner() {
 
 export default function CommercialPage() {
   return (
-    <Suspense fallback={<div className="p-8 text-caption text-[#94A3B8]">Loading commercial…</div>}>
+    <Suspense fallback={<div className="p-8 text-caption text-[#475569]">Loading commercial…</div>}>
       <CommercialPageInner />
     </Suspense>
   );

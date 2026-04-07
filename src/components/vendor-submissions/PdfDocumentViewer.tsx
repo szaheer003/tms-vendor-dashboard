@@ -378,7 +378,7 @@ export function PdfDocumentViewer({
           loading={
             <div className="flex w-full flex-col gap-4 p-6">
               <div className="skeleton mx-auto h-[720px] max-w-3xl rounded-lg" />
-              <p className="text-center text-caption text-[#64748B]">Loading PDF…</p>
+              <p className="text-center text-caption text-[#475569]">Loading PDF…</p>
             </div>
           }
           className="flex min-h-0 min-w-0 flex-1 flex-col"

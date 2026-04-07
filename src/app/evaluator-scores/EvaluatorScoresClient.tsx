@@ -1,7 +1,7 @@
 "use client";
 
-import { Fragment, useEffect, useMemo, useState } from "react";
-import { ScoringMethodologyPanel } from "@/components/ScoringMethodologyPanel";
+import Link from "next/link";
+import { Fragment, useMemo, useState } from "react";
 import {
   EVALUATORS,
   EVALUATOR_IDS,
@@ -80,25 +80,6 @@ export function EvaluatorScoresClient({ portfolio }: { portfolio: Portfolio }) {
   const columnOrder = portfolio.scorecard.columnOrder;
   const [vendorTab, setVendorTab] = useState<string>(columnOrder[0] ?? VENDOR_IDS[0]!);
 
-  useEffect(() => {
-    let cancelled = false;
-    fetch(`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/data/evaluatorScores.json`, { cache: "no-store" })
-      .then((r) => (r.ok ? r.json() : null))
-      .then((raw: EvaluatorScoresPayload | null) => {
-        if (cancelled || !raw?.scores) return;
-        const m = mergeEvaluatorScoresPayload(raw);
-        setScores(m.scores);
-        setQual(m.qualitative);
-        setConfidence(m.confidence);
-        setProceed(m.proceed);
-        setImportNote(m.importNote);
-      })
-      .catch(() => {});
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
   const vendors = columnOrder.map((id) => portfolio.vendors.find((v) => v.id === id)!).filter(Boolean) as PortfolioVendor[];
   const flatSubs = useMemo(() => flattenScoredSubs(), []);
   const pillarGroups = useMemo(() => {
@@ -141,13 +122,20 @@ export function EvaluatorScoresClient({ portfolio }: { portfolio: Portfolio }) {
     <div className="space-y-12 animate-page-in">
       <div>
         <h1 className="text-h1 text-[#0F172A]">Evaluator scores</h1>
-        <p className="mt-2 max-w-3xl text-body text-[#64748B]">
-          Workshop 1 evaluator submissions (Folder 8 xlsx) feed <code className="text-[13px] bg-[#F1F5F9] px-1 rounded">/data/evaluatorScores.json</code> via{" "}
-          <code className="text-[13px] bg-[#F1F5F9] px-1 rounded">python scripts/import_folder8_scores.py</code>. Qualitative (Q3–Q7), scored matrix (1–9), confidence, and proceed votes load here automatically.
+        <p className="mt-2 max-w-3xl text-body text-[#475569]">
+          Workshop 1 evaluator workbook data syncs into this dashboard automatically after import. Qualitative responses (Q3–Q7), numeric matrix (1–9),
+          confidence, and proceed votes appear here when present in the active dataset.
         </p>
         {importNote ? (
           <p className="mt-3 text-caption text-[#059669] max-w-3xl border-l-2 border-[#059669] pl-3">{importNote}</p>
         ) : null}
+        <p className="text-[13px] text-[#475569] mt-4 max-w-4xl">
+          Scoring methodology and scale definitions are on the{" "}
+          <Link href="/scorecard/" className="text-[#1E40AF] underline underline-offset-2 font-medium">
+            Scorecard
+          </Link>{" "}
+          page.
+        </p>
       </div>
 
       <div className="flex flex-wrap gap-2 print-hide">
@@ -165,12 +153,12 @@ export function EvaluatorScoresClient({ portfolio }: { portfolio: Portfolio }) {
       {!anyNumeric && (
         <>
           <div className="text-center py-12 max-w-2xl mx-auto">
-            <p className="text-h2 text-[#64748B] font-medium leading-snug">Evaluator scores will be populated after Workshop 1</p>
-            <p className="text-body text-[#94A3B8] mt-4">{EVALUATOR_SCORES_TARGET_LINE}</p>
+            <p className="text-h2 text-[#475569] font-medium leading-snug">Evaluator scores will be populated after Workshop 1</p>
+            <p className="text-body text-[#475569] mt-4">{EVALUATOR_SCORES_TARGET_LINE}</p>
           </div>
           <div className="grid md:grid-cols-2 gap-16 max-w-3xl mx-auto">
             <div>
-              <p className="text-[11px] font-medium uppercase tracking-[0.08em] text-[#94A3B8] mb-4">Pillars &amp; weights</p>
+              <p className="text-[11px] font-medium uppercase tracking-[0.08em] text-[#475569] mb-4">Pillars &amp; weights</p>
               <ul className="space-y-2 text-body text-[#0F172A]">
                 <li>Commercial Attractiveness — 22.5%</li>
                 <li>Operational Excellence — 22.5%</li>
@@ -178,18 +166,18 @@ export function EvaluatorScoresClient({ portfolio }: { portfolio: Portfolio }) {
                 <li>Client &amp; Workforce Migration — 22.5%</li>
                 <li>Partnership Readiness — 10%</li>
               </ul>
-              <p className="text-caption text-[#94A3B8] mt-4">Scale: 1 / 3 / 7 / 9 · Up to 12 evaluator slots per vendor</p>
+              <p className="text-caption text-[#475569] mt-4">Scale: 1 / 3 / 7 / 9 · Up to 12 evaluator slots per vendor</p>
             </div>
             <div>
-              <p className="text-[11px] font-medium uppercase tracking-[0.08em] text-[#94A3B8] mb-4">Sub-dimensions by pillar</p>
+              <p className="text-[11px] font-medium uppercase tracking-[0.08em] text-[#475569] mb-4">Sub-dimensions by pillar</p>
               <div className="space-y-5">
                 {Array.from(pillarGroups.entries()).map(([pillarLabel, subs]) => (
                   <div key={pillarLabel}>
                     <p className="text-caption font-medium text-[#0F172A]">{pillarLabel}</p>
-                    <ul className="mt-2 space-y-1 text-caption text-[#64748B] leading-relaxed">
+                    <ul className="mt-2 space-y-1 text-caption text-[#475569] leading-relaxed">
                       {subs.map((s) => (
                         <li key={s.id}>
-                          <span className="font-mono text-[11px] text-[#94A3B8]">{s.id}</span> {s.label}
+                          <span className="font-mono text-[11px] text-[#475569]">{s.id}</span> {s.label}
                         </li>
                       ))}
                     </ul>
@@ -198,23 +186,20 @@ export function EvaluatorScoresClient({ portfolio }: { portfolio: Portfolio }) {
               </div>
             </div>
           </div>
-          <ScoringMethodologyPanel collapsedDefault />
         </>
       )}
 
       {anyNumeric && (
         <>
-      <p className="text-body text-[#64748B] max-w-4xl pl-4 border-l-2 border-[#E2E8F0]">
+      <p className="text-body text-[#475569] max-w-4xl pl-4 border-l-2 border-[#E2E8F0]">
         <span className="font-medium text-[#0F172A]">Purpose:</span> Evaluators score demonstrated capability in submissions — not reputation.
         Post-workshop, this view highlights consensus versus divergence ahead of down-select (6 → 3).
       </p>
 
-      <ScoringMethodologyPanel collapsedDefault />
-
       {/* B) Heatmap */}
       <section className="space-y-3">
         <h2 className="text-h2 text-[#0F172A]">Scored matrix (Q8–Q12)</h2>
-        <p className="text-caption text-[#94A3B8]">
+        <p className="text-caption text-[#475569]">
           Rows: 15 sub-dimensions. Columns: vendors. Cell: average of evaluator scores (non-blank responses). Hover for per-evaluator
           breakdown.
         </p>
@@ -222,7 +207,7 @@ export function EvaluatorScoresClient({ portfolio }: { portfolio: Portfolio }) {
           <table className="w-full min-w-[900px] text-caption">
             <thead>
               <tr className="border-b border-[#E2E8F0] bg-[#F8FAFC]">
-                <th className="sticky left-0 z-20 w-64 border-r border-[#F1F5F9] bg-[#F8FAFC] p-3 text-left font-semibold text-[#64748B]">
+                <th className="sticky left-0 z-20 w-64 border-r border-[#F1F5F9] bg-[#F8FAFC] p-3 text-left font-semibold text-[#475569]">
                   Dimension
                 </th>
                 {vendors.map((v) => (
@@ -250,7 +235,7 @@ export function EvaluatorScoresClient({ portfolio }: { portfolio: Portfolio }) {
                   {subs.map((r) => (
                     <tr key={r.id} className="border-b border-[#F1F5F9] hover:bg-[#FAFAFA]/80">
                       <td className="sticky left-0 z-10 border-r border-[#F1F5F9] bg-white p-3 shadow-[4px_0_12px_-8px_rgba(0,0,0,0.08)]">
-                        <span className="font-mono text-micro text-[#64748B]">{r.id}</span>
+                        <span className="font-mono text-micro text-[#475569]">{r.id}</span>
                         <p className="text-body text-[#0F172A]">{r.label}</p>
                       </td>
                       {vendors.map((v) => {
@@ -267,7 +252,7 @@ export function EvaluatorScoresClient({ portfolio }: { portfolio: Portfolio }) {
                               className="inline-flex min-h-[3rem] min-w-[3.5rem] flex-col items-center justify-center rounded-lg border border-black/5 px-1 py-1 tabular-nums"
                               style={{
                                 backgroundColor: pending ? "#F8FAFC" : scoreBgContinuous(av),
-                                color: pending ? "#94A3B8" : scoreHeatTextOnRamp(av!),
+                                color: pending ? "#64748B" : scoreHeatTextOnRamp(av!),
                               }}
                             >
                               {pending ? "—" : av!.toFixed(1)}
@@ -291,7 +276,7 @@ export function EvaluatorScoresClient({ portfolio }: { portfolio: Portfolio }) {
 
         <div className="rounded-card border border-border bg-surface-sunken px-5 py-4">
           <p className="text-micro uppercase tracking-wider text-ink-faint font-medium mb-3">Divergence strip — where to debate?</p>
-          <p className="text-caption text-ink-tertiary mb-3 max-w-3xl">
+          <p className="text-caption text-[#475569] mb-3 max-w-3xl">
             One dot per sub-dimension: green = tight consensus (max σ &lt; 1.5), amber = moderate, red = split (σ &gt; 3) across vendors’ evaluator
             spreads. Gray = insufficient scores.
           </p>
@@ -351,14 +336,14 @@ export function EvaluatorScoresClient({ portfolio }: { portfolio: Portfolio }) {
       {anyNumeric && (
       <section className="space-y-3 rounded-card border border-[#E2E8F0] bg-white p-6 shadow-card">
         <h2 className="text-h2 text-[#0F172A]">Evaluator consensus view</h2>
-        <p className="text-caption text-[#94A3B8]">
+        <p className="text-caption text-[#475569]">
           Each row: one dot per evaluator slot (gray = no score). Strong consensus = tight cluster; split = spread ≥ 4 on the 1–9 scale.
         </p>
         <div className="max-h-[420px] space-y-2 overflow-y-auto pr-2">
           {flatSubs.map((r) => (
             <div key={r.id} className="flex flex-wrap items-center gap-3 border-b border-[#F1F5F9] py-2">
-              <div className="w-52 shrink-0 text-caption text-[#64748B]">
-                <span className="font-mono text-micro text-[#64748B]">{r.id}</span> {r.label}
+              <div className="w-52 shrink-0 text-caption text-[#475569]">
+                <span className="font-mono text-micro text-[#475569]">{r.id}</span> {r.label}
               </div>
               {vendors.map((v) => {
                 const pts = EVALUATOR_IDS.map((eid) => scores[v.id]?.[eid]?.[r.id] ?? null);
@@ -379,7 +364,7 @@ export function EvaluatorScoresClient({ portfolio }: { portfolio: Portfolio }) {
                       );
                     })}
                     {spread != null && (
-                      <span className={`ml-1 text-micro ${spread >= 4 ? "font-semibold text-red-600" : "text-[#94A3B8]"}`}>
+                      <span className={`ml-1 text-micro ${spread >= 4 ? "font-semibold text-red-600" : "text-[#475569]"}`}>
                         Δ{spread}
                       </span>
                     )}
@@ -396,9 +381,8 @@ export function EvaluatorScoresClient({ portfolio }: { portfolio: Portfolio }) {
       <section className="space-y-5">
         <div>
           <h2 className="text-h2 font-medium text-[#0F172A]">Qualitative insights</h2>
-          <p className="mt-1.5 text-caption text-[#64748B] max-w-2xl">
-            Q3–Q7 free text per evaluator. Empty cells usually mean that column was not detected in the last Folder 8 import — re-run{" "}
-            <code className="rounded bg-[#F1F5F9] px-1 text-[12px]">python scripts/import_folder8_scores.py</code> after exports are updated.
+          <p className="mt-1.5 text-caption text-[#475569] max-w-2xl">
+            Q3–Q7 free text per evaluator. Empty cells mean no response was captured for that evaluator and question in the current dataset.
           </p>
         </div>
         <div className="flex flex-wrap gap-2 border-b border-slate-200/90 pb-3">
@@ -440,7 +424,7 @@ export function EvaluatorScoresClient({ portfolio }: { portfolio: Portfolio }) {
                       <li key={eid} className="flex gap-4 px-4 py-3 transition-colors hover:bg-slate-50/60">
                         <span className="w-[5.5rem] shrink-0 text-[11px] font-medium text-slate-500">{EVALUATORS[eid].label}</span>
                         <div className="min-w-0 flex-1 text-[13px] leading-relaxed text-slate-800 whitespace-pre-wrap">
-                          {empty ? <span className="text-slate-400 italic">No response</span> : text}
+                          {empty ? <span className="text-[#475569] italic">No response</span> : text}
                         </div>
                       </li>
                     );
@@ -457,7 +441,7 @@ export function EvaluatorScoresClient({ portfolio }: { portfolio: Portfolio }) {
       <section className="grid gap-6 md:grid-cols-2">
         <div className="rounded-card border border-[#E2E8F0] bg-white p-6 shadow-card">
           <h3 className="text-h3 text-[#0F172A]">Q13 — Confidence (stacked)</h3>
-          <p className="mt-1 text-caption text-[#94A3B8]">Distribution per vendor once evaluators submit.</p>
+          <p className="mt-1 text-caption text-[#475569]">Distribution per vendor once evaluators submit.</p>
           {vendors.map((v) => {
             const counts: Record<string, number> = Object.fromEntries(CONFIDENCE_LEVELS.map((l) => [l, 0]));
             for (const eid of EVALUATOR_IDS) {
@@ -494,15 +478,15 @@ export function EvaluatorScoresClient({ portfolio }: { portfolio: Portfolio }) {
                     })
                   )}
                 </div>
-                <p className="text-micro text-[#94A3B8] mt-1">{total ? `${total} responses` : "—"}</p>
+                <p className="text-micro text-[#475569] mt-1">{total ? `${total} responses` : "—"}</p>
               </div>
             );
           })}
         </div>
         <div className="rounded-card border border-[#E2E8F0] bg-white p-6 shadow-card">
           <h3 className="text-h3 text-[#0F172A]">Q14 — Proceed votes</h3>
-          <p className="mt-1 text-caption text-[#94A3B8]">Yes / No counts per vendor after Workshop 1.</p>
-          <ul className="mt-4 space-y-2 text-body text-[#64748B]">
+          <p className="mt-1 text-caption text-[#475569]">Yes / No counts per vendor after Workshop 1.</p>
+          <ul className="mt-4 space-y-2 text-body text-[#475569]">
             {vendors.map((v) => {
               let yes = 0;
               let no = 0;
@@ -516,7 +500,7 @@ export function EvaluatorScoresClient({ portfolio }: { portfolio: Portfolio }) {
                   <span style={{ color: v.color }} className="font-semibold">
                     {v.displayName}
                   </span>
-                  <span className="tabular-nums text-[#64748B]">
+                  <span className="tabular-nums text-[#475569]">
                     <span className="text-[#059669] font-medium">Yes {yes}</span>
                     {" · "}
                     <span className="text-[#B91C1C] font-medium">No {no}</span>
@@ -533,7 +517,7 @@ export function EvaluatorScoresClient({ portfolio }: { portfolio: Portfolio }) {
       {anyNumeric && (
       <section className="rounded-card border border-[#E2E8F0] bg-white p-6 shadow-card">
         <h2 className="text-h2 text-[#0F172A]">Weighted composite</h2>
-        <p className="mt-1 text-caption text-[#94A3B8]">
+        <p className="mt-1 text-caption text-[#475569]">
           Σ (pillar weight × average sub-score). Partnership 10%; Commercial, Operational, Technology, and Migration each 22.5%.
         </p>
         <div className="mt-4 space-y-3">
@@ -549,7 +533,7 @@ export function EvaluatorScoresClient({ portfolio }: { portfolio: Portfolio }) {
                     <span className="font-semibold" style={{ color: v?.color }}>
                       {v?.displayName ?? id}
                     </span>
-                    <span className="tabular-nums text-[#64748B]">{c == null ? "—" : c.toFixed(2)}</span>
+                    <span className="tabular-nums text-[#475569]">{c == null ? "—" : c.toFixed(2)}</span>
                   </div>
                   <div className="mt-1 h-2 overflow-hidden rounded-full bg-[#F1F5F9]">
                     <div

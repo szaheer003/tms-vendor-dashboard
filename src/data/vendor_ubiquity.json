@@ -40,7 +40,7 @@
         "location": "Rows 110+111 (quarters); row 112 annual check",
         "valueLabel": "$938.75M",
         "calculation": "Summed quarterly NA+EMEA lines; USD \u2192 $M",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 105,
@@ -1004,7 +1004,7 @@
         "location": "Derived from rows 110+111 quarterly bands",
         "valueLabel": "$176.82M",
         "calculation": "Four quarters per year from combined rows",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 105,
@@ -1968,7 +1968,7 @@
         "location": "Derived from rows 110+111 quarterly bands",
         "valueLabel": "$182.12M",
         "calculation": "Four quarters per year from combined rows",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 105,
@@ -2932,7 +2932,7 @@
         "location": "Derived from rows 110+111 quarterly bands",
         "valueLabel": "$187.59M",
         "calculation": "Four quarters per year from combined rows",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 105,
@@ -3896,7 +3896,7 @@
         "location": "Derived from rows 110+111 quarterly bands",
         "valueLabel": "$193.21M",
         "calculation": "Four quarters per year from combined rows",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 105,
@@ -4860,7 +4860,7 @@
         "location": "Derived from rows 110+111 quarterly bands",
         "valueLabel": "$199.01M",
         "calculation": "Four quarters per year from combined rows",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 105,
@@ -5834,7 +5834,7 @@
         "location": "Section 6.1 rate card, row 11",
         "valueLabel": "Tier 1 Customer Service \u2014 IVR",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 10,
@@ -6097,7 +6097,7 @@
         "location": "Section 6.1 rate card, row 12",
         "valueLabel": "Tier 1 Customer Service \u2014 Multilingual",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 11,
@@ -6360,7 +6360,7 @@
         "location": "Section 6.1 rate card, row 13",
         "valueLabel": "Tier 1 Customer Service \u2014 Live Agent",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 12,
@@ -6623,7 +6623,7 @@
         "location": "Section 6.1 rate card, row 14",
         "valueLabel": "Tier 1 Customer Service \u2014 Loyalty",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 13,
@@ -6886,7 +6886,7 @@
         "location": "Section 6.1 rate card, row 15",
         "valueLabel": "Tier 1 Customer Service \u2014 Lost/Stolen",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 14,
@@ -7149,7 +7149,7 @@
         "location": "Section 6.1 rate card, row 16",
         "valueLabel": "Tier 1 Customer Service \u2014 After hours",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 15,
@@ -7412,7 +7412,7 @@
         "location": "Section 6.1 rate card, row 17",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Fraud Detection",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 16,
@@ -7675,7 +7675,7 @@
         "location": "Section 6.1 rate card, row 18",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Fraud Investigation",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 17,
@@ -7938,7 +7938,7 @@
         "location": "Section 6.1 rate card, row 19",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Fraud Strategy",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 18,
@@ -8201,7 +8201,7 @@
         "location": "Section 6.1 rate card, row 20",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Fraud Consulting",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 19,
@@ -8464,7 +8464,7 @@
         "location": "Section 6.1 rate card, row 21",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Collections",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 20,
@@ -8727,7 +8727,7 @@
         "location": "Section 6.1 rate card, row 22",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Skip Tracing",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 21,
@@ -8990,7 +8990,7 @@
         "location": "Section 6.1 rate card, row 23",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Disputes & Chargebacks",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 22,
@@ -9253,7 +9253,7 @@
         "location": "Section 6.1 rate card, row 24",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Risk Call Center",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 23,
@@ -9516,7 +9516,7 @@
         "location": "Section 6.1 rate card, row 25",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Credit",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 24,
@@ -9779,7 +9779,7 @@
         "location": "Section 6.1 rate card, row 26",
         "valueLabel": "Back Office \u2014 Imaging",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 25,
@@ -10042,7 +10042,7 @@
         "location": "Section 6.1 rate card, row 27",
         "valueLabel": "Back Office \u2014 Copy Requests",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 26,
@@ -10305,7 +10305,7 @@
         "location": "Section 6.1 rate card, row 28",
         "valueLabel": "Back Office \u2014 Correspondence",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 27,
@@ -10568,7 +10568,7 @@
         "location": "Section 6.1 rate card, row 29",
         "valueLabel": "Back Office \u2014 Application Processing",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 28,
@@ -10831,7 +10831,7 @@
         "location": "Section 6.1 rate card, row 30",
         "valueLabel": "Back Office \u2014 Credit Bureau Updates",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 29,
@@ -11094,7 +11094,7 @@
         "location": "Section 6.1 rate card, row 31",
         "valueLabel": "Back Office \u2014 Returned Mail",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 30,
@@ -11357,7 +11357,7 @@
         "location": "Section 6.1 rate card, row 32",
         "valueLabel": "Back Office \u2014 Card Destruction",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 31,
@@ -11620,7 +11620,7 @@
         "location": "Section 6.1 rate card, row 33",
         "valueLabel": "Back Office \u2014 Account Maintenance",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 32,
@@ -11883,7 +11883,7 @@
         "location": "Section 6.1 rate card, row 34",
         "valueLabel": "Back Office \u2014 Accounting & Settlement",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 33,
@@ -12590,7 +12590,7 @@
             "location": "Cell D12",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 9,
@@ -13335,7 +13335,7 @@
             "location": "Cell D17",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 14,
@@ -14080,7 +14080,7 @@
             "location": "Cell D13",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 10,

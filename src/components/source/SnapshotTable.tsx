@@ -18,7 +18,7 @@ export function SnapshotTable({ snap }: { snap: GridSnapshot }) {
         <tbody>
           {snap.rows.map((row, ri) => (
             <tr key={ri}>
-              <td className="p-1 text-slate-400 border-r border-slate-100">{row[0]?.r ?? snap.minRow + ri}</td>
+              <td className="p-1 text-slate-500 border-r border-slate-100">{row[0]?.r ?? snap.minRow + ri}</td>
               {row.map((cell, ci) => (
                 <td
                   key={ci}

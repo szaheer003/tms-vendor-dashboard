@@ -34,8 +34,8 @@ export function OverviewRadar({
   if (inferredPending) {
     return (
       <div className="py-16 px-8 text-center max-w-xl mx-auto">
-        <p className="text-body text-[#64748B] leading-relaxed">Composite scoring available after Workshop 1.</p>
-        <p className="text-caption text-[#94A3B8] mt-3">
+        <p className="text-body text-[#475569] leading-relaxed">Composite scoring available after Workshop 1.</p>
+        <p className="text-caption text-[#475569] mt-3">
           Evaluator sessions populate pillar means; radar activates when scores land (target {EVALUATOR_SCORES_TARGET_LINE}).
         </p>
       </div>
@@ -58,13 +58,13 @@ export function OverviewRadar({
   const colors = order.map((id) => portfolio.vendors.find((v) => v.id === id)?.color ?? "#64748b");
 
   return (
-    <div className="h-[500px] w-full max-w-[640px] mx-auto">
+    <div className="h-[min(300px,70vw)] w-full max-w-[300px] mx-auto">
       <ResponsiveContainer width="100%" height="100%">
-        <RadarChart data={rows} cx="50%" cy="52%" outerRadius="72%">
+        <RadarChart data={rows} cx="50%" cy="52%" outerRadius="68%">
           <PolarGrid stroke="#CBD5E1" strokeOpacity={0.45} />
           <PolarAngleAxis dataKey="pillar" tick={{ fill: "#64748B", fontSize: 11 }} />
-          <PolarRadiusAxis angle={30} domain={[0, 9]} tick={{ fill: "#94A3B8", fontSize: 10 }} />
-          <Radar name="Field avg" dataKey="field" stroke="#94A3B8" fill="#94A3B8" fillOpacity={0.22} strokeWidth={2} />
+          <PolarRadiusAxis angle={30} domain={[0, 9]} tick={{ fill: "#64748B", fontSize: 10 }} />
+          <Radar name="Field avg" dataKey="field" stroke="#64748B" fill="#64748B" fillOpacity={0.22} strokeWidth={2} />
           {vendorNames.map((nm, i) => (
             <Radar
               key={nm}

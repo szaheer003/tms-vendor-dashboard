@@ -73,9 +73,9 @@ export function NarrativeBody({
   let raw = (text ?? "").trim();
   if (stripMigrationPreamble) raw = stripLeadingMigrationBoilerplate(raw);
   else if (variant === "migration") raw = sanitizeMigrationNoteParagraphs(raw);
-  const bodyColor = variant === "answer" ? "text-[#0F172A]" : "text-[#64748B]";
+  const bodyColor = variant === "answer" ? "text-[#0F172A]" : "text-[#475569]";
   if (!raw || raw === "—") {
-    return <p className={className ?? "text-[#94A3B8]"}>—</p>;
+    return <p className={className ?? "text-[#475569]"}>—</p>;
   }
   const blocks = raw.split(/\n{2,}/).map((b) => b.trim()).filter(Boolean);
   return (

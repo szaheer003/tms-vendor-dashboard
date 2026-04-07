@@ -5,7 +5,7 @@ const VendorSubmissionsClient = dynamic(() => import("./VendorSubmissionsClient"
 
 export default function VendorSubmissionsPage() {
   return (
-    <Suspense fallback={<div className="p-8 text-caption text-[#94A3B8]">Loading vendor submissions…</div>}>
+    <Suspense fallback={<div className="p-8 text-caption text-[#475569]">Loading vendor submissions…</div>}>
       <VendorSubmissionsClient />
     </Suspense>
   );

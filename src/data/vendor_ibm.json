@@ -40,7 +40,7 @@
         "location": "Row 119, columns C:V (20 quarters)",
         "valueLabel": "$460.00M",
         "calculation": "Sum of quarterly values on Total Annual Cost row; values in $M per workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 116,
@@ -611,7 +611,7 @@
         "location": "Row 119, Y1 = sum of quarters 1\u20134",
         "valueLabel": "$67.27M",
         "calculation": "Sum of four quarterly cells on same row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 116,
@@ -1182,7 +1182,7 @@
         "location": "Row 119, Y2 = sum of quarters 5\u20138",
         "valueLabel": "$122.77M",
         "calculation": "Sum of four quarterly cells on same row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 116,
@@ -1753,7 +1753,7 @@
         "location": "Row 119, Y3 = sum of quarters 9\u201312",
         "valueLabel": "$101.72M",
         "calculation": "Sum of four quarterly cells on same row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 116,
@@ -2324,7 +2324,7 @@
         "location": "Row 119, Y4 = sum of quarters 13\u201316",
         "valueLabel": "$87.82M",
         "calculation": "Sum of four quarterly cells on same row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 116,
@@ -2895,7 +2895,7 @@
         "location": "Row 119, Y5 = sum of quarters 17\u201320",
         "valueLabel": "$80.41M",
         "calculation": "Sum of four quarterly cells on same row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 116,
@@ -3476,7 +3476,7 @@
         "location": "Section 6.1 rate card, row 11",
         "valueLabel": "Tier 1 Customer Service \u2014 IVR",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 10,
@@ -3763,7 +3763,7 @@
             "location": "Cell C8 \u00b7 US & Canada Clients Clients \u00b7 Offshore to Onshore Mix",
             "valueLabel": "Vendor to provide",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -4089,7 +4089,7 @@
             "location": "Cell D8 \u00b7 US & Canada Clients Clients \u00b7 Consequent Labor Arbitrage %",
             "valueLabel": "Vendor to provide",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -4464,7 +4464,7 @@
             "location": "Cell E8 \u00b7 US & Canada Clients Clients \u00b7 Cost Reduction from AI & Digital Overlays %",
             "valueLabel": "Vendor to provide",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -4839,7 +4839,7 @@
             "location": "Cell F8 \u00b7 US & Canada Clients Clients \u00b7 Cost Reduction from Productivity Gains %",
             "valueLabel": "Vendor to provide",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -5214,7 +5214,7 @@
             "location": "Cell G8 \u00b7 US & Canada Clients Clients \u00b7 Commitment to Certainty of Cost Savings as a %",
             "valueLabel": "Vendor to provide",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -6477,7 +6477,7 @@
       "location": "Rows 6\u201312",
       "valueLabel": "Efficiency assumptions",
       "calculation": "Vendor Tab 9.0",
-      "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+      "extractionTimestamp": "2026-04-06T23:15:55+00:00",
       "verified": true,
       "snapshot": {
         "minRow": 5,
@@ -7393,7 +7393,7 @@
         "location": "Row 67 (one-time / transition line)",
         "valueLabel": "FIS Transition",
         "calculation": "Sum of populated quarterly cells across C:V for this row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 64,
@@ -7969,7 +7969,7 @@
         "location": "Row 68 (one-time / transition line)",
         "valueLabel": "IBM investment (partial row)",
         "calculation": "Sum of populated quarterly cells across C:V for this row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 65,
@@ -8535,7 +8535,7 @@
       }
     }
   ],
-  "migrationNotes": "Part 1 \u2014 Wave Composition: For each wave, list which client cohorts are included, explaining what criteria drove the grouping; for all clients, specify which client is mapped to each wave.  FIS has intentionally not prescribed a wave structure or grouping methodology. We expect vendors to analyze the client dataset provided and propose the wave design they believe is most operationally sound for an engagement of this complexity. There is no correct number of waves. Responses that demonstrate genuine analytical thinking about client risk, regulatory complexity, volume sequencing, and transition readiness will be evaluated more favorably than generic frameworks.\n\nRisk: Personnel do not accept re-badge offer.\nMigitation: Provide compelling rational to accept re-badge offer\n\nAdditional risk: Transition must include enough time to deal with UK regulatory requirements pertaining to re-badging.\n\nRisk: Loss of critical knowledge due to early attrition of personnel.\nMigitation: Work with FIS to provide appropriate incentives for personnel to be retained.  Early capture of process knowledge through use of IBM's Cobee tool.\n\nRisk: Loss of critical knowledge due to early attrition of personnel.\nMigitation: Work with FIS to provide appropriate incentives for personnel to be retained.  Early capture of process knowledge through use of IBM's Cobee tool.\n\nRisk: Loss of critical knowledge due to early attrition of personnel.\nMigitation: Work with FIS to provide appropriate incentives for personnel to be retained.  Early capture of process knowledge through use of IBM's Cobee tool.\n\nRisk: Loss of critical knowledge due to early attrition of personnel.\nMigitation: Work with FIS to provide appropriate incentives for personnel to be retained.  Early capture of process knowledge through use of IBM's Cobee tool.\n\nRisk: Loss of critical knowledge due to early attrition of personnel.\nMigitation: Work with FIS to provide appropriate incentives for personnel to be retained.  Early capture of process knowledge through use of IBM's Cobee tool.\n\nRisk: Loss of critical knowledge due to early attrition of personnel.\nMigitation: Work with FIS to provide appropriate incentives for personnel to be retained.  Early capture of process knowledge through use of IBM's Cobee tool.\n\nRisk: Loss of critical knowledge due to early attrition of personnel.\nMigitation: Work with FIS to provide appropriate incentives for personnel to be retained.  Early capture of process knowledge through use of IBM's Cobee tool.\n\nRisk: Loss of critical knowledge due to early attrition of personnel.\nMigitation: Work with FIS to provide appropriate incentives for personnel to be retained.  Early capture of process knowledge through use of IBM's Cobee tool.\n\nRisk: Loss of critical knowledge due to early attrition of personnel.\nMigitation: Work with FIS to provide appropriate incentives for personnel to be retained.  Early capture of process knowledge through use of IBM's Cobee tool.\n\nRisk: Loss of critical knowledge due to early attrition of personnel.\nMigitation: Work with FIS to provide appropriate incentives for personnel to be retained.  Early capture of process knowledge through use of IBM's Cobee tool.\n\nRisk: Loss of critical knowledge due to early attrition of personnel.\nMigitation: Work with FIS to provide appropriate incentives for personnel to be retained.  Early capture of process knowledge through use of IBM's Cobee tool.\n\nRisk: Loss of critical knowledge due to early attrition of personnel.\nMigitation: Work with FIS to provide appropriate incentives for personnel to be retained.  Early capture of process knowledge through use of IBM's Cobee tool.\n\nRisk: Loss of critical knowledge due to early attrition of personnel.\nMigitation: Work with FIS to provide appropriate incentives for personnel to be retained.  Early capture of process knowledge through use of IBM's Cobee tool.\n\nRisk: Loss of critical knowledge due to early attrition of personnel.\nMigitation: Work with FIS to provide appropriate incentives for personnel to be retained.  Early capture of process knowledge through use of IBM's Cobee tool.\n\nRisk: Loss of critical knowledge due to early attrition of personnel.\nMigitation: Work with FIS to provide appropriate incentives for personnel to be retained.  Early capture of process knowledge through use of IBM's Cobee tool.\n\nAll Migration activities are completed by end of Q1 of Year 2\n\nNo dual run due re-badging of existing personnel\n\nDual Run First Month of Q3\n\nDual Run First Month of Q1\n\nPopulate a RACI of what TSYS/FIS will be responsible for and what you will be responsible for; FIS has not pre-populated this RACI. Vendors are expected to propose the full activity list they believe is required to execute a migration of this scale, and to assign responsibility accordingly. Responses should reflect your actual delivery methodology \u2014 not a generic RACI template. Activities should cover at minimum: client readiness, knowledge transfer, dual-run management, cutover approval, stabilization, and hypercare exit. Add rows as needed.\n\nVendor documents up to 15 migration waves in Tab 7.0 (enumerated wave list / summary).",
+  "migrationNotes": "Part 1 \u2014 Wave Composition: For each wave, list which client cohorts are included, explaining what criteria drove the grouping; for all clients, specify which client is mapped to each wave.  FIS has intentionally not prescribed a wave structure or grouping methodology. We expect vendors to analyze the client dataset provided and propose the wave design they believe is most operationally sound for an engagement of this complexity. There is no correct number of waves. Responses that demonstrate genuine analytical thinking about client risk, regulatory complexity, volume sequencing, and transition readiness will be evaluated more favorably than generic frameworks.\n\nRisk: Personnel do not accept re-badge offer.\nMigitation: Provide compelling rational to accept re-badge offer\n\nAdditional risk: Transition must include enough time to deal with UK regulatory requirements pertaining to re-badging.\n\nRisk: Loss of critical knowledge due to early attrition of personnel.\nMigitation: Work with FIS to provide appropriate incentives for personnel to be retained.  Early capture of process knowledge through use of IBM's Cobee tool.\n\nAll Migration activities are completed by end of Q1 of Year 2\n\nNo dual run due re-badging of existing personnel\n\nDual Run First Month of Q3\n\nDual Run First Month of Q1\n\nPopulate a RACI of what TSYS/FIS will be responsible for and what you will be responsible for; FIS has not pre-populated this RACI. Vendors are expected to propose the full activity list they believe is required to execute a migration of this scale, and to assign responsibility accordingly. Responses should reflect your actual delivery methodology \u2014 not a generic RACI template. Activities should cover at minimum: client readiness, knowledge transfer, dual-run management, cutover approval, stabilization, and hypercare exit. Add rows as needed.\n\nDetailed Project Plan & Timeline Creation\u200b\n\nDevelop Process Workshop Plan and Schedule\u200b\n\nIdentify FIS Participated for Knowledge Transfer\u200b\n\nGrant System Access to IBM SMEs and KT Participants\u200b\n\nAssign each IBM Delivery Personnel their Operational Role\u200b\n\nGrant System Access to all IBM Delivery Personnel\u200b\n\nCertify Each IBM Delivery Personnel is Ready to Operate\u200b\n\nIdentify Key Stakeholders for Operational Governance\u200b\n\nConduct Targeted Education for Operational Personnel as needed\u200b\n\nExit Migration Phase and Enter Steady State Delivery\u200b\n\nThis team is responsible for leading and executing the activity.\n\nThis team must ensure that the activity is completed.\u00a0\u00a0Only one team can be accountable for an activity.\u00a0\u00a0A team can be both accountable for an activity and responsible to execute an activity or consult in the execution of the activity.\n\nOne or more team(s) may be consulted.\u00a0\u00a0Consulted is defined as providing guidance or participating in the execution of an activity (support / inputs to execute the activity).\n\nOne or more team(s) may be informed.\n\nVendor documents up to 15 migration waves in Tab 7.0 (enumerated wave list / summary).",
   "flags": [
     "Operating TCV ~$460.0M on Row 119; separate IBM investment lines (Rows 68\u201373, ~$11.3M) are not deductions from Row 119.",
     "COLA shown as 0% pending mutual agreement \u2014 treated as pricing floor, not ceiling.",
@@ -8964,7 +8964,7 @@
             "location": "Cell D14",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 11,
@@ -9709,7 +9709,7 @@
             "location": "Cell D25",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 22,
@@ -10454,7 +10454,7 @@
             "location": "Cell D23",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 20,
@@ -11199,7 +11199,7 @@
             "location": "Cell D13",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 10,
@@ -11944,7 +11944,7 @@
             "location": "Cell D22",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 19,
@@ -12689,7 +12689,7 @@
             "location": "Cell D21",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 18,
@@ -13434,7 +13434,7 @@
             "location": "Cell D24",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 21,
@@ -14179,7 +14179,7 @@
             "location": "Cell D20",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 17,
@@ -14924,7 +14924,7 @@
             "location": "Cell D19",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 16,
@@ -15571,7 +15571,7 @@
             "location": "Cell B18",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 15,
@@ -16120,7 +16120,7 @@
             "location": "Cell B15",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 12,
@@ -16669,7 +16669,7 @@
             "location": "Cell B16",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 13,
@@ -17218,7 +17218,7 @@
             "location": "Cell B17",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 14,
@@ -17822,7 +17822,7 @@
             "location": "Cell C10",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 7,
@@ -18469,7 +18469,7 @@
             "location": "Cell C20",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 17,
@@ -19030,7 +19030,7 @@
             "location": "Cell B3",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 1,
@@ -19597,7 +19597,7 @@
             "location": "Cell C101",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 98,
@@ -20244,7 +20244,7 @@
             "location": "Cell C58",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 55,
@@ -20891,7 +20891,7 @@
             "location": "Cell C49",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 46,
@@ -21538,7 +21538,7 @@
             "location": "Cell C107",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 104,
@@ -22185,7 +22185,7 @@
             "location": "Cell C106",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 103,
@@ -22832,7 +22832,7 @@
             "location": "Cell C82",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 79,
@@ -23528,7 +23528,7 @@
             "location": "Cell D11",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 8,
@@ -24224,7 +24224,7 @@
             "location": "Cell C42",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 39,
@@ -24920,7 +24920,7 @@
             "location": "Cell G25",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 22,
@@ -25665,7 +25665,7 @@
             "location": "Cell F100",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 97,
@@ -26312,7 +26312,7 @@
             "location": "Cell B82",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 79,
@@ -26824,7 +26824,7 @@
             "location": "Cell B3",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 1,
@@ -27336,7 +27336,7 @@
             "location": "Cell B23",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 20,
@@ -27940,7 +27940,7 @@
             "location": "Cell C11",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 8,
@@ -28587,7 +28587,7 @@
             "location": "Cell C31",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 28,
@@ -28910,7 +28910,7 @@
         {
           "ref": "C50",
           "questionText": "Describe the AI overlay tools you propose to deploy as part of this engagement. For each, describe the capability, quantify the anticipated operational impact, and confirm how it integrates with the existing technology stack. Summarize your total efficiency ambition across all three levers. All figures in USD millions, rounded to one decimal place (e.g. $2.4M). Clearly state which savings are contractually committed.",
-          "text": "Category\n(e.g. NLP, GenAI, RPA, Predictive)\n\nDescription\n\nPrimary Value Lever\n(Digital Efficiencies, Labor Arbitrage, Productivity)\n\nQuantified Impact\n(e.g. X% AHT reduction, Contact Elimination)\n\nTimeline to\nDeploy\n\nIntegration Method\n(API / Native / Other)\n\nProposed Application to Integrate With\n\nKey Assumptions /\nDependencies\n\nTotal Opportunity\n($M relative to Direct Costs)\n\nYear 1\nBenefit ($M)\n\nYear 2\nBenefit ($M)\n\nYear 3\nBenefit ($M)\n\nAutomated document creation tool for capture of business process steps to accelerate creation of Standard Operating Procedures (SOPs) and conversion into digital simulation for virtual training and certification\n\nProductivity\n\nAccelerated Transition: Rapid definition current state SOPs and creation of agent training or certification materials, from months to weeks\n\nImmediately available on IBM Cloud\n\nN/A - current state documents are loaded into tool available on IBM Cloud for generation of operational material\n\n3500000\n\n1500000\n\n500000\n\n500000\n\nReporting Aggregation for AI\n\nEnterprise-wide standard Service Level agreement reporting platform with prebuilt metrics and dashboards for Contact Center operations, AI performance, and customer experience metrics\n\nProductivity\n\nFTE Reduction: Reduced reporting and tracking effort required\n\nImmediately available on IBM Cloud\n\nNICE CXOne, AI Agents\n\n900000\n\n500000\n\n100000\n\n100000\n\nAccelerates use case ideation, requirements generation, and promprt creation. Extracts and synethsizes information from current state procedures in a model-agnostic manner to:\n- Identify functions that overlap and opportunities to merge similar work into one process\n- Identify candidate work that appears redundant and can be eliminated\n- Generate Agent Prompts and system connections for MCP and A2A\n- Generate data models and pipelines for enrichment\n- Conduct cost and ROI analysis based on input metrics (i.e., FTE headcount, current process SLAs)\n\nProductivity\n\nAccelerated Transition and Execution: Enables rapid analysis of current documentation, identification of opportunities, and generation of inputs for creation and training of agentic workflows\n\nImmediately available. Flexible architecture and deployment options across hyperscaler or IBM Cloud\n\nNICE CXOne, AI Agents, Workflow of Choice\n\n8000000\n\n2000000\n\n1500000\n\n1500000\n\nICA is a modular consulting platform that is model and cloud-agnostic. It contains libraries of pre-built agents and assistants that accelerate transformation across the Product Development Lifecycle.\n\nICA's open architecture can integrate with native services in FIS' cloud/AI platforms, offering capabilities across:\n1. Low-code UI for design, build, and deployment of agentic applications leveraging pre-built suite of agentic templates\n2. Agentic core for agentic architectural components for communication protocol management including MCP orchestration and A2A message brokering, gateway/registry services, and security & identity management\n3. Agentic application library of pre-built banking templates\n4. Embedded observability, evaluation, and control for every agentic application\n\nProductivity\n\nAccelerated Transition and Execution\n\nImmediately available. Flexible architecture and deployment options across hyperscaler or IBM Cloud\n\nExisting Systems  and the Target Systesms\n\n8000000\n\n2000000\n\n1500000\n\n1500000\n\nConnectLingua\nAn AI\u2011powered language translation and transcription capability that enables real\u2011time multilingual support across voice and digital channels, allowing agents and\ncustomers to communicate seamlessly in different languages.\nAutoScoring\nAn AI\u2011driven quality evaluation capability that automatically scores customer interactions against predefined criteria, reducing manual reviews while improving\nconsistency, coverage, and coaching insights.\nAutoSummary\nAn AI\u2011generated interaction summarization capability that automatically produces concise, structured call or chat summaries for after\u2011call work, CRM updates, and\ncompliance documentation.\nCopilot\nAn AI\u2011enabled assistant for agents and supervisors that delivers real\u2011time insights, recommendations, summaries, and performance guidance to improve\nproductivity, decision\u2011making, and coaching effectiveness.\n\nProductivity\n\nAutomating routine tasks reduces staffing needs and allows agents to focus on complex issues. While reducing average handle time and boosting overall efficiency.\n\nImmediate Available via CXONE. IBM will establish two regional instances of NICE CXOne and the proposed Cha",
+          "text": "Category\n(e.g. NLP, GenAI, RPA, Predictive)\n\nDescription\n\nPrimary Value Lever\n(Digital Efficiencies, Labor Arbitrage, Productivity)\n\nQuantified Impact\n(e.g. X% AHT reduction, Contact Elimination)\n\nTimeline to\nDeploy\n\nIntegration Method\n(API / Native / Other)\n\nProposed Application to Integrate With\n\nKey Assumptions /\nDependencies\n\nTotal Opportunity\n($M relative to Direct Costs)\n\nYear 1\nBenefit ($M)\n\nYear 2\nBenefit ($M)\n\nYear 3\nBenefit ($M)\n\nAutomated document creation tool for capture of business process steps to accelerate creation of Standard Operating Procedures (SOPs) and conversion into digital simulation for virtual training and certification\n\nProductivity\n\nAccelerated Transition: Rapid definition current state SOPs and creation of agent training or certification materials, from months to weeks\n\nImmediately available on IBM Cloud\n\nN/A - current state documents are loaded into tool available on IBM Cloud for generation of operational material\n\n3500000\n\n1500000\n\n500000\n\nReporting Aggregation for AI\n\nEnterprise-wide standard Service Level agreement reporting platform with prebuilt metrics and dashboards for Contact Center operations, AI performance, and customer experience metrics\n\nProductivity\n\nFTE Reduction: Reduced reporting and tracking effort required\n\nImmediately available on IBM Cloud\n\nNICE CXOne, AI Agents\n\n900000\n\n500000\n\n100000\n\nAccelerates use case ideation, requirements generation, and promprt creation. Extracts and synethsizes information from current state procedures in a model-agnostic manner to:\n- Identify functions that overlap and opportunities to merge similar work into one process\n- Identify candidate work that appears redundant and can be eliminated\n- Generate Agent Prompts and system connections for MCP and A2A\n- Generate data models and pipelines for enrichment\n- Conduct cost and ROI analysis based on input metrics (i.e., FTE headcount, current process SLAs)\n\nProductivity\n\nAccelerated Transition and Execution: Enables rapid analysis of current documentation, identification of opportunities, and generation of inputs for creation and training of agentic workflows\n\nImmediately available. Flexible architecture and deployment options across hyperscaler or IBM Cloud\n\nNICE CXOne, AI Agents, Workflow of Choice\n\n8000000\n\n2000000\n\n1500000\n\nICA is a modular consulting platform that is model and cloud-agnostic. It contains libraries of pre-built agents and assistants that accelerate transformation across the Product Development Lifecycle.\n\nICA's open architecture can integrate with native services in FIS' cloud/AI platforms, offering capabilities across:\n1. Low-code UI for design, build, and deployment of agentic applications leveraging pre-built suite of agentic templates\n2. Agentic core for agentic architectural components for communication protocol management including MCP orchestration and A2A message brokering, gateway/registry services, and security & identity management\n3. Agentic application library of pre-built banking templates\n4. Embedded observability, evaluation, and control for every agentic application\n\nProductivity\n\nAccelerated Transition and Execution\n\nImmediately available. Flexible architecture and deployment options across hyperscaler or IBM Cloud\n\nExisting Systems  and the Target Systesms\n\n8000000\n\n2000000\n\n1500000\n\nConnectLingua\nAn AI\u2011powered language translation and transcription capability that enables real\u2011time multilingual support across voice and digital channels, allowing agents and\ncustomers to communicate seamlessly in different languages.\nAutoScoring\nAn AI\u2011driven quality evaluation capability that automatically scores customer interactions against predefined criteria, reducing manual reviews while improving\nconsistency, coverage, and coaching insights.\nAutoSummary\nAn AI\u2011generated interaction summarization capability that automatically produces concise, structured call or chat summaries for after\u2011call work, CRM updates, and\ncompliance documentation.\nCopilot\nAn AI\u2011enabled assistant for agents and supervisors that delivers real\u2011time insights, recommendations, summaries, and performance guidance to improve\nproductivity, decision\u2011making, and coaching effectiveness.\n\nProductivity\n\nAutomating routine tasks reduces staffing needs and allows agents to focus on complex issues. While reducing average handle time and boosting overall efficiency.\n\nImmediate Available via CXONE. IBM will establish two regional instances of NICE CXOne and the proposed Chat/Secure Messaging and Conversatio",
           "snapshot": {
             "minRow": 47,
             "maxRow": 53,
@@ -29234,7 +29234,7 @@
             "location": "Cell C50",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 47,
@@ -29557,7 +29557,7 @@
         {
           "ref": "C55",
           "questionText": "5.3  AI Overlay Technology",
-          "text": "ConnectLingua\nAn AI\u2011powered language translation and transcription capability that enables real\u2011time multilingual support across voice and digital channels, allowing agents and\ncustomers to communicate seamlessly in different languages.\nAutoScoring\nAn AI\u2011driven quality evaluation capability that automatically scores customer interactions against predefined criteria, reducing manual reviews while improving\nconsistency, coverage, and coaching insights.\nAutoSummary\nAn AI\u2011generated interaction summarization capability that automatically produces concise, structured call or chat summaries for after\u2011call work, CRM updates, and\ncompliance documentation.\nCopilot\nAn AI\u2011enabled assistant for agents and supervisors that delivers real\u2011time insights, recommendations, summaries, and performance guidance to improve\nproductivity, decision\u2011making, and coaching effectiveness.\n\nProductivity\n\nAutomating routine tasks reduces staffing needs and allows agents to focus on complex issues. While reducing average handle time and boosting overall efficiency.\n\nImmediate Available via CXONE. IBM will establish two regional instances of NICE CXOne and the proposed Chat/Secure Messaging and Conversational/AI-based IVR in North America and EMEA. \n\nPlease refer to the Technology Integration Approach section of the *Insert PPT title* for additional details.\n\nNICE CXOne, AI Agents\n\n3500000\n\n1500000\n\n500000\n\n500000",
+          "text": "ConnectLingua\nAn AI\u2011powered language translation and transcription capability that enables real\u2011time multilingual support across voice and digital channels, allowing agents and\ncustomers to communicate seamlessly in different languages.\nAutoScoring\nAn AI\u2011driven quality evaluation capability that automatically scores customer interactions against predefined criteria, reducing manual reviews while improving\nconsistency, coverage, and coaching insights.\nAutoSummary\nAn AI\u2011generated interaction summarization capability that automatically produces concise, structured call or chat summaries for after\u2011call work, CRM updates, and\ncompliance documentation.\nCopilot\nAn AI\u2011enabled assistant for agents and supervisors that delivers real\u2011time insights, recommendations, summaries, and performance guidance to improve\nproductivity, decision\u2011making, and coaching effectiveness.\n\nProductivity\n\nAutomating routine tasks reduces staffing needs and allows agents to focus on complex issues. While reducing average handle time and boosting overall efficiency.\n\nImmediate Available via CXONE. IBM will establish two regional instances of NICE CXOne and the proposed Chat/Secure Messaging and Conversational/AI-based IVR in North America and EMEA. \n\nPlease refer to the Technology Integration Approach section of the *Insert PPT title* for additional details.\n\nNICE CXOne, AI Agents\n\n3500000\n\n1500000\n\n500000",
           "snapshot": {
             "minRow": 52,
             "maxRow": 58,
@@ -29881,7 +29881,7 @@
             "location": "Cell C55",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 52,
@@ -30528,7 +30528,7 @@
             "location": "Cell C56",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 53,
@@ -31175,7 +31175,7 @@
             "location": "Cell C24",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 21,
@@ -31822,7 +31822,7 @@
             "location": "Cell C22",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 19,
@@ -32469,7 +32469,7 @@
             "location": "Cell C23",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 20,
@@ -33165,7 +33165,7 @@
             "location": "Cell D44",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 41,
@@ -33910,7 +33910,7 @@
             "location": "Cell D43",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 40,
@@ -34655,7 +34655,7 @@
             "location": "Cell I19",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 16,
@@ -35302,7 +35302,7 @@
             "location": "Cell B68",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 65,
@@ -35814,7 +35814,7 @@
             "location": "Cell B3",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 1,
@@ -36326,7 +36326,7 @@
             "location": "Cell B66",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 63,
@@ -36875,7 +36875,7 @@
             "location": "Cell B80",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 77,
@@ -37528,7 +37528,7 @@
             "location": "Cell D9",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 6,
@@ -38224,7 +38224,7 @@
             "location": "Cell C38",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 35,
@@ -38920,7 +38920,7 @@
             "location": "Cell F149",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 146,
@@ -39530,7 +39530,7 @@
             "location": "Cell B3",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 1,
@@ -40042,7 +40042,7 @@
             "location": "Cell B69",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 66,
@@ -40591,7 +40591,7 @@
             "location": "Cell B148",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 145,
@@ -41195,7 +41195,7 @@
             "location": "Cell C8",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -41891,7 +41891,7 @@
             "location": "Cell D23",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 20,
@@ -42636,7 +42636,7 @@
             "location": "Cell D22",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 19,
@@ -43381,7 +43381,7 @@
             "location": "Cell D26",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 23,
@@ -44126,7 +44126,7 @@
             "location": "Cell D15",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 12,
@@ -44871,7 +44871,7 @@
             "location": "Cell D20",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 17,
@@ -45616,7 +45616,7 @@
             "location": "Cell D16",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 13,
@@ -46361,7 +46361,7 @@
             "location": "Cell D18",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 15,
@@ -47106,7 +47106,7 @@
             "location": "Cell D19",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 16,
@@ -47851,7 +47851,7 @@
             "location": "Cell D17",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 14,
@@ -48596,7 +48596,7 @@
             "location": "Cell D25",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 22,
@@ -49341,7 +49341,7 @@
             "location": "Cell D24",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 21,
@@ -50086,7 +50086,7 @@
             "location": "Cell D21",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 18,

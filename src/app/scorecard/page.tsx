@@ -1,8 +1,19 @@
 "use client";
 
-import { Fragment, useEffect, useMemo, useState } from "react";
+import { Fragment, useMemo, useState } from "react";
 import Link from "next/link";
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Cell,
+  ResponsiveContainer,
+  Tooltip as RTooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
 import { bestInClass, ScoreValueBlock } from "@/components/ScoreCell";
+import { OverviewRadar } from "@/components/OverviewRadar";
 import { ScoringMethodologyPanel } from "@/components/ScoringMethodologyPanel";
 import { ProvenanceTrigger } from "@/components/source/ProvenanceTrigger";
 import { Tooltip } from "@/components/ui/Tooltip";
@@ -12,6 +23,8 @@ import { VendorCaveatStrip } from "@/components/VendorCaveatStrip";
 import { useDataset } from "@/lib/dataset";
 import { EVALUATOR_IDS, EVALUATORS } from "@/lib/evaluatorData";
 import type { ScoreDimension } from "@/lib/types";
+import { SCORE_COLORS, SCORE_LABELS } from "@/lib/scoreGradient";
+import evaluatorScoresBundled from "@/data/evaluatorScores.json";
 
 function scorecardCellMeta(
   dimensionLabel: string,
@@ -22,7 +35,7 @@ function scorecardCellMeta(
   const pending = value == null || !Number.isFinite(value);
   return {
     kind: "scorecard",
-    sourceFile: "Folder 8 evaluator import",
+    sourceFile: "Workshop 1 evaluator exports",
     location: dimensionLabel,
     valueLabel: pending ? "—" : Number(value).toFixed(2),
     note: pending
@@ -57,18 +70,9 @@ export default function ScorecardPage() {
   const [hoverRow, setHoverRow] = useState<string | null>(null);
   const [hoverCol, setHoverCol] = useState<string | null>(null);
   const [panel, setPanel] = useState<{ dimensionId: string; vendorId: string } | null>(null);
-  const [evaluatorMatrix, setEvaluatorMatrix] = useState<Record<
-    string,
-    Record<string, Record<string, number | null>>
-  > | null>(null);
-
-  useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/data/evaluatorScores.json`, { cache: "no-store" })
-      .then((r) => (r.ok ? r.json() : null))
-      .then((d) => {
-        if (d?.scores) setEvaluatorMatrix(d.scores);
-      })
-      .catch(() => {});
+  const evaluatorMatrix = useMemo(() => {
+    const d = evaluatorScoresBundled as { scores?: Record<string, Record<string, Record<string, number | null>>> };
+    return d?.scores ?? null;
   }, []);
 
   const panelDim = panel ? dims.find((d) => d.id === panel.dimensionId) : null;
@@ -91,6 +95,20 @@ export default function ScorecardPage() {
     });
   }
 
+  const radarPending = portfolio.scorecard.dimensions[0]?.scores[order[0] ?? "cognizant"] == null;
+  const compositeBarData = useMemo(
+    () =>
+      [...vendors]
+        .sort((a, b) => (b.composite ?? -1) - (a.composite ?? -1))
+        .map((v) => ({
+          name: v.displayName.slice(0, 12),
+          full: v.displayName,
+          composite: v.composite ?? 0,
+          color: v.color,
+        })),
+    [vendors],
+  );
+
   return (
     <div className="space-y-10 relative">
       <div>
@@ -100,39 +118,104 @@ export default function ScorecardPage() {
         </p>
       </div>
 
-      <p className="text-caption text-[#64748B] max-w-3xl pl-4 border-l-2 border-[#E2E8F0]">{scoreSrc}</p>
+      <p className="text-caption text-[#475569] max-w-3xl pl-4 border-l-2 border-[#E2E8F0]">{scoreSrc}</p>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-        {[...vendors]
-          .sort((a, b) => (b.composite ?? -999) - (a.composite ?? -999))
-          .map((v, idx) => (
-            <div
-              key={v.id}
-              className="bg-white p-6 shadow-card text-center border border-[#F1F5F9]"
-              style={{ borderLeftWidth: 2, borderLeftColor: v.color }}
-            >
-              <p className="text-caption font-medium uppercase tracking-[0.06em]" style={{ color: v.color }}>
-                {v.displayName}
-              </p>
-              <div className="mt-3 flex justify-center">
-                <ProvenanceTrigger meta={scorecardCellMeta("Weighted composite", v.composite, scoreSrc, ext)}>
-                  <ScoreValueBlock value={v.composite} />
-                </ProvenanceTrigger>
-              </div>
-              <p className="text-micro text-[#94A3B8] mt-2">
-                #{idx + 1} by weighted composite
-                {v.composite == null ? " (pending import)" : ""}
-              </p>
-              <VendorCaveatStrip vendorId={v.id} context="scorecard" />
+      <ScoringMethodologyPanel />
+
+      <div className="rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-4 py-3">
+        <p className="text-[11px] font-semibold uppercase tracking-wider text-[#475569] mb-2">Score scale (1–9 — rubric anchors)</p>
+        <div className="flex flex-wrap gap-x-6 gap-y-2">
+          {([1, 3, 7, 9] as const).map((k) => (
+            <div key={k} className="flex items-center gap-2 text-[12px] text-[#475569]">
+              <span className="h-3 w-3 rounded-sm shrink-0 ring-1 ring-black/10" style={{ backgroundColor: SCORE_COLORS[k] }} />
+              <span className="font-mono tabular-nums font-semibold text-[#0F172A]">{k}</span>
+              <span>— {SCORE_LABELS[k]}</span>
             </div>
           ))}
+        </div>
+        <p className="text-[11px] text-[#475569] mt-2">
+          Legend: 1 = Does Not Meet, 3 = Partially Meets, 7 = Meets, 9 = Exceeds (Strong). “Strong” in memos maps to these rubric anchors.
+        </p>
+      </div>
+
+      <section className="pb-1">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          {[...vendors]
+            .sort((a, b) => (b.composite ?? -999) - (a.composite ?? -999))
+            .map((v, idx) => (
+              <div
+                key={v.id}
+                className="bg-white p-3 shadow-card text-center border border-[#E2E8F0] rounded-xl max-h-[120px] overflow-hidden flex flex-col"
+                style={{ borderTopWidth: 3, borderTopColor: v.color }}
+              >
+                <p className="text-[13px] font-bold leading-tight truncate" style={{ color: v.color }}>
+                  {v.displayName}
+                </p>
+                <div className="mt-1 flex justify-center shrink-0">
+                  <ProvenanceTrigger meta={scorecardCellMeta("Weighted composite", v.composite, scoreSrc, ext)}>
+                    <span className="text-[22px] font-bold text-[#0F172A] tabular-nums leading-none">
+                      {v.composite != null && Number.isFinite(v.composite) ? v.composite.toFixed(2) : "—"}
+                    </span>
+                  </ProvenanceTrigger>
+                </div>
+                <p className="text-[11px] text-[#475569] mt-1 leading-tight">
+                  #{idx + 1} · {v.composite == null ? "pending" : "composite"}
+                </p>
+                <VendorCaveatStrip vendorId={v.id} context="scorecard" />
+              </div>
+            ))}
+        </div>
       </section>
 
-      <div className="overflow-x-auto bg-white shadow-card border border-[#F1F5F9]">
+      {!radarPending ? (
+        <section className="max-w-[900px] mx-auto grid lg:grid-cols-2 gap-8 items-center">
+          <div className="space-y-2 min-w-0">
+            <h2 className="text-h3 font-semibold text-[#0F172A]">Composite comparison</h2>
+            <p className="text-caption text-[#475569]">Weighted composite by vendor (1–9 scale).</p>
+            <div className="h-[280px] w-full">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={compositeBarData} layout="vertical" margin={{ left: 4, right: 16, top: 8, bottom: 8 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" horizontal vertical={false} />
+                  <XAxis type="number" domain={[0, 9]} ticks={[0, 3, 6, 9]} tick={{ fontSize: 11, fill: "#475569" }} />
+                  <YAxis type="category" dataKey="name" width={72} tick={{ fontSize: 11, fill: "#334155" }} interval={0} />
+                  <RTooltip
+                    content={({ active, payload }) => {
+                      if (!active || !payload?.length) return null;
+                      const row = payload[0]?.payload as (typeof compositeBarData)[0];
+                      if (!row) return null;
+                      return (
+                        <div className="rounded-lg border border-[#E2E8F0] bg-white px-3 py-2 text-[12px] shadow-md">
+                          <p className="font-semibold text-[#0F172A]">{row.full}</p>
+                          <p className="tabular-nums text-[#475569]">{row.composite.toFixed(2)} · composite</p>
+                        </div>
+                      );
+                    }}
+                    wrapperStyle={{ zIndex: 70 }}
+                  />
+                  <Bar dataKey="composite" radius={[0, 4, 4, 0]} maxBarSize={22}>
+                    {compositeBarData.map((e) => (
+                      <Cell key={e.full} fill={e.color} />
+                    ))}
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+          <div className="flex justify-center lg:justify-end">
+            <div className="w-full max-w-[300px]">
+              <h2 className="text-h3 font-semibold text-[#0F172A] text-center mb-2">Pillar radar</h2>
+              <p className="text-caption text-[#475569] text-center mb-2">Field average vs vendors</p>
+              <OverviewRadar portfolio={portfolio} scoresPending={false} />
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      <div className="overflow-x-auto bg-white shadow-card border border-[#E2E8F0]">
         <table className="min-w-[1100px] w-full text-[13px]">
           <thead className="sticky top-0 z-20 bg-[#F8FAFC] border-b border-[#E2E8F0]">
             <tr>
-              <th className="sticky left-0 z-30 bg-[#F8FAFC] text-left p-2 font-medium text-[#64748B] w-[280px] border-r border-[#F1F5F9] align-bottom">
+              <th className="sticky left-0 z-30 bg-[#F8FAFC] text-left p-2 font-medium text-[#475569] w-[280px] border-r border-[#E2E8F0] align-bottom">
                 Dimension
               </th>
               {vendors.map((v) => (
@@ -156,7 +239,7 @@ export default function ScorecardPage() {
                   >
                     {v.displayName}
                   </span>
-                  {sortVendorId === v.id && <span className="block text-[10px] font-normal normal-case text-[#94A3B8] mt-1">↓</span>}
+                  {sortVendorId === v.id && <span className="block text-[10px] font-normal normal-case text-[#475569] mt-1">↓</span>}
                 </th>
               ))}
             </tr>
@@ -164,12 +247,14 @@ export default function ScorecardPage() {
           <tbody>
             {pillarBlocks.map(({ pillar, dims: pillarDims }) => {
               const collapsed = collapsedPillars.has(pillar);
+              const pctMatch = pillar.match(/\(([\d.]+%)\)\s*$/);
+              const pillarLabelOnly = pctMatch ? pillar.slice(0, pctMatch.index).trim() : pillar;
               return (
                 <Fragment key={pillar}>
                   <tr className="bg-[#FAFAFA] border-l-2 border-l-[#CBD5E1]">
                     <td
                       colSpan={vendors.length + 1}
-                      className="sticky left-0 z-10 bg-[#FAFAFA] px-3 py-2 text-[11px] font-medium uppercase tracking-wide text-[#94A3B8] cursor-pointer hover:bg-[#F8FAFC] transition-fast border-y border-[#F1F5F9]"
+                      className="sticky left-0 z-10 bg-[#FAFAFA] px-3 py-2 text-[11px] font-medium uppercase tracking-wide text-[#475569] cursor-pointer hover:bg-[#F8FAFC] transition-fast border-y border-[#E2E8F0]"
                       onClick={() => togglePillar(pillar)}
                       onKeyDown={(e) => {
                         if (e.key === "Enter" || e.key === " ") {
@@ -180,9 +265,11 @@ export default function ScorecardPage() {
                       role="button"
                       tabIndex={0}
                     >
-                      <span className="inline-block w-4 text-[#CBD5E1]">{collapsed ? "▸" : "▾"}</span>
-                      {pillar.replace(/\(\d+%\)/, "").trim()}
-                      <span className="ml-2 tabular-nums text-[#CBD5E1]">{pillar.match(/\((\d+)%\)/)?.[1] ?? ""}%</span>
+                      <span className="inline-block w-4 text-[#475569]">{collapsed ? "▸" : "▾"}</span>
+                      {pillarLabelOnly}
+                      {pctMatch ? (
+                        <span className="ml-2 tabular-nums text-[#475569] font-semibold normal-case">({pctMatch[1]})</span>
+                      ) : null}
                     </td>
                   </tr>
                   {!collapsed &&
@@ -192,15 +279,15 @@ export default function ScorecardPage() {
                       return (
                         <tr
                           key={d.id}
-                          className={`border-b border-[#F1F5F9] transition-fast font-mono ${
+                          className={`border-b border-[#E2E8F0] transition-fast font-mono ${
                             rowHot ? "bg-[#F8FAFC]" : "hover:bg-[#FAFAFA]"
                           }`}
                           onMouseEnter={() => setHoverRow(d.id)}
                           onMouseLeave={() => setHoverRow(null)}
                         >
-                          <td className="sticky left-0 z-10 bg-white p-2 align-top border-r border-[#F1F5F9] shadow-[2px_0_8px_-4px_rgba(0,0,0,0.06)]">
+                          <td className="sticky left-0 z-10 bg-white p-2 align-top border-r border-[#E2E8F0] shadow-[2px_0_8px_-4px_rgba(0,0,0,0.06)]">
                             <p className="font-medium text-[#0F172A] text-caption">{d.label}</p>
-                            <p className="text-[11px] text-[#94A3B8] mt-0.5 leading-snug">{DIMENSION_QUESTIONS[d.id] ?? ""}</p>
+                            <p className="text-[11px] text-[#475569] mt-0.5 leading-snug">{DIMENSION_QUESTIONS[d.id] ?? ""}</p>
                           </td>
                           {order.map((id) => {
                             const sc = d.scores[id];
@@ -219,7 +306,7 @@ export default function ScorecardPage() {
                                   content={
                                     <span className="max-w-[240px] whitespace-normal text-left block text-[11px]">
                                       {pending
-                                        ? "Score pending — Workshop 1"
+                                        ? "Score not available for this cell"
                                         : `Score ${Number(sc).toFixed(Number.isInteger(sc as number) ? 0 : 1)} · ${d.label}`}
                                     </span>
                                   }
@@ -272,10 +359,6 @@ export default function ScorecardPage() {
         </table>
       </div>
 
-      <div className="pt-8">
-        <ScoringMethodologyPanel collapsedDefault />
-      </div>
-
       {panel && panelDim && panelVendor && (
         <>
           <button
@@ -287,7 +370,7 @@ export default function ScorecardPage() {
           <aside className="fixed top-0 right-0 z-50 h-full w-full max-w-md border-l border-border bg-surface-raised shadow-modal flex flex-col animate-slide-up print-hide">
             <div className="px-6 py-4 border-b border-border-subtle flex items-start justify-between gap-3">
               <div>
-                <p className="text-micro font-semibold uppercase tracking-wide text-ink-tertiary">Cell detail</p>
+                <p className="text-micro font-semibold uppercase tracking-wide text-[#475569]">Cell detail</p>
                 <p className="text-h3 font-semibold text-ink mt-1" style={{ color: panelVendor.color }}>
                   {panelVendor.displayName}
                 </p>
@@ -302,7 +385,7 @@ export default function ScorecardPage() {
               </button>
             </div>
             <div className="flex-1 overflow-y-auto px-6 py-5 space-y-4 text-body text-ink-secondary">
-              <p className="text-caption text-ink-tertiary">{DIMENSION_QUESTIONS[panelDim.id] ?? ""}</p>
+              <p className="text-caption text-[#475569]">{DIMENSION_QUESTIONS[panelDim.id] ?? ""}</p>
               <div className="rounded-btn border border-border bg-surface-sunken p-4">
                 <p className="text-micro uppercase tracking-wider text-ink-faint font-medium mb-2">Evaluator inputs</p>
                 {evaluatorMatrix && panel ? (
@@ -312,7 +395,7 @@ export default function ScorecardPage() {
                       const pending = v == null || !Number.isFinite(v);
                       return (
                         <li key={eid} className="flex justify-between gap-2 border-b border-border-subtle pb-1">
-                          <span className="text-ink-tertiary">{EVALUATORS[eid]?.label ?? eid}</span>
+                          <span className="text-[#475569]">{EVALUATORS[eid]?.label ?? eid}</span>
                           <span className="tabular-nums font-medium text-ink">{pending ? "—" : Number(v).toFixed(1)}</span>
                         </li>
                       );

@@ -22,7 +22,7 @@ export function DocumentMetadataBar({ fileName, pages, bytes, submittedAt }: Pro
   ].filter(Boolean);
 
   return (
-    <p className="mt-3 text-caption text-[#94A3B8]">
+    <p className="mt-3 text-caption text-[#475569]">
       {parts.join(" · ")}
     </p>
   );

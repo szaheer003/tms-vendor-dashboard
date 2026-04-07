@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Card } from "@/components/ui/Card";
-import { SCORE_BG, SCORE_COLORS, SCORE_LABELS } from "@/lib/scoreGradient";
+import { SCORE_BG, SCORE_COLORS, SCORE_LABELS, scoreHeatTextOnRamp } from "@/lib/scoreGradient";
 
 const ROWS: { s: number; t: string }[] = [
   {
@@ -33,15 +33,15 @@ export function ScoringMethodologyPanel({ collapsedDefault = false }: { collapse
         className="flex w-full items-center justify-between px-5 py-4 text-left text-h3 text-[#0F172A] hover:bg-[#FAFAFA]"
       >
         Scoring methodology
-        <span className="text-caption text-[#64748B]">{open ? "Hide" : "View methodology"}</span>
+        <span className="text-caption text-[#475569]">{open ? "Hide" : "View methodology"}</span>
       </button>
       {open && (
-        <div className="space-y-4 border-t border-[#F1F5F9] px-5 pb-5 pt-4 text-body text-[#64748B]">
+        <div className="space-y-4 border-t border-[#F1F5F9] px-5 pb-5 pt-4 text-body text-[#475569]">
           <p>
             Workshop evaluators use a discrete <strong>1 / 3 / 7 / 9</strong> scale on scored questions (Q8–Q12). Intermediate
             values may be recorded for nuance; heatmaps interpolate between the four anchor colors.
           </p>
-          <p className="text-caption text-[#64748B]">
+          <p className="text-caption text-[#475569]">
             Anchor shorthand: <strong>1</strong> = Does not meet threshold (unacceptable risk); <strong>3</strong> = Material gaps;{" "}
             <strong>7</strong> = Strong fit; <strong>9</strong> = Differentiated / exceeds expectations.
           </p>
@@ -59,8 +59,8 @@ export function ScoringMethodologyPanel({ collapsedDefault = false }: { collapse
                   <tr key={r.s} className="border-b border-[#F1F5F9]">
                     <td className="w-20 align-top p-2">
                       <span
-                        className="inline-flex min-w-[2rem] items-center justify-center rounded-md border border-black/10 px-2 py-0.5 font-semibold tabular-nums text-[#0F172A]"
-                        style={{ backgroundColor: SCORE_BG[r.s] }}
+                        className="inline-flex min-w-[2rem] items-center justify-center rounded-md border border-black/10 px-2 py-0.5 font-semibold tabular-nums"
+                        style={{ backgroundColor: SCORE_BG[r.s], color: scoreHeatTextOnRamp(r.s) }}
                       >
                         {r.s}
                       </span>
@@ -83,7 +83,7 @@ export function ScoringMethodologyPanel({ collapsedDefault = false }: { collapse
               <li>Client &amp; Workforce Migration — 22.5%</li>
               <li>Partnership Readiness — 10%</li>
             </ul>
-            <p className="mt-3 text-caption">Evaluators: up to <strong>12</strong> Workshop 1 responses per vendor (Folder 8 imports).</p>
+            <p className="mt-3 text-caption">Evaluators: up to <strong>12</strong> Workshop 1 responses per vendor (evaluator workbook exports).</p>
             <p className="mt-2 text-caption">Weighted composite = Σ (pillar average × pillar weight).</p>
           </div>
         </div>

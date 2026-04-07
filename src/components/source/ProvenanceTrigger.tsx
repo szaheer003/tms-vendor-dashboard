@@ -20,7 +20,7 @@ const HOVER_CLOSE_MS = 200;
 function SourceIcon() {
   return (
     <span
-      className="inline-flex shrink-0 text-[10px] leading-none text-[#94A3B8] opacity-70 hover:opacity-100 transition-opacity duration-150"
+      className="inline-flex shrink-0 text-[10px] leading-none text-[#475569] opacity-70 hover:opacity-100 transition-opacity duration-150"
       aria-hidden
     >
       ●
@@ -40,11 +40,11 @@ function PopoverContent({
   return (
     <div className="rounded-xl bg-white p-4 text-[14px] text-[#0F172A] leading-normal shadow-[0_12px_36px_rgba(0,0,0,0.12),0_4px_12px_rgba(0,0,0,0.06)] border border-slate-200 max-w-[480px]">
       <div className="flex items-start justify-between gap-2 mb-3">
-        <p className="text-[10px] font-medium uppercase tracking-wider text-[#64748B]">Source preview</p>
+        <p className="text-[10px] font-medium uppercase tracking-wider text-[#475569]">Source preview</p>
         <button
           type="button"
           onClick={onClose}
-          className="text-[#94A3B8] hover:text-[#64748B] text-lg leading-none px-1"
+          className="text-[#475569] hover:text-[#475569] text-lg leading-none px-1"
           aria-label="Close"
         >
           ×
@@ -55,21 +55,21 @@ function PopoverContent({
       )}
       {meta.kind === "workbook" && (
         <>
-          <dl className="space-y-1.5 text-[12px] text-[#64748B] mb-3">
+          <dl className="space-y-1.5 text-[12px] text-[#475569] mb-3">
             <div>
-              <dt className="inline text-[#94A3B8]">Source: </dt>
+              <dt className="inline text-[#475569]">Source: </dt>
               <dd className="inline">{meta.sourceFile}</dd>
             </div>
             <div>
-              <dt className="inline text-[#94A3B8]">Tab: </dt>
+              <dt className="inline text-[#475569]">Tab: </dt>
               <dd className="inline">{meta.tab}</dd>
             </div>
             <div>
-              <dt className="inline text-[#94A3B8]">Location: </dt>
+              <dt className="inline text-[#475569]">Location: </dt>
               <dd className="inline">{meta.location}</dd>
             </div>
             <div>
-              <dt className="inline text-[#94A3B8]">Calculation: </dt>
+              <dt className="inline text-[#475569]">Calculation: </dt>
               <dd className="inline">{meta.calculation}</dd>
             </div>
           </dl>
@@ -81,7 +81,7 @@ function PopoverContent({
       )}
       {meta.kind === "proposal" && (
         <>
-          <dl className="space-y-1 text-[12px] text-[#64748B] mb-2">
+          <dl className="space-y-1 text-[12px] text-[#475569] mb-2">
             <div>Document: {proposalDocLabel(meta)}</div>
             <div>Source: {meta.sourceFile}</div>
             {meta.page && meta.page !== "—" && (
@@ -109,15 +109,15 @@ function PopoverContent({
         </>
       )}
       {meta.kind === "scorecard" && (
-        <div className="text-[12px] text-[#64748B] space-y-1">
+        <div className="text-[12px] text-[#475569] space-y-1">
           {meta.valueLabel && <p className="font-semibold text-[#0F172A]">{meta.valueLabel}</p>}
           <p>{meta.note}</p>
-          <p className="text-[#94A3B8]">{meta.location}</p>
+          <p className="text-[#475569]">{meta.location}</p>
           <p>Extracted: {meta.extractionTimestamp ?? "—"}</p>
         </div>
       )}
       {meta.kind === "analyst" && (
-        <p className="text-[12px] text-[#64748B]">{meta.note}</p>
+        <p className="text-[12px] text-[#475569]">{meta.note}</p>
       )}
       {deepHref && (
         <Link

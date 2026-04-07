@@ -40,7 +40,7 @@
         "location": "Row 131, columns C:V (20 quarters)",
         "valueLabel": "$425.30M",
         "calculation": "Sum of quarterly values on Total Annual Cost row; values already in $M per workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 128,
@@ -532,7 +532,7 @@
         "location": "Row 131, Y1 = sum of quarters 1\u20134",
         "valueLabel": "$172.30M",
         "calculation": "Sum of four quarterly cells on same row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 128,
@@ -1024,7 +1024,7 @@
         "location": "Row 131, Y2 = sum of quarters 5\u20138",
         "valueLabel": "$109.07M",
         "calculation": "Sum of four quarterly cells on same row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 128,
@@ -1516,7 +1516,7 @@
         "location": "Row 131, Y3 = sum of quarters 9\u201312",
         "valueLabel": "$55.04M",
         "calculation": "Sum of four quarterly cells on same row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 128,
@@ -2008,7 +2008,7 @@
         "location": "Row 131, Y4 = sum of quarters 13\u201316",
         "valueLabel": "$47.73M",
         "calculation": "Sum of four quarterly cells on same row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 128,
@@ -2500,7 +2500,7 @@
         "location": "Row 131, Y5 = sum of quarters 17\u201320",
         "valueLabel": "$41.16M",
         "calculation": "Sum of four quarterly cells on same row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 128,
@@ -3002,7 +3002,7 @@
         "location": "Section 6.1 rate card, row 11",
         "valueLabel": "Tier 1 Customer Service \u2014 IVR",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 10,
@@ -3265,7 +3265,7 @@
         "location": "Section 6.1 rate card, row 12",
         "valueLabel": "Tier 1 Customer Service \u2014 Multilingual",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 11,
@@ -3528,7 +3528,7 @@
         "location": "Section 6.1 row 13 (Genpact US/PH/UK columns)",
         "valueLabel": "CS Live Agent",
         "calculation": "Live Agent sub-row per workbook layout",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 12,
@@ -3791,7 +3791,7 @@
         "location": "Section 6.1 rate card, row 14",
         "valueLabel": "Tier 1 Customer Service \u2014 Loyalty",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 13,
@@ -4054,7 +4054,7 @@
         "location": "Section 6.1 rate card, row 15",
         "valueLabel": "Tier 1 Customer Service \u2014 Lost/Stolen",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 14,
@@ -4317,7 +4317,7 @@
         "location": "Section 6.1 rate card, row 16",
         "valueLabel": "Tier 1 Customer Service \u2014 After hours",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 15,
@@ -4580,7 +4580,7 @@
         "location": "Section 6.1 rate card, row 17",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Fraud Detection",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 16,
@@ -4843,7 +4843,7 @@
         "location": "Section 6.1 rate card, row 18",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Fraud Investigation",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 17,
@@ -5106,7 +5106,7 @@
         "location": "Section 6.1 rate card, row 19",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Fraud Strategy",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 18,
@@ -5369,7 +5369,7 @@
         "location": "Section 6.1 rate card, row 20",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Fraud Consulting",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 19,
@@ -5632,7 +5632,7 @@
         "location": "Section 6.1 rate card, row 21",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Collections",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 20,
@@ -5895,7 +5895,7 @@
         "location": "Section 6.1 rate card, row 22",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Skip Tracing",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 21,
@@ -6158,7 +6158,7 @@
         "location": "Section 6.1 rate card, row 23",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Disputes & Chargebacks",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 22,
@@ -6421,7 +6421,7 @@
         "location": "Section 6.1 rate card, row 24",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Risk Call Center",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 23,
@@ -6684,7 +6684,7 @@
         "location": "Section 6.1 rate card, row 25",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Credit",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 24,
@@ -6947,7 +6947,7 @@
         "location": "Section 6.1 rate card, row 26",
         "valueLabel": "Back Office \u2014 Imaging",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 25,
@@ -7210,7 +7210,7 @@
         "location": "Section 6.1 rate card, row 27",
         "valueLabel": "Back Office \u2014 Copy Requests",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 26,
@@ -7473,7 +7473,7 @@
         "location": "Section 6.1 rate card, row 28",
         "valueLabel": "Back Office \u2014 Correspondence",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 27,
@@ -7736,7 +7736,7 @@
         "location": "Section 6.1 rate card, row 29",
         "valueLabel": "Back Office \u2014 Application Processing",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 28,
@@ -7999,7 +7999,7 @@
         "location": "Section 6.1 rate card, row 30",
         "valueLabel": "Back Office \u2014 Credit Bureau Updates",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 29,
@@ -8262,7 +8262,7 @@
         "location": "Section 6.1 rate card, row 31",
         "valueLabel": "Back Office \u2014 Returned Mail",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 30,
@@ -8525,7 +8525,7 @@
         "location": "Section 6.1 rate card, row 32",
         "valueLabel": "Back Office \u2014 Card Destruction",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 31,
@@ -8788,7 +8788,7 @@
         "location": "Section 6.1 rate card, row 33",
         "valueLabel": "Back Office \u2014 Account Maintenance",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 32,
@@ -9051,7 +9051,7 @@
         "location": "Section 6.1 rate card, row 34",
         "valueLabel": "Back Office \u2014 Accounting & Settlement",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 33,
@@ -9340,7 +9340,7 @@
             "location": "Cell C8 \u00b7 US & Canada Clients Clients \u00b7 Offshore to Onshore Mix Day 1",
             "valueLabel": "1",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -9666,7 +9666,7 @@
             "location": "Cell D8 \u00b7 US & Canada Clients Clients \u00b7 Offshore to Onshore Mix- End State",
             "valueLabel": "0.9",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -10041,7 +10041,7 @@
             "location": "Cell E8 \u00b7 US & Canada Clients Clients \u00b7 Consequent Labor Arbitrage %",
             "valueLabel": "67.68%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -10416,7 +10416,7 @@
             "location": "Cell F8 \u00b7 US & Canada Clients Clients \u00b7 Cost Reduction from AI & Digital Overlays %",
             "valueLabel": "39.51%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -10791,7 +10791,7 @@
             "location": "Cell G8 \u00b7 US & Canada Clients Clients \u00b7 Cost Reduction from Productivity Gains %",
             "valueLabel": "Vendor to provide",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -11166,7 +11166,7 @@
             "location": "Cell H8 \u00b7 US & Canada Clients Clients \u00b7 Commitment to Certainty of Cost Savings as a %",
             "valueLabel": "TBD",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -11554,7 +11554,7 @@
             "location": "Cell C9 \u00b7 Netherlands Clients \u00b7 Offshore to Onshore Mix Day 1",
             "valueLabel": "1",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 6,
@@ -11880,7 +11880,7 @@
             "location": "Cell D9 \u00b7 Netherlands Clients \u00b7 Offshore to Onshore Mix- End State",
             "valueLabel": "0.7",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 6,
@@ -12255,7 +12255,7 @@
             "location": "Cell E9 \u00b7 Netherlands Clients \u00b7 Consequent Labor Arbitrage %",
             "valueLabel": "65.28%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 6,
@@ -12630,7 +12630,7 @@
             "location": "Cell F9 \u00b7 Netherlands Clients \u00b7 Cost Reduction from AI & Digital Overlays %",
             "valueLabel": "27.91%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 6,
@@ -13005,7 +13005,7 @@
             "location": "Cell H9 \u00b7 Netherlands Clients \u00b7 Commitment to Certainty of Cost Savings as a %",
             "valueLabel": "TBD",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 6,
@@ -13393,7 +13393,7 @@
             "location": "Cell C10 \u00b7 Germany Clients \u00b7 Offshore to Onshore Mix Day 1",
             "valueLabel": "1",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 7,
@@ -13719,7 +13719,7 @@
             "location": "Cell D10 \u00b7 Germany Clients \u00b7 Offshore to Onshore Mix- End State",
             "valueLabel": "0.7",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 7,
@@ -14094,7 +14094,7 @@
             "location": "Cell E10 \u00b7 Germany Clients \u00b7 Consequent Labor Arbitrage %",
             "valueLabel": "59.87%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 7,
@@ -14469,7 +14469,7 @@
             "location": "Cell F10 \u00b7 Germany Clients \u00b7 Cost Reduction from AI & Digital Overlays %",
             "valueLabel": "29.10%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 7,
@@ -14844,7 +14844,7 @@
             "location": "Cell H10 \u00b7 Germany Clients \u00b7 Commitment to Certainty of Cost Savings as a %",
             "valueLabel": "TBD",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 7,
@@ -15232,7 +15232,7 @@
             "location": "Cell C11 \u00b7 United Kingdom Clients \u00b7 Offshore to Onshore Mix Day 1",
             "valueLabel": "1",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 8,
@@ -15558,7 +15558,7 @@
             "location": "Cell D11 \u00b7 United Kingdom Clients \u00b7 Offshore to Onshore Mix- End State",
             "valueLabel": "0.7",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 8,
@@ -15933,7 +15933,7 @@
             "location": "Cell E11 \u00b7 United Kingdom Clients \u00b7 Consequent Labor Arbitrage %",
             "valueLabel": "59.87%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 8,
@@ -16308,7 +16308,7 @@
             "location": "Cell F11 \u00b7 United Kingdom Clients \u00b7 Cost Reduction from AI & Digital Overlays %",
             "valueLabel": "38.02%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 8,
@@ -16683,7 +16683,7 @@
             "location": "Cell H11 \u00b7 United Kingdom Clients \u00b7 Commitment to Certainty of Cost Savings as a %",
             "valueLabel": "TBD",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 8,
@@ -17071,7 +17071,7 @@
             "location": "Cell C12 \u00b7 Philippines Clients \u00b7 Offshore to Onshore Mix Day 1",
             "valueLabel": "0",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 9,
@@ -17397,7 +17397,7 @@
             "location": "Cell D12 \u00b7 Philippines Clients \u00b7 Offshore to Onshore Mix- End State",
             "valueLabel": "0",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 9,
@@ -17772,7 +17772,7 @@
             "location": "Cell E12 \u00b7 Philippines Clients \u00b7 Consequent Labor Arbitrage %",
             "valueLabel": "0",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 9,
@@ -18147,7 +18147,7 @@
             "location": "Cell F12 \u00b7 Philippines Clients \u00b7 Cost Reduction from AI & Digital Overlays %",
             "valueLabel": "51.97%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 9,
@@ -18522,7 +18522,7 @@
             "location": "Cell H12 \u00b7 Philippines Clients \u00b7 Commitment to Certainty of Cost Savings as a %",
             "valueLabel": "TBD",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 9,
@@ -19745,7 +19745,7 @@
       "location": "Rows 6\u201312",
       "valueLabel": "Efficiency assumptions",
       "calculation": "Vendor Tab 9.0",
-      "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+      "extractionTimestamp": "2026-04-06T23:15:55+00:00",
       "verified": true,
       "snapshot": {
         "minRow": 5,
@@ -21075,7 +21075,7 @@
             "location": "Cell D15",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 12,
@@ -21820,7 +21820,7 @@
             "location": "Cell D13",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 10,
@@ -22565,7 +22565,7 @@
             "location": "Cell D17",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 14,
@@ -23310,7 +23310,7 @@
             "location": "Cell D21",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 18,
@@ -24055,7 +24055,7 @@
             "location": "Cell D25",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 22,
@@ -24800,7 +24800,7 @@
             "location": "Cell D16",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 13,
@@ -25545,7 +25545,7 @@
             "location": "Cell D22",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 19,
@@ -26290,7 +26290,7 @@
             "location": "Cell D18",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 15,
@@ -27035,7 +27035,7 @@
             "location": "Cell D23",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 20,
@@ -27780,7 +27780,7 @@
             "location": "Cell D19",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 16,
@@ -28525,7 +28525,7 @@
             "location": "Cell D24",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 21,
@@ -29270,7 +29270,7 @@
             "location": "Cell D14",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 11,
@@ -30015,7 +30015,7 @@
             "location": "Cell D20",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 17,
@@ -30717,7 +30717,7 @@
             "location": "Cell C10",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 7,
@@ -31278,7 +31278,7 @@
             "location": "Cell B3",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 1,
@@ -31790,7 +31790,7 @@
             "location": "Cell B16",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 13,
@@ -32443,7 +32443,7 @@
             "location": "Cell D50",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 47,
@@ -33188,7 +33188,7 @@
             "location": "Cell D101",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 98,
@@ -33884,7 +33884,7 @@
             "location": "Cell C58",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 55,
@@ -34531,7 +34531,7 @@
             "location": "Cell C40",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 37,
@@ -35178,7 +35178,7 @@
             "location": "Cell C26",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 23,
@@ -35825,7 +35825,7 @@
             "location": "Cell C82",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 79,
@@ -36521,7 +36521,7 @@
             "location": "Cell G25",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 22,
@@ -37266,7 +37266,7 @@
             "location": "Cell F100",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 97,
@@ -37913,7 +37913,7 @@
             "location": "Cell B82",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 79,
@@ -38425,7 +38425,7 @@
             "location": "Cell B3",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 1,
@@ -38937,7 +38937,7 @@
             "location": "Cell B8",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -39541,7 +39541,7 @@
             "location": "Cell C10",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 7,
@@ -40188,7 +40188,7 @@
             "location": "Cell C49",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 46,
@@ -40835,7 +40835,7 @@
             "location": "Cell C64",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 61,
@@ -41482,7 +41482,7 @@
             "location": "Cell C63",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 60,
@@ -42129,7 +42129,7 @@
             "location": "Cell C62",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 59,
@@ -42776,7 +42776,7 @@
             "location": "Cell C54",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 51,
@@ -43423,7 +43423,7 @@
             "location": "Cell C55",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 52,
@@ -44070,7 +44070,7 @@
             "location": "Cell C68",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 65,
@@ -44393,7 +44393,7 @@
         {
           "ref": "C65",
           "questionText": "5.3  AI Overlay Technology",
-          "text": "A sandbox environment, where agents can practice virtual call types which will help agents with handling various types of queries related to fraud and dispute.  Agents can be coached on both inbound & outbound calls and back office processing and putting the right emphasis on regulatory scripts, verification process, investigation and account actions.\n\nDigital Efficiencies\n\n1.3-5%  improvement in productivity  \n2. 2-5% improvement in Quality\n\nBlueprinting, Devlopment, Testing and UAT  - 6 weeks\n\nNo Integrations required\n\nNo Integrations required\n\n1. Security protocols and access controls will be in place for handling sensitive data.\n2. All necessary InfoSec and legal approvals will be secured by the client prior to project execution.\n\n0.015565957989152602\n\n0.20691744410853963\n\n0.2979475999981484",
+          "text": "A sandbox environment, where agents can practice virtual call types which will help agents with handling various types of queries related to fraud and dispute.  Agents can be coached on both inbound & outbound calls and back office processing and putting the right emphasis on regulatory scripts, verification process, investigation and account actions.\n\nDigital Efficiencies\n\n1.3-5%  improvement in productivity  \n2. 2-5% improvement in Quality\n\nBlueprinting, Devlopment, Testing and UAT  - 6 weeks\n\nNo Integrations required\n\n1. Security protocols and access controls will be in place for handling sensitive data.\n2. All necessary InfoSec and legal approvals will be secured by the client prior to project execution.\n\n0.015565957989152602\n\n0.20691744410853963\n\n0.2979475999981484",
           "snapshot": {
             "minRow": 62,
             "maxRow": 68,
@@ -44717,7 +44717,7 @@
             "location": "Cell C65",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 62,
@@ -45364,7 +45364,7 @@
             "location": "Cell C72",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 69,
@@ -46011,7 +46011,7 @@
             "location": "Cell C69",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 66,
@@ -46658,7 +46658,7 @@
             "location": "Cell C67",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 64,
@@ -47305,7 +47305,7 @@
             "location": "Cell C56",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 53,
@@ -47618,1300 +47618,6 @@
                     "c": 6,
                     "col": "F",
                     "value": "1. 10-15 % improvement in productivity   2. 5-10\u2026",
-                    "highlight": false
-                  }
-                ]
-              ]
-            }
-          }
-        },
-        {
-          "ref": "C22",
-          "questionText": "5.1  Technology Capability Mapping & Migration Plan",
-          "text": "Compliance Monitoring\n\nAvaya/Verint WFO (compliance recording)\n\nNICE CXone\n\nPhase 1 :Introduce compliance analytics early to ensure regulatory adherence during migration.\n\nEnable compliance recording and analytics for priority processes first.\n\nMigrate to NICE CXone compliance module with parallel validation.\n\nAI-powered speech and text analytics with real-time compliance monitoring on NICE\n\nOptional migration of historical recordings; focus on forward-state analytics.\n\nOptional migration of historical recordings; focus on forward-state analytics.\n\nRegulatory requirements and QA alignment.\n\nCompliance gaps or missed recordings during transition.",
-          "snapshot": {
-            "minRow": 19,
-            "maxRow": 25,
-            "minCol": 1,
-            "maxCol": 6,
-            "rows": [
-              [
-                {
-                  "r": 19,
-                  "c": 1,
-                  "col": "A",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 19,
-                  "c": 2,
-                  "col": "B",
-                  "value": "QA \u2014 Recording & Scorecards",
-                  "highlight": false
-                },
-                {
-                  "r": 19,
-                  "c": 3,
-                  "col": "C",
-                  "value": "Call / Contact Recording",
-                  "highlight": false
-                },
-                {
-                  "r": 19,
-                  "c": 4,
-                  "col": "D",
-                  "value": "Avaya/Verint WFO; NICE Call Recording (North Ame\u2026",
-                  "highlight": false
-                },
-                {
-                  "r": 19,
-                  "c": 5,
-                  "col": "E",
-                  "value": "NICE CXone (recording module)",
-                  "highlight": false
-                },
-                {
-                  "r": 19,
-                  "c": 6,
-                  "col": "F",
-                  "value": "Phase 1 :Migrate recording capabilities alongsid\u2026",
-                  "highlight": false
-                }
-              ],
-              [
-                {
-                  "r": 20,
-                  "c": 1,
-                  "col": "A",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 20,
-                  "c": 2,
-                  "col": "B",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 20,
-                  "c": 3,
-                  "col": "C",
-                  "value": "Screen Capture",
-                  "highlight": false
-                },
-                {
-                  "r": 20,
-                  "c": 4,
-                  "col": "D",
-                  "value": "Avaya/Verint WFO; Desktop & Process Analytics (E\u2026",
-                  "highlight": false
-                },
-                {
-                  "r": 20,
-                  "c": 5,
-                  "col": "E",
-                  "value": "NICE CXone",
-                  "highlight": false
-                },
-                {
-                  "r": 20,
-                  "c": 6,
-                  "col": "F",
-                  "value": "Phase 2 : Enable screen capture after stabilizin\u2026",
-                  "highlight": false
-                }
-              ],
-              [
-                {
-                  "r": 21,
-                  "c": 1,
-                  "col": "A",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 21,
-                  "c": 2,
-                  "col": "B",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 21,
-                  "c": 3,
-                  "col": "C",
-                  "value": "Quality Scorecard & Review",
-                  "highlight": false
-                },
-                {
-                  "r": 21,
-                  "c": 4,
-                  "col": "D",
-                  "value": "Avaya/Verint WFO (Quality Monitoring, Form Desig\u2026",
-                  "highlight": false
-                },
-                {
-                  "r": 21,
-                  "c": 5,
-                  "col": "E",
-                  "value": "NICE CXone",
-                  "highlight": false
-                },
-                {
-                  "r": 21,
-                  "c": 6,
-                  "col": "F",
-                  "value": "Phase 2 :Enable Nice QA component",
-                  "highlight": false
-                }
-              ],
-              [
-                {
-                  "r": 22,
-                  "c": 1,
-                  "col": "A",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 22,
-                  "c": 2,
-                  "col": "B",
-                  "value": "Speech & Text Analytics",
-                  "highlight": false
-                },
-                {
-                  "r": 22,
-                  "c": 3,
-                  "col": "C",
-                  "value": "Compliance Monitoring",
-                  "highlight": true
-                },
-                {
-                  "r": 22,
-                  "c": 4,
-                  "col": "D",
-                  "value": "Avaya/Verint WFO (compliance recording)",
-                  "highlight": false
-                },
-                {
-                  "r": 22,
-                  "c": 5,
-                  "col": "E",
-                  "value": "NICE CXone",
-                  "highlight": false
-                },
-                {
-                  "r": 22,
-                  "c": 6,
-                  "col": "F",
-                  "value": "Phase 1 :Introduce compliance analytics early to\u2026",
-                  "highlight": false
-                }
-              ],
-              [
-                {
-                  "r": 23,
-                  "c": 1,
-                  "col": "A",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 23,
-                  "c": 2,
-                  "col": "B",
-                  "value": "Workforce Management",
-                  "highlight": false
-                },
-                {
-                  "r": 23,
-                  "c": 3,
-                  "col": "C",
-                  "value": "Strategic & Tactical Forecasting",
-                  "highlight": false
-                },
-                {
-                  "r": 23,
-                  "c": 4,
-                  "col": "D",
-                  "value": "Avaya/Verint WFO (Strategy Planner + WFM)",
-                  "highlight": false
-                },
-                {
-                  "r": 23,
-                  "c": 5,
-                  "col": "E",
-                  "value": "NICE CXone (WFM module)",
-                  "highlight": false
-                },
-                {
-                  "r": 23,
-                  "c": 6,
-                  "col": "F",
-                  "value": "Phase 1 :Stabilize operations first, then transi\u2026",
-                  "highlight": false
-                }
-              ],
-              [
-                {
-                  "r": 24,
-                  "c": 1,
-                  "col": "A",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 24,
-                  "c": 2,
-                  "col": "B",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 24,
-                  "c": 3,
-                  "col": "C",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 24,
-                  "c": 4,
-                  "col": "D",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 24,
-                  "c": 5,
-                  "col": "E",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 24,
-                  "c": 6,
-                  "col": "F",
-                  "value": "",
-                  "highlight": false
-                }
-              ],
-              [
-                {
-                  "r": 25,
-                  "c": 1,
-                  "col": "A",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 25,
-                  "c": 2,
-                  "col": "B",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 25,
-                  "c": 3,
-                  "col": "C",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 25,
-                  "c": 4,
-                  "col": "D",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 25,
-                  "c": 5,
-                  "col": "E",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 25,
-                  "c": 6,
-                  "col": "F",
-                  "value": "",
-                  "highlight": false
-                }
-              ]
-            ]
-          },
-          "sourcePreview": {
-            "kind": "workbook",
-            "sourceFile": "Genpact_Appendix B - TMS RFP - G updated.xlsx",
-            "tab": "5.0  Technology Solution",
-            "location": "Cell C22",
-            "valueLabel": "Vendor response cell",
-            "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
-            "verified": true,
-            "snapshot": {
-              "minRow": 19,
-              "maxRow": 25,
-              "minCol": 1,
-              "maxCol": 6,
-              "rows": [
-                [
-                  {
-                    "r": 19,
-                    "c": 1,
-                    "col": "A",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 19,
-                    "c": 2,
-                    "col": "B",
-                    "value": "QA \u2014 Recording & Scorecards",
-                    "highlight": false
-                  },
-                  {
-                    "r": 19,
-                    "c": 3,
-                    "col": "C",
-                    "value": "Call / Contact Recording",
-                    "highlight": false
-                  },
-                  {
-                    "r": 19,
-                    "c": 4,
-                    "col": "D",
-                    "value": "Avaya/Verint WFO; NICE Call Recording (North Ame\u2026",
-                    "highlight": false
-                  },
-                  {
-                    "r": 19,
-                    "c": 5,
-                    "col": "E",
-                    "value": "NICE CXone (recording module)",
-                    "highlight": false
-                  },
-                  {
-                    "r": 19,
-                    "c": 6,
-                    "col": "F",
-                    "value": "Phase 1 :Migrate recording capabilities alongsid\u2026",
-                    "highlight": false
-                  }
-                ],
-                [
-                  {
-                    "r": 20,
-                    "c": 1,
-                    "col": "A",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 20,
-                    "c": 2,
-                    "col": "B",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 20,
-                    "c": 3,
-                    "col": "C",
-                    "value": "Screen Capture",
-                    "highlight": false
-                  },
-                  {
-                    "r": 20,
-                    "c": 4,
-                    "col": "D",
-                    "value": "Avaya/Verint WFO; Desktop & Process Analytics (E\u2026",
-                    "highlight": false
-                  },
-                  {
-                    "r": 20,
-                    "c": 5,
-                    "col": "E",
-                    "value": "NICE CXone",
-                    "highlight": false
-                  },
-                  {
-                    "r": 20,
-                    "c": 6,
-                    "col": "F",
-                    "value": "Phase 2 : Enable screen capture after stabilizin\u2026",
-                    "highlight": false
-                  }
-                ],
-                [
-                  {
-                    "r": 21,
-                    "c": 1,
-                    "col": "A",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 21,
-                    "c": 2,
-                    "col": "B",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 21,
-                    "c": 3,
-                    "col": "C",
-                    "value": "Quality Scorecard & Review",
-                    "highlight": false
-                  },
-                  {
-                    "r": 21,
-                    "c": 4,
-                    "col": "D",
-                    "value": "Avaya/Verint WFO (Quality Monitoring, Form Desig\u2026",
-                    "highlight": false
-                  },
-                  {
-                    "r": 21,
-                    "c": 5,
-                    "col": "E",
-                    "value": "NICE CXone",
-                    "highlight": false
-                  },
-                  {
-                    "r": 21,
-                    "c": 6,
-                    "col": "F",
-                    "value": "Phase 2 :Enable Nice QA component",
-                    "highlight": false
-                  }
-                ],
-                [
-                  {
-                    "r": 22,
-                    "c": 1,
-                    "col": "A",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 22,
-                    "c": 2,
-                    "col": "B",
-                    "value": "Speech & Text Analytics",
-                    "highlight": false
-                  },
-                  {
-                    "r": 22,
-                    "c": 3,
-                    "col": "C",
-                    "value": "Compliance Monitoring",
-                    "highlight": true
-                  },
-                  {
-                    "r": 22,
-                    "c": 4,
-                    "col": "D",
-                    "value": "Avaya/Verint WFO (compliance recording)",
-                    "highlight": false
-                  },
-                  {
-                    "r": 22,
-                    "c": 5,
-                    "col": "E",
-                    "value": "NICE CXone",
-                    "highlight": false
-                  },
-                  {
-                    "r": 22,
-                    "c": 6,
-                    "col": "F",
-                    "value": "Phase 1 :Introduce compliance analytics early to\u2026",
-                    "highlight": false
-                  }
-                ],
-                [
-                  {
-                    "r": 23,
-                    "c": 1,
-                    "col": "A",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 23,
-                    "c": 2,
-                    "col": "B",
-                    "value": "Workforce Management",
-                    "highlight": false
-                  },
-                  {
-                    "r": 23,
-                    "c": 3,
-                    "col": "C",
-                    "value": "Strategic & Tactical Forecasting",
-                    "highlight": false
-                  },
-                  {
-                    "r": 23,
-                    "c": 4,
-                    "col": "D",
-                    "value": "Avaya/Verint WFO (Strategy Planner + WFM)",
-                    "highlight": false
-                  },
-                  {
-                    "r": 23,
-                    "c": 5,
-                    "col": "E",
-                    "value": "NICE CXone (WFM module)",
-                    "highlight": false
-                  },
-                  {
-                    "r": 23,
-                    "c": 6,
-                    "col": "F",
-                    "value": "Phase 1 :Stabilize operations first, then transi\u2026",
-                    "highlight": false
-                  }
-                ],
-                [
-                  {
-                    "r": 24,
-                    "c": 1,
-                    "col": "A",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 24,
-                    "c": 2,
-                    "col": "B",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 24,
-                    "c": 3,
-                    "col": "C",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 24,
-                    "c": 4,
-                    "col": "D",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 24,
-                    "c": 5,
-                    "col": "E",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 24,
-                    "c": 6,
-                    "col": "F",
-                    "value": "",
-                    "highlight": false
-                  }
-                ],
-                [
-                  {
-                    "r": 25,
-                    "c": 1,
-                    "col": "A",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 25,
-                    "c": 2,
-                    "col": "B",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 25,
-                    "c": 3,
-                    "col": "C",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 25,
-                    "c": 4,
-                    "col": "D",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 25,
-                    "c": 5,
-                    "col": "E",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 25,
-                    "c": 6,
-                    "col": "F",
-                    "value": "",
-                    "highlight": false
-                  }
-                ]
-              ]
-            }
-          }
-        },
-        {
-          "ref": "C23",
-          "questionText": "5.1  Technology Capability Mapping & Migration Plan",
-          "text": "Strategic & Tactical Forecasting\n\nAvaya/Verint WFO (Strategy Planner + WFM)\n\nNICE CXone (WFM module)\n\nPhase 1 :Stabilize operations first, then transition forecasting and scheduling capabilities.\n\nMigrate forecasting models followed by scheduling and intraday management.\n\nPhased migration with parallel run to validate forecast accuracy.\n\nCloud-based WFM with AI-driven forecasting and real-time optimization on NICE\n\nMigrate historical data for baseline forecasting models.\n\nMigrate historical data for baseline forecasting models.\n\nHistorical data quality and integration with CCaaS.\n\nForecast inaccuracies impacting staffing and service levels.",
-          "snapshot": {
-            "minRow": 20,
-            "maxRow": 26,
-            "minCol": 1,
-            "maxCol": 6,
-            "rows": [
-              [
-                {
-                  "r": 20,
-                  "c": 1,
-                  "col": "A",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 20,
-                  "c": 2,
-                  "col": "B",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 20,
-                  "c": 3,
-                  "col": "C",
-                  "value": "Screen Capture",
-                  "highlight": false
-                },
-                {
-                  "r": 20,
-                  "c": 4,
-                  "col": "D",
-                  "value": "Avaya/Verint WFO; Desktop & Process Analytics (E\u2026",
-                  "highlight": false
-                },
-                {
-                  "r": 20,
-                  "c": 5,
-                  "col": "E",
-                  "value": "NICE CXone",
-                  "highlight": false
-                },
-                {
-                  "r": 20,
-                  "c": 6,
-                  "col": "F",
-                  "value": "Phase 2 : Enable screen capture after stabilizin\u2026",
-                  "highlight": false
-                }
-              ],
-              [
-                {
-                  "r": 21,
-                  "c": 1,
-                  "col": "A",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 21,
-                  "c": 2,
-                  "col": "B",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 21,
-                  "c": 3,
-                  "col": "C",
-                  "value": "Quality Scorecard & Review",
-                  "highlight": false
-                },
-                {
-                  "r": 21,
-                  "c": 4,
-                  "col": "D",
-                  "value": "Avaya/Verint WFO (Quality Monitoring, Form Desig\u2026",
-                  "highlight": false
-                },
-                {
-                  "r": 21,
-                  "c": 5,
-                  "col": "E",
-                  "value": "NICE CXone",
-                  "highlight": false
-                },
-                {
-                  "r": 21,
-                  "c": 6,
-                  "col": "F",
-                  "value": "Phase 2 :Enable Nice QA component",
-                  "highlight": false
-                }
-              ],
-              [
-                {
-                  "r": 22,
-                  "c": 1,
-                  "col": "A",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 22,
-                  "c": 2,
-                  "col": "B",
-                  "value": "Speech & Text Analytics",
-                  "highlight": false
-                },
-                {
-                  "r": 22,
-                  "c": 3,
-                  "col": "C",
-                  "value": "Compliance Monitoring",
-                  "highlight": false
-                },
-                {
-                  "r": 22,
-                  "c": 4,
-                  "col": "D",
-                  "value": "Avaya/Verint WFO (compliance recording)",
-                  "highlight": false
-                },
-                {
-                  "r": 22,
-                  "c": 5,
-                  "col": "E",
-                  "value": "NICE CXone",
-                  "highlight": false
-                },
-                {
-                  "r": 22,
-                  "c": 6,
-                  "col": "F",
-                  "value": "Phase 1 :Introduce compliance analytics early to\u2026",
-                  "highlight": false
-                }
-              ],
-              [
-                {
-                  "r": 23,
-                  "c": 1,
-                  "col": "A",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 23,
-                  "c": 2,
-                  "col": "B",
-                  "value": "Workforce Management",
-                  "highlight": false
-                },
-                {
-                  "r": 23,
-                  "c": 3,
-                  "col": "C",
-                  "value": "Strategic & Tactical Forecasting",
-                  "highlight": true
-                },
-                {
-                  "r": 23,
-                  "c": 4,
-                  "col": "D",
-                  "value": "Avaya/Verint WFO (Strategy Planner + WFM)",
-                  "highlight": false
-                },
-                {
-                  "r": 23,
-                  "c": 5,
-                  "col": "E",
-                  "value": "NICE CXone (WFM module)",
-                  "highlight": false
-                },
-                {
-                  "r": 23,
-                  "c": 6,
-                  "col": "F",
-                  "value": "Phase 1 :Stabilize operations first, then transi\u2026",
-                  "highlight": false
-                }
-              ],
-              [
-                {
-                  "r": 24,
-                  "c": 1,
-                  "col": "A",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 24,
-                  "c": 2,
-                  "col": "B",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 24,
-                  "c": 3,
-                  "col": "C",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 24,
-                  "c": 4,
-                  "col": "D",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 24,
-                  "c": 5,
-                  "col": "E",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 24,
-                  "c": 6,
-                  "col": "F",
-                  "value": "",
-                  "highlight": false
-                }
-              ],
-              [
-                {
-                  "r": 25,
-                  "c": 1,
-                  "col": "A",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 25,
-                  "c": 2,
-                  "col": "B",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 25,
-                  "c": 3,
-                  "col": "C",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 25,
-                  "c": 4,
-                  "col": "D",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 25,
-                  "c": 5,
-                  "col": "E",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 25,
-                  "c": 6,
-                  "col": "F",
-                  "value": "",
-                  "highlight": false
-                }
-              ],
-              [
-                {
-                  "r": 26,
-                  "c": 1,
-                  "col": "A",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 26,
-                  "c": 2,
-                  "col": "B",
-                  "value": "5.2  Technology Governance Commitments",
-                  "highlight": false
-                },
-                {
-                  "r": 26,
-                  "c": 3,
-                  "col": "C",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 26,
-                  "c": 4,
-                  "col": "D",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 26,
-                  "c": 5,
-                  "col": "E",
-                  "value": "",
-                  "highlight": false
-                },
-                {
-                  "r": 26,
-                  "c": 6,
-                  "col": "F",
-                  "value": "",
-                  "highlight": false
-                }
-              ]
-            ]
-          },
-          "sourcePreview": {
-            "kind": "workbook",
-            "sourceFile": "Genpact_Appendix B - TMS RFP - G updated.xlsx",
-            "tab": "5.0  Technology Solution",
-            "location": "Cell C23",
-            "valueLabel": "Vendor response cell",
-            "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
-            "verified": true,
-            "snapshot": {
-              "minRow": 20,
-              "maxRow": 26,
-              "minCol": 1,
-              "maxCol": 6,
-              "rows": [
-                [
-                  {
-                    "r": 20,
-                    "c": 1,
-                    "col": "A",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 20,
-                    "c": 2,
-                    "col": "B",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 20,
-                    "c": 3,
-                    "col": "C",
-                    "value": "Screen Capture",
-                    "highlight": false
-                  },
-                  {
-                    "r": 20,
-                    "c": 4,
-                    "col": "D",
-                    "value": "Avaya/Verint WFO; Desktop & Process Analytics (E\u2026",
-                    "highlight": false
-                  },
-                  {
-                    "r": 20,
-                    "c": 5,
-                    "col": "E",
-                    "value": "NICE CXone",
-                    "highlight": false
-                  },
-                  {
-                    "r": 20,
-                    "c": 6,
-                    "col": "F",
-                    "value": "Phase 2 : Enable screen capture after stabilizin\u2026",
-                    "highlight": false
-                  }
-                ],
-                [
-                  {
-                    "r": 21,
-                    "c": 1,
-                    "col": "A",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 21,
-                    "c": 2,
-                    "col": "B",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 21,
-                    "c": 3,
-                    "col": "C",
-                    "value": "Quality Scorecard & Review",
-                    "highlight": false
-                  },
-                  {
-                    "r": 21,
-                    "c": 4,
-                    "col": "D",
-                    "value": "Avaya/Verint WFO (Quality Monitoring, Form Desig\u2026",
-                    "highlight": false
-                  },
-                  {
-                    "r": 21,
-                    "c": 5,
-                    "col": "E",
-                    "value": "NICE CXone",
-                    "highlight": false
-                  },
-                  {
-                    "r": 21,
-                    "c": 6,
-                    "col": "F",
-                    "value": "Phase 2 :Enable Nice QA component",
-                    "highlight": false
-                  }
-                ],
-                [
-                  {
-                    "r": 22,
-                    "c": 1,
-                    "col": "A",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 22,
-                    "c": 2,
-                    "col": "B",
-                    "value": "Speech & Text Analytics",
-                    "highlight": false
-                  },
-                  {
-                    "r": 22,
-                    "c": 3,
-                    "col": "C",
-                    "value": "Compliance Monitoring",
-                    "highlight": false
-                  },
-                  {
-                    "r": 22,
-                    "c": 4,
-                    "col": "D",
-                    "value": "Avaya/Verint WFO (compliance recording)",
-                    "highlight": false
-                  },
-                  {
-                    "r": 22,
-                    "c": 5,
-                    "col": "E",
-                    "value": "NICE CXone",
-                    "highlight": false
-                  },
-                  {
-                    "r": 22,
-                    "c": 6,
-                    "col": "F",
-                    "value": "Phase 1 :Introduce compliance analytics early to\u2026",
-                    "highlight": false
-                  }
-                ],
-                [
-                  {
-                    "r": 23,
-                    "c": 1,
-                    "col": "A",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 23,
-                    "c": 2,
-                    "col": "B",
-                    "value": "Workforce Management",
-                    "highlight": false
-                  },
-                  {
-                    "r": 23,
-                    "c": 3,
-                    "col": "C",
-                    "value": "Strategic & Tactical Forecasting",
-                    "highlight": true
-                  },
-                  {
-                    "r": 23,
-                    "c": 4,
-                    "col": "D",
-                    "value": "Avaya/Verint WFO (Strategy Planner + WFM)",
-                    "highlight": false
-                  },
-                  {
-                    "r": 23,
-                    "c": 5,
-                    "col": "E",
-                    "value": "NICE CXone (WFM module)",
-                    "highlight": false
-                  },
-                  {
-                    "r": 23,
-                    "c": 6,
-                    "col": "F",
-                    "value": "Phase 1 :Stabilize operations first, then transi\u2026",
-                    "highlight": false
-                  }
-                ],
-                [
-                  {
-                    "r": 24,
-                    "c": 1,
-                    "col": "A",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 24,
-                    "c": 2,
-                    "col": "B",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 24,
-                    "c": 3,
-                    "col": "C",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 24,
-                    "c": 4,
-                    "col": "D",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 24,
-                    "c": 5,
-                    "col": "E",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 24,
-                    "c": 6,
-                    "col": "F",
-                    "value": "",
-                    "highlight": false
-                  }
-                ],
-                [
-                  {
-                    "r": 25,
-                    "c": 1,
-                    "col": "A",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 25,
-                    "c": 2,
-                    "col": "B",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 25,
-                    "c": 3,
-                    "col": "C",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 25,
-                    "c": 4,
-                    "col": "D",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 25,
-                    "c": 5,
-                    "col": "E",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 25,
-                    "c": 6,
-                    "col": "F",
-                    "value": "",
-                    "highlight": false
-                  }
-                ],
-                [
-                  {
-                    "r": 26,
-                    "c": 1,
-                    "col": "A",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 26,
-                    "c": 2,
-                    "col": "B",
-                    "value": "5.2  Technology Governance Commitments",
-                    "highlight": false
-                  },
-                  {
-                    "r": 26,
-                    "c": 3,
-                    "col": "C",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 26,
-                    "c": 4,
-                    "col": "D",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 26,
-                    "c": 5,
-                    "col": "E",
-                    "value": "",
-                    "highlight": false
-                  },
-                  {
-                    "r": 26,
-                    "c": 6,
-                    "col": "F",
-                    "value": "",
                     "highlight": false
                   }
                 ]
@@ -49246,7 +47952,7 @@
             "location": "Cell C57",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 54,
@@ -49893,7 +48599,7 @@
             "location": "Cell C70",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 67,
@@ -50206,6 +48912,1300 @@
                     "c": 6,
                     "col": "F",
                     "value": "1. 20-30% improvement in workforce utilization",
+                    "highlight": false
+                  }
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "ref": "C23",
+          "questionText": "5.1  Technology Capability Mapping & Migration Plan",
+          "text": "Strategic & Tactical Forecasting\n\nAvaya/Verint WFO (Strategy Planner + WFM)\n\nNICE CXone (WFM module)\n\nPhase 1 :Stabilize operations first, then transition forecasting and scheduling capabilities.\n\nMigrate forecasting models followed by scheduling and intraday management.\n\nPhased migration with parallel run to validate forecast accuracy.\n\nCloud-based WFM with AI-driven forecasting and real-time optimization on NICE\n\nMigrate historical data for baseline forecasting models.\n\nHistorical data quality and integration with CCaaS.\n\nForecast inaccuracies impacting staffing and service levels.",
+          "snapshot": {
+            "minRow": 20,
+            "maxRow": 26,
+            "minCol": 1,
+            "maxCol": 6,
+            "rows": [
+              [
+                {
+                  "r": 20,
+                  "c": 1,
+                  "col": "A",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 20,
+                  "c": 2,
+                  "col": "B",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 20,
+                  "c": 3,
+                  "col": "C",
+                  "value": "Screen Capture",
+                  "highlight": false
+                },
+                {
+                  "r": 20,
+                  "c": 4,
+                  "col": "D",
+                  "value": "Avaya/Verint WFO; Desktop & Process Analytics (E\u2026",
+                  "highlight": false
+                },
+                {
+                  "r": 20,
+                  "c": 5,
+                  "col": "E",
+                  "value": "NICE CXone",
+                  "highlight": false
+                },
+                {
+                  "r": 20,
+                  "c": 6,
+                  "col": "F",
+                  "value": "Phase 2 : Enable screen capture after stabilizin\u2026",
+                  "highlight": false
+                }
+              ],
+              [
+                {
+                  "r": 21,
+                  "c": 1,
+                  "col": "A",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 21,
+                  "c": 2,
+                  "col": "B",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 21,
+                  "c": 3,
+                  "col": "C",
+                  "value": "Quality Scorecard & Review",
+                  "highlight": false
+                },
+                {
+                  "r": 21,
+                  "c": 4,
+                  "col": "D",
+                  "value": "Avaya/Verint WFO (Quality Monitoring, Form Desig\u2026",
+                  "highlight": false
+                },
+                {
+                  "r": 21,
+                  "c": 5,
+                  "col": "E",
+                  "value": "NICE CXone",
+                  "highlight": false
+                },
+                {
+                  "r": 21,
+                  "c": 6,
+                  "col": "F",
+                  "value": "Phase 2 :Enable Nice QA component",
+                  "highlight": false
+                }
+              ],
+              [
+                {
+                  "r": 22,
+                  "c": 1,
+                  "col": "A",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 22,
+                  "c": 2,
+                  "col": "B",
+                  "value": "Speech & Text Analytics",
+                  "highlight": false
+                },
+                {
+                  "r": 22,
+                  "c": 3,
+                  "col": "C",
+                  "value": "Compliance Monitoring",
+                  "highlight": false
+                },
+                {
+                  "r": 22,
+                  "c": 4,
+                  "col": "D",
+                  "value": "Avaya/Verint WFO (compliance recording)",
+                  "highlight": false
+                },
+                {
+                  "r": 22,
+                  "c": 5,
+                  "col": "E",
+                  "value": "NICE CXone",
+                  "highlight": false
+                },
+                {
+                  "r": 22,
+                  "c": 6,
+                  "col": "F",
+                  "value": "Phase 1 :Introduce compliance analytics early to\u2026",
+                  "highlight": false
+                }
+              ],
+              [
+                {
+                  "r": 23,
+                  "c": 1,
+                  "col": "A",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 23,
+                  "c": 2,
+                  "col": "B",
+                  "value": "Workforce Management",
+                  "highlight": false
+                },
+                {
+                  "r": 23,
+                  "c": 3,
+                  "col": "C",
+                  "value": "Strategic & Tactical Forecasting",
+                  "highlight": true
+                },
+                {
+                  "r": 23,
+                  "c": 4,
+                  "col": "D",
+                  "value": "Avaya/Verint WFO (Strategy Planner + WFM)",
+                  "highlight": false
+                },
+                {
+                  "r": 23,
+                  "c": 5,
+                  "col": "E",
+                  "value": "NICE CXone (WFM module)",
+                  "highlight": false
+                },
+                {
+                  "r": 23,
+                  "c": 6,
+                  "col": "F",
+                  "value": "Phase 1 :Stabilize operations first, then transi\u2026",
+                  "highlight": false
+                }
+              ],
+              [
+                {
+                  "r": 24,
+                  "c": 1,
+                  "col": "A",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 24,
+                  "c": 2,
+                  "col": "B",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 24,
+                  "c": 3,
+                  "col": "C",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 24,
+                  "c": 4,
+                  "col": "D",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 24,
+                  "c": 5,
+                  "col": "E",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 24,
+                  "c": 6,
+                  "col": "F",
+                  "value": "",
+                  "highlight": false
+                }
+              ],
+              [
+                {
+                  "r": 25,
+                  "c": 1,
+                  "col": "A",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 25,
+                  "c": 2,
+                  "col": "B",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 25,
+                  "c": 3,
+                  "col": "C",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 25,
+                  "c": 4,
+                  "col": "D",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 25,
+                  "c": 5,
+                  "col": "E",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 25,
+                  "c": 6,
+                  "col": "F",
+                  "value": "",
+                  "highlight": false
+                }
+              ],
+              [
+                {
+                  "r": 26,
+                  "c": 1,
+                  "col": "A",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 26,
+                  "c": 2,
+                  "col": "B",
+                  "value": "5.2  Technology Governance Commitments",
+                  "highlight": false
+                },
+                {
+                  "r": 26,
+                  "c": 3,
+                  "col": "C",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 26,
+                  "c": 4,
+                  "col": "D",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 26,
+                  "c": 5,
+                  "col": "E",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 26,
+                  "c": 6,
+                  "col": "F",
+                  "value": "",
+                  "highlight": false
+                }
+              ]
+            ]
+          },
+          "sourcePreview": {
+            "kind": "workbook",
+            "sourceFile": "Genpact_Appendix B - TMS RFP - G updated.xlsx",
+            "tab": "5.0  Technology Solution",
+            "location": "Cell C23",
+            "valueLabel": "Vendor response cell",
+            "calculation": "Q/A extraction: template question vs vendor answer column",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
+            "verified": true,
+            "snapshot": {
+              "minRow": 20,
+              "maxRow": 26,
+              "minCol": 1,
+              "maxCol": 6,
+              "rows": [
+                [
+                  {
+                    "r": 20,
+                    "c": 1,
+                    "col": "A",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 20,
+                    "c": 2,
+                    "col": "B",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 20,
+                    "c": 3,
+                    "col": "C",
+                    "value": "Screen Capture",
+                    "highlight": false
+                  },
+                  {
+                    "r": 20,
+                    "c": 4,
+                    "col": "D",
+                    "value": "Avaya/Verint WFO; Desktop & Process Analytics (E\u2026",
+                    "highlight": false
+                  },
+                  {
+                    "r": 20,
+                    "c": 5,
+                    "col": "E",
+                    "value": "NICE CXone",
+                    "highlight": false
+                  },
+                  {
+                    "r": 20,
+                    "c": 6,
+                    "col": "F",
+                    "value": "Phase 2 : Enable screen capture after stabilizin\u2026",
+                    "highlight": false
+                  }
+                ],
+                [
+                  {
+                    "r": 21,
+                    "c": 1,
+                    "col": "A",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 21,
+                    "c": 2,
+                    "col": "B",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 21,
+                    "c": 3,
+                    "col": "C",
+                    "value": "Quality Scorecard & Review",
+                    "highlight": false
+                  },
+                  {
+                    "r": 21,
+                    "c": 4,
+                    "col": "D",
+                    "value": "Avaya/Verint WFO (Quality Monitoring, Form Desig\u2026",
+                    "highlight": false
+                  },
+                  {
+                    "r": 21,
+                    "c": 5,
+                    "col": "E",
+                    "value": "NICE CXone",
+                    "highlight": false
+                  },
+                  {
+                    "r": 21,
+                    "c": 6,
+                    "col": "F",
+                    "value": "Phase 2 :Enable Nice QA component",
+                    "highlight": false
+                  }
+                ],
+                [
+                  {
+                    "r": 22,
+                    "c": 1,
+                    "col": "A",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 22,
+                    "c": 2,
+                    "col": "B",
+                    "value": "Speech & Text Analytics",
+                    "highlight": false
+                  },
+                  {
+                    "r": 22,
+                    "c": 3,
+                    "col": "C",
+                    "value": "Compliance Monitoring",
+                    "highlight": false
+                  },
+                  {
+                    "r": 22,
+                    "c": 4,
+                    "col": "D",
+                    "value": "Avaya/Verint WFO (compliance recording)",
+                    "highlight": false
+                  },
+                  {
+                    "r": 22,
+                    "c": 5,
+                    "col": "E",
+                    "value": "NICE CXone",
+                    "highlight": false
+                  },
+                  {
+                    "r": 22,
+                    "c": 6,
+                    "col": "F",
+                    "value": "Phase 1 :Introduce compliance analytics early to\u2026",
+                    "highlight": false
+                  }
+                ],
+                [
+                  {
+                    "r": 23,
+                    "c": 1,
+                    "col": "A",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 23,
+                    "c": 2,
+                    "col": "B",
+                    "value": "Workforce Management",
+                    "highlight": false
+                  },
+                  {
+                    "r": 23,
+                    "c": 3,
+                    "col": "C",
+                    "value": "Strategic & Tactical Forecasting",
+                    "highlight": true
+                  },
+                  {
+                    "r": 23,
+                    "c": 4,
+                    "col": "D",
+                    "value": "Avaya/Verint WFO (Strategy Planner + WFM)",
+                    "highlight": false
+                  },
+                  {
+                    "r": 23,
+                    "c": 5,
+                    "col": "E",
+                    "value": "NICE CXone (WFM module)",
+                    "highlight": false
+                  },
+                  {
+                    "r": 23,
+                    "c": 6,
+                    "col": "F",
+                    "value": "Phase 1 :Stabilize operations first, then transi\u2026",
+                    "highlight": false
+                  }
+                ],
+                [
+                  {
+                    "r": 24,
+                    "c": 1,
+                    "col": "A",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 24,
+                    "c": 2,
+                    "col": "B",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 24,
+                    "c": 3,
+                    "col": "C",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 24,
+                    "c": 4,
+                    "col": "D",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 24,
+                    "c": 5,
+                    "col": "E",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 24,
+                    "c": 6,
+                    "col": "F",
+                    "value": "",
+                    "highlight": false
+                  }
+                ],
+                [
+                  {
+                    "r": 25,
+                    "c": 1,
+                    "col": "A",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 25,
+                    "c": 2,
+                    "col": "B",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 25,
+                    "c": 3,
+                    "col": "C",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 25,
+                    "c": 4,
+                    "col": "D",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 25,
+                    "c": 5,
+                    "col": "E",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 25,
+                    "c": 6,
+                    "col": "F",
+                    "value": "",
+                    "highlight": false
+                  }
+                ],
+                [
+                  {
+                    "r": 26,
+                    "c": 1,
+                    "col": "A",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 26,
+                    "c": 2,
+                    "col": "B",
+                    "value": "5.2  Technology Governance Commitments",
+                    "highlight": false
+                  },
+                  {
+                    "r": 26,
+                    "c": 3,
+                    "col": "C",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 26,
+                    "c": 4,
+                    "col": "D",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 26,
+                    "c": 5,
+                    "col": "E",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 26,
+                    "c": 6,
+                    "col": "F",
+                    "value": "",
+                    "highlight": false
+                  }
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "ref": "C22",
+          "questionText": "5.1  Technology Capability Mapping & Migration Plan",
+          "text": "Compliance Monitoring\n\nAvaya/Verint WFO (compliance recording)\n\nNICE CXone\n\nPhase 1 :Introduce compliance analytics early to ensure regulatory adherence during migration.\n\nEnable compliance recording and analytics for priority processes first.\n\nMigrate to NICE CXone compliance module with parallel validation.\n\nAI-powered speech and text analytics with real-time compliance monitoring on NICE\n\nOptional migration of historical recordings; focus on forward-state analytics.\n\nRegulatory requirements and QA alignment.\n\nCompliance gaps or missed recordings during transition.",
+          "snapshot": {
+            "minRow": 19,
+            "maxRow": 25,
+            "minCol": 1,
+            "maxCol": 6,
+            "rows": [
+              [
+                {
+                  "r": 19,
+                  "c": 1,
+                  "col": "A",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 19,
+                  "c": 2,
+                  "col": "B",
+                  "value": "QA \u2014 Recording & Scorecards",
+                  "highlight": false
+                },
+                {
+                  "r": 19,
+                  "c": 3,
+                  "col": "C",
+                  "value": "Call / Contact Recording",
+                  "highlight": false
+                },
+                {
+                  "r": 19,
+                  "c": 4,
+                  "col": "D",
+                  "value": "Avaya/Verint WFO; NICE Call Recording (North Ame\u2026",
+                  "highlight": false
+                },
+                {
+                  "r": 19,
+                  "c": 5,
+                  "col": "E",
+                  "value": "NICE CXone (recording module)",
+                  "highlight": false
+                },
+                {
+                  "r": 19,
+                  "c": 6,
+                  "col": "F",
+                  "value": "Phase 1 :Migrate recording capabilities alongsid\u2026",
+                  "highlight": false
+                }
+              ],
+              [
+                {
+                  "r": 20,
+                  "c": 1,
+                  "col": "A",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 20,
+                  "c": 2,
+                  "col": "B",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 20,
+                  "c": 3,
+                  "col": "C",
+                  "value": "Screen Capture",
+                  "highlight": false
+                },
+                {
+                  "r": 20,
+                  "c": 4,
+                  "col": "D",
+                  "value": "Avaya/Verint WFO; Desktop & Process Analytics (E\u2026",
+                  "highlight": false
+                },
+                {
+                  "r": 20,
+                  "c": 5,
+                  "col": "E",
+                  "value": "NICE CXone",
+                  "highlight": false
+                },
+                {
+                  "r": 20,
+                  "c": 6,
+                  "col": "F",
+                  "value": "Phase 2 : Enable screen capture after stabilizin\u2026",
+                  "highlight": false
+                }
+              ],
+              [
+                {
+                  "r": 21,
+                  "c": 1,
+                  "col": "A",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 21,
+                  "c": 2,
+                  "col": "B",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 21,
+                  "c": 3,
+                  "col": "C",
+                  "value": "Quality Scorecard & Review",
+                  "highlight": false
+                },
+                {
+                  "r": 21,
+                  "c": 4,
+                  "col": "D",
+                  "value": "Avaya/Verint WFO (Quality Monitoring, Form Desig\u2026",
+                  "highlight": false
+                },
+                {
+                  "r": 21,
+                  "c": 5,
+                  "col": "E",
+                  "value": "NICE CXone",
+                  "highlight": false
+                },
+                {
+                  "r": 21,
+                  "c": 6,
+                  "col": "F",
+                  "value": "Phase 2 :Enable Nice QA component",
+                  "highlight": false
+                }
+              ],
+              [
+                {
+                  "r": 22,
+                  "c": 1,
+                  "col": "A",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 22,
+                  "c": 2,
+                  "col": "B",
+                  "value": "Speech & Text Analytics",
+                  "highlight": false
+                },
+                {
+                  "r": 22,
+                  "c": 3,
+                  "col": "C",
+                  "value": "Compliance Monitoring",
+                  "highlight": true
+                },
+                {
+                  "r": 22,
+                  "c": 4,
+                  "col": "D",
+                  "value": "Avaya/Verint WFO (compliance recording)",
+                  "highlight": false
+                },
+                {
+                  "r": 22,
+                  "c": 5,
+                  "col": "E",
+                  "value": "NICE CXone",
+                  "highlight": false
+                },
+                {
+                  "r": 22,
+                  "c": 6,
+                  "col": "F",
+                  "value": "Phase 1 :Introduce compliance analytics early to\u2026",
+                  "highlight": false
+                }
+              ],
+              [
+                {
+                  "r": 23,
+                  "c": 1,
+                  "col": "A",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 23,
+                  "c": 2,
+                  "col": "B",
+                  "value": "Workforce Management",
+                  "highlight": false
+                },
+                {
+                  "r": 23,
+                  "c": 3,
+                  "col": "C",
+                  "value": "Strategic & Tactical Forecasting",
+                  "highlight": false
+                },
+                {
+                  "r": 23,
+                  "c": 4,
+                  "col": "D",
+                  "value": "Avaya/Verint WFO (Strategy Planner + WFM)",
+                  "highlight": false
+                },
+                {
+                  "r": 23,
+                  "c": 5,
+                  "col": "E",
+                  "value": "NICE CXone (WFM module)",
+                  "highlight": false
+                },
+                {
+                  "r": 23,
+                  "c": 6,
+                  "col": "F",
+                  "value": "Phase 1 :Stabilize operations first, then transi\u2026",
+                  "highlight": false
+                }
+              ],
+              [
+                {
+                  "r": 24,
+                  "c": 1,
+                  "col": "A",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 24,
+                  "c": 2,
+                  "col": "B",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 24,
+                  "c": 3,
+                  "col": "C",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 24,
+                  "c": 4,
+                  "col": "D",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 24,
+                  "c": 5,
+                  "col": "E",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 24,
+                  "c": 6,
+                  "col": "F",
+                  "value": "",
+                  "highlight": false
+                }
+              ],
+              [
+                {
+                  "r": 25,
+                  "c": 1,
+                  "col": "A",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 25,
+                  "c": 2,
+                  "col": "B",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 25,
+                  "c": 3,
+                  "col": "C",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 25,
+                  "c": 4,
+                  "col": "D",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 25,
+                  "c": 5,
+                  "col": "E",
+                  "value": "",
+                  "highlight": false
+                },
+                {
+                  "r": 25,
+                  "c": 6,
+                  "col": "F",
+                  "value": "",
+                  "highlight": false
+                }
+              ]
+            ]
+          },
+          "sourcePreview": {
+            "kind": "workbook",
+            "sourceFile": "Genpact_Appendix B - TMS RFP - G updated.xlsx",
+            "tab": "5.0  Technology Solution",
+            "location": "Cell C22",
+            "valueLabel": "Vendor response cell",
+            "calculation": "Q/A extraction: template question vs vendor answer column",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
+            "verified": true,
+            "snapshot": {
+              "minRow": 19,
+              "maxRow": 25,
+              "minCol": 1,
+              "maxCol": 6,
+              "rows": [
+                [
+                  {
+                    "r": 19,
+                    "c": 1,
+                    "col": "A",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 19,
+                    "c": 2,
+                    "col": "B",
+                    "value": "QA \u2014 Recording & Scorecards",
+                    "highlight": false
+                  },
+                  {
+                    "r": 19,
+                    "c": 3,
+                    "col": "C",
+                    "value": "Call / Contact Recording",
+                    "highlight": false
+                  },
+                  {
+                    "r": 19,
+                    "c": 4,
+                    "col": "D",
+                    "value": "Avaya/Verint WFO; NICE Call Recording (North Ame\u2026",
+                    "highlight": false
+                  },
+                  {
+                    "r": 19,
+                    "c": 5,
+                    "col": "E",
+                    "value": "NICE CXone (recording module)",
+                    "highlight": false
+                  },
+                  {
+                    "r": 19,
+                    "c": 6,
+                    "col": "F",
+                    "value": "Phase 1 :Migrate recording capabilities alongsid\u2026",
+                    "highlight": false
+                  }
+                ],
+                [
+                  {
+                    "r": 20,
+                    "c": 1,
+                    "col": "A",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 20,
+                    "c": 2,
+                    "col": "B",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 20,
+                    "c": 3,
+                    "col": "C",
+                    "value": "Screen Capture",
+                    "highlight": false
+                  },
+                  {
+                    "r": 20,
+                    "c": 4,
+                    "col": "D",
+                    "value": "Avaya/Verint WFO; Desktop & Process Analytics (E\u2026",
+                    "highlight": false
+                  },
+                  {
+                    "r": 20,
+                    "c": 5,
+                    "col": "E",
+                    "value": "NICE CXone",
+                    "highlight": false
+                  },
+                  {
+                    "r": 20,
+                    "c": 6,
+                    "col": "F",
+                    "value": "Phase 2 : Enable screen capture after stabilizin\u2026",
+                    "highlight": false
+                  }
+                ],
+                [
+                  {
+                    "r": 21,
+                    "c": 1,
+                    "col": "A",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 21,
+                    "c": 2,
+                    "col": "B",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 21,
+                    "c": 3,
+                    "col": "C",
+                    "value": "Quality Scorecard & Review",
+                    "highlight": false
+                  },
+                  {
+                    "r": 21,
+                    "c": 4,
+                    "col": "D",
+                    "value": "Avaya/Verint WFO (Quality Monitoring, Form Desig\u2026",
+                    "highlight": false
+                  },
+                  {
+                    "r": 21,
+                    "c": 5,
+                    "col": "E",
+                    "value": "NICE CXone",
+                    "highlight": false
+                  },
+                  {
+                    "r": 21,
+                    "c": 6,
+                    "col": "F",
+                    "value": "Phase 2 :Enable Nice QA component",
+                    "highlight": false
+                  }
+                ],
+                [
+                  {
+                    "r": 22,
+                    "c": 1,
+                    "col": "A",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 22,
+                    "c": 2,
+                    "col": "B",
+                    "value": "Speech & Text Analytics",
+                    "highlight": false
+                  },
+                  {
+                    "r": 22,
+                    "c": 3,
+                    "col": "C",
+                    "value": "Compliance Monitoring",
+                    "highlight": true
+                  },
+                  {
+                    "r": 22,
+                    "c": 4,
+                    "col": "D",
+                    "value": "Avaya/Verint WFO (compliance recording)",
+                    "highlight": false
+                  },
+                  {
+                    "r": 22,
+                    "c": 5,
+                    "col": "E",
+                    "value": "NICE CXone",
+                    "highlight": false
+                  },
+                  {
+                    "r": 22,
+                    "c": 6,
+                    "col": "F",
+                    "value": "Phase 1 :Introduce compliance analytics early to\u2026",
+                    "highlight": false
+                  }
+                ],
+                [
+                  {
+                    "r": 23,
+                    "c": 1,
+                    "col": "A",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 23,
+                    "c": 2,
+                    "col": "B",
+                    "value": "Workforce Management",
+                    "highlight": false
+                  },
+                  {
+                    "r": 23,
+                    "c": 3,
+                    "col": "C",
+                    "value": "Strategic & Tactical Forecasting",
+                    "highlight": false
+                  },
+                  {
+                    "r": 23,
+                    "c": 4,
+                    "col": "D",
+                    "value": "Avaya/Verint WFO (Strategy Planner + WFM)",
+                    "highlight": false
+                  },
+                  {
+                    "r": 23,
+                    "c": 5,
+                    "col": "E",
+                    "value": "NICE CXone (WFM module)",
+                    "highlight": false
+                  },
+                  {
+                    "r": 23,
+                    "c": 6,
+                    "col": "F",
+                    "value": "Phase 1 :Stabilize operations first, then transi\u2026",
+                    "highlight": false
+                  }
+                ],
+                [
+                  {
+                    "r": 24,
+                    "c": 1,
+                    "col": "A",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 24,
+                    "c": 2,
+                    "col": "B",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 24,
+                    "c": 3,
+                    "col": "C",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 24,
+                    "c": 4,
+                    "col": "D",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 24,
+                    "c": 5,
+                    "col": "E",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 24,
+                    "c": 6,
+                    "col": "F",
+                    "value": "",
+                    "highlight": false
+                  }
+                ],
+                [
+                  {
+                    "r": 25,
+                    "c": 1,
+                    "col": "A",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 25,
+                    "c": 2,
+                    "col": "B",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 25,
+                    "c": 3,
+                    "col": "C",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 25,
+                    "c": 4,
+                    "col": "D",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 25,
+                    "c": 5,
+                    "col": "E",
+                    "value": "",
+                    "highlight": false
+                  },
+                  {
+                    "r": 25,
+                    "c": 6,
+                    "col": "F",
+                    "value": "",
                     "highlight": false
                   }
                 ]
@@ -50540,7 +50540,7 @@
             "location": "Cell C73",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 70,
@@ -51187,7 +51187,7 @@
             "location": "Cell C58",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 55,
@@ -51834,7 +51834,7 @@
             "location": "Cell C74",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 71,
@@ -52157,7 +52157,7 @@
         {
           "ref": "C66",
           "questionText": "5.3  AI Overlay Technology",
-          "text": "Agent performance improvement using incremental performance focused daily nudges\n\nDigital Efficiencies\n\n1.3-5%  improvement in productivity  \n2. 2-5% improvement in Quality\n\nBlueprinting, Devlopment, Testing and UAT  - 6 weeks\n\nNo Integrations required\n\nNo Integrations required\n\n1. Security protocols and access controls will be in place for handling sensitive data.\n2. All necessary InfoSec and legal approvals will be secured by the client prior to project execution.\n\n0.015565957989152602\n\n0.20691744410853963\n\n0.2979475999981484",
+          "text": "Agent performance improvement using incremental performance focused daily nudges\n\nDigital Efficiencies\n\n1.3-5%  improvement in productivity  \n2. 2-5% improvement in Quality\n\nBlueprinting, Devlopment, Testing and UAT  - 6 weeks\n\nNo Integrations required\n\n1. Security protocols and access controls will be in place for handling sensitive data.\n2. All necessary InfoSec and legal approvals will be secured by the client prior to project execution.\n\n0.015565957989152602\n\n0.20691744410853963\n\n0.2979475999981484",
           "snapshot": {
             "minRow": 63,
             "maxRow": 69,
@@ -52481,7 +52481,7 @@
             "location": "Cell C66",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 63,
@@ -53177,7 +53177,7 @@
             "location": "Cell D37",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 34,
@@ -53873,7 +53873,7 @@
             "location": "Cell C30",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 27,
@@ -54569,7 +54569,7 @@
             "location": "Cell F18",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 15,
@@ -55314,7 +55314,7 @@
             "location": "Cell F20",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 17,
@@ -55887,7 +55887,7 @@
             "location": "Cell B2",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 1,
@@ -56417,7 +56417,7 @@
             "location": "Cell C9",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 6,
@@ -57064,7 +57064,7 @@
             "location": "Cell C14",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 11,
@@ -57760,7 +57760,7 @@
             "location": "Cell E131",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 128,
@@ -58505,7 +58505,7 @@
             "location": "Cell G128",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 125,
@@ -59115,7 +59115,7 @@
             "location": "Cell B3",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 1,
@@ -59627,7 +59627,7 @@
             "location": "Cell B87",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 84,
@@ -60176,7 +60176,7 @@
             "location": "Cell B98",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 95,
@@ -60780,7 +60780,7 @@
             "location": "Cell C7",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 4,
@@ -61476,7 +61476,7 @@
             "location": "Cell D19",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 16,
@@ -62221,7 +62221,7 @@
             "location": "Cell D23",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 20,
@@ -62966,7 +62966,7 @@
             "location": "Cell D24",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 21,
@@ -63711,7 +63711,7 @@
             "location": "Cell D22",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 19,
@@ -64456,7 +64456,7 @@
             "location": "Cell D25",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 22,
@@ -65201,7 +65201,7 @@
             "location": "Cell D20",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 17,
@@ -65946,7 +65946,7 @@
             "location": "Cell D21",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 18,

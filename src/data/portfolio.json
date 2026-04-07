@@ -3,8 +3,8 @@
   "subtitle": "Vendor Memos & Tear Sheets",
   "classification": "FIS x Total Issuing Solutions \u00b7 Confidential \u00b7 March 2026",
   "footer": "\u00a9 2026 FIS and/or its subsidiaries. All Rights Reserved. FIS confidential and proprietary information.",
-  "extractionTimestamp": "2026-04-02T14:21:54+00:00",
-  "dashboardBuildTimestamp": "2026-04-02T14:21:54+00:00",
+  "extractionTimestamp": "2026-04-06T23:15:55+00:00",
+  "dashboardBuildTimestamp": "2026-04-06T23:15:55+00:00",
   "baselineAnnualM": {
     "low": 144,
     "high": 156,
@@ -17,46 +17,46 @@
       "displayName": "Cognizant",
       "color": "#1E3A5F",
       "tcvM": 499.89,
-      "composite": 6.233
+      "composite": null
     },
     {
       "id": "exl",
       "displayName": "EXL",
       "color": "#EA580C",
       "tcvM": 477.0,
-      "composite": 6.514
+      "composite": null
     },
     {
       "id": "genpact",
       "displayName": "Genpact",
       "color": "#059669",
       "tcvM": 425.3,
-      "composite": 6.046
+      "composite": null
     },
     {
       "id": "ibm",
       "displayName": "IBM",
       "color": "#1E40AF",
       "tcvM": 460.0,
-      "composite": 6.617
+      "composite": null
     },
     {
       "id": "sutherland",
       "displayName": "Sutherland",
       "color": "#4B5563",
       "tcvM": 559.66,
-      "composite": 5.872
+      "composite": null
     },
     {
       "id": "ubiquity",
       "displayName": "Ubiquity",
       "color": "#DC2626",
       "tcvM": 938.75,
-      "composite": 4.378
+      "composite": null
     }
   ],
   "scorecard": {
-    "source": "Folder 8 \u2014 Workshop 1 evaluator Google Form exports (xlsx) \u00b7 Imported 2026-04-03.",
+    "source": "Pending Workshop 1 evaluator sessions \u2014 numeric scores intentionally withheld until EOD Thursday, April 3, 2026.",
     "columnOrder": [
       "cognizant",
       "genpact",
@@ -68,158 +68,158 @@
     "dimensions": [
       {
         "id": "1.1",
-        "pillar": "Commercial Attractiveness (22.5%)",
+        "pillar": "Commercial Attractiveness (30%)",
         "label": "1.1 Synergy Alignment",
         "scores": {
-          "cognizant": 7.0,
-          "genpact": 6.556,
-          "exl": 6.636,
-          "sutherland": 6.2,
-          "ubiquity": 3.8,
-          "ibm": 6.143
+          "cognizant": null,
+          "genpact": null,
+          "exl": null,
+          "sutherland": null,
+          "ubiquity": null,
+          "ibm": null
         }
       },
       {
         "id": "1.2",
-        "pillar": "Commercial Attractiveness (22.5%)",
+        "pillar": "Commercial Attractiveness (30%)",
         "label": "1.2 Efficiency Assumptions & Certainty",
         "scores": {
-          "cognizant": 5.667,
-          "genpact": 5.889,
-          "exl": 6.273,
-          "sutherland": 6.0,
-          "ubiquity": 4.6,
-          "ibm": 5.857
+          "cognizant": null,
+          "genpact": null,
+          "exl": null,
+          "sutherland": null,
+          "ubiquity": null,
+          "ibm": null
         }
       },
       {
         "id": "1.3",
-        "pillar": "Commercial Attractiveness (22.5%)",
+        "pillar": "Commercial Attractiveness (30%)",
         "label": "1.3 Investments, Transparency & Savings Protection",
         "scores": {
-          "cognizant": 5.667,
-          "genpact": 5.444,
-          "exl": 6.455,
-          "sutherland": 5.6,
-          "ubiquity": 2.2,
-          "ibm": 6.143
+          "cognizant": null,
+          "genpact": null,
+          "exl": null,
+          "sutherland": null,
+          "ubiquity": null,
+          "ibm": null
         }
       },
       {
         "id": "2.1",
-        "pillar": "Operational Excellence & Delivery (22.5%)",
+        "pillar": "Operational Excellence & Delivery (25%)",
         "label": "2.1 SLA Commitment Level",
         "scores": {
-          "cognizant": 6.0,
-          "genpact": 6.111,
-          "exl": 7.182,
-          "sutherland": 7.0,
-          "ubiquity": 4.8,
-          "ibm": 7.571
+          "cognizant": null,
+          "genpact": null,
+          "exl": null,
+          "sutherland": null,
+          "ubiquity": null,
+          "ibm": null
         }
       },
       {
         "id": "2.2",
-        "pillar": "Operational Excellence & Delivery (22.5%)",
+        "pillar": "Operational Excellence & Delivery (25%)",
         "label": "2.2 Language, Coverage & Compliance",
         "scores": {
-          "cognizant": 6.667,
-          "genpact": 5.222,
-          "exl": 5.909,
-          "sutherland": 5.2,
-          "ubiquity": 5.4,
-          "ibm": 6.714
+          "cognizant": null,
+          "genpact": null,
+          "exl": null,
+          "sutherland": null,
+          "ubiquity": null,
+          "ibm": null
         }
       },
       {
         "id": "2.3",
-        "pillar": "Operational Excellence & Delivery (22.5%)",
+        "pillar": "Operational Excellence & Delivery (25%)",
         "label": "2.3 Delivery Model Credibility",
         "scores": {
-          "cognizant": 6.0,
-          "genpact": 5.444,
-          "exl": 6.636,
-          "sutherland": 4.0,
-          "ubiquity": 4.4,
-          "ibm": 6.714
+          "cognizant": null,
+          "genpact": null,
+          "exl": null,
+          "sutherland": null,
+          "ubiquity": null,
+          "ibm": null
         }
       },
       {
         "id": "3.1",
-        "pillar": "Technology & AI (22.5%)",
+        "pillar": "Technology & AI (15%)",
         "label": "3.1 Tech Governance Compliance",
         "scores": {
-          "cognizant": 6.333,
-          "genpact": 6.111,
-          "exl": 6.455,
-          "sutherland": 5.6,
-          "ubiquity": 4.4,
-          "ibm": 7.286
+          "cognizant": null,
+          "genpact": null,
+          "exl": null,
+          "sutherland": null,
+          "ubiquity": null,
+          "ibm": null
         }
       },
       {
         "id": "3.2",
-        "pillar": "Technology & AI (22.5%)",
+        "pillar": "Technology & AI (15%)",
         "label": "3.2 Migration Plan Specificity",
         "scores": {
-          "cognizant": 5.833,
-          "genpact": 6.111,
-          "exl": 6.455,
-          "sutherland": 6.6,
-          "ubiquity": 4.0,
-          "ibm": 7.0
+          "cognizant": null,
+          "genpact": null,
+          "exl": null,
+          "sutherland": null,
+          "ubiquity": null,
+          "ibm": null
         }
       },
       {
         "id": "3.3",
-        "pillar": "Technology & AI (22.5%)",
+        "pillar": "Technology & AI (15%)",
         "label": "3.3 AI Overlay Innovation & Impact",
         "scores": {
-          "cognizant": 6.0,
-          "genpact": 6.778,
-          "exl": 7.0,
-          "sutherland": 6.8,
-          "ubiquity": 4.6,
-          "ibm": 7.571
+          "cognizant": null,
+          "genpact": null,
+          "exl": null,
+          "sutherland": null,
+          "ubiquity": null,
+          "ibm": null
         }
       },
       {
         "id": "4.1",
-        "pillar": "Client & Workforce Migration (22.5%)",
+        "pillar": "Client & Workforce Migration (20%)",
         "label": "4.1 Wave Composition & Constraint Compliance",
         "scores": {
-          "cognizant": 5.667,
-          "genpact": 5.0,
-          "exl": 5.545,
-          "sutherland": 4.6,
-          "ubiquity": 4.8,
-          "ibm": 6.143
+          "cognizant": null,
+          "genpact": null,
+          "exl": null,
+          "sutherland": null,
+          "ubiquity": null,
+          "ibm": null
         }
       },
       {
         "id": "4.2",
-        "pillar": "Client & Workforce Migration (22.5%)",
+        "pillar": "Client & Workforce Migration (20%)",
         "label": "4.2 Sequencing, Speed & Revenue Pace",
         "scores": {
-          "cognizant": 6.833,
-          "genpact": 5.889,
-          "exl": 7.0,
-          "sutherland": 7.0,
-          "ubiquity": 3.6,
-          "ibm": 6.714
+          "cognizant": null,
+          "genpact": null,
+          "exl": null,
+          "sutherland": null,
+          "ubiquity": null,
+          "ibm": null
         }
       },
       {
         "id": "4.3",
-        "pillar": "Client & Workforce Migration (22.5%)",
+        "pillar": "Client & Workforce Migration (20%)",
         "label": "4.3 Workforce Transition Safeguards",
         "scores": {
-          "cognizant": 7.0,
-          "genpact": 7.222,
-          "exl": 7.182,
-          "sutherland": 6.4,
-          "ubiquity": 6.0,
-          "ibm": 5.286
+          "cognizant": null,
+          "genpact": null,
+          "exl": null,
+          "sutherland": null,
+          "ubiquity": null,
+          "ibm": null
         }
       },
       {
@@ -227,12 +227,12 @@
         "pillar": "Partnership Readiness (10%)",
         "label": "5.1 Reference & Case Study Alignment",
         "scores": {
-          "cognizant": 6.0,
-          "genpact": 6.778,
-          "exl": 6.455,
-          "sutherland": 5.6,
-          "ubiquity": 4.6,
-          "ibm": 7.571
+          "cognizant": null,
+          "genpact": null,
+          "exl": null,
+          "sutherland": null,
+          "ubiquity": null,
+          "ibm": null
         }
       },
       {
@@ -240,12 +240,12 @@
         "pillar": "Partnership Readiness (10%)",
         "label": "5.2 Operational Depth & Geographic Reach",
         "scores": {
-          "cognizant": 7.0,
-          "genpact": 6.333,
-          "exl": 6.091,
-          "sutherland": 4.4,
-          "ubiquity": 4.2,
-          "ibm": 5.857
+          "cognizant": null,
+          "genpact": null,
+          "exl": null,
+          "sutherland": null,
+          "ubiquity": null,
+          "ibm": null
         }
       },
       {
@@ -253,91 +253,91 @@
         "pillar": "Partnership Readiness (10%)",
         "label": "5.3 Contracting Posture",
         "scores": {
-          "cognizant": 6.0,
-          "genpact": 6.778,
-          "exl": 5.727,
-          "sutherland": 6.4,
-          "ubiquity": 4.2,
-          "ibm": 7.0
+          "cognizant": null,
+          "genpact": null,
+          "exl": null,
+          "sutherland": null,
+          "ubiquity": null,
+          "ibm": null
         }
       }
     ],
     "composite": {
-      "cognizant": 6.233,
-      "genpact": 6.046,
-      "exl": 6.514,
-      "sutherland": 5.872,
-      "ubiquity": 4.378,
-      "ibm": 6.617
+      "cognizant": null,
+      "genpact": null,
+      "exl": null,
+      "sutherland": null,
+      "ubiquity": null,
+      "ibm": null
     }
   },
   "radar": {
     "fieldAverage": {
-      "commercial": 5.842,
-      "operations": 6.179,
-      "technology": 6.454,
-      "migration": 6.242,
-      "partnership": 6.18
+      "commercial": 0.0,
+      "operations": 0.0,
+      "technology": 0.0,
+      "migration": 0.0,
+      "partnership": 0.0
     },
     "vendors": [
       {
         "vendorId": "cognizant",
         "pillars": {
-          "commercial": 6.38875,
-          "operations": 6.527500000000001,
-          "technology": 6.31875,
-          "migration": 6.875,
-          "partnership": 6.66625
+          "commercial": 0.0,
+          "operations": 0.0,
+          "technology": 0.0,
+          "migration": 0.0,
+          "partnership": 0.0
         }
       },
       {
         "vendorId": "genpact",
         "pillars": {
-          "commercial": 6.20375,
-          "operations": 5.739999999999999,
-          "technology": 6.66625,
-          "migration": 6.29625,
-          "partnership": 7.0375
+          "commercial": 0.0,
+          "operations": 0.0,
+          "technology": 0.0,
+          "migration": 0.0,
+          "partnership": 0.0
         }
       },
       {
         "vendorId": "exl",
         "pillars": {
-          "commercial": 6.81875,
-          "operations": 6.97,
-          "technology": 7.04625,
-          "migration": 6.97,
-          "partnership": 6.3637500000000005
+          "commercial": 0.0,
+          "operations": 0.0,
+          "technology": 0.0,
+          "migration": 0.0,
+          "partnership": 0.0
         }
       },
       {
         "vendorId": "sutherland",
         "pillars": {
-          "commercial": 6.16625,
-          "operations": 5.5,
-          "technology": 6.66625,
-          "migration": 6.25,
-          "partnership": 5.583749999999999
+          "commercial": 0.0,
+          "operations": 0.0,
+          "technology": 0.0,
+          "migration": 0.0,
+          "partnership": 0.0
         }
       },
       {
         "vendorId": "ubiquity",
         "pillars": {
-          "commercial": 3.16625,
-          "operations": 4.83375,
-          "technology": 4.16625,
-          "migration": 4.75,
-          "partnership": 4.16625
+          "commercial": 0.0,
+          "operations": 0.0,
+          "technology": 0.0,
+          "migration": 0.0,
+          "partnership": 0.0
         }
       },
       {
         "vendorId": "ibm",
         "pillars": {
-          "commercial": 6.3100000000000005,
-          "operations": 7.5,
-          "technology": 7.8575,
-          "migration": 6.3100000000000005,
-          "partnership": 7.26125
+          "commercial": 0.0,
+          "operations": 0.0,
+          "technology": 0.0,
+          "migration": 0.0,
+          "partnership": 0.0
         }
       }
     ]

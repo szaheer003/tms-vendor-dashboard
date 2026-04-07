@@ -9,6 +9,7 @@ import math
 import os
 import re
 import shutil
+import sys
 from collections import defaultdict
 from dataclasses import dataclass, field, asdict
 from datetime import datetime, timezone
@@ -18,6 +19,11 @@ from typing import Any, Optional
 import openpyxl
 from openpyxl.utils import column_index_from_string, get_column_letter
 from docx import Document
+
+_SCRIPT_DIR = Path(__file__).resolve().parent
+if str(_SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPT_DIR))
+from folder2_pdf_resolver import proposal_paths_for_extraction
 
 BASE = Path(os.environ.get("TMS_BASE", Path(__file__).resolve().parents[1]))
 F1 = BASE / "Folder 1"
@@ -323,63 +329,34 @@ def proposal_link_meta(
     return out
 
 
-# (pdf_path, manifest-style fileName, proposalPart for multi-part PDFs)
-VENDOR_LINK_SOURCES: dict[str, dict[str, Any]] = {
-    "cognizant": {
-        "proposal_pdfs": [
-            (
-                F2 / "Cognizant_FIS TSYS Managed Services Partnership Cognizant Proposal Document.pdf",
-                "Cognizant_FIS TSYS Managed Services Partnership Cognizant Proposal Document.pdf",
-                None,
-            )
-        ],
-        "sow": F3 / "Cognizant_Appendix C - Draft FIS SOW_Cognizant Redline.Docx",
-    },
-    "genpact": {
-        "proposal_pdfs": [
-            (F2 / "Genpact_FIS - TMS RFP G Proposal - 20 pager.pdf", "Genpact_FIS - TMS RFP G Proposal - 20 pager.pdf", None)
-        ],
-        "sow": F3 / "Genpact_Appendix C - Draft FIS SOW_G updated.docx",
-    },
-    "exl": {
-        "proposal_pdfs": [
-            (F2 / "EXL_FIS Managed Services RFP_EXL-1.pdf", "EXL_FIS Managed Services RFP_EXL-1.pdf", 0),
-            (F2 / "EXL_FIS Managed Services RFP_EXL-2.pdf", "EXL_FIS Managed Services RFP_EXL-2.pdf", 1),
-        ],
-        "sow": F3 / "EXL_Draft FIS SOW - EXL Comment.docx",
-    },
-    "sutherland": {
-        "proposal_pdfs": [
-            (F2 / "Sutherland_Response to_FIS (TSYS).pdf", "Sutherland_Response to_FIS (TSYS).pdf", None),
-        ],
-        "sow": F3 / "Sutherland_Response to Appendix C - FIS SOW.docx",
-    },
-    "ubiquity": {
-        "proposal_pdfs": [
-            (F2 / "Ubiquity_FIS__Ubiquity_Proposal.pdf", "Ubiquity_FIS__Ubiquity_Proposal.pdf", None),
-        ],
-        "sow": F3 / "Ubiquity_Appendix C - Draft FIS SOW RF redliines CB.docx",
-    },
-    "ibm": {
-        "proposal_pdfs": [
-            (
-                F2 / "IBM_FIS TMS Managed Services RFP Response_IBM_Mar 26.pdf",
-                "IBM_FIS TMS Managed Services RFP Response_IBM_Mar 26.pdf",
-                None,
-            ),
-        ],
-        "sow": F3 / "IBM_Appendix C - Draft FIS SOW_IBM March 26.docx",
-    },
+_VENDOR_SOW_PATHS: dict[str, Path] = {
+    "cognizant": F3 / "Cognizant_Appendix C - Draft FIS SOW_Cognizant Redline.Docx",
+    "genpact": F3 / "Genpact_Appendix C - Draft FIS SOW_G updated.docx",
+    "exl": F3 / "EXL_Draft FIS SOW - EXL Comment.docx",
+    "sutherland": F3 / "Sutherland_Response to Appendix C - FIS SOW.docx",
+    "ubiquity": F3 / "Ubiquity_Appendix C - Draft FIS SOW RF redliines CB.docx",
+    "ibm": F3 / "IBM_Appendix C - Draft FIS SOW_IBM March 26.docx",
 }
+
+
+def vendor_link_sources_for(vendor_id: str) -> dict[str, Any]:
+    """Folder 2 proposal PDFs (resolved dynamically) + Folder 3 SOW paths for drill-down text matching."""
+    pdfs = proposal_paths_for_extraction(BASE, vendor_id)
+    return {
+        "proposal_pdfs": pdfs,
+        "sow": _VENDOR_SOW_PATHS.get(vendor_id),
+    }
 
 
 def enrich_drill_linked_documents(vendor_id: str, blocks: list[dict[str, Any]]) -> None:
     """Attach linkedDocumentPreview (proposal PDF or SOW) when answer text matches submission files (requires Folder 2/3)."""
-    cfg = VENDOR_LINK_SOURCES.get(vendor_id)
-    if not cfg:
+    if os.environ.get("TMS_SKIP_LINKED_PDF", "").strip().lower() in ("1", "true", "yes"):
         return
+    cfg = vendor_link_sources_for(vendor_id)
     proposal_list: list[tuple[Path, str, Optional[int]]] = list(cfg.get("proposal_pdfs") or [])
     sow_path: Optional[Path] = cfg.get("sow")
+    if not proposal_list and not sow_path:
+        return
     for block in blocks:
         if block.get("missing"):
             continue
@@ -1960,6 +1937,7 @@ def extract_ibm(wb: Optional[openpyxl.Workbook] = None, drill_ctx: Optional[Dril
     v.adminTabs = [{"tab": t, "status": "complete" if t in wb.sheetnames else "missing"} for t in STANDARD_TABS]
     v.drilldownSnippets = extract_drill_blocks(wb, drill_ctx)
     enrich_drill_snippets(wb, v.drilldownSnippets, path.name)
+    enrich_drill_linked_documents("ibm", v.drilldownSnippets)
     return v
 
 
@@ -2028,7 +2006,7 @@ def extract_sutherland(wb: Optional[openpyxl.Workbook] = None, drill_ctx: Option
     v.adminTabs = [{"tab": t, "status": "complete" if t in wb.sheetnames else "missing"} for t in STANDARD_TABS]
     v.drilldownSnippets = extract_drill_blocks(wb, drill_ctx)
     enrich_drill_snippets(wb, v.drilldownSnippets, path.name)
-    enrich_drill_linked_documents("ibm", v.drilldownSnippets)
+    enrich_drill_linked_documents("sutherland", v.drilldownSnippets)
     return v
 
 
@@ -2089,6 +2067,7 @@ def extract_ubiquity(wb: Optional[openpyxl.Workbook] = None, drill_ctx: Optional
     v.migrationNotes = migration_notes_with_waves(wb)
     v.adminTabs = tab_status(wb, STANDARD_TABS)
     v.drilldownSnippets = ubi_drill if ubi_drill else [{"tab": t, "missing": True, "snippets": []} for t in DRILL_TABS]
+    enrich_drill_linked_documents("ubiquity", v.drilldownSnippets)
     v.governance = {"commit": 0, "partial": 0, "cannotCommit": 0}
     v.governanceItems = []
     return v
@@ -2222,6 +2201,11 @@ def _sync_data_json_to_public_and_out() -> None:
     for path in [OUT / "portfolio.json", OUT / "scorecard.json", *OUT.glob("vendor_*.json")]:
         if path.is_file():
             shutil.copy2(path, pub / path.name)
+    # Dashboard JSON produced by other scripts (workshop memos, scores import, ideal RFP build).
+    for name in ("workshop1_memos.json", "idealRfpSubmission.json", "evaluatorScores.json"):
+        p = OUT / name
+        if p.is_file():
+            shutil.copy2(p, pub / name)
     out_data = BASE / "out" / "data"
     if (BASE / "out").is_dir():
         out_data.mkdir(parents=True, exist_ok=True)

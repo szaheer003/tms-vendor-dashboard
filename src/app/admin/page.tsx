@@ -316,7 +316,7 @@ export default function AdminPage() {
     <div className="space-y-8 animate-page-in">
       <div>
         <h1 className="text-h1 text-[#0F172A]">Admin checklist</h1>
-        <p className="text-body text-[#64748B] mt-2 max-w-3xl">
+        <p className="text-body text-[#475569] mt-2 max-w-3xl">
           Workbook tab coverage, derived validation, and coarse section-level signals from extracted drill/migration text. Hover status dots for
           labels; click for source preview. Partial (amber) signals thin content — Ubiquity omits most standard tabs by design.
         </p>
@@ -327,7 +327,7 @@ export default function AdminPage() {
         <table className="min-w-[900px] w-full text-body">
           <thead>
             <tr className="bg-[#F8FAFC] border-b border-[#E2E8F0]">
-              <th className="text-left p-3 font-medium text-[#64748B] w-[320px] sticky left-0 bg-[#F8FAFC] z-10">
+              <th className="text-left p-3 font-medium text-[#475569] w-[320px] sticky left-0 bg-[#F8FAFC] z-10">
                 Requirement
               </th>
               {vendors.map((v) => (
@@ -341,7 +341,7 @@ export default function AdminPage() {
             <tr className="bg-[#F8FAFC]">
               <td
                 colSpan={vendors.length + 1}
-                className="px-3 py-2 text-[11px] font-medium uppercase tracking-[0.08em] text-[#94A3B8] sticky left-0 bg-[#F8FAFC]"
+                className="px-3 py-2 text-[11px] font-medium uppercase tracking-[0.08em] text-[#475569] sticky left-0 bg-[#F8FAFC]"
               >
                 Workbook tabs
               </td>
@@ -375,7 +375,7 @@ export default function AdminPage() {
                         </Tooltip>
                         <select
                           aria-label={`Override status ${r.label} ${v.displayName}`}
-                          className="max-w-[5.5rem] rounded border border-[#E2E8F0] bg-white px-0.5 py-0.5 text-micro text-[#64748B]"
+                          className="max-w-[5.5rem] rounded border border-[#E2E8F0] bg-white px-0.5 py-0.5 text-micro text-[#475569]"
                           value={cellOverrides[ck] ?? ""}
                           onChange={(e) => setCellOverride(ck, (e.target.value || "") as "" | CellSt)}
                         >
@@ -393,7 +393,7 @@ export default function AdminPage() {
             <tr className="bg-[#F8FAFC]">
               <td
                 colSpan={vendors.length + 1}
-                className="px-3 py-2 text-[11px] font-medium uppercase tracking-[0.08em] text-[#94A3B8] sticky left-0 bg-[#F8FAFC]"
+                className="px-3 py-2 text-[11px] font-medium uppercase tracking-[0.08em] text-[#475569] sticky left-0 bg-[#F8FAFC]"
               >
                 Derived checks
               </td>
@@ -427,7 +427,7 @@ export default function AdminPage() {
                         </Tooltip>
                         <select
                           aria-label={`Override status ${r.label} ${v.displayName}`}
-                          className="max-w-[5.5rem] rounded border border-[#E2E8F0] bg-white px-0.5 py-0.5 text-micro text-[#64748B]"
+                          className="max-w-[5.5rem] rounded border border-[#E2E8F0] bg-white px-0.5 py-0.5 text-micro text-[#475569]"
                           value={cellOverrides[ck] ?? ""}
                           onChange={(e) => setCellOverride(ck, (e.target.value || "") as "" | CellSt)}
                         >
@@ -445,7 +445,7 @@ export default function AdminPage() {
             <tr className="bg-[#F8FAFC]">
               <td
                 colSpan={vendors.length + 1}
-                className="px-3 py-2 text-[11px] font-medium uppercase tracking-[0.08em] text-[#94A3B8] sticky left-0 bg-[#F8FAFC]"
+                className="px-3 py-2 text-[11px] font-medium uppercase tracking-[0.08em] text-[#475569] sticky left-0 bg-[#F8FAFC]"
               >
                 Detailed submission requirements (heuristic)
               </td>
@@ -479,7 +479,7 @@ export default function AdminPage() {
                         </Tooltip>
                         <select
                           aria-label={`Override status ${r.label} ${v.displayName}`}
-                          className="max-w-[5.5rem] rounded border border-[#E2E8F0] bg-white px-0.5 py-0.5 text-micro text-[#64748B]"
+                          className="max-w-[5.5rem] rounded border border-[#E2E8F0] bg-white px-0.5 py-0.5 text-micro text-[#475569]"
                           value={cellOverrides[ck] ?? ""}
                           onChange={(e) => setCellOverride(ck, (e.target.value || "") as "" | CellSt)}
                         >
@@ -505,7 +505,7 @@ export default function AdminPage() {
                     {(() => {
                       const { ok, partial, missing } = counts(v);
                       return (
-                        <p className="text-caption text-[#64748B] mt-2">
+                        <p className="text-caption text-[#475569] mt-2">
                           <span className="text-[#059669]">{ok}✓</span>{" "}
                           <span className="text-[#D97706]">{partial}◐</span>{" "}
                           <span className="text-[#DC2626]">{missing}✗</span>
@@ -522,14 +522,14 @@ export default function AdminPage() {
 
       <div className="rounded-lg border border-[#F1F5F9] bg-white p-6 shadow-card">
         <h2 className="text-h2 text-[#0F172A]">RFP readiness (granular)</h2>
-        <p className="text-caption text-[#94A3B8] mt-1 mb-4">
+        <p className="text-caption text-[#475569] mt-1 mb-4">
           Heuristic status per vendor. Enter initials and blur a cell to record analyst review (stored in this browser only).
         </p>
         <div className="overflow-x-auto">
           <table className="min-w-[900px] w-full text-body">
             <thead>
               <tr className="border-b border-[#E2E8F0] bg-[#F8FAFC]">
-                <th className="sticky left-0 z-10 bg-[#F8FAFC] p-3 text-left font-medium text-[#64748B]">Category</th>
+                <th className="sticky left-0 z-10 bg-[#F8FAFC] p-3 text-left font-medium text-[#475569]">Category</th>
                 {vendors.map((v) => (
                   <th key={v.id} className="p-3 text-center text-h3" style={{ color: v.color }}>
                     {v.displayName}

@@ -1,6 +1,6 @@
 /**
  * Full 2026 RFP program timeline (phases, activities, milestones).
- * Aligned to stakeholder master schedule; used by the Process page Gantt view.
+ * Single source of truth: TMS_RFP_Project_Timeline.xlsx — used by the Process page Gantt view.
  */
 
 export type RfpProgramRowType = "activity" | "milestone";
@@ -27,9 +27,9 @@ export interface RfpProgramRow {
 
 /** First / last calendar bounds for horizontal scale (inclusive visualization). */
 export const RFP_PROGRAM_RANGE_START = "2026-02-01";
-export const RFP_PROGRAM_RANGE_END = "2026-06-30";
+/** Through early July so Jun 19 milestones and late-June bars are not clipped. */
+export const RFP_PROGRAM_RANGE_END = "2026-07-01";
 
-/** Narrative order: core RFP path first; business case last as parallel track. */
 export const RFP_PROGRAM_PHASES: RfpProgramPhase[] = [
   {
     id: "rfp_admin",
@@ -46,32 +46,32 @@ export const RFP_PROGRAM_PHASES: RfpProgramPhase[] = [
     headerBg: "linear-gradient(90deg, #15803d 0%, #22c55e 100%)",
   },
   {
-    id: "w2_revised",
-    title: "Workshop 2 & revised proposals",
+    id: "w2_path",
+    title: "Workshop 2 & finalist selection",
     bar: "#65a30d",
     tint: "rgba(101, 163, 13, 0.1)",
     headerBg: "linear-gradient(90deg, #4d7c0f 0%, #84cc16 100%)",
   },
   {
-    id: "steering_w3",
-    title: "Steering committee & Workshop 3",
+    id: "steering_w3w4",
+    title: "Steering committee, Workshop 3 & 4",
     bar: "#4f46e5",
     tint: "rgba(79, 70, 229, 0.09)",
     headerBg: "linear-gradient(90deg, #4338ca 0%, #6366f1 100%)",
   },
   {
-    id: "w4_final",
-    title: "Workshop 4 & final proposals",
-    bar: "#0284c7",
-    tint: "rgba(2, 132, 199, 0.09)",
-    headerBg: "linear-gradient(90deg, #0369a1 0%, #0ea5e9 100%)",
-  },
-  {
     id: "contracting",
-    title: "Contracting & due diligence",
+    title: "Contracting",
     bar: "#9333ea",
     tint: "rgba(147, 51, 234, 0.09)",
     headerBg: "linear-gradient(90deg, #7e22ce 0%, #a855f7 100%)",
+  },
+  {
+    id: "due_diligence",
+    title: "Due diligence",
+    bar: "#0d9488",
+    tint: "rgba(13, 148, 136, 0.09)",
+    headerBg: "linear-gradient(90deg, #0f766e 0%, #14b8a6 100%)",
   },
   {
     id: "business",
@@ -83,7 +83,7 @@ export const RFP_PROGRAM_PHASES: RfpProgramPhase[] = [
 ];
 
 export const RFP_PROGRAM_ROWS: RfpProgramRow[] = [
-  // Business case
+  // Business case (parallel)
   {
     id: "bc_pre",
     phaseId: "business",
@@ -93,25 +93,17 @@ export const RFP_PROGRAM_ROWS: RfpProgramRow[] = [
     type: "activity",
   },
   {
-    id: "bc_refresh",
+    id: "bc_interim",
     phaseId: "business",
-    activity: "Refresh proforma with vendor proposal inputs",
+    activity: "Interim business case (post-RFP)",
     startIso: "2026-03-28",
-    endIso: "2026-04-10",
-    type: "activity",
-  },
-  {
-    id: "bc_align",
-    phaseId: "business",
-    activity: "Align business case with revised & final proposals",
-    startIso: "2026-04-22",
-    endIso: "2026-05-01",
+    endIso: "2026-04-24",
     type: "activity",
   },
   {
     id: "bc_cmb",
     phaseId: "business",
-    activity: "Final business case for CMB approval",
+    activity: "Final Business Case submitted for exec approval",
     startIso: "2026-06-19",
     endIso: "2026-06-19",
     type: "milestone",
@@ -152,164 +144,139 @@ export const RFP_PROGRAM_ROWS: RfpProgramRow[] = [
   {
     id: "rfp_props",
     phaseId: "rfp_admin",
-    activity: "Proposals & SOW redlines received (6 vendors)",
+    activity: "Proposals & SOW redlines received",
     startIso: "2026-03-27",
     endIso: "2026-03-27",
     type: "milestone",
   },
+  {
+    id: "rfp_hub",
+    phaseId: "rfp_admin",
+    activity: "Launch RFP Intelligence Hub",
+    startIso: "2026-04-01",
+    endIso: "2026-04-08",
+    type: "activity",
+  },
   // Workshop 1 & evaluation
   {
-    id: "w1_criteria",
+    id: "w1_prep",
     phaseId: "w1_eval",
-    activity: "Prepare evaluation criteria & scoring forms",
-    startIso: "2026-03-27",
-    endIso: "2026-03-29",
+    activity: "Prepare evaluation criteria, scoring, pre-workshop memos",
+    startIso: "2026-03-28",
+    endIso: "2026-03-31",
     type: "activity",
   },
   {
     id: "w1_sessions",
     phaseId: "w1_eval",
-    activity: "Workshop 1 sessions — 6 vendors (3 days)",
-    startIso: "2026-03-30",
-    endIso: "2026-04-01",
+    activity: "Conduct Workshop 1 — 6 vendors (3 days)",
+    startIso: "2026-03-31",
+    endIso: "2026-04-02",
     type: "activity",
   },
   {
-    id: "w1_memos",
+    id: "w1_post",
     phaseId: "w1_eval",
-    activity: "Executive summary memos per vendor",
-    startIso: "2026-03-30",
-    endIso: "2026-04-03",
-    type: "activity",
-  },
-  {
-    id: "w1_ds_memo",
-    phaseId: "w1_eval",
-    activity: "Prepare down-selection recommendation memo",
-    startIso: "2026-04-04",
-    endIso: "2026-04-07",
+    activity: "Post Workshop Debrief, Scoring, Down-Selection Memo",
+    startIso: "2026-04-02",
+    endIso: "2026-04-06",
     type: "activity",
   },
   {
     id: "w1_shortlist",
     phaseId: "w1_eval",
     activity: "Decision Committee approves shortlist (6 → 3)",
-    startIso: "2026-04-08",
+    startIso: "2026-04-07",
     endIso: "2026-04-08",
     type: "milestone",
   },
-  // Workshop 2 & revised
+  // Workshop 2 & finalist selection
   {
-    id: "w2_share",
-    phaseId: "w2_revised",
-    activity: "Share WS2 agenda & vendor memos",
-    startIso: "2026-04-04",
-    endIso: "2026-04-06",
+    id: "w2_prep",
+    phaseId: "w2_path",
+    activity: "Prepare evaluation criteria, scoring, pre-workshop memos",
+    startIso: "2026-04-07",
+    endIso: "2026-04-12",
     type: "activity",
   },
   {
     id: "w2_sessions",
-    phaseId: "w2_revised",
-    activity: "Workshop 2 sessions — 3 vendors (3 days)",
-    startIso: "2026-04-07",
-    endIso: "2026-04-09",
-    type: "activity",
-  },
-  {
-    id: "w2_debrief",
-    phaseId: "w2_revised",
-    activity: "Post-WS2 debrief, scoring & evaluation",
-    startIso: "2026-04-10",
-    endIso: "2026-04-11",
-    type: "activity",
-  },
-  {
-    id: "w2_revised",
-    phaseId: "w2_revised",
-    activity: "Revised proposals received",
-    startIso: "2026-04-12",
-    endIso: "2026-04-12",
-    type: "milestone",
-  },
-  {
-    id: "w2_analyze",
-    phaseId: "w2_revised",
-    activity: "Analyze proposals, update comparisons & 3 → 2 memo",
-    startIso: "2026-04-12",
-    endIso: "2026-04-12",
-    type: "activity",
-  },
-  // Steering & W3
-  {
-    id: "s3_ds",
-    phaseId: "steering_w3",
-    activity: "Decision Committee selects 2 finalists (3 → 2)",
-    startIso: "2026-04-12",
-    endIso: "2026-04-12",
-    type: "milestone",
-  },
-  {
-    id: "s3_pack",
-    phaseId: "steering_w3",
-    activity: "Prepare Steering Committee briefing pack",
-    startIso: "2026-04-11",
-    endIso: "2026-04-13",
-    type: "activity",
-  },
-  {
-    id: "s3_meeting",
-    phaseId: "steering_w3",
-    activity: "Steering Committee meeting",
+    phaseId: "w2_path",
+    activity: "Conduct Workshop 2 — 3 vendors (3 days)",
     startIso: "2026-04-13",
-    endIso: "2026-04-13",
+    endIso: "2026-04-15",
+    type: "activity",
+  },
+  {
+    id: "w2_post",
+    phaseId: "w2_path",
+    activity: "Post Workshop Debrief, Scoring, Down-Selection Memo",
+    startIso: "2026-04-15",
+    endIso: "2026-04-17",
+    type: "activity",
+  },
+  {
+    id: "w2_finalists",
+    phaseId: "w2_path",
+    activity: "Decision Committee selects 2 finalists (3 → 2)",
+    startIso: "2026-04-17",
+    endIso: "2026-04-17",
+    type: "milestone",
+  },
+  // Steering, W3, W4
+  {
+    id: "steering",
+    phaseId: "steering_w3w4",
+    activity: "Steering Committee — approves path to award",
+    startIso: "2026-04-21",
+    endIso: "2026-04-21",
     type: "milestone",
   },
   {
-    id: "s3_ws3_prep",
-    phaseId: "steering_w3",
-    activity: "Prepare WS3 agenda & commercial gap analysis",
-    startIso: "2026-04-11",
-    endIso: "2026-04-14",
-    type: "activity",
-  },
-  {
-    id: "s3_sessions",
-    phaseId: "steering_w3",
-    activity: "Workshop 3 sessions & debrief — 2 vendors",
-    startIso: "2026-04-14",
-    endIso: "2026-04-16",
-    type: "activity",
-  },
-  // W4 & final proposals
-  {
-    id: "w4_fis_tech",
-    phaseId: "w4_final",
-    activity: "Prepare FIS technology approach documentation",
+    id: "w3_prep",
+    phaseId: "steering_w3w4",
+    activity: "Prepare evaluation criteria, scoring, pre-workshop memos",
     startIso: "2026-04-17",
-    endIso: "2026-04-27",
+    endIso: "2026-04-21",
     type: "activity",
   },
   {
-    id: "w4_share",
-    phaseId: "w4_final",
-    activity: "Share WS4 agenda & vendor memos",
-    startIso: "2026-04-24",
+    id: "w3_sessions",
+    phaseId: "steering_w3w4",
+    activity: "Conduct Workshop 3 — 2 vendors (2 days)",
+    startIso: "2026-04-22",
+    endIso: "2026-04-23",
+    type: "activity",
+  },
+  {
+    id: "w3_post",
+    phaseId: "steering_w3w4",
+    activity: "Post Workshop Debrief, Scoring, Recommendation",
+    startIso: "2026-04-23",
+    endIso: "2026-04-25",
+    type: "activity",
+  },
+  {
+    id: "w4_prep",
+    phaseId: "steering_w3w4",
+    activity: "Prepare FIS technology approach docs & WS4 memos",
+    startIso: "2026-04-21",
     endIso: "2026-04-27",
     type: "activity",
   },
   {
     id: "w4_sessions",
-    phaseId: "w4_final",
-    activity: "Workshop 4 sessions & tech debrief — 2 vendors",
+    phaseId: "steering_w3w4",
+    activity: "Conduct Workshop 4 — 2 vendors (2 days)",
     startIso: "2026-04-28",
-    endIso: "2026-05-01",
+    endIso: "2026-04-30",
     type: "activity",
   },
   {
-    id: "w4_negotiate",
-    phaseId: "w4_final",
-    activity: "Initiate proposal refinements / negotiations",
-    startIso: "2026-04-17",
+    id: "w4_post",
+    phaseId: "steering_w3w4",
+    activity: "Post-WS4 tech scoring, debrief & final proposal refinements",
+    startIso: "2026-04-30",
     endIso: "2026-05-07",
     type: "activity",
   },
@@ -325,7 +292,7 @@ export const RFP_PROGRAM_ROWS: RfpProgramRow[] = [
   {
     id: "c_terms",
     phaseId: "contracting",
-    activity: "Compile & refine deal terms w/ FIS stakeholders",
+    activity: "Compile & refine deal terms",
     startIso: "2026-05-05",
     endIso: "2026-06-10",
     type: "activity",
@@ -334,6 +301,31 @@ export const RFP_PROGRAM_ROWS: RfpProgramRow[] = [
     id: "c_ratify",
     phaseId: "contracting",
     activity: "Vendor ratification — Compliance & InfoSec",
+    startIso: "2026-05-05",
+    endIso: "2026-06-15",
+    type: "activity",
+  },
+  // Due diligence
+  {
+    id: "dd_ops",
+    phaseId: "due_diligence",
+    activity: "Operations & Client SLA Due Diligence",
+    startIso: "2026-05-05",
+    endIso: "2026-06-15",
+    type: "activity",
+  },
+  {
+    id: "dd_tech",
+    phaseId: "due_diligence",
+    activity: "Technology Due Diligence",
+    startIso: "2026-05-05",
+    endIso: "2026-06-15",
+    type: "activity",
+  },
+  {
+    id: "dd_hr",
+    phaseId: "due_diligence",
+    activity: "HR & Workforce Due Diligence",
     startIso: "2026-05-05",
     endIso: "2026-06-15",
     type: "activity",
@@ -380,6 +372,26 @@ export function rfpTodayPct(now: Date): number | null {
   return ((t - start) / span) * 100;
 }
 
+/** Local calendar date from `YYYY-MM-DD` (avoids UTC off-by-one). */
+export function rfpParseLocalDate(iso: string): Date {
+  const [y, m, d] = iso.split("-").map((x) => parseInt(x, 10));
+  return new Date(y, m - 1, d);
+}
+
+export function rfpStartOfLocalDay(d: Date): Date {
+  return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+}
+
+/** Row ended before today's local date (end date is strictly in the past). */
+export function rfpRowIsPast(row: RfpProgramRow, now: Date): boolean {
+  return rfpParseLocalDate(row.endIso) < rfpStartOfLocalDay(now);
+}
+
+/** Phase date range fully before today (by latest end in the phase). */
+export function rfpPhaseRangeIsPast(endIso: string, now: Date): boolean {
+  return rfpParseLocalDate(endIso) < rfpStartOfLocalDay(now);
+}
+
 export interface RfpMonthTick {
   label: string;
   pct: number;
@@ -395,14 +407,13 @@ export function rfpMonthTicks(): RfpMonthTick[] {
     { label: "Apr 1", t: new Date(year, 3, 1).getTime() },
     { label: "May 1", t: new Date(year, 4, 1).getTime() },
     { label: "Jun 1", t: new Date(year, 5, 1).getTime() },
-    { label: "Jun 30", t: new Date(year, 5, 30, 12, 0, 0).getTime() },
+    { label: "Jul 1", t: new Date(year, 6, 1).getTime() },
   ];
   return ticks.map(({ label, t }) => ({
     label,
     pct: Math.max(0, Math.min(100, ((t - start) / span) * 100)),
   }));
 }
-
 
 export function formatRfpRowDates(row: RfpProgramRow): string {
   const same = row.startIso === row.endIso;

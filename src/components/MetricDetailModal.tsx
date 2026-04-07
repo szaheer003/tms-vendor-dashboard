@@ -22,7 +22,7 @@ export function MetricDetailModal({ open, title, onClose, children }: Props) {
             Close
           </button>
         </div>
-        <div className="px-5 py-4 overflow-y-auto text-body text-[#64748B]">{children}</div>
+        <div className="px-5 py-4 overflow-y-auto text-body text-[#475569]">{children}</div>
       </div>
     </div>
   );

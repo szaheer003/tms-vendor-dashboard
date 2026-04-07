@@ -90,7 +90,7 @@ export function RateCardHeatmap({ vendors, highlightVendorId }: { vendors: Vendo
       return {
         text: "—",
         bg: "repeating-linear-gradient(45deg,#F8FAFC,#F8FAFC 4px,#F1F5F9 4px,#F1F5F9 8px)",
-        fg: "#94A3B8",
+        fg: "#64748B",
       };
     const n = parseHourlyUsd(raw);
     if (n == null) {
@@ -117,7 +117,7 @@ export function RateCardHeatmap({ vendors, highlightVendorId }: { vendors: Vendo
               </th>
             ))}
           </tr>
-          <tr className="border-b border-[#F1F5F9] text-micro text-ink-tertiary">
+          <tr className="border-b border-[#F1F5F9] text-micro text-[#475569]">
             <th className="p-1" />
             {vendors.map((v) =>
               HEAT_COLS.map((c) => (
@@ -135,7 +135,7 @@ export function RateCardHeatmap({ vendors, highlightVendorId }: { vendors: Vendo
         <tbody>
           {tierLabels.map((tier) => (
             <tr key={tier}>
-              <td className="p-2 text-[#64748B] max-w-[200px]">{tier}</td>
+              <td className="p-2 text-[#475569] max-w-[200px]">{tier}</td>
               {vendors.flatMap((v) =>
                 HEAT_COLS.map((col) => {
                   const { text, bg, fg } = cell(v, tier, col);
@@ -194,11 +194,11 @@ export function AnnualFeeChart({
       <ResponsiveContainer width="100%" height="100%">
         <ComposedChart data={data} margin={{ top: 16, right: 24, left: 8, bottom: 8 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" vertical={false} />
-          <XAxis dataKey="year" tick={{ fontSize: 10, fill: "#94A3B8" }} />
+          <XAxis dataKey="year" tick={{ fontSize: 10, fill: "#64748B" }} />
           <YAxis
-            tick={{ fontSize: 10, fill: "#94A3B8" }}
+            tick={{ fontSize: 10, fill: "#64748B" }}
             tickMargin={8}
-            label={{ value: "$M / yr", angle: -90, position: "insideLeft", fill: "#94A3B8", fontSize: 10 }}
+            label={{ value: "$M / yr", angle: -90, position: "insideLeft", fill: "#64748B", fontSize: 10 }}
           />
           <Tooltip content={<StandardChartTooltip valueFormatter={formatChartM1} />} />
           <Legend
@@ -216,17 +216,17 @@ export function AnnualFeeChart({
               y2={baselineMid}
               fill="#0F172A"
               fillOpacity={0.05}
-              label={{ value: "Baseline band (low–mid)", fill: "#94A3B8", fontSize: 10, position: "insideTopRight" }}
+              label={{ value: "Baseline band (low–mid)", fill: "#64748B", fontSize: 10, position: "insideTopRight" }}
             />
           )}
           {baselineAnnualLow != null && (
             <ReferenceLine
               y={baselineAnnualLow}
-              stroke="#94A3B8"
+              stroke="#64748B"
               strokeDasharray="6 4"
               label={{
                 value: "FIS baseline low ~$144M/yr",
-                fill: "#94A3B8",
+                fill: "#64748B",
                 fontSize: 10,
                 position: "insideBottomRight",
               }}
@@ -292,15 +292,15 @@ export function CumulativeSavingsChart({
       <ResponsiveContainer width="100%" height="100%">
         <ComposedChart data={data} margin={{ top: 12, right: 20, left: 8, bottom: 8 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" vertical={false} />
-          <XAxis dataKey="year" tick={{ fontSize: 10, fill: "#94A3B8" }} />
+          <XAxis dataKey="year" tick={{ fontSize: 10, fill: "#64748B" }} />
           <YAxis
-            tick={{ fontSize: 10, fill: "#94A3B8" }}
+            tick={{ fontSize: 10, fill: "#64748B" }}
             label={{
               value: "$M cumulative vs baseline",
               angle: -90,
               position: "insideLeft",
               fontSize: 10,
-              fill: "#94A3B8",
+              fill: "#64748B",
             }}
           />
           <ReferenceLine y={0} stroke="#0F172A" strokeWidth={1} />
@@ -400,7 +400,7 @@ export function OneTimeCostsByCategoryChart({
   }).filter((row) => vendors.some((v) => (row[v.id] as number) > 0));
 
   if (!data.length) {
-    return <p className="text-caption text-ink-tertiary">No categorized one-time rows to chart.</p>;
+    return <p className="text-caption text-[#475569]">No categorized one-time rows to chart.</p>;
   }
 
   const averages: Record<string, number> = {};
@@ -420,20 +420,20 @@ export function OneTimeCostsByCategoryChart({
           <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" vertical={false} />
           <XAxis
             dataKey="category"
-            tick={{ fontSize: 10, fill: "#94A3B8" }}
+            tick={{ fontSize: 10, fill: "#64748B" }}
             interval={0}
             angle={-22}
             textAnchor="end"
             height={72}
           />
           <YAxis
-            tick={{ fontSize: 10, fill: "#94A3B8" }}
+            tick={{ fontSize: 10, fill: "#64748B" }}
             label={{
               value: "$M (row sums)",
               angle: -90,
               position: "insideLeft",
               fontSize: 10,
-              fill: "#94A3B8",
+              fill: "#64748B",
             }}
           />
           <Tooltip
@@ -512,7 +512,7 @@ export function TcvBarSorted({
   };
   return (
     <div className="space-y-3">
-      <p className="text-micro text-ink-tertiary">
+      <p className="text-micro text-[#475569]">
         Field avg: <span className="tabular-nums font-semibold text-ink-secondary">${avg.toFixed(1)}M</span>
       </p>
       {sorted.map((v) => {

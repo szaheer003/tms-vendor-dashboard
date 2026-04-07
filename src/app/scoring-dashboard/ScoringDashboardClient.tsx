@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
+import { useMemo, useState } from "react";
 import {
   Bar,
   BarChart,
@@ -17,9 +18,9 @@ import {
   YAxis,
 } from "recharts";
 import { useDataset } from "@/lib/dataset";
+import evaluatorScoresBundled from "@/data/evaluatorScores.json";
 import { EVALUATOR_IDS, flattenScoredSubs, QUALITATIVE_QUESTIONS, VENDOR_IDS } from "@/lib/evaluatorData";
 import { scoreBgContinuous, scoreHeatTextOnRamp } from "@/lib/scoreGradient";
-import { ScoringMethodologyPanel } from "@/components/ScoringMethodologyPanel";
 import type { PortfolioVendor } from "@/lib/types";
 
 /** Pillar comparison chart: one hue per pillar (not per vendor) for readable grouped bars. */
@@ -86,14 +87,7 @@ type EvalPayload = {
 
 export function ScoringDashboardClient() {
   const { portfolio } = useDataset();
-  const [raw, setRaw] = useState<EvalPayload | null>(null);
-
-  useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/data/evaluatorScores.json`, { cache: "no-store" })
-      .then((r) => (r.ok ? r.json() : null))
-      .then(setRaw)
-      .catch(() => setRaw(null));
-  }, []);
+  const raw = evaluatorScoresBundled as EvalPayload;
 
   const order = portfolio.scorecard.columnOrder;
   const vendors = order.map((id) => portfolio.vendors.find((v) => v.id === id)!).filter(Boolean) as PortfolioVendor[];
@@ -152,119 +146,136 @@ export function ScoringDashboardClient() {
     <div className="space-y-12 animate-page-in">
       <header>
         <h1 className="text-h1 text-[#0F172A]">Scoring dashboard</h1>
-        <p className="mt-2 max-w-4xl text-body text-[#64748B] leading-relaxed">
-          Consolidated view of Workshop 1 evaluator data from Folder 8. Composite includes all five pillars (Partnership 10%; others 22.5% each). Refresh imports with{" "}
-          <code className="text-[13px] bg-[#F1F5F9] px-1 rounded">python scripts/import_folder8_scores.py</code> after adding new xlsx files.
+        <p className="mt-2 max-w-4xl text-body text-[#475569] leading-relaxed">
+          Story view: pillar-level patterns, sub-dimension heat, and qualitative themes from Workshop 1. For the full dimension matrix and scoring methodology, open the{" "}
+          <Link href="/scorecard/" className="font-medium text-[#0F172A] underline underline-offset-2">
+            Scorecard
+          </Link>
+          .
         </p>
         {raw?.source ? (
-          <p className="mt-3 text-caption text-[#059669] border-l-2 border-[#059669] pl-3 max-w-3xl">{raw.source}</p>
+          <p className="mt-3 text-caption text-[#475569] border-l-2 border-[#CBD5E1] pl-3 max-w-3xl">{raw.source}</p>
         ) : null}
+        <p className="text-[13px] text-[#475569] mt-4 mb-2 max-w-4xl">
+          Scoring methodology and scale definitions are on the{" "}
+          <Link href="/scorecard/" className="text-[#1E40AF] underline underline-offset-2 font-medium">
+            Scorecard
+          </Link>{" "}
+          page.
+        </p>
       </header>
 
-      {/* Leaderboard */}
-      <section className="rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-card">
-        <h2 className="text-h2 text-[#0F172A] mb-1">Weighted composite ranking</h2>
-        <p className="text-caption text-[#94A3B8] mb-6">
-          Scale is raw 1–9 evaluator composite (not the 0–10 radar mapping). All five pillars count: Commercial, Operational, Technology, Migration (22.5% each) and Partnership (10%).
-        </p>
-        <div className="h-[300px] w-full min-h-[260px]">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={compositeSorted} layout="vertical" margin={{ left: 4, right: 28, top: 4, bottom: 4 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" horizontal={false} />
-              <XAxis type="number" domain={[0, 9]} ticks={[0, 3, 6, 9]} tick={{ fontSize: 11, fill: "#64748B" }} />
-              <YAxis type="category" dataKey="name" width={92} tick={{ fontSize: 12, fill: "#334155" }} interval={0} />
-              <RTooltip
-                formatter={(v: number) => [v != null ? v.toFixed(2) : "—", "Weighted composite"]}
-                contentStyle={{ borderRadius: 8, border: "1px solid #E2E8F0" }}
-              />
-              <Bar dataKey="composite" radius={[0, 6, 6, 0]} name="Composite">
-                {compositeSorted.map((e, i) => (
-                  <Cell key={e.id ?? i} fill={e.color} fillOpacity={e.composite == null ? 0.25 : 0.92} />
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+        <section className="rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-card min-w-0 flex flex-col">
+          <h2 className="text-h2 text-[#0F172A] mb-1">Weighted composite ranking</h2>
+          <p className="text-caption text-[#475569] mb-4">
+            Scale is raw 1–9 evaluator composite (not the 0–10 radar mapping). All five pillars count: Commercial, Operational, Technology, Migration (22.5% each) and Partnership (10%).
+          </p>
+          <div className="h-[360px] w-full min-h-0 flex-1">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={compositeSorted} layout="vertical" margin={{ left: 4, right: 28, top: 4, bottom: 4 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" horizontal={false} />
+                <XAxis type="number" domain={[0, 9]} ticks={[0, 3, 6, 9]} tick={{ fontSize: 11, fill: "#475569" }} />
+                <YAxis type="category" dataKey="name" width={92} tick={{ fontSize: 12, fill: "#334155" }} interval={0} />
+                <RTooltip
+                  formatter={(v: number) => [v != null ? v.toFixed(2) : "—", "Weighted composite"]}
+                  contentStyle={{ borderRadius: 8, border: "1px solid #E2E8F0", zIndex: 70 }}
+                  wrapperStyle={{ zIndex: 70 }}
+                />
+                <Bar dataKey="composite" radius={[0, 6, 6, 0]} name="Composite">
+                  {compositeSorted.map((e, i) => (
+                    <Cell key={e.id ?? i} fill={e.color} fillOpacity={e.composite == null ? 0.25 : 0.92} />
+                  ))}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        </section>
+
+        <div className="rounded-2xl border border-[#E2E8F0] bg-gradient-to-b from-[#F8FAFC] to-white p-6 shadow-card min-w-0 flex flex-col">
+          <h2 className="text-h2 text-[#0F172A] mb-1">Pillar comparison</h2>
+          <p className="text-caption text-[#475569] mb-4 max-w-3xl">
+            0–10 radar scale (mapped from 1–9 averages). One row per vendor; bar colors are pillars.
+          </p>
+          <div className="h-[360px] w-full min-h-0 flex-1">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart
+                data={pillarComparisonByVendor}
+                layout="vertical"
+                margin={{ left: 4, right: 16, top: 8, bottom: 8 }}
+                barCategoryGap="12%"
+                barGap={2}
+              >
+                <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" horizontal vertical={false} />
+                <XAxis type="number" domain={[0, 10]} ticks={[0, 2, 4, 6, 8, 10]} tick={{ fontSize: 11, fill: "#475569" }} />
+                <YAxis type="category" dataKey="name" width={88} tick={{ fontSize: 12, fill: "#334155" }} interval={0} />
+                <RTooltip
+                  cursor={{ fill: "rgba(241, 245, 249, 0.6)" }}
+                  contentStyle={{ borderRadius: 8, border: "1px solid #E2E8F0", fontSize: 12, zIndex: 70 }}
+                  wrapperStyle={{ zIndex: 70 }}
+                  formatter={(v: number) => (v != null ? v.toFixed(2) : "—")}
+                />
+                <Legend wrapperStyle={{ fontSize: 11, paddingTop: 8 }} iconType="square" iconSize={10} />
+                {PILLAR_SERIES.map((s) => (
+                  <Bar key={s.dataKey} dataKey={s.dataKey} name={s.name} fill={s.fill} maxBarSize={18} radius={[0, 3, 3, 0]} />
                 ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
         </div>
-      </section>
+      </div>
 
-      {/* Pillar comparison — horizontal bars: one row per vendor, pillars as series */}
-      <section className="rounded-2xl border border-[#E2E8F0] bg-gradient-to-b from-[#F8FAFC] to-white p-6 shadow-card">
-        <h2 className="text-h2 text-[#0F172A] mb-1">Pillar comparison</h2>
-        <p className="text-caption text-[#94A3B8] mb-4 max-w-3xl">
-          Same 0–10 radar scale as the overview (mapped from 1–9 averages). One row per vendor; bar colors represent pillars. All five pillars are included in the weighted composite above.
-        </p>
-        <div className="h-[400px] w-full min-h-[360px]">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart
-              data={pillarComparisonByVendor}
-              layout="vertical"
-              margin={{ left: 4, right: 16, top: 8, bottom: 8 }}
-              barCategoryGap="12%"
-              barGap={2}
-            >
-              <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" horizontal vertical={false} />
-              <XAxis type="number" domain={[0, 10]} ticks={[0, 2, 4, 6, 8, 10]} tick={{ fontSize: 11, fill: "#64748B" }} />
-              <YAxis type="category" dataKey="name" width={88} tick={{ fontSize: 12, fill: "#334155" }} interval={0} />
-              <RTooltip
-                cursor={{ fill: "rgba(241, 245, 249, 0.6)" }}
-                contentStyle={{ borderRadius: 8, border: "1px solid #E2E8F0", fontSize: 12 }}
-                formatter={(v: number) => (v != null ? v.toFixed(2) : "—")}
-              />
-              <Legend wrapperStyle={{ fontSize: 11, paddingTop: 8 }} iconType="square" iconSize={10} />
-              {PILLAR_SERIES.map((s) => (
-                <Bar key={s.dataKey} dataKey={s.dataKey} name={s.name} fill={s.fill} maxBarSize={18} radius={[0, 3, 3, 0]} />
-              ))}
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
-      </section>
-
-      {/* Mini radars — five pillars, compact axis labels */}
-      <section className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-        {vendors.map((v) => {
-          const pv = portfolio.radar.vendors.find((x) => x.vendorId === v.id)?.pillars;
-          const data = RADAR_AXES.map(({ key, short, full }) => ({
-            axis: short,
-            full,
-            value: pv?.[key] ?? 0,
-          }));
-          return (
-            <div key={v.id} className="rounded-xl border border-[#F1F5F9] bg-white p-4 shadow-sm">
-              <p className="text-caption font-semibold mb-2" style={{ color: v.color }}>
-                {v.displayName}
-              </p>
-              <div className="h-[230px] w-full">
-                <ResponsiveContainer width="100%" height="100%">
-                  <RadarChart data={data} cx="50%" cy="52%" outerRadius="68%">
-                    <PolarGrid stroke="#E2E8F0" />
-                    <PolarAngleAxis dataKey="axis" tick={{ fontSize: 10, fill: "#64748B" }} />
-                    <Radar dataKey="value" stroke={v.color} fill={v.color} fillOpacity={0.22} strokeWidth={1.5} />
-                    <RTooltip
-                      content={({ active, payload }) => {
-                        if (!active || !payload?.length) return null;
-                        const item = payload[0];
-                        const row = item?.payload as { full?: string; value?: number };
-                        const val = item?.value;
-                        return (
-                          <div className="rounded-lg border border-[#E2E8F0] bg-white px-3 py-2 text-[12px] shadow-md">
-                            <p className="font-semibold text-[#0F172A]">{row?.full ?? "—"}</p>
-                            <p className="tabular-nums text-[#64748B]">
-                              {typeof val === "number" ? val.toFixed(2) : "—"} / 10
-                            </p>
-                          </div>
-                        );
-                      }}
-                    />
-                  </RadarChart>
-                </ResponsiveContainer>
-              </div>
-              <p className="text-center text-[20px] font-bold tabular-nums text-[#0F172A] mt-1">
-                {v.composite != null ? v.composite.toFixed(2) : "—"}
-                <span className="text-micro font-normal text-[#94A3B8] ml-1">composite (1–9)</span>
-              </p>
-            </div>
-          );
-        })}
+      <section className="rounded-2xl border border-[#E2E8F0] bg-white p-4 shadow-card min-w-0 max-w-[900px] mx-auto w-full">
+          <h2 className="text-h2 text-[#0F172A] mb-3">Per-vendor pillar shape</h2>
+          <p className="text-caption text-[#475569] mb-4">Five pillars per vendor (0–10 display scale).</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {vendors.map((v) => {
+              const pv = portfolio.radar.vendors.find((x) => x.vendorId === v.id)?.pillars;
+              const data = RADAR_AXES.map(({ key, short, full }) => ({
+                axis: short,
+                full,
+                value: pv?.[key] ?? 0,
+              }));
+              return (
+                <div key={v.id} className="mx-auto w-full max-w-[280px] rounded-lg border border-[#E2E8F0] p-3">
+                  <p className="text-[13px] font-semibold mb-1 text-center" style={{ color: v.color }}>
+                    {v.displayName}
+                  </p>
+                  <div className="h-[200px] w-full">
+                    <ResponsiveContainer width="100%" height="100%">
+                      <RadarChart data={data} cx="50%" cy="52%" outerRadius="72%">
+                        <PolarGrid stroke="#E2E8F0" />
+                        <PolarAngleAxis dataKey="axis" tick={false} />
+                        <Radar dataKey="value" stroke={v.color} fill={v.color} fillOpacity={0.22} strokeWidth={1.5} />
+                        <RTooltip
+                          contentStyle={{ zIndex: 70 }}
+                          wrapperStyle={{ zIndex: 70 }}
+                          content={({ active, payload }) => {
+                            if (!active || !payload?.length) return null;
+                            const item = payload[0];
+                            const row = item?.payload as { full?: string; value?: number };
+                            const val = item?.value;
+                            return (
+                              <div className="rounded-lg border border-[#E2E8F0] bg-white px-3 py-2 text-[12px] shadow-md">
+                                <p className="font-semibold text-[#0F172A]">{row?.full ?? "—"}</p>
+                                <p className="tabular-nums text-[#475569]">
+                                  {typeof val === "number" ? val.toFixed(2) : "—"} / 10
+                                </p>
+                              </div>
+                            );
+                          }}
+                        />
+                      </RadarChart>
+                    </ResponsiveContainer>
+                  </div>
+                  <p className="text-center text-[16px] font-bold tabular-nums text-[#0F172A] mt-1">
+                    {v.composite != null ? v.composite.toFixed(2) : "—"}
+                    <span className="text-[11px] font-normal text-[#475569] ml-1">composite</span>
+                  </p>
+                </div>
+              );
+            })}
+          </div>
       </section>
 
       {/* Sub-dimension heat strip */}
@@ -273,7 +284,7 @@ export function ScoringDashboardClient() {
         <table className="min-w-[800px] w-full text-[12px]">
           <thead>
             <tr className="border-b border-[#E2E8F0]">
-              <th className="text-left p-2 text-[#64748B]">Dim</th>
+              <th className="text-left p-2 text-[#475569]">Dim</th>
               {vendors.map((v) => (
                 <th key={v.id} className="p-2 text-center font-medium" style={{ color: v.color }}>
                   {v.displayName}
@@ -285,7 +296,7 @@ export function ScoringDashboardClient() {
             {heatRows.map((row) => (
               <tr key={String(row.id)} className="border-b border-[#F8FAFC]">
                 <td className="p-2 text-[#334155]">
-                  <span className="font-mono text-[10px] text-[#94A3B8]">{row.id}</span> {String(row.label)}
+                  <span className="font-mono text-[10px] text-[#475569]">{row.id}</span> {String(row.label)}
                 </td>
                 {vendors.map((v) => {
                   const val = row[v.id] as number | null;
@@ -296,7 +307,7 @@ export function ScoringDashboardClient() {
                         className="inline-block min-w-[2.5rem] rounded-md px-1 py-1 font-semibold tabular-nums"
                         style={{
                           backgroundColor: pending ? "#F8FAFC" : scoreBgContinuous(val!),
-                          color: pending ? "#94A3B8" : scoreHeatTextOnRamp(val!),
+                          color: pending ? "#64748B" : scoreHeatTextOnRamp(val!),
                         }}
                       >
                         {pending ? "—" : val!.toFixed(1)}
@@ -313,8 +324,8 @@ export function ScoringDashboardClient() {
       {/* Qualitative themes */}
       <section className="rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-card">
         <h2 className="text-h2 text-[#0F172A] mb-2">Qualitative signal — recurring themes</h2>
-        <p className="text-caption text-[#94A3B8] mb-4 max-w-3xl">
-          Automated token frequency across all evaluator free-text (Q3–Q7) for the selected vendor. Use for interview prep — not a substitute for reading full responses on the Evaluator Scores tab.
+        <p className="text-caption text-[#475569] mb-4 max-w-3xl">
+          Automated token frequency across evaluator free-text (Q3–Q7) for the selected vendor. Cross-check on the Evaluator Scores tab.
         </p>
         <div className="flex flex-wrap gap-2 mb-6">
           {VENDOR_IDS.filter((id) => order.includes(id)).map((id) => {
@@ -326,7 +337,7 @@ export function ScoringDashboardClient() {
                 type="button"
                 onClick={() => setQualVendor(id)}
                 className={`rounded-full px-4 py-1.5 text-[13px] font-medium border transition-colors ${
-                  qualVendor === id ? "border-[#0F172A] bg-[#0F172A] text-white" : "border-[#E2E8F0] text-[#64748B] hover:border-[#CBD5E1]"
+                  qualVendor === id ? "border-[#0F172A] bg-[#0F172A] text-white" : "border-[#E2E8F0] text-[#475569] hover:border-[#CBD5E1]"
                 }`}
                 style={qualVendor === id ? {} : { borderColor: v.color + "55", color: v.color }}
               >
@@ -337,7 +348,7 @@ export function ScoringDashboardClient() {
         </div>
         <div className="flex flex-wrap gap-3">
           {themes.length === 0 ? (
-            <p className="text-caption text-[#94A3B8]">No qualitative text loaded.</p>
+            <p className="text-caption text-[#475569]">No qualitative text loaded.</p>
           ) : (
             themes.map((t) => (
               <div
@@ -346,12 +357,12 @@ export function ScoringDashboardClient() {
                 title={`${t.count} mentions`}
               >
                 <span className="font-semibold text-[#0F172A]">{t.term}</span>
-                <span className="ml-2 text-[11px] tabular-nums text-[#64748B]">×{t.count}</span>
+                <span className="ml-2 text-[11px] tabular-nums text-[#475569]">×{t.count}</span>
               </div>
             ))
           )}
         </div>
-        <ul className="mt-6 space-y-2 text-caption text-[#64748B]">
+        <ul className="mt-6 space-y-2 text-caption text-[#475569]">
           {(Object.keys(QUALITATIVE_QUESTIONS) as (keyof typeof QUALITATIVE_QUESTIONS)[])
             .filter((k) => k.startsWith("Q"))
             .slice(2)
@@ -363,7 +374,13 @@ export function ScoringDashboardClient() {
         </ul>
       </section>
 
-      <ScoringMethodologyPanel collapsedDefault />
+      <p className="text-caption text-[#475569]">
+        Rubric weights and scale anchors: see{" "}
+        <Link href="/scorecard/" className="font-medium text-[#0F172A] underline underline-offset-2">
+          Scorecard → methodology
+        </Link>
+        .
+      </p>
     </div>
   );
 }

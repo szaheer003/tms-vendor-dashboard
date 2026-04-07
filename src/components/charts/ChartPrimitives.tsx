@@ -52,11 +52,11 @@ export function ChartSection({
     <section className="space-y-6">
       <div>
         <h3 className="text-[16px] font-medium text-[#0F172A]">{title}</h3>
-        {subtitle && <p className="text-[13px] text-[#64748B] mt-1 leading-relaxed">{subtitle}</p>}
+        {subtitle && <p className="text-[13px] text-[#475569] mt-1 leading-relaxed">{subtitle}</p>}
       </div>
       <div className="py-1">{children}</div>
       {interpretation && (
-        <p className="text-[13px] text-[#64748B] leading-relaxed pl-4 border-l-2 border-[#E2E8F0]">{interpretation}</p>
+        <p className="text-[13px] text-[#475569] leading-relaxed pl-4 border-l-2 border-[#E2E8F0]">{interpretation}</p>
       )}
     </section>
   );

@@ -1,8 +1,11 @@
 import type { VendorFilesManifest } from "./vendorFilesTypes";
-import fallbackJson from "@/data/vendor-files-manifest.json";
+import bundledJson from "@/data/vendor-files-manifest.json";
 
-/** Bundled fallback when /vendor-files-manifest.json is missing (used before first Python sync). */
-export const fallbackVendorFilesManifest = fallbackJson as VendorFilesManifest;
+/** Bundled at build time (file:// safe; no runtime fetch). */
+export const bundledVendorFilesManifest = bundledJson as VendorFilesManifest;
+
+/** @deprecated Use bundledVendorFilesManifest */
+export const fallbackVendorFilesManifest = bundledVendorFilesManifest;
 
 export const VENDOR_SUBMISSION_ORDER = ["cognizant", "genpact", "exl", "sutherland", "ubiquity", "ibm"] as const;
 

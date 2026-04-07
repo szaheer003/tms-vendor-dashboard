@@ -138,11 +138,11 @@ export function ProvideFeedbackClient() {
       <header className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <h1 className="text-h1 text-[#0F172A]">Your feedback</h1>
-          <p className="mt-2 text-body text-[#64748B] leading-relaxed">
+          <p className="mt-2 text-body text-[#475569] leading-relaxed">
             Capture notes for the dashboard build. Nothing is sent to a server — text stays in this browser until you copy or download it. You can paste the file into email, Teams, or Cursor.
           </p>
           {hydrated && (
-            <p className={`mt-2 text-caption transition-opacity ${savedFlash ? "text-[#059669] opacity-100" : "text-[#94A3B8] opacity-90"}`}>
+            <p className={`mt-2 text-caption transition-opacity ${savedFlash ? "text-[#059669] opacity-100" : "text-[#475569] opacity-90"}`}>
               {savedFlash ? "Saved locally." : "Autosaves as you type."}
             </p>
           )}
@@ -152,7 +152,7 @@ export function ProvideFeedbackClient() {
           <button
             type="button"
             onClick={copyAll}
-            className="text-caption text-[#64748B] hover:text-[#0F172A] px-3 py-1.5 rounded-btn border border-[#E2E8F0] bg-white transition-colors duration-150"
+            className="text-caption text-[#475569] hover:text-[#0F172A] px-3 py-1.5 rounded-btn border border-[#E2E8F0] bg-white transition-colors duration-150"
           >
             Copy all
           </button>
@@ -161,7 +161,7 @@ export function ProvideFeedbackClient() {
             onClick={downloadMd}
             className="text-caption font-medium text-[#0F172A] px-3 py-1.5 rounded-btn border border-[#E2E8F0] bg-[#F8FAFC] hover:bg-[#F1F5F9] transition-colors duration-150"
           >
-            Download .md
+            Export feedback (.md)
           </button>
           <button
             type="button"
@@ -183,7 +183,7 @@ export function ProvideFeedbackClient() {
             <label htmlFor={`fb-${key}`} className="block text-h3 font-semibold text-[#0F172A]">
               {title}
             </label>
-            <p className="mt-1 text-caption text-[#94A3B8] mb-3">{hint}</p>
+            <p className="mt-1 text-caption text-[#475569] mb-3">{hint}</p>
             <textarea
               id={`fb-${key}`}
               value={hydrated ? draft[key] : ""}
@@ -197,8 +197,8 @@ export function ProvideFeedbackClient() {
         ))}
       </div>
 
-      <footer className="text-center text-caption text-[#94A3B8] pb-8">
-        Tip: after <strong className="text-[#64748B]">Download .md</strong>, attach the file or drop it into a chat with your team or AI assistant.
+      <footer className="text-center text-caption text-[#475569] pb-8">
+        Tip: after <strong className="text-[#475569]">Download .md</strong>, attach the file or drop it into a chat with your team or AI assistant.
       </footer>
     </div>
   );

@@ -10,15 +10,20 @@ export const SCORE_LABELS: Record<number, string> = {
   9: "Differentiated",
 };
 
-/** Saturated stops for dots / chart lines (same hue path as heatmap). */
-const VIVID_ORANGE: [number, number, number] = [249, 115, 22]; // orange-500
-const VIVID_YELLOW: [number, number, number] = [234, 179, 8]; // yellow-500
-const VIVID_GREEN: [number, number, number] = [34, 197, 94]; // green-500
+/** Saturated stops for dots / chart lines (aligned hue path; slightly deeper for contrast). */
+const VIVID_ORANGE: [number, number, number] = [234, 88, 12]; // orange-600
+const VIVID_YELLOW: [number, number, number] = [202, 138, 4]; // yellow-600
+const VIVID_GREEN: [number, number, number] = [22, 163, 74]; // green-600
 
-/** Pastel stops for table / matrix cells. */
-const SOFT_ORANGE: [number, number, number] = [254, 215, 170]; // orange-200
-const SOFT_YELLOW: [number, number, number] = [253, 230, 138]; // yellow-200
-const SOFT_GREEN: [number, number, number] = [167, 243, 208]; // green-200
+/**
+ * Table / matrix fills — stronger saturation & wider light–dark spread so heatmap
+ * bands read clearly at a glance (vs. prior pastel ramp).
+ */
+const SOFT_RED: [number, number, number] = [220, 38, 38]; // red-600
+const SOFT_ORANGE: [number, number, number] = [234, 88, 12]; // orange-600
+const SOFT_YELLOW: [number, number, number] = [217, 119, 6]; // amber-600
+const SOFT_GREEN: [number, number, number] = [22, 163, 74]; // green-600
+const SOFT_GREEN_DEEP: [number, number, number] = [20, 83, 45]; // green-800
 
 function lerp(a: number, b: number, t: number) {
   return a + (b - a) * t;
@@ -29,9 +34,22 @@ function lerp(a: number, b: number, t: number) {
  * `t = (s-1)/8`: first half orange→yellow, second half yellow→green.
  */
 function heatRgb(s: number, soft: boolean): [number, number, number] {
-  const o = soft ? SOFT_ORANGE : VIVID_ORANGE;
-  const y = soft ? SOFT_YELLOW : VIVID_YELLOW;
-  const g = soft ? SOFT_GREEN : VIVID_GREEN;
+  if (soft) {
+    const x = Math.min(9, Math.max(1, s));
+    if (x <= 2) return [lerp(SOFT_RED[0], SOFT_ORANGE[0], (x - 1) / 1), lerp(SOFT_RED[1], SOFT_ORANGE[1], (x - 1) / 1), lerp(SOFT_RED[2], SOFT_ORANGE[2], (x - 1) / 1)];
+    if (x <= 5) {
+      const u = (x - 2) / 3;
+      return [lerp(SOFT_ORANGE[0], SOFT_YELLOW[0], u), lerp(SOFT_ORANGE[1], SOFT_YELLOW[1], u), lerp(SOFT_ORANGE[2], SOFT_YELLOW[2], u)];
+    }
+    if (x <= 8) {
+      const u = (x - 5) / 3;
+      return [lerp(SOFT_YELLOW[0], SOFT_GREEN[0], u), lerp(SOFT_YELLOW[1], SOFT_GREEN[1], u), lerp(SOFT_YELLOW[2], SOFT_GREEN[2], u)];
+    }
+    return SOFT_GREEN_DEEP;
+  }
+  const o = VIVID_ORANGE;
+  const y = VIVID_YELLOW;
+  const g = VIVID_GREEN;
   const x = Math.min(9, Math.max(1, s));
   const t = (x - 1) / 8;
   if (t <= 0.5) {
@@ -52,6 +70,15 @@ function rgbToHex(rgb: [number, number, number]): string {
       .toString(16)
       .padStart(2, "0");
   return `#${h(rgb[0])}${h(rgb[1])}${h(rgb[2])}`;
+}
+
+/** sRGB relative luminance (0–1); used to pick light vs dark label on heat cells. */
+function relativeLuminance(rgb: [number, number, number]): number {
+  const lin = rgb.map((c) => {
+    const x = c / 255;
+    return x <= 0.03928 ? x / 12.92 : Math.pow((x + 0.055) / 1.055, 2.4);
+  });
+  return 0.2126 * lin[0]! + 0.7152 * lin[1]! + 0.0722 * lin[2]!;
 }
 
 /** Discrete anchor fills = samples on the same orange–yellow–green ramp. */
@@ -88,13 +115,11 @@ export function scoreBgContinuous(value: number | null | undefined): string {
   return rgbToCss(heatRgb(value, true));
 }
 
-/** Text color on the orange–yellow–green ramp (readable on pastel fills). */
+/** Text on heat cells: white on dark bands, near-black on lighter mid-amber. */
 export function scoreHeatTextOnRamp(v: number): string {
-  const t = (v - 1) / 8;
-  if (t < 0.35) return "#9A3412";
-  if (t < 0.55) return "#854D0E";
-  if (t < 0.8) return "#166534";
-  return "#14532D";
+  const s = Math.min(9, Math.max(1, v));
+  const rgb = heatRgb(s, true);
+  return relativeLuminance(rgb) < 0.42 ? "#FFFFFF" : "#0F172A";
 }
 
 export function scoreColor(value: number | null | undefined): string {

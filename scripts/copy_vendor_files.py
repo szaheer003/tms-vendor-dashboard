@@ -10,8 +10,14 @@ from __future__ import annotations
 
 import json
 import shutil
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
+
+_SCRIPT_DIR = Path(__file__).resolve().parent
+if str(_SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPT_DIR))
+from folder2_pdf_resolver import resolve_proposal_pdf_tuples_for_copy
 
 ROOT = Path(__file__).resolve().parent.parent
 PUBLIC_VENDOR = ROOT / "public" / "vendor-files"
@@ -306,10 +312,24 @@ def sync_to_out():
     print("Synced vendor-files + manifest to out/ (static export)")
 
 
+def _specs_with_resolved_folder2() -> list[tuple]:
+    out: list[tuple] = []
+    for vendor_id, display, color, spec in BUILD:
+        s = dict(spec)
+        resolved = resolve_proposal_pdf_tuples_for_copy(ROOT, vendor_id)
+        if resolved is not None:
+            if len(resolved) == 1:
+                s["proposal"] = resolved[0]
+            else:
+                s["proposal"] = resolved
+        out.append((vendor_id, display, color, s))
+    return out
+
+
 def main():
     PUBLIC_VENDOR.mkdir(parents=True, exist_ok=True)
     vendors = {}
-    for vendor_id, display, color, spec in BUILD:
+    for vendor_id, display, color, spec in _specs_with_resolved_folder2():
         vendors[vendor_id] = process_vendor(vendor_id, display, color, spec)
 
     manifest = {

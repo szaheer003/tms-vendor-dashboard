@@ -16,7 +16,6 @@ const nextConfig = {
   images: { unoptimized: true },
   trailingSlash: true,
   transpilePackages: ["react-pdf"],
-  env: { NEXT_PUBLIC_BASE_PATH: basePath },
 };
 
 export default nextConfig;

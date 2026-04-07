@@ -101,6 +101,37 @@ async function processSowCognizant(src, outDir) {
 }
 
 const SUBMITTED = "2026-03-30";
+const F2_ABS = path.join(ROOT, "Folder 2");
+
+function f2PdfNames() {
+  try {
+    return fs.readdirSync(F2_ABS).filter((n) => n.toLowerCase().endsWith(".pdf"));
+  } catch {
+    return [];
+  }
+}
+
+/** @param {string} name @returns {string} */
+function f2rel(name) {
+  return path.join("Folder 2", name).replace(/\\/g, "/");
+}
+
+function scoreCognizantPdf(name) {
+  const n = name.toLowerCase();
+  let s = 0;
+  if (n.includes("one page") || (n.includes("summary") && n.includes("response guide"))) s -= 30;
+  if (n.includes("proposal") || n.includes("presentation") || n.includes("partnership")) s += 20;
+  if (n.includes("workshop")) s += 8;
+  return s;
+}
+
+function scoreSutherlandPdf(name) {
+  const n = name.toLowerCase();
+  let s = 0;
+  if (n.includes("response guide")) s -= 25;
+  if (n.includes("response") || n.includes("updated") || n.includes("tsys")) s += 10;
+  return s;
+}
 
 /** @type {Record<string, any>} */
 const BUILD = {
@@ -255,6 +286,88 @@ const BUILD = {
     supplemental: [],
   },
 };
+
+function applyResolvedFolder2Proposals() {
+  const pick = (names, scorer) => {
+    const found = names
+      .map((n) => ({ n, abs: path.join(F2_ABS, n) }))
+      .filter((x) => exists(x.abs));
+    if (!found.length) return null;
+    found.sort((a, b) => scorer(b.n) - scorer(a.n) || a.n.localeCompare(b.n));
+    return found[0].n;
+  };
+
+  const cogHits = f2PdfNames().filter((n) => n.toLowerCase().includes("cognizant"));
+  if (cogHits.length) {
+    const ranked = [...cogHits].sort((a, b) => scoreCognizantPdf(b) - scoreCognizantPdf(a) || a.localeCompare(b));
+    BUILD.cognizant.proposal.from = f2rel(ranked[0]);
+  }
+
+  const sutNames = [
+    "Sutherland_Response to FIS (TSYS).pdf",
+    "Sutherland_Response to_FIS (TSYS).pdf",
+    "Sutherland_response to FIS-updated March 30, 2026.pdf",
+  ];
+  let sut = sutNames.find((n) => exists(path.join(F2_ABS, n)));
+  if (!sut) {
+    const hits = f2PdfNames().filter((n) => n.toLowerCase().includes("sutherland"));
+    sut = pick(hits, scoreSutherlandPdf);
+  }
+  if (sut) BUILD.sutherland.proposal.from = f2rel(sut);
+
+  const genLegacy = "Genpact_FIS - TMS RFP G Proposal - 20 pager.pdf";
+  if (exists(path.join(F2_ABS, genLegacy))) BUILD.genpact.proposal.from = f2rel(genLegacy);
+  else {
+    const hits = f2PdfNames().filter((n) => n.toLowerCase().includes("genpact") && !n.toLowerCase().includes("exec"));
+    const n = pick(hits, (name) => (name.toLowerCase().includes("20 pager") || name.toLowerCase().includes("proposal") ? 15 : 0));
+    if (n) BUILD.genpact.proposal.from = f2rel(n);
+  }
+
+  const exl1 = "EXL_FIS Managed Services RFP_EXL-1.pdf";
+  const exl2 = "EXL_FIS Managed Services RFP_EXL-2.pdf";
+  if (exists(path.join(F2_ABS, exl1)) && exists(path.join(F2_ABS, exl2))) {
+    BUILD.exl.proposal = [
+      { from: f2rel(exl1), to: "proposal-0.pdf", label: "Proposal — Part 1" },
+      { from: f2rel(exl2), to: "proposal-1.pdf", label: "Proposal — Part 2" },
+    ];
+  } else {
+    const hits = f2PdfNames().filter((n) => n.toLowerCase().includes("exl") && !n.toLowerCase().includes("guide"));
+    if (hits.length >= 2) {
+      const sorted = [...hits].sort((a, b) => a.localeCompare(b));
+      BUILD.exl.proposal = [
+        { from: f2rel(sorted[0]), to: "proposal-0.pdf", label: "Proposal — Part 1" },
+        { from: f2rel(sorted[1]), to: "proposal-1.pdf", label: "Proposal — Part 2" },
+      ];
+    } else if (hits.length === 1) {
+      BUILD.exl.proposal = [{ from: f2rel(hits[0]), to: "proposal.pdf", label: "Proposal" }];
+    }
+  }
+
+  const ubiLegacy = "Ubiquity_FIS__Ubiquity_Proposal.pdf";
+  if (exists(path.join(F2_ABS, ubiLegacy))) BUILD.ubiquity.proposal.from = f2rel(ubiLegacy);
+  else {
+    let hits = f2PdfNames().filter((n) => n.toLowerCase().includes("ubiquity"));
+    hits = hits.filter((n) => !n.toLowerCase().includes("executive") && !n.toLowerCase().includes("summary"));
+    if (!hits.length) hits = f2PdfNames().filter((n) => n.toLowerCase().includes("ubiquity"));
+    const n = pick(hits, (name) => {
+      const l = name.toLowerCase();
+      let s = 0;
+      if (l.includes("proposal")) s += 15;
+      if (l.includes("executive")) s -= 10;
+      return s;
+    });
+    if (n) BUILD.ubiquity.proposal.from = f2rel(n);
+  }
+
+  const ibmLegacy = "IBM_FIS TMS Managed Services RFP Response_IBM_Mar 26.pdf";
+  if (exists(path.join(F2_ABS, ibmLegacy))) BUILD.ibm.proposal.from = f2rel(ibmLegacy);
+  else {
+    const hits = f2PdfNames().filter((n) => n.toLowerCase().includes("ibm"));
+    if (hits.length) BUILD.ibm.proposal.from = f2rel([...hits].sort((a, b) => a.localeCompare(b))[0]);
+  }
+}
+
+applyResolvedFolder2Proposals();
 
 async function copyPdf(relFrom, vendorDir, destName, label) {
   const src = path.join(ROOT, relFrom);

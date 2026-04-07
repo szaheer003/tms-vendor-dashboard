@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { PrintButton } from "@/components/PrintButton";
 import { FilterChip } from "@/components/ui/Chip";
 import {
@@ -94,17 +94,10 @@ export function FeedbackDashboardClient({ portfolioVendors, columnOrder }: { por
     [portfolioVendors, columnOrder],
   );
 
-  const [raw, setRaw] = useState<Payload | null>(null);
+  const raw = bundledEvaluatorJson as Payload;
   const [mode, setMode] = useState<"vendor" | "question">("vendor");
   const [vendorTab, setVendorTab] = useState<string>(columnOrder[0] ?? "cognizant");
   const [questionTab, setQuestionTab] = useState<QKey>("Q3");
-
-  useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/data/evaluatorScores.json`, { cache: "no-store" })
-      .then((r) => (r.ok ? r.json() : null))
-      .then(setRaw)
-      .catch(() => setRaw(null));
-  }, []);
 
   const qual = raw?.qualitative;
   const stats = useMemo(() => countQualitative(qual), [qual]);
@@ -128,8 +121,8 @@ export function FeedbackDashboardClient({ portfolioVendors, columnOrder }: { por
       <header className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <h1 className="text-h1 text-[#0F172A]">Feedback dashboard</h1>
-          <p className="mt-2 max-w-3xl text-body text-[#64748B] leading-relaxed">
-            Workshop 1 free-text and sentiment signals from Folder 8 imports: qualitative prompts (Q3–Q7), confidence (Q13), and proceed
+          <p className="mt-2 max-w-3xl text-body text-[#475569] leading-relaxed">
+            Workshop 1 free-text and sentiment signals from evaluator imports: qualitative prompts (Q3–Q7), confidence (Q13), and proceed
             votes (Q14). Use this view for debriefs and follow-ups; scored rubric detail stays on{" "}
             <a href="/evaluator-scores/" className="text-[#2563EB] hover:underline">
               Evaluator scores
@@ -137,7 +130,7 @@ export function FeedbackDashboardClient({ portfolioVendors, columnOrder }: { por
             .
           </p>
           {raw?.source ? (
-            <p className="mt-3 text-caption text-[#059669] border-l-2 border-[#059669] pl-3 max-w-3xl">{raw.source}</p>
+            <p className="mt-3 text-caption text-[#475569] border-l-2 border-[#CBD5E1] pl-3 max-w-3xl">{raw.source}</p>
           ) : null}
         </div>
         <PrintButton label="Print feedback" />
@@ -146,38 +139,38 @@ export function FeedbackDashboardClient({ portfolioVendors, columnOrder }: { por
       {/* KPI strip */}
       <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <div className="rounded-xl border border-[#E2E8F0] bg-white p-4 shadow-sm">
-          <p className="text-micro font-medium uppercase tracking-wider text-[#94A3B8]">Qualitative responses</p>
+          <p className="text-micro font-medium uppercase tracking-wider text-[#475569]">Qualitative responses</p>
           <p className="mt-1 text-2xl font-bold tabular-nums text-[#0F172A]">{stats.total}</p>
-          <p className="mt-1 text-caption text-[#64748B]">Non-empty Q3–Q7 cells (vendor × evaluator)</p>
+          <p className="mt-1 text-caption text-[#475569]">Non-empty Q3–Q7 cells (vendor × evaluator)</p>
         </div>
         <div className="rounded-xl border border-[#E2E8F0] bg-white p-4 shadow-sm">
-          <p className="text-micro font-medium uppercase tracking-wider text-[#94A3B8]">Vendors with text</p>
+          <p className="text-micro font-medium uppercase tracking-wider text-[#475569]">Vendors with text</p>
           <p className="mt-1 text-2xl font-bold tabular-nums text-[#0F172A]">
             {vendors.filter((v) => (stats.byVendor[v.id] ?? 0) > 0).length}
           </p>
-          <p className="mt-1 text-caption text-[#64748B]">Of {vendors.length} in scorecard order</p>
+          <p className="mt-1 text-caption text-[#475569]">Of {vendors.length} in scorecard order</p>
         </div>
         <div className="rounded-xl border border-[#E2E8F0] bg-white p-4 shadow-sm">
-          <p className="text-micro font-medium uppercase tracking-wider text-[#94A3B8]">Evaluator slots used</p>
+          <p className="text-micro font-medium uppercase tracking-wider text-[#475569]">Evaluator slots used</p>
           <p className="mt-1 text-2xl font-bold tabular-nums text-[#0F172A]">{stats.activeEvaluators}</p>
-          <p className="mt-1 text-caption text-[#64748B]">Slots with at least one Q3–Q7 answer</p>
+          <p className="mt-1 text-caption text-[#475569]">Slots with at least one Q3–Q7 answer</p>
         </div>
         <div className="rounded-xl border border-[#E2E8F0] bg-white p-4 shadow-sm">
-          <p className="text-micro font-medium uppercase tracking-wider text-[#94A3B8]">Most commentary</p>
+          <p className="text-micro font-medium uppercase tracking-wider text-[#475569]">Most commentary</p>
           <p className="mt-1 text-lg font-semibold text-[#0F172A]">{topVendorByVolume ?? "—"}</p>
-          <p className="mt-1 text-caption text-[#64748B]">By count of filled Q3–Q7 cells</p>
+          <p className="mt-1 text-caption text-[#475569]">By count of filled Q3–Q7 cells</p>
         </div>
       </section>
 
       {/* Lens toggle */}
       <div className="flex flex-wrap items-center gap-3 print-hide">
-        <span className="text-micro font-medium uppercase tracking-wider text-[#94A3B8]">View</span>
+        <span className="text-micro font-medium uppercase tracking-wider text-[#475569]">View</span>
         <div className="inline-flex rounded-lg border border-[#E2E8F0] bg-[#F8FAFC] p-1">
           <button
             type="button"
             onClick={() => setMode("vendor")}
             className={`rounded-md px-4 py-2 text-caption font-medium transition-colors ${
-              mode === "vendor" ? "bg-white text-[#0F172A] shadow-sm" : "text-[#64748B] hover:text-[#0F172A]"
+              mode === "vendor" ? "bg-white text-[#0F172A] shadow-sm" : "text-[#475569] hover:text-[#0F172A]"
             }`}
           >
             By vendor
@@ -186,7 +179,7 @@ export function FeedbackDashboardClient({ portfolioVendors, columnOrder }: { por
             type="button"
             onClick={() => setMode("question")}
             className={`rounded-md px-4 py-2 text-caption font-medium transition-colors ${
-              mode === "question" ? "bg-white text-[#0F172A] shadow-sm" : "text-[#64748B] hover:text-[#0F172A]"
+              mode === "question" ? "bg-white text-[#0F172A] shadow-sm" : "text-[#475569] hover:text-[#0F172A]"
             }`}
           >
             By question
@@ -196,11 +189,10 @@ export function FeedbackDashboardClient({ portfolioVendors, columnOrder }: { por
 
       {stats.total === 0 && (
         <div className="rounded-xl border border-dashed border-[#CBD5E1] bg-[#F8FAFC] p-8 text-center">
-          <p className="text-h3 text-[#64748B] font-medium">No qualitative feedback loaded yet</p>
-          <p className="mt-2 text-caption text-[#94A3B8] max-w-lg mx-auto">
-            After Workshop 1, import Folder 8 xlsx files with{" "}
-            <code className="text-[11px] bg-white px-1 rounded border border-[#E2E8F0]">python scripts/import_folder8_scores.py</code> — the same
-            run populates <code className="text-[11px] bg-white px-1 rounded border border-[#E2E8F0]">evaluatorScores.json</code>.
+          <p className="text-h3 text-[#475569] font-medium">No qualitative feedback loaded yet</p>
+          <p className="mt-2 text-caption text-[#475569] max-w-lg mx-auto">
+            When evaluator workbook exports are loaded into the dashboard dataset, qualitative answers appear here automatically. If this stays empty,
+            ask the administrator to refresh evaluator imports.
           </p>
         </div>
       )}
@@ -223,7 +215,7 @@ export function FeedbackDashboardClient({ portfolioVendors, columnOrder }: { por
           <div className="grid gap-4 md:grid-cols-2">
             {Q_KEYS.map((qk, qi) => (
               <div key={qk} className="space-y-2" style={{ animationDelay: `${qi * 40}ms` }}>
-                <p className="text-micro font-semibold uppercase tracking-wider text-[#94A3B8]">
+                <p className="text-micro font-semibold uppercase tracking-wider text-[#475569]">
                   {qk} — {QUALITATIVE_QUESTIONS[qk]}
                 </p>
                 {EVALUATOR_IDS.map((eid) => {
@@ -231,11 +223,11 @@ export function FeedbackDashboardClient({ portfolioVendors, columnOrder }: { por
                   const empty = !text.trim();
                   return (
                     <div key={eid} className="rounded-lg border border-slate-200/90 bg-white p-3 shadow-sm">
-                      <p className="text-micro font-semibold text-[#64748B]">
+                      <p className="text-micro font-semibold text-[#475569]">
                         {EVALUATORS[eid].label} · {EVALUATORS[eid].role}
                       </p>
                       <p className="mt-1 text-body text-[#0F172A] whitespace-pre-wrap">
-                        {empty ? <span className="text-slate-400 italic">No response</span> : text}
+                        {empty ? <span className="text-[#475569] italic">No response</span> : text}
                       </p>
                     </div>
                   );
@@ -258,14 +250,14 @@ export function FeedbackDashboardClient({ portfolioVendors, columnOrder }: { por
                 className={`rounded-full border px-4 py-2 text-caption font-medium transition-colors ${
                   questionTab === qk
                     ? "border-[#0F172A] bg-[#0F172A] text-white"
-                    : "border-[#E2E8F0] bg-white text-[#64748B] hover:border-[#CBD5E1]"
+                    : "border-[#E2E8F0] bg-white text-[#475569] hover:border-[#CBD5E1]"
                 }`}
               >
                 {qk}
               </button>
             ))}
           </div>
-          <p className="text-caption text-[#64748B] max-w-3xl">{QUALITATIVE_QUESTIONS[questionTab]}</p>
+          <p className="text-caption text-[#475569] max-w-3xl">{QUALITATIVE_QUESTIONS[questionTab]}</p>
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {vendors.map((v) => {
               const filled = EVALUATOR_IDS.map((eid) => {
@@ -277,14 +269,14 @@ export function FeedbackDashboardClient({ portfolioVendors, columnOrder }: { por
                   <p className="text-caption font-bold" style={{ color: v.color }}>
                     {v.displayName}
                   </p>
-                  <p className="text-micro text-[#94A3B8] mt-0.5">{filled.length} response{filled.length === 1 ? "" : "s"}</p>
+                  <p className="text-micro text-[#475569] mt-0.5">{filled.length} response{filled.length === 1 ? "" : "s"}</p>
                   <ul className="mt-3 space-y-3">
                     {filled.length === 0 ? (
-                      <li className="text-caption text-[#94A3B8]">No responses for this question.</li>
+                      <li className="text-caption text-[#475569]">No responses for this question.</li>
                     ) : (
                       filled.map(({ eid, t }) => (
                         <li key={eid} className="text-body text-[#0F172A] border-t border-[#F1F5F9] pt-3 first:border-0 first:pt-0">
-                          <span className="text-micro font-semibold text-[#64748B] block mb-1">{EVALUATORS[eid].label}</span>
+                          <span className="text-micro font-semibold text-[#475569] block mb-1">{EVALUATORS[eid].label}</span>
                           <span className="whitespace-pre-wrap">{t}</span>
                         </li>
                       ))
@@ -300,7 +292,7 @@ export function FeedbackDashboardClient({ portfolioVendors, columnOrder }: { por
       {stats.total > 0 && (
         <section className="rounded-2xl border border-[#E2E8F0] bg-gradient-to-b from-[#F8FAFC] to-white p-6 shadow-card">
           <h2 className="text-h2 text-[#0F172A] mb-1">Recurring themes (token frequency)</h2>
-          <p className="text-caption text-[#94A3B8] mb-4 max-w-3xl">
+          <p className="text-caption text-[#475569] mb-4 max-w-3xl">
             Automated word counts across Q3–Q7 for the selected vendor — useful for interview prep, not a substitute for reading full text.
           </p>
           <div className="flex flex-wrap gap-2 mb-4 print-hide">
@@ -317,7 +309,7 @@ export function FeedbackDashboardClient({ portfolioVendors, columnOrder }: { por
           </div>
           <div className="flex flex-wrap gap-2">
             {themes.length === 0 ? (
-              <p className="text-caption text-[#94A3B8]">No tokens for this vendor.</p>
+              <p className="text-caption text-[#475569]">No tokens for this vendor.</p>
             ) : (
               themes.map((t) => (
                 <span
@@ -326,7 +318,7 @@ export function FeedbackDashboardClient({ portfolioVendors, columnOrder }: { por
                   title={`${t.count} mentions`}
                 >
                   <span className="font-semibold">{t.term}</span>
-                  <span className="ml-2 text-micro tabular-nums text-[#64748B]">×{t.count}</span>
+                  <span className="ml-2 text-micro tabular-nums text-[#475569]">×{t.count}</span>
                 </span>
               ))
             )}
@@ -337,7 +329,7 @@ export function FeedbackDashboardClient({ portfolioVendors, columnOrder }: { por
       <section className="grid gap-6 lg:grid-cols-2">
         <div className="rounded-card border border-[#E2E8F0] bg-white p-6 shadow-card">
           <h3 className="text-h3 text-[#0F172A]">Q13 — Confidence</h3>
-          <p className="mt-1 text-caption text-[#94A3B8]">Stacked distribution per vendor.</p>
+          <p className="mt-1 text-caption text-[#475569]">Stacked distribution per vendor.</p>
           {vendors.map((v) => {
             const counts: Record<string, number> = Object.fromEntries(CONFIDENCE_LEVELS.map((l) => [l, 0]));
             for (const eid of EVALUATOR_IDS) {
@@ -374,15 +366,15 @@ export function FeedbackDashboardClient({ portfolioVendors, columnOrder }: { por
                     })
                   )}
                 </div>
-                <p className="text-micro text-[#94A3B8] mt-1">{total ? `${total} responses` : "—"}</p>
+                <p className="text-micro text-[#475569] mt-1">{total ? `${total} responses` : "—"}</p>
               </div>
             );
           })}
         </div>
         <div className="rounded-card border border-[#E2E8F0] bg-white p-6 shadow-card">
           <h3 className="text-h3 text-[#0F172A]">Q14 — Proceed</h3>
-          <p className="mt-1 text-caption text-[#94A3B8]">Yes / No counts per vendor.</p>
-          <ul className="mt-4 space-y-2 text-body text-[#64748B]">
+          <p className="mt-1 text-caption text-[#475569]">Yes / No counts per vendor.</p>
+          <ul className="mt-4 space-y-2 text-body text-[#475569]">
             {vendors.map((v) => {
               let yes = 0;
               let no = 0;
@@ -396,7 +388,7 @@ export function FeedbackDashboardClient({ portfolioVendors, columnOrder }: { por
                   <span style={{ color: v.color }} className="font-semibold">
                     {v.displayName}
                   </span>
-                  <span className="tabular-nums text-[#64748B]">
+                  <span className="tabular-nums text-[#475569]">
                     <span className="text-[#059669] font-medium">Yes {yes}</span>
                     {" · "}
                     <span className="text-[#B91C1C] font-medium">No {no}</span>

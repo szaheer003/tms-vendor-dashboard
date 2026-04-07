@@ -1,10 +1,8 @@
 "use client";
 
-const BP = process.env.NEXT_PUBLIC_BASE_PATH || "";
-
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { fallbackVendorFilesManifest, VENDOR_SUBMISSION_ORDER } from "@/lib/vendorFilesManifest";
+import { bundledVendorFilesManifest, VENDOR_SUBMISSION_ORDER } from "@/lib/vendorFilesManifest";
 import type { VendorDocFile, VendorFilesManifest, VendorManifestEntry } from "@/lib/vendorFilesTypes";
 import { DocumentError } from "@/components/vendor-submissions/DocumentError";
 import { DocumentMetadataBar } from "@/components/vendor-submissions/DocumentMetadataBar";
@@ -13,6 +11,7 @@ import { HtmlDocViewer } from "@/components/vendor-submissions/HtmlDocViewer";
 import { PdfDocumentViewer } from "@/components/vendor-submissions/PdfDocumentViewer";
 import { SpreadsheetViewer } from "@/components/vendor-submissions/SpreadsheetViewer";
 import { TextDocViewer } from "@/components/vendor-submissions/TextDocViewer";
+import { publicAssetUrl } from "@/lib/publicAssetUrl";
 
 type DocKey = "proposal" | "workbook" | "sow" | "supplemental";
 
@@ -63,25 +62,11 @@ const DOC_LABELS: Record<DocKey, string> = {
 export default function VendorSubmissionsClient() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const [remoteManifest, setRemoteManifest] = useState<VendorFilesManifest | null>(null);
-  const manifest = remoteManifest ?? fallbackVendorFilesManifest;
+  const manifest = bundledVendorFilesManifest;
   const { vendors } = manifest;
 
   const [fullScreen, setFullScreen] = useState(false);
   const [pdfPages, setPdfPages] = useState<number | undefined>(undefined);
-
-  useEffect(() => {
-    let cancelled = false;
-    fetch(`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/vendor-files-manifest.json`)
-      .then((r) => (r.ok ? r.json() : null))
-      .then((j: VendorFilesManifest | null) => {
-        if (!cancelled && j?.vendors) setRemoteManifest(j);
-      })
-      .catch(() => {});
-    return () => {
-      cancelled = true;
-    };
-  }, []);
 
   const vendorFromUrl = searchParams.get("vendor");
   const typeFromUrl = searchParams.get("type") as DocKey | null;
@@ -181,8 +166,8 @@ export default function VendorSubmissionsClient() {
     }
 
     const fsToggle = () => setFullScreen((f) => !f);
+    const docUrl = publicAssetUrl(activeDoc.path);
 
-    const docUrl = `${BP}${activeDoc.path}`;
     switch (activeDoc.kind) {
       case "pdf":
         return (
@@ -214,7 +199,7 @@ export default function VendorSubmissionsClient() {
                 <button
                   type="button"
                   onClick={fsToggle}
-                  className="rounded px-2 py-1 text-caption text-[#64748B] hover:bg-white"
+                  className="rounded px-2 py-1 text-caption text-[#475569] hover:bg-white"
                   title="Full screen"
                 >
                   ⛶
@@ -232,7 +217,7 @@ export default function VendorSubmissionsClient() {
                 <button
                   type="button"
                   onClick={fsToggle}
-                  className="rounded px-2 py-1 text-caption text-[#64748B] hover:bg-white"
+                  className="rounded px-2 py-1 text-caption text-[#475569] hover:bg-white"
                   title="Full screen"
                 >
                   ⛶
@@ -250,7 +235,7 @@ export default function VendorSubmissionsClient() {
                 <button
                   type="button"
                   onClick={fsToggle}
-                  className="rounded px-2 py-1 text-caption text-[#64748B] hover:bg-white"
+                  className="rounded px-2 py-1 text-caption text-[#475569] hover:bg-white"
                   title="Full screen"
                 >
                   ⛶
@@ -277,7 +262,7 @@ export default function VendorSubmissionsClient() {
       {fullScreen && (
         <button
           type="button"
-          className="absolute right-4 top-4 z-[210] rounded-lg border border-[#E2E8F0] bg-white px-3 py-2 text-caption font-medium text-[#64748B] shadow-card hover:bg-[#F8FAFC]"
+          className="absolute right-4 top-4 z-[210] rounded-lg border border-[#E2E8F0] bg-white px-3 py-2 text-caption font-medium text-[#475569] shadow-card hover:bg-[#F8FAFC]"
           onClick={() => setFullScreen(false)}
         >
           Exit full screen
@@ -292,7 +277,7 @@ export default function VendorSubmissionsClient() {
               type="button"
               onClick={() => pushUrl({ part: "0" })}
               className={`rounded-full px-3 py-1 font-medium ${
-                proposalPart === 0 ? "bg-[#EA580C]/15 text-[#EA580C] ring-1 ring-[#EA580C]" : "bg-white text-[#64748B] ring-1 ring-[#E2E8F0]"
+                proposalPart === 0 ? "bg-[#EA580C]/15 text-[#EA580C] ring-1 ring-[#EA580C]" : "bg-white text-[#475569] ring-1 ring-[#E2E8F0]"
               }`}
             >
               Part 1
@@ -301,7 +286,7 @@ export default function VendorSubmissionsClient() {
               type="button"
               onClick={() => pushUrl({ part: "1" })}
               className={`rounded-full px-3 py-1 font-medium ${
-                proposalPart === 1 ? "bg-[#EA580C]/15 text-[#EA580C] ring-1 ring-[#EA580C]" : "bg-white text-[#64748B] ring-1 ring-[#E2E8F0]"
+                proposalPart === 1 ? "bg-[#EA580C]/15 text-[#EA580C] ring-1 ring-[#EA580C]" : "bg-white text-[#475569] ring-1 ring-[#E2E8F0]"
               }`}
             >
               Part 2
@@ -320,7 +305,7 @@ export default function VendorSubmissionsClient() {
               className={`rounded-full px-3 py-1 text-caption font-medium ${
                 supIndex === i
                   ? "bg-white text-[#0F172A] shadow-sm ring-1 ring-[#E2E8F0]"
-                  : "text-[#64748B] hover:bg-white"
+                  : "text-[#475569] hover:bg-white"
               }`}
             >
               {s.label}
@@ -346,7 +331,7 @@ export default function VendorSubmissionsClient() {
     <div className="space-y-8 animate-page-in">
       <div>
         <h1 className="text-h1 text-[#0F172A]">Vendor submissions</h1>
-        <p className="text-body text-[#64748B] mt-2 max-w-3xl">
+        <p className="text-body text-[#475569] mt-2 max-w-3xl">
           Original proposals, Appendix B workbooks, SOW redlines, and supplements — embedded for in-browser review without
           opening external files.
         </p>
@@ -354,7 +339,7 @@ export default function VendorSubmissionsClient() {
 
       <div className="flex flex-wrap items-end gap-x-10 gap-y-4 border-b border-[#F1F5F9] pb-3">
         <div className="flex min-w-0 flex-1 flex-wrap items-center gap-x-6 gap-y-2">
-          <span className="text-micro font-medium uppercase tracking-[0.08em] text-[#94A3B8]">Vendor</span>
+          <span className="text-micro font-medium uppercase tracking-[0.08em] text-[#475569]">Vendor</span>
           {VENDOR_SUBMISSION_ORDER.map((id) => {
             const v = vendors[id];
             if (!v) return null;
@@ -364,7 +349,7 @@ export default function VendorSubmissionsClient() {
                 key={id}
                 type="button"
                 onClick={() => pushUrl({ vendor: id, type: availableDocTypes(v)[0] })}
-                className={`text-body transition-colors duration-[120ms] ${on ? "font-medium" : "text-[#94A3B8]"}`}
+                className={`text-body transition-colors duration-[120ms] ${on ? "font-medium" : "text-[#475569]"}`}
                 style={on ? { color: v.color } : undefined}
               >
                 {v.displayName}
@@ -373,7 +358,7 @@ export default function VendorSubmissionsClient() {
           })}
         </div>
         <div className="flex flex-wrap items-center gap-x-1 gap-y-2">
-          <span className="text-micro font-medium uppercase tracking-[0.08em] text-[#94A3B8] mr-3">Document</span>
+          <span className="text-micro font-medium uppercase tracking-[0.08em] text-[#475569] mr-3">Document</span>
           {avail.map((d) => (
             <button
               key={d}
@@ -382,7 +367,7 @@ export default function VendorSubmissionsClient() {
               className={`px-3 py-2 text-caption font-medium transition-colors duration-[120ms] border-b-2 -mb-px ${
                 docType === d
                   ? "border-[#0F172A] text-[#0F172A]"
-                  : "border-transparent text-[#94A3B8] hover:text-[#64748B]"
+                  : "border-transparent text-[#475569] hover:text-[#0F172A]"
               }`}
             >
               {DOC_LABELS[d]}

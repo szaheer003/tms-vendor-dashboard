@@ -40,7 +40,7 @@
         "location": "Row 120, columns C:V (20 quarters)",
         "valueLabel": "$499.89M",
         "calculation": "Sum of quarterly values on Total Annual Cost row; raw USD \u2192 $M (quarterly sums \u00f7 1e6)",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 117,
@@ -532,7 +532,7 @@
         "location": "Row 120, Y1 = sum of quarters 1\u20134",
         "valueLabel": "$86.96M",
         "calculation": "Sum of four quarterly cells on same row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 117,
@@ -1024,7 +1024,7 @@
         "location": "Row 120, Y2 = sum of quarters 5\u20138",
         "valueLabel": "$124.08M",
         "calculation": "Sum of four quarterly cells on same row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 117,
@@ -1516,7 +1516,7 @@
         "location": "Row 120, Y3 = sum of quarters 9\u201312",
         "valueLabel": "$111.50M",
         "calculation": "Sum of four quarterly cells on same row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 117,
@@ -2008,7 +2008,7 @@
         "location": "Row 120, Y4 = sum of quarters 13\u201316",
         "valueLabel": "$88.63M",
         "calculation": "Sum of four quarterly cells on same row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 117,
@@ -2500,7 +2500,7 @@
         "location": "Row 120, Y5 = sum of quarters 17\u201320",
         "valueLabel": "$88.72M",
         "calculation": "Sum of four quarterly cells on same row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 117,
@@ -3002,7 +3002,7 @@
         "location": "Section 6.1 rate card, row 12",
         "valueLabel": "Tier 1 Customer Service \u2014 IVR",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 11,
@@ -3265,7 +3265,7 @@
         "location": "Section 6.1 \u2014 CS live reference row 13 (US col D, DR col F, PH col G, UK col I)",
         "valueLabel": "CS Live Agent (canonical columns)",
         "calculation": "Mapped from workbook geography columns on Multilingual row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 12,
@@ -3528,7 +3528,7 @@
         "location": "Section 6.1 rate card, row 14",
         "valueLabel": "Tier 1 Customer Service \u2014 Live Agent",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 13,
@@ -3791,7 +3791,7 @@
         "location": "Section 6.1 rate card, row 15",
         "valueLabel": "Tier 1 Customer Service \u2014 Loyalty",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 14,
@@ -4054,7 +4054,7 @@
         "location": "Section 6.1 rate card, row 16",
         "valueLabel": "Tier 1 Customer Service \u2014 Lost/Stolen",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 15,
@@ -4317,7 +4317,7 @@
         "location": "Section 6.1 rate card, row 17",
         "valueLabel": "Tier 1 Customer Service \u2014 After hours",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 16,
@@ -4580,7 +4580,7 @@
         "location": "Section 6.1 rate card, row 18",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Fraud Detection",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 17,
@@ -4843,7 +4843,7 @@
         "location": "Section 6.1 rate card, row 19",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Fraud Investigation",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 18,
@@ -5106,7 +5106,7 @@
         "location": "Section 6.1 rate card, row 20",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Fraud Strategy",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 19,
@@ -5369,7 +5369,7 @@
         "location": "Section 6.1 rate card, row 21",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Fraud Consulting",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 20,
@@ -5632,7 +5632,7 @@
         "location": "Section 6.1 rate card, row 22",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Collections",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 21,
@@ -5895,7 +5895,7 @@
         "location": "Section 6.1 rate card, row 23",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Skip Tracing",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 22,
@@ -6158,7 +6158,7 @@
         "location": "Section 6.1 rate card, row 24",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Disputes & Chargebacks",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 23,
@@ -6421,7 +6421,7 @@
         "location": "Section 6.1 rate card, row 25",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Risk Call Centre",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 24,
@@ -6684,7 +6684,7 @@
         "location": "Section 6.1 rate card, row 26",
         "valueLabel": "Tier 2 Risk Mitigation \u2014 Credit",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 25,
@@ -6947,7 +6947,7 @@
         "location": "Section 6.1 rate card, row 27",
         "valueLabel": "Back Office \u2014 Imaging",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 26,
@@ -7210,7 +7210,7 @@
         "location": "Section 6.1 rate card, row 28",
         "valueLabel": "Back Office \u2014 Copy Requests",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 27,
@@ -7473,7 +7473,7 @@
         "location": "Section 6.1 rate card, row 29",
         "valueLabel": "Back Office \u2014 Correspondence",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 28,
@@ -7736,7 +7736,7 @@
         "location": "Section 6.1 rate card, row 30",
         "valueLabel": "Back Office \u2014 Application Processing",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 29,
@@ -7999,7 +7999,7 @@
         "location": "Section 6.1 rate card, row 31",
         "valueLabel": "Back Office \u2014 Credit Bureau Updates",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 30,
@@ -8262,7 +8262,7 @@
         "location": "Section 6.1 rate card, row 32",
         "valueLabel": "Back Office \u2014 Returned Mail",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 31,
@@ -8525,7 +8525,7 @@
         "location": "Section 6.1 rate card, row 33",
         "valueLabel": "Back Office \u2014 Card Destruction",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 32,
@@ -8788,7 +8788,7 @@
         "location": "Section 6.1 rate card, row 34",
         "valueLabel": "Back Office \u2014 Account Maintenance",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 33,
@@ -9051,7 +9051,7 @@
         "location": "Section 6.1 rate card, row 35",
         "valueLabel": "Back Office \u2014 Accounting & Settlement",
         "calculation": "Hourly rate as submitted in workbook",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 34,
@@ -9338,7 +9338,7 @@
             "location": "Cell C8 \u00b7 US & Canada Clients Clients \u00b7 Offshore to Onshore Mix",
             "valueLabel": "17% - Onshore\n68% - Offshore \n15% - Nearshore",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -9664,7 +9664,7 @@
             "location": "Cell D8 \u00b7 US & Canada Clients Clients \u00b7 Consequent Labor Arbitrage %",
             "valueLabel": "20% -25%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -10039,7 +10039,7 @@
             "location": "Cell E8 \u00b7 US & Canada Clients Clients \u00b7 Cost Reduction from AI & Digital Overlays %",
             "valueLabel": "29.00%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -10414,7 +10414,7 @@
             "location": "Cell F8 \u00b7 US & Canada Clients Clients \u00b7 Cost Reduction from Productivity Gains %",
             "valueLabel": "12.00%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -10789,7 +10789,7 @@
             "location": "Cell G8 \u00b7 US & Canada Clients Clients \u00b7 Commitment to Certainty of Cost Savings as a %",
             "valueLabel": "100%*",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -11176,7 +11176,7 @@
             "location": "Cell C9 \u00b7 Netherlands Clients \u00b7 Offshore to Onshore Mix",
             "valueLabel": "100% Offshore",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 6,
@@ -11502,7 +11502,7 @@
             "location": "Cell D9 \u00b7 Netherlands Clients \u00b7 Consequent Labor Arbitrage %",
             "valueLabel": "45% - 50%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 6,
@@ -11877,7 +11877,7 @@
             "location": "Cell G9 \u00b7 Netherlands Clients \u00b7 Commitment to Certainty of Cost Savings as a %",
             "valueLabel": "100%*",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 6,
@@ -12264,7 +12264,7 @@
             "location": "Cell C10 \u00b7 Germany Clients \u00b7 Offshore to Onshore Mix",
             "valueLabel": "100% Offshore",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 7,
@@ -12590,7 +12590,7 @@
             "location": "Cell D10 \u00b7 Germany Clients \u00b7 Consequent Labor Arbitrage %",
             "valueLabel": "35% - 40%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 7,
@@ -12965,7 +12965,7 @@
             "location": "Cell G10 \u00b7 Germany Clients \u00b7 Commitment to Certainty of Cost Savings as a %",
             "valueLabel": "100%*",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 7,
@@ -13352,7 +13352,7 @@
             "location": "Cell C11 \u00b7 United Kingdom Clients \u00b7 Offshore to Onshore Mix",
             "valueLabel": "87% - Onshore \n13% - Offshore/Nearshore",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 8,
@@ -13678,7 +13678,7 @@
             "location": "Cell D11 \u00b7 United Kingdom Clients \u00b7 Consequent Labor Arbitrage %",
             "valueLabel": "5% -10%",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 8,
@@ -14053,7 +14053,7 @@
             "location": "Cell G11 \u00b7 United Kingdom Clients \u00b7 Commitment to Certainty of Cost Savings as a %",
             "valueLabel": "100%*",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 8,
@@ -14440,7 +14440,7 @@
             "location": "Cell C12 \u00b7 Philippines Clients \u00b7 Offshore to Onshore Mix",
             "valueLabel": "0",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 9,
@@ -14766,7 +14766,7 @@
             "location": "Cell D12 \u00b7 Philippines Clients \u00b7 Consequent Labor Arbitrage %",
             "valueLabel": "0",
             "calculation": "Tab 9.0 vendor-reported cell",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 9,
@@ -15989,7 +15989,7 @@
       "location": "Rows 6\u201312 (data), row 6 headers",
       "valueLabel": "Efficiency assumptions",
       "calculation": "Vendor Tab 9.0 structured fields",
-      "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+      "extractionTimestamp": "2026-04-06T23:15:55+00:00",
       "verified": true,
       "snapshot": {
         "minRow": 5,
@@ -16905,7 +16905,7 @@
         "location": "Row 74 (one-time / transition line)",
         "valueLabel": "Tech overlay",
         "calculation": "Sum of populated quarterly cells across C:V for this row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 71,
@@ -17481,7 +17481,7 @@
         "location": "Row 76 (one-time / transition line)",
         "valueLabel": "Tech migration",
         "calculation": "Sum of populated quarterly cells across C:V for this row",
-        "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+        "extractionTimestamp": "2026-04-06T23:15:55+00:00",
         "verified": true,
         "snapshot": {
           "minRow": 73,
@@ -18047,7 +18047,7 @@
       }
     }
   ],
-  "migrationNotes": "This table represent Wave sequencing and rationale\n\nTo protect customer experience and regulatory compliance, enabling phased stabilization of knowledge, tooling, and service KPIs under FCA, PCI DSS, TUPE, and no\u2011WFH constraints before full volume ramp.\n\nSupport infrastructure must go Q1 \u2014 WFM tooling, QA framework, Training LMS all needed before any client agents onboard.\n\nNA client with FR-CA Loyalty component. Halifax CA agents hired Q2 for FR-CA coverage. FDCPA, PCI DSS (VDI)\n\nFDCPA-regulated outbound Collections (Mesa AZ + El Salvador). Q4 \u2014 latest possible to minimize Mesa AZ overhead while FDCPA compliance framework is validated.\n\nDisputes Inbound transitions over 4 waves to protect settlement accuracy and regulatory timelines under FCA, card\u2011scheme rules, and PCI DSS, enabling staged validation of intake, coding, and downstream recovery while honouring TUPE, Works Council, and no\u2011WFH constraints.\n\nFraud Inbound is transitioned over 4 waves to safely scale volume\u2011driven work under FCA/FDCPA/PCI DSS controls, enabling pilot stabilization, site certification, and progressive capacity ramp while honouring TUPE, Works Council, no\u2011WFH, and data\u2011residency constraints.\n\nLargest NA Q1 client. No legal obligation but strategic priority \u2014 high revenue, Day-1 readiness demonstrated to FIS. Priority rebadge: TLs, Fraud seniors, BO supervisors. Mesa AZ operational M3 critical path. FDCPA, PCI DSS (VDI required)\n\nFraud is transitioned in a single wave to protect Day\u20111 regulatory compliance, data security, and decision integrity, driven by FCA/FDCPA/PCI DSS requirements, TUPE & Works Council constraints, no\u2011WFH clauses, and EU data\u2011residency mandates.\n\nAccounting transitions in a single wave to preserve ledger integrity, SOX controls, and audit accountability, avoiding reconciliation risk and split ownership during close cycles.\n\nBack Office Disputes transitions in 3 waves to safeguard chargeback accuracy, recovery value, and regulatory timelines under FCA and card\u2011scheme rules, enabling staged capacity ramp without settlement or audit risk.\n\nOff\u2011phone activities require a single\u2011wave transition to maintain unified queue ownership, control integrity, and operational efficiency.\n\nReporting requires a single\u2011wave transition to preserve data integrity, governance consistency, and audit accountability.\n\nSupport infrastructure must go Q1 \u2014 WFM tooling, QA framework, Training LMS all needed before any client agents onboard.\n\nLargest NA Q1 client. No legal obligation but strategic priority \u2014 high revenue, Day-1 readiness demonstrated to FIS. Priority rebadge: TLs, Fraud seniors, BO supervisors. Mesa AZ operational M3 critical path. FDCPA, PCI DSS (VDI required)\n\nSupport infrastructure must go Q1 \u2014 WFM tooling, QA framework, Training LMS all needed before any client agents onboard.\n\nSupport infrastructure must go Q1 \u2014 WFM tooling, QA framework, Training LMS all needed before any client agents onboard.\n\nDeconverting with no migration; natural run-off through exit on 30/04/2026, with potential WARN Act implications if bulk terminations occur, and full deconversion completed by 2027.\n\nSS \u2014 Steady State  |  AI \u2014 AI Ramp  |  EXIT\n\nUS, UK , CA, El Sal, PHP & Rom\n\nCS, IVR/Tech, Disputes IB, Fraud IB, Quality, Training and WFM\n\nCS, Loyalty, Disputes IB, Fraud IB, Fraud Strategy, Accounting, Back Off Disp and Reporting",
+  "migrationNotes": "This table represent Wave sequencing and rationale\n\nTo protect customer experience and regulatory compliance, enabling phased stabilization of knowledge, tooling, and service KPIs under FCA, PCI DSS, TUPE, and no\u2011WFH constraints before full volume ramp.\n\nSupport infrastructure must go Q1 \u2014 WFM tooling, QA framework, Training LMS all needed before any client agents onboard.\n\nNA client with FR-CA Loyalty component. Halifax CA agents hired Q2 for FR-CA coverage. FDCPA, PCI DSS (VDI)\n\nFDCPA-regulated outbound Collections (Mesa AZ + El Salvador). Q4 \u2014 latest possible to minimize Mesa AZ overhead while FDCPA compliance framework is validated.\n\nDisputes Inbound transitions over 4 waves to protect settlement accuracy and regulatory timelines under FCA, card\u2011scheme rules, and PCI DSS, enabling staged validation of intake, coding, and downstream recovery while honouring TUPE, Works Council, and no\u2011WFH constraints.\n\nFraud Inbound is transitioned over 4 waves to safely scale volume\u2011driven work under FCA/FDCPA/PCI DSS controls, enabling pilot stabilization, site certification, and progressive capacity ramp while honouring TUPE, Works Council, no\u2011WFH, and data\u2011residency constraints.\n\nLargest NA Q1 client. No legal obligation but strategic priority \u2014 high revenue, Day-1 readiness demonstrated to FIS. Priority rebadge: TLs, Fraud seniors, BO supervisors. Mesa AZ operational M3 critical path. FDCPA, PCI DSS (VDI required)\n\nFraud is transitioned in a single wave to protect Day\u20111 regulatory compliance, data security, and decision integrity, driven by FCA/FDCPA/PCI DSS requirements, TUPE & Works Council constraints, no\u2011WFH clauses, and EU data\u2011residency mandates.\n\nAccounting transitions in a single wave to preserve ledger integrity, SOX controls, and audit accountability, avoiding reconciliation risk and split ownership during close cycles.\n\nBack Office Disputes transitions in 3 waves to safeguard chargeback accuracy, recovery value, and regulatory timelines under FCA and card\u2011scheme rules, enabling staged capacity ramp without settlement or audit risk.\n\nOff\u2011phone activities require a single\u2011wave transition to maintain unified queue ownership, control integrity, and operational efficiency.\n\nReporting requires a single\u2011wave transition to preserve data integrity, governance consistency, and audit accountability.\n\nDeconverting with no migration; natural run-off through exit on 30/04/2026, with potential WARN Act implications if bulk terminations occur, and full deconversion completed by 2027.\n\nSS \u2014 Steady State  |  AI \u2014 AI Ramp  |  EXIT\n\nUS, UK , CA, El Sal, PHP & Rom\n\nCS, IVR/Tech, Disputes IB, Fraud IB, Quality, Training and WFM\n\nCS, Loyalty, Disputes IB, Fraud IB, Fraud Strategy, Accounting, Back Off Disp and Reporting\n\nCS,Loyalty, Disputes IB, Fraud IB, Back Off Disputes and Off Phone\n\nCS,Loyalty, Collections, Disputes IB, Fraud IB and Back off Disputes\n\nTimeline notes: ONB = 2-week agent onboarding at Cognizant target location. KT = 6-week knowledge transfer (TMS SMEs alongside Cognizant agents). Ramp = 2-week parallel processing dual-run (Cognizant secondary, TMS primary). SS = Cognizant 100% primary. AI ramp = AI/automation productivity uplift applied (Voice: 40% by Y4; NV: 45% by Y4). EXIT population 188 FTE (NA-1, UK-5) runs in parallel with no Cognizant migration investment.\n\nPopulate a RACI of what TSYS/FIS will be responsible for and what you will be responsible for; FIS has not pre-populated this RACI. Vendors are expected to propose the full activity list they believe is required to execute a migration of this scale, and to assign responsibility accordingly. Responses should reflect your actual delivery methodology \u2014 not a generic RACI template. Activities should cover at minimum: client readiness, knowledge transfer, dual-run management, cutover approval, stabilization, and hyper care exit. Add rows as needed.",
   "flags": [
     "Proposal cites ~$25M vendor investment; workbook one-time tech lines (~$5.2M excl. absorbed training) materially lower \u2014 pressure-test reconciliation.",
     "Efficiency certainty shown as 100%* in Tab 9.0; asterisk conditions not specified in workbook."
@@ -18477,7 +18477,7 @@
             "location": "Cell D13",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 10,
@@ -19222,7 +19222,7 @@
             "location": "Cell D17",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 14,
@@ -19967,7 +19967,7 @@
             "location": "Cell D23",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 20,
@@ -20712,7 +20712,7 @@
             "location": "Cell D18",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 15,
@@ -21457,7 +21457,7 @@
             "location": "Cell D21",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 18,
@@ -22202,7 +22202,7 @@
             "location": "Cell D16",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 13,
@@ -22947,7 +22947,7 @@
             "location": "Cell D25",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 22,
@@ -23692,7 +23692,7 @@
             "location": "Cell D22",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 19,
@@ -24437,7 +24437,7 @@
             "location": "Cell D20",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 17,
@@ -25182,7 +25182,7 @@
             "location": "Cell D19",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 16,
@@ -25927,7 +25927,7 @@
             "location": "Cell D14",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 11,
@@ -26672,7 +26672,7 @@
             "location": "Cell D15",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 12,
@@ -27417,7 +27417,7 @@
             "location": "Cell D24",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 21,
@@ -28119,7 +28119,7 @@
             "location": "Cell C10",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 7,
@@ -28766,7 +28766,7 @@
             "location": "Cell C11",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 8,
@@ -29413,7 +29413,7 @@
             "location": "Cell C20",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 17,
@@ -30060,7 +30060,7 @@
             "location": "Cell C12",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 9,
@@ -30621,7 +30621,7 @@
             "location": "Cell B3",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 1,
@@ -31188,7 +31188,7 @@
             "location": "Cell C102",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 99,
@@ -31835,7 +31835,7 @@
             "location": "Cell C82",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 79,
@@ -32482,7 +32482,7 @@
             "location": "Cell C26",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 23,
@@ -33129,7 +33129,7 @@
             "location": "Cell C49",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 46,
@@ -33825,7 +33825,7 @@
             "location": "Cell D13",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 10,
@@ -34570,7 +34570,7 @@
             "location": "Cell G25",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 22,
@@ -35315,7 +35315,7 @@
             "location": "Cell F101",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 98,
@@ -35962,7 +35962,7 @@
             "location": "Cell B82",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 79,
@@ -36474,7 +36474,7 @@
             "location": "Cell B3",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 1,
@@ -36986,7 +36986,7 @@
             "location": "Cell B36",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 33,
@@ -37535,7 +37535,7 @@
             "location": "Cell B57",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 54,
@@ -38139,7 +38139,7 @@
             "location": "Cell C31",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 28,
@@ -38786,7 +38786,7 @@
             "location": "Cell C50",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 47,
@@ -39433,7 +39433,7 @@
             "location": "Cell C11",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 8,
@@ -40129,7 +40129,7 @@
             "location": "Cell D42",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 39,
@@ -40874,7 +40874,7 @@
             "location": "Cell D39",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 36,
@@ -41619,7 +41619,7 @@
             "location": "Cell D44",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 41,
@@ -42364,7 +42364,7 @@
             "location": "Cell D41",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 38,
@@ -43109,7 +43109,7 @@
             "location": "Cell D43",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 40,
@@ -43854,7 +43854,7 @@
             "location": "Cell D40",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 37,
@@ -44501,7 +44501,7 @@
             "location": "Cell B69",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 66,
@@ -45013,7 +45013,7 @@
             "location": "Cell B3",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 1,
@@ -45525,7 +45525,7 @@
             "location": "Cell B67",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 64,
@@ -46074,7 +46074,7 @@
             "location": "Cell B79",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 76,
@@ -46727,7 +46727,7 @@
             "location": "Cell I19",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 16,
@@ -47472,7 +47472,7 @@
             "location": "Cell D53",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 50,
@@ -48168,7 +48168,7 @@
             "location": "Cell C120",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 117,
@@ -48864,7 +48864,7 @@
             "location": "Cell F118",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 115,
@@ -49474,7 +49474,7 @@
             "location": "Cell B3",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 1,
@@ -50041,7 +50041,7 @@
             "location": "Cell C8",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 5,
@@ -50737,7 +50737,7 @@
             "location": "Cell D21",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 18,
@@ -51482,7 +51482,7 @@
             "location": "Cell D15",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 12,
@@ -52227,7 +52227,7 @@
             "location": "Cell D14",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 11,
@@ -52972,7 +52972,7 @@
             "location": "Cell D17",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 14,
@@ -53717,7 +53717,7 @@
             "location": "Cell D22",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 19,
@@ -54462,7 +54462,7 @@
             "location": "Cell D19",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 16,
@@ -55207,7 +55207,7 @@
             "location": "Cell D25",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 22,
@@ -55952,7 +55952,7 @@
             "location": "Cell D18",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 15,
@@ -56697,7 +56697,7 @@
             "location": "Cell D16",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 13,
@@ -57442,7 +57442,7 @@
             "location": "Cell D23",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 20,
@@ -58187,7 +58187,7 @@
             "location": "Cell D20",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 17,
@@ -58932,7 +58932,7 @@
             "location": "Cell D26",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 23,
@@ -59677,7 +59677,7 @@
             "location": "Cell D24",
             "valueLabel": "Vendor response cell",
             "calculation": "Q/A extraction: template question vs vendor answer column",
-            "extractionTimestamp": "2026-04-02T14:21:54+00:00",
+            "extractionTimestamp": "2026-04-06T23:15:55+00:00",
             "verified": true,
             "snapshot": {
               "minRow": 21,

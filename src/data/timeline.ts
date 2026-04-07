@@ -1,166 +1,197 @@
 import type { Milestone } from "@/lib/workshopTypes";
 
-/** Target for entering Workshop 1 evaluator scores (ahead of Apr 8 shortlist decision). */
-export const EVALUATOR_SCORES_TARGET_LINE = "EOD Tuesday, April 7, 2026";
+/** Evaluator scores ahead of the Apr 7–8 Decision Committee shortlist window. */
+export const EVALUATOR_SCORES_TARGET_LINE = "EOD Sunday, April 6, 2026";
 
 export const MILESTONES: Milestone[] = [
   {
-    id: "questions",
+    id: "rfp_issued",
     label: "RFP Issued to 6 Vendors",
     date: "Mar 17",
     isoDate: "2026-03-17",
     status: "complete",
-    detail: "Milestone",
-    description: "RFP released to the competing vendor set per program administration.",
+    detail: "RFP released to the competing vendor set per program administration.",
   },
   {
-    id: "responses",
+    id: "qa_distributed",
     label: "Vendor Q&A Responses Distributed",
     date: "Mar 25",
     isoDate: "2026-03-25",
     status: "complete",
-    detail: "Milestone",
-    description: "Written responses published so all bidders proceed from the same clarified requirements.",
+    detail: "Responses to vendor questions compiled and distributed to all 6 vendors.",
   },
   {
-    id: "submission",
+    id: "proposals_received",
     label: "Proposals & SOW Redlines Received",
     date: "Mar 27",
     isoDate: "2026-03-27",
     status: "complete",
-    detail: "6 vendors",
-    description: "Initial proposals and SOW redlines — baseline commercial and technical packages for evaluation.",
+    detail:
+      "Initial proposals and SOW redlines — baseline commercial and technical packages for evaluation.",
   },
   {
     id: "workshop1",
-    label: "Workshop 1",
-    date: "Mar 30 – Apr 1",
-    isoDate: "2026-04-01",
+    label: "Workshop 1 — Vendor Credentials & Commercial",
+    date: "Mar 31 – Apr 2",
+    isoDate: "2026-04-02",
     status: "complete",
     vendorCount: 6,
     vendors: ["cognizant", "genpact", "exl", "ibm", "sutherland", "ubiquity"],
     detail:
-      "90-minute structured sessions — organizational qualifications, proposed commercial framework, and high-level transformation plan.",
-    description:
-      "Vendors should be prepared for a 90-minute structured session covering their organizational qualifications, proposed commercial framework, and high-level transformation plan. Vendors who progress past down-selection will be invited to Workshop 2.",
+      "90-minute structured sessions covering organizational qualifications, proposed commercial framework, and high-level transformation plan. 6 vendors presented.",
   },
   {
-    id: "downselect",
-    label: "Shortlist Approved (6 → 3)",
-    date: "Apr 8",
+    id: "ws1_debrief",
+    label: "Post-WS1 Debrief, Scoring & Down-Selection Memo",
+    date: "Apr 2 – 6",
+    isoDate: "2026-04-06",
+    status: "complete",
+    detail:
+      "Evaluator scoring, debrief synthesis, and down-selection recommendation published on RFP Intelligence Hub.",
+  },
+  {
+    id: "shortlist_approved",
+    label: "Decision Committee Approves Shortlist (6 → 3)",
+    date: "Apr 7 – 8",
     isoDate: "2026-04-08",
     status: "active",
     vendorCount: 3,
-    detail: "Decision Committee milestone",
-    description:
-      "Decision Committee approves the shortlist on April 8. Six vendors narrowed to three based on Workshop 1 evaluation and commercial review.",
+    detail:
+      "Decision Committee reviews evaluator scores and workshop memos. Shortlist notification sent to vendors.",
+  },
+  {
+    id: "ws2_prep",
+    label: "Workshop 2 Preparation",
+    date: "Apr 7 – 12",
+    isoDate: "2026-04-12",
+    status: "upcoming",
+    detail: "Prepare evaluation criteria, scoring mechanism, and pre-workshop memos for shortlisted vendors.",
   },
   {
     id: "workshop2",
-    label: "Workshop 2",
-    date: "Apr 7 – 9",
-    isoDate: "2026-04-09",
+    label: "Workshop 2 — Migration, Rebadge, Tech & Offshoring",
+    date: "Apr 13 – 15",
+    isoDate: "2026-04-15",
     status: "upcoming",
     vendorCount: 3,
-    vendors: [],
-    detail: "Three-day sessions — 3 shortlisted vendors",
-    description:
-      "Vendors should come prepared with an initial wave design and a view on how they would approach the migration of TMS's clients.",
+    detail:
+      "3-hour structured sessions. Focus: client migration wave design, rebadge mechanics, technology approach, and offshore delivery model.",
   },
   {
-    id: "revised",
-    label: "Revised Proposals Received",
-    date: "Apr 12",
-    isoDate: "2026-04-12",
+    id: "ws2_debrief",
+    label: "Post-WS2 Debrief & Scoring",
+    date: "Apr 15 – 17",
+    isoDate: "2026-04-17",
     status: "upcoming",
-    detail: "Milestone",
-    description: "Revised proposals in — pricing, investment specifics, and updates after Workshop 2.",
+    detail: "Post-workshop debrief, scoring, and down-selection memo published on RFP Intelligence Hub.",
   },
   {
-    id: "downselect32",
-    label: "Finalists Selected (3 → 2)",
-    date: "Apr 12",
-    isoDate: "2026-04-12",
+    id: "finalists_selected",
+    label: "Decision Committee Selects 2 Finalists (3 → 2)",
+    date: "Apr 17",
+    isoDate: "2026-04-17",
     status: "upcoming",
     vendorCount: 2,
-    detail: "Decision Committee milestone",
-    description: "Decision Committee selects two finalists to continue toward Workshop 3.",
+    detail: "Decision Committee narrows shortlist to 2 finalists for final workshops and contracting.",
   },
   {
-    id: "steering",
-    label: "Steering Committee",
-    date: "Apr 13",
-    isoDate: "2026-04-13",
+    id: "steering_committee",
+    label: "Steering Committee — Approves Path to Award",
+    date: "Apr 21",
+    isoDate: "2026-04-21",
     status: "upcoming",
-    detail: "Milestone",
-    description: "Steering Committee session with briefing pack and governance alignment.",
+    detail: "Steering Committee reviews evaluation progress and approves the path to vendor award.",
   },
   {
     id: "workshop3",
-    label: "Workshop 3",
-    date: "Apr 14 – 16",
-    isoDate: "2026-04-16",
+    label: "Workshop 3 — Commercial Alignment & Open Questions",
+    date: "Apr 22 – 23",
+    isoDate: "2026-04-23",
     status: "upcoming",
     vendorCount: 2,
-    vendors: [],
-    detail: "Sessions & debrief — 2 vendors",
-    description:
-      "This session will focus on commercial alignment and resolving open questions prior to final proposal submission and refinements.",
+    detail: "3-hour sessions focused on commercial alignment and resolving open questions prior to final proposal.",
   },
   {
     id: "workshop4",
-    label: "Workshop 4",
-    date: "Apr 28 – May 1",
-    isoDate: "2026-05-01",
+    label: "Workshop 4 — Technology Approach & Migration",
+    date: "Apr 28 – 30",
+    isoDate: "2026-04-30",
     status: "upcoming",
     vendorCount: 2,
-    vendors: [],
-    detail: "Technology debrief — 2 vendors",
-    description:
-      "Technology migration approach, key risks, delivery ownership, and minimizing transition disruption — aligned to master schedule.",
+    detail:
+      "Technology migration approach, key risks and dependencies, delivery ownership, and minimizing transition disruption.",
   },
   {
-    id: "award",
+    id: "ws4_debrief",
+    label: "Post-WS4 Scoring & Final Refinements",
+    date: "Apr 30 – May 7",
+    isoDate: "2026-05-07",
+    status: "upcoming",
+    detail: "Post-WS4 technology scoring, debrief, and final proposal refinements with 2 finalists.",
+  },
+  {
+    id: "contracting_start",
+    label: "Contracting Begins",
+    date: "May 5",
+    isoDate: "2026-05-05",
+    status: "upcoming",
+    detail:
+      "Negotiation workshops (2 vendors), deal terms compilation, and vendor ratification (Compliance & InfoSec).",
+  },
+  {
+    id: "due_diligence_window",
+    label: "Due Diligence (Ops / Technology / HR)",
+    date: "May 5 – Jun 15",
+    isoDate: "2026-06-15",
+    status: "upcoming",
+    detail:
+      "Parallel due diligence across Operations & client SLA, Technology, and HR / workforce — aligned with contracting through mid-June.",
+  },
+  {
+    id: "intent_to_award",
     label: "Intent to Award",
     date: "Jun 19",
     isoDate: "2026-06-19",
     status: "upcoming",
     vendorCount: 1,
-    vendors: [],
-    detail: "Milestone — subject to governance",
-    description:
-      "Target intent to award. Parallel contracting, due diligence, and business case activities continue through this window per program plan.",
+    detail: "Vendor selection announced. Final Business Case submitted for executive approval.",
   },
 ];
 
 /** Workshop funnel stage keys (visual pipeline). */
-export const FUNNEL_STAGE_IDS = ["workshop1", "workshop2", "workshop3", "workshop4", "award"] as const;
+export const FUNNEL_STAGE_IDS = [
+  "workshop1",
+  "workshop2",
+  "workshop3",
+  "workshop4",
+  "intent_to_award",
+] as const;
 
 export type FunnelStageId = (typeof FUNNEL_STAGE_IDS)[number];
 
 export const WORKSHOP_EMPTY_COPY: Record<
-  number,
+  2 | 3 | 4,
   { title: string; topic: string; dateLine: string; vendorLine: string }
 > = {
   2: {
-    title: "Workshop 2 — Wave Design & TMS Client Migration",
+    title: "Workshop 2 — Migration, Rebadge, Tech & Offshoring",
     topic:
-      "Vendors should come prepared with an initial wave design and a view on how they would approach the migration of TMS's clients.",
-    dateLine: "Scheduled: April 7–9, 2026",
+      "Client migration wave design, rebadge mechanics, technology approach, and offshore delivery model — focus on how shortlisted vendors operationalize transition and shore mix.",
+    dateLine: "Scheduled: April 13–15, 2026",
     vendorLine: "3 shortlisted vendors (TBD after down-selection)",
   },
   3: {
     title: "Workshop 3 — Commercial Alignment & Open Questions",
-    topic:
-      "This session will focus on commercial alignment and resolving open questions prior to final proposal submission.",
-    dateLine: "Scheduled: April 14–16, 2026",
-    vendorLine: "2 vendors (TBD)",
+    topic: "Commercial alignment and resolving open questions prior to final proposal submission.",
+    dateLine: "Scheduled: April 22–23, 2026",
+    vendorLine: "2 finalist vendors",
   },
   4: {
-    title: "Workshop 4 — Final Clarifications & Award Readiness",
-    topic: "Final clarifications, commitments, and path to award with two remaining bidders.",
-    dateLine: "Scheduled: April 28 – May 1, 2026",
-    vendorLine: "2 vendors (TBD)",
+    title: "Workshop 4 — Technology Approach & Migration",
+    topic:
+      "Technology migration approach, key risks and dependencies, delivery ownership, and approaches to minimizing disruption during transition.",
+    dateLine: "Scheduled: April 28–30, 2026",
+    vendorLine: "2 finalist vendors",
   },
 };
 
@@ -196,7 +227,7 @@ export const WORKSHOP_AGENDA: Record<number, { title: string; description: strin
     {
       title: "Path to refinements",
       description:
-        "Framing next steps as proposal refinements and negotiations continue into May per the master program timeline.",
+        "Framing next steps as proposal refinements and negotiations continue per the master program timeline.",
     },
   ],
   4: [

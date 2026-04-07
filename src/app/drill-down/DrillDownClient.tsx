@@ -227,20 +227,17 @@ export function DrillDownClient({ vendors, portfolio }: { vendors: VendorRecord[
     [tab, activeSub.id, vendors, snippetsByVendor],
   );
 
-  const ubiquityVendor = vendors.find((v) => v.id === "ubiquity");
-  const ubiquityQBlocks = ubiquityVendor ? ubiquityQuestionnaireBlocks(ubiquityVendor) : [];
-
   return (
     <div className="space-y-6">
       {vendors.some((v) => v.id === "ubiquity") && (
-        <div className="rounded-lg border border-amber-200/80 bg-amber-50/90 px-4 py-3 text-caption text-[#92400E]">
-          <strong className="font-semibold text-[#78350F]">Ubiquity — non-standard Appendix B.</strong> Ubiquity did not submit a standard
-          Appendix B workbook. Tabs 2.0–9.0 from that template are not available. Responses below for Ubiquity use the Vendor RFP Questionnaire
-          workbook; open the questionnaire section when viewing Ubiquity to read those extracts.
+        <div className="rounded-lg border-2 border-amber-300 bg-amber-50 px-4 py-3 text-[13px] leading-relaxed text-[#78350F]">
+          <strong className="font-semibold text-[#92400E] block mb-1">Ubiquity — no standard Appendix B workbook</strong>
+          Ubiquity did not submit the standard Appendix B template. Tabs 2.0–9.0 are not in scope for this vendor. Use the Vendor RFP Questionnaire
+          excerpts when Ubiquity is selected — do not expect Appendix B drill-down rows to populate for Ubiquity.
         </div>
       )}
 
-      <div className="flex flex-wrap gap-x-1 gap-y-1 border-b border-[#F1F5F9] pb-3">
+      <div className="flex flex-wrap gap-x-1 gap-y-1 border-b border-[#E2E8F0] pb-3">
         {PRIMARY.map((p) => (
           <button
             key={p.id}
@@ -250,7 +247,7 @@ export function DrillDownClient({ vendors, portfolio }: { vendors: VendorRecord[
             className={`px-3 py-2 text-left text-[13px] font-medium leading-snug transition-fast border-b-2 -mb-px ${
               tab === p.id
                 ? "text-[#0F172A] border-[#0F172A] bg-transparent"
-                : "text-[#94A3B8] border-transparent hover:text-[#64748B]"
+                : "text-[#475569] border-transparent hover:text-[#0F172A]"
             }`}
           >
             {p.label}
@@ -273,19 +270,19 @@ export function DrillDownClient({ vendors, portfolio }: { vendors: VendorRecord[
       </div>
 
       <div className="flex flex-wrap items-center gap-3">
-        <span className="text-caption text-[#94A3B8]">View:</span>
-        <div className="inline-flex rounded-full bg-[#F1F5F9] p-0.5">
+        <span className="text-caption text-[#475569]">View:</span>
+        <div className="inline-flex rounded-full bg-[#E2E8F0] p-0.5">
           <button
             type="button"
             onClick={() => setLayout("compare")}
-            className={`rounded-full px-3 py-1.5 text-caption font-medium transition-fast ${layout === "compare" ? "bg-[#0F172A] text-white" : "text-[#64748B]"}`}
+            className={`rounded-full px-3 py-1.5 text-caption font-medium transition-fast ${layout === "compare" ? "bg-[#0F172A] text-white" : "text-[#475569]"}`}
           >
             Side-by-side
           </button>
           <button
             type="button"
             onClick={() => setLayout("deep")}
-            className={`rounded-full px-3 py-1.5 text-caption font-medium transition-fast ${layout === "deep" ? "bg-[#0F172A] text-white" : "text-[#64748B]"}`}
+            className={`rounded-full px-3 py-1.5 text-caption font-medium transition-fast ${layout === "deep" ? "bg-[#0F172A] text-white" : "text-[#475569]"}`}
           >
             Single vendor
           </button>
@@ -305,12 +302,12 @@ export function DrillDownClient({ vendors, portfolio }: { vendors: VendorRecord[
         )}
       </div>
 
-      <p className="text-caption text-[#94A3B8]">
+      <p className="text-caption text-[#475569]">
         Each excerpt links to the underlying Appendix B workbook (or matched proposal/SOW) in{" "}
         <Link href="/vendor-submissions/" className="font-medium text-[#475569] hover:underline">
           Vendor Submissions
         </Link>
-        . Use <span className="font-medium text-[#64748B]">Workbook →</span> / <span className="font-medium text-[#64748B]">Proposal →</span>{" "}
+        . Use <span className="font-medium text-[#475569]">Workbook →</span> / <span className="font-medium text-[#475569]">Proposal →</span>{" "}
         next to a response, or hover ● for cell preview. Comparison metrics are directional, not audited.
       </p>
 
@@ -321,14 +318,14 @@ export function DrillDownClient({ vendors, portfolio }: { vendors: VendorRecord[
         >
           <div className="border-b border-[#F1F5F9] bg-[#FAFAFA] px-4 py-3">
             <h3 className="text-h3 text-[#0F172A]">Comparison table</h3>
-            <p className="text-caption text-[#94A3B8] mt-1">
+            <p className="text-caption text-[#475569] mt-1">
               Automated extraction from this topic&apos;s response snippets. Open each vendor&apos;s workbook tab from the column
               headers; full text and per-cell links are below.
             </p>
           </div>
           <table className="min-w-[720px] w-full text-body">
             <thead>
-              <tr className="bg-[#F8FAFC] text-caption text-[#94A3B8]">
+              <tr className="bg-[#F8FAFC] text-caption text-[#475569]">
                 <th className="text-left p-3 font-medium sticky left-0 bg-[#F8FAFC] z-10 border-b border-[#F1F5F9]">Metric</th>
                 {vendors.map((v) => (
                   <th
@@ -350,7 +347,7 @@ export function DrillDownClient({ vendors, portfolio }: { vendors: VendorRecord[
             <tbody>
               {comparisonRows.map((row) => (
                 <tr key={row.id} className="border-b border-[#F1F5F9]">
-                  <td className="p-3 text-[#64748B] sticky left-0 bg-white z-10 align-top max-w-[220px]">{row.label}</td>
+                  <td className="p-3 text-[#475569] sticky left-0 bg-white z-10 align-top max-w-[220px]">{row.label}</td>
                   {vendors.map((v) => {
                     const c = row.cells[v.id];
                     return (
@@ -358,10 +355,10 @@ export function DrillDownClient({ vendors, portfolio }: { vendors: VendorRecord[
                         {c ? (
                           <>
                             <span className="font-semibold">{c.value}</span>
-                            {c.note && <span className="block text-micro text-[#94A3B8] mt-0.5 whitespace-pre-wrap">{c.note}</span>}
+                            {c.note && <span className="block text-micro text-[#475569] mt-0.5 whitespace-pre-wrap">{c.note}</span>}
                           </>
                         ) : (
-                          <span className="text-[#94A3B8]">—</span>
+                          <span className="text-[#475569]">—</span>
                         )}
                       </td>
                     );
@@ -377,7 +374,7 @@ export function DrillDownClient({ vendors, portfolio }: { vendors: VendorRecord[
         <Card className="overflow-x-auto animate-page-in p-0">
           <table className="min-w-[720px] w-full text-body">
             <thead>
-              <tr className="bg-[#F8FAFC] text-caption text-[#94A3B8]">
+              <tr className="bg-[#F8FAFC] text-caption text-[#475569]">
                 <th className="text-left p-3 font-medium sticky left-0 bg-[#F8FAFC] z-10 border-b border-[#F1F5F9]">Metric</th>
                 {vendors.map((v) => (
                   <th key={v.id} className="p-3 text-right font-semibold border-b border-[#F1F5F9] whitespace-nowrap" style={{ color: v.color }}>
@@ -401,10 +398,10 @@ export function DrillDownClient({ vendors, portfolio }: { vendors: VendorRecord[
                 const max = r.numeric ? Math.max(...nums.filter((n) => Number.isFinite(n)), 0) || 1 : 1;
                 return (
                   <tr key={r.id} className="border-b border-[#F1F5F9]">
-                    <td className="p-3 text-[#64748B] sticky left-0 bg-white z-10">
+                    <td className="p-3 text-[#475569] sticky left-0 bg-white z-10">
                       {r.label}
                       {r.id === "gov" && (
-                        <span className="block text-micro text-[#94A3B8] mt-1">Click commit count for line-item modal (where curated).</span>
+                        <span className="block text-micro text-[#475569] mt-1">Click commit count for line-item modal (where curated).</span>
                       )}
                     </td>
                     {vendors.map((v, i) => {
@@ -493,19 +490,12 @@ export function DrillDownClient({ vendors, portfolio }: { vendors: VendorRecord[
             sheetTabFull={sheetTabFull}
             fullWidth
           />
-          {deepVendor.id === "ubiquity" && ubiquityQuestionnaireBlocks(deepVendor).length > 0 && (
-            <UbiquityQuestionnaireSection vendor={deepVendor} blocks={ubiquityQuestionnaireBlocks(deepVendor)} />
-          )}
         </>
-      )}
-
-      {activeSub.id !== "summary" && layout === "compare" && ubiquityVendor && ubiquityQBlocks.length > 0 && (
-        <UbiquityQuestionnaireSection vendor={ubiquityVendor} blocks={ubiquityQBlocks} />
       )}
 
       <Card className="p-6">
         <h3 className="text-h3 text-[#0F172A]">Migration notes (Tab 7.0 extracts)</h3>
-        <p className="text-caption text-[#94A3B8] mt-1">
+        <p className="text-caption text-[#475569] mt-1">
           Structured pull from Client Migration tab per vendor workbook. Open the live sheet to compare against this narrative.
         </p>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -556,9 +546,9 @@ function LinkedDocumentProvenance({ meta, vendorId }: { meta: SourcePreviewMeta;
   if (meta.kind !== "proposal") return null;
   return (
     <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1">
-      <span className="text-micro text-[#94A3B8]">Also sourced in</span>
+      <span className="text-micro text-[#475569]">Also sourced in</span>
       <ProvenanceTrigger meta={meta} vendorId={vendorId}>
-        <span className="text-micro font-medium text-[#64748B] border-b border-dotted border-[#CBD5E1] cursor-pointer transition-colors duration-[120ms] hover:text-[#0F172A]">
+        <span className="text-micro font-medium text-[#475569] border-b border-dotted border-[#CBD5E1] cursor-pointer transition-colors duration-[120ms] hover:text-[#0F172A]">
           {linkedSubmissionLabel(meta)}
         </span>
       </ProvenanceTrigger>
@@ -587,7 +577,7 @@ function GovernanceModalBody({ vendor, onClose }: { vendor: VendorRecord; onClos
           <span className="font-mono text-caption w-6">{icon(it.status)}</span>
           <span>
             <span className="capitalize font-medium text-[#0F172A]">{it.status}</span>
-            <span className="text-[#64748B]"> — {it.label}</span>
+            <span className="text-[#475569]"> — {it.label}</span>
           </span>
         </li>
       ))}
@@ -622,7 +612,7 @@ function CaseStudyExpandableCard({
       >
         <div className="min-w-0">
           <ProvenanceTrigger meta={snippet.sourcePreview as SourcePreviewMeta} vendorId={v.id}>
-            <span className="text-micro font-mono text-[#94A3B8]">
+            <span className="text-micro font-mono text-[#475569]">
               {blockTab} · {snippet.ref}
             </span>
           </ProvenanceTrigger>
@@ -642,37 +632,37 @@ function CaseStudyExpandableCard({
             ) : null}
           </div>
           <p className="text-h3 text-[#0F172A]">{parsed.title}</p>
-          <p className="mt-1 text-caption text-[#94A3B8]">
+          <p className="mt-1 text-caption text-[#475569]">
             {parsed.fteCount || "—"} FTE · {parsed.geography || "—"}
           </p>
         </div>
-        <span className="shrink-0 text-[#94A3B8]">{exp ? "▾" : "▸"}</span>
+        <span className="shrink-0 text-[#475569]">{exp ? "▾" : "▸"}</span>
       </button>
       {exp && (
-        <div className="animate-page-in space-y-3 border-t border-[#F1F5F9] px-4 pb-4 pt-3 text-body text-[#64748B]">
+        <div className="animate-page-in space-y-3 border-t border-[#F1F5F9] px-4 pb-4 pt-3 text-body text-[#475569]">
           <div>
-            <p className="text-micro text-[#94A3B8]">Scope</p>
+            <p className="text-micro text-[#475569]">Scope</p>
             <p className="text-body text-[#0F172A]">{parsed.scope || "—"}</p>
           </div>
           <div>
-            <p className="text-micro text-[#94A3B8]">Technology</p>
+            <p className="text-micro text-[#475569]">Technology</p>
             <p className="text-body text-[#0F172A]">{parsed.tech || "—"}</p>
           </div>
           <div>
-            <p className="text-micro text-[#94A3B8]">Results</p>
+            <p className="text-micro text-[#475569]">Results</p>
             <div className="max-w-prose text-body text-[#0F172A]">
               <DrillAnswerBody answer={parsed.results || "—"} />
             </div>
           </div>
           <div>
-            <p className="text-micro text-[#94A3B8]">Challenges &amp; resolution</p>
+            <p className="text-micro text-[#475569]">Challenges &amp; resolution</p>
             <div className="max-w-prose text-body text-[#0F172A]">
               <DrillAnswerBody answer={parsed.resolution || "—"} />
             </div>
           </div>
           <details className="text-caption">
             <summary className="cursor-pointer font-medium text-[#0F172A]">Full extracted text</summary>
-            <div className="mt-2 max-w-prose text-[#64748B]">
+            <div className="mt-2 max-w-prose text-[#475569]">
               <NarrativeBody text={rawAnswer} variant="answer" />
             </div>
           </details>
@@ -735,56 +725,53 @@ function normalizeSnippetDisplay(s: DrillSnippet): { question?: string; answer: 
 
 type DrillSnippetBlock = NonNullable<VendorRecord["drilldownSnippets"]>[number];
 
-function UbiquityQuestionnaireSection({ vendor, blocks }: { vendor: VendorRecord; blocks: DrillSnippetBlock[] }) {
+/** Questionnaire excerpts for Ubiquity — rendered inside VendorResponseCard when Appendix B is empty. */
+function UbiquityQuestionnaireBody({ vendor, blocks }: { vendor: VendorRecord; blocks: DrillSnippetBlock[] }) {
   return (
-    <Card className="overflow-hidden animate-page-in" accent={vendor.color}>
-      <div className="border-b border-border-subtle bg-[#FAFAFA] px-4 py-3">
-        <h3 className="text-h3 text-[#0F172A]">Ubiquity — Vendor RFP Questionnaire</h3>
-        <p className="text-caption text-[#94A3B8] mt-1">Sheets from the questionnaire workbook (not Appendix B tabs).</p>
-      </div>
-      <div className="p-4 space-y-6">
-        {blocks.map((b) => (
-          <div key={b.tab}>
-            <h4 className="text-caption font-medium text-[#64748B] mb-2">{b.tab}</h4>
-            <ul className="space-y-4">
-              {(b.snippets as DrillSnippet[]).map((s) => {
-                const norm = normalizeSnippetDisplay(s);
-                const { workbookHref, proposalHref } = drillSnippetSourceHrefs(vendor, s, b.tab, b.tab);
-                return (
-                  <li key={`${b.tab}-${s.ref}-${(s.questionText ?? "").slice(0, 20)}`} className="text-body">
-                    <ProvenanceTrigger meta={s.sourcePreview as SourcePreviewMeta} vendorId={vendor.id}>
-                      <span className="text-micro font-mono text-[#94A3B8]">
-                        {b.tab} · {s.ref}
-                      </span>
-                    </ProvenanceTrigger>
-                    <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1">
-                      {workbookHref ? (
-                        <SubmissionDeepLink href={workbookHref} className="text-micro font-medium">
-                          Workbook →
-                        </SubmissionDeepLink>
-                      ) : null}
-                      {proposalHref ? (
-                        <SubmissionDeepLink href={proposalHref} className="text-micro font-medium">
-                          Proposal →
-                        </SubmissionDeepLink>
-                      ) : null}
+    <div className="space-y-6">
+      <p className="text-[15px] font-semibold text-[#0F172A]">Ubiquity — Vendor RFP Questionnaire</p>
+      <p className="text-[13px] font-medium text-[#475569] -mt-4 mb-2">Sheets from the questionnaire workbook (not Appendix B tabs).</p>
+      {blocks.map((b) => (
+        <div key={b.tab}>
+          <h4 className="text-[13px] font-medium text-[#0F172A] mb-2">{b.tab}</h4>
+          <ul className="space-y-4">
+            {(b.snippets as DrillSnippet[]).map((s) => {
+              const norm = normalizeSnippetDisplay(s);
+              const { workbookHref, proposalHref } = drillSnippetSourceHrefs(vendor, s, b.tab, b.tab);
+              return (
+                <li key={`${b.tab}-${s.ref}-${(s.questionText ?? "").slice(0, 20)}`} className="text-[14px] text-[#334155] leading-relaxed">
+                  <ProvenanceTrigger meta={s.sourcePreview as SourcePreviewMeta} vendorId={vendor.id}>
+                    <span className="text-[11px] font-mono text-[#475569]">
+                      {b.tab} · {s.ref}
+                    </span>
+                  </ProvenanceTrigger>
+                  <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1">
+                    {workbookHref ? (
+                      <SubmissionDeepLink href={workbookHref} className="text-[12px] font-medium">
+                        Workbook →
+                      </SubmissionDeepLink>
+                    ) : null}
+                    {proposalHref ? (
+                      <SubmissionDeepLink href={proposalHref} className="text-[12px] font-medium">
+                        Proposal →
+                      </SubmissionDeepLink>
+                    ) : null}
+                  </div>
+                  {norm.question ? <p className="font-semibold text-[#0F172A] mt-2 mb-1">{norm.question}</p> : null}
+                  {norm.isEmpty ? (
+                    <p className="text-[14px] text-[#475569] mt-1 italic">No response provided</p>
+                  ) : (
+                    <div className="mt-1 max-w-prose text-[14px] text-[#334155] leading-relaxed">
+                      <DrillAnswerBody answer={norm.answer} />
                     </div>
-                    {norm.question ? <p className="text-caption text-[#94A3B8] mt-1">{norm.question}</p> : null}
-                    {norm.isEmpty ? (
-                      <p className="text-[#94A3B8] mt-1 italic">No response provided</p>
-                    ) : (
-                      <div className="mt-1 max-w-prose">
-                        <DrillAnswerBody answer={norm.answer} />
-                      </div>
-                    )}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </Card>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      ))}
+    </div>
   );
 }
 
@@ -808,6 +795,7 @@ function VendorResponseCard({
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const empty = !block || block.missing || !snippets.length || snippets.every((s) => normalizeSnippetDisplay(s).isEmpty);
+  const ubiquityQBlocks = v.id === "ubiquity" ? ubiquityQuestionnaireBlocks(v) : [];
   const totalWords = useMemo(() => {
     let n = 0;
     for (const s of snippets) {
@@ -827,11 +815,11 @@ function VendorResponseCard({
   return (
     <div ref={rootRef} className={fullWidth ? "md:col-span-2" : undefined}>
       <Card
-        className={`min-h-[200px] flex flex-col overflow-hidden shadow-card ${empty ? "opacity-50" : ""}`}
+        className={`min-h-[200px] flex flex-col overflow-hidden shadow-card ${empty && v.id !== "ubiquity" ? "opacity-50" : ""}`}
         accent={v.color}
       >
         <div className="flex flex-wrap items-start justify-between gap-2 px-6 py-4 border-b border-[#F1F5F9]">
-          <h4 className="text-h3 font-medium uppercase tracking-[0.05em]" style={{ color: v.color }}>
+          <h4 className="text-[15px] font-semibold uppercase tracking-wide" style={{ color: v.color }}>
             {v.displayName}
           </h4>
           {sheetTabFull ? (
@@ -844,12 +832,47 @@ function VendorResponseCard({
         <div className="p-6 pt-5 flex-1 flex flex-col">
         <VendorCaveatStrip vendorId={v.id} context="drill" />
         {empty ? (
-          <p className="text-body text-[#94A3B8] italic flex items-center gap-2">
-            <span className="text-[#D97706]" aria-hidden>
-              ⚠
-            </span>
-            No response provided for this topic.
-          </p>
+          v.id === "ubiquity" && ubiquityQBlocks.length > 0 ? (
+            <div className="text-[14px] text-[#334155] leading-relaxed space-y-6">
+              <UbiquityQuestionnaireBody vendor={v} blocks={ubiquityQBlocks} />
+              <div className="border-t border-[#E2E8F0] pt-5">
+                <p className="flex items-start gap-2 text-[14px] text-[#334155]">
+                  <span className="text-[#D97706] shrink-0" aria-hidden>
+                    ⚠
+                  </span>
+                  <span>
+                    Standard Appendix B responses are not used for this vendor on these tabs. Additional materials are in{" "}
+                    <Link href="/vendor-submissions/?vendor=ubiquity" className="font-medium text-[#2563EB] hover:underline">
+                      Vendor Submissions
+                    </Link>
+                    .
+                  </span>
+                </p>
+              </div>
+            </div>
+          ) : v.id === "ubiquity" ? (
+            <div className="text-[14px] text-[#334155] leading-relaxed space-y-3">
+              <p className="flex items-start gap-2">
+                <span className="text-[#D97706] shrink-0" aria-hidden>
+                  ⚠
+                </span>
+                <span>
+                  Ubiquity did not submit a standard Appendix B response for this section. Questionnaire responses are available in{" "}
+                  <Link href="/vendor-submissions/?vendor=ubiquity" className="font-medium text-[#2563EB] hover:underline">
+                    Vendor Submissions
+                  </Link>
+                  .
+                </span>
+              </p>
+            </div>
+          ) : (
+            <p className="text-[14px] text-[#475569] italic flex items-center gap-2">
+              <span className="text-[#D97706]" aria-hidden>
+                ⚠
+              </span>
+              No response provided for this topic.
+            </p>
+          )
         ) : (
           <div
             className={`relative overflow-hidden transition-[max-height] duration-300 ease-out ${
@@ -879,7 +902,7 @@ function VendorResponseCard({
                   <li key={key} className="leading-relaxed">
                     <div>
                       <ProvenanceTrigger meta={s.sourcePreview as SourcePreviewMeta} vendorId={v.id}>
-                        <span className="block text-micro font-mono text-[#94A3B8] tracking-tight">
+                        <span className="block text-[11px] font-mono text-[#475569] tracking-tight">
                           {block?.tab} · {s.ref}
                         </span>
                       </ProvenanceTrigger>
@@ -899,7 +922,7 @@ function VendorResponseCard({
                         <LinkedDocumentProvenance meta={s.linkedDocumentPreview} vendorId={v.id} />
                       )}
                       {norm.isEmpty ? (
-                        <p className="text-body text-[#94A3B8] mt-2 flex items-center gap-2 italic">
+                        <p className="text-[14px] text-[#475569] mt-2 flex items-center gap-2 italic">
                           <span className="text-[#D97706]" aria-hidden>
                             ⚠
                           </span>
@@ -908,9 +931,9 @@ function VendorResponseCard({
                       ) : (
                         <>
                           {norm.question && (
-                            <p className="text-caption text-[#94A3B8] mt-1 mb-1">{norm.question}</p>
+                            <p className="text-[15px] font-semibold text-[#0F172A] mt-1 mb-1">{norm.question}</p>
                           )}
-                          <div className="mt-1 max-w-prose text-[#0F172A]">
+                          <div className="mt-1 max-w-prose text-[14px] text-[#334155] leading-relaxed">
                             <DrillAnswerBody answer={norm.answer} />
                           </div>
                         </>

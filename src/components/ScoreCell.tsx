@@ -3,12 +3,12 @@ import { scoreBgContinuous, scoreHeatTextOnRamp, scoreLabel } from "@/lib/scoreG
 
 /** Tailwind-friendly cell style for scorecard / matrix cells (1/3/7/9 scale). */
 export function scoreHeatStyle(v: number | null | undefined): string {
-  if (v == null || Number.isNaN(v)) return "bg-slate-100 text-slate-400 border border-slate-200";
+  if (v == null || Number.isNaN(v)) return "bg-slate-100 text-slate-500 border border-slate-200";
   return "border border-black/10";
 }
 
 export function scoreHeatInlineStyle(v: number | null | undefined): CSSProperties | undefined {
-  if (v == null || Number.isNaN(v)) return { backgroundColor: "#F8FAFC", color: "#94A3B8" };
+  if (v == null || Number.isNaN(v)) return { backgroundColor: "#F8FAFC", color: "#64748B" };
   return {
     backgroundColor: scoreBgContinuous(v),
     color: scoreHeatTextOnRamp(v),
@@ -19,7 +19,7 @@ export function scoreHeatInlineStyle(v: number | null | undefined): CSSPropertie
 export function ScoreValueBlock({ value }: { value: number | null | undefined }) {
   const pending = value == null || !Number.isFinite(value);
   if (pending) {
-    return <span className="inline-flex min-w-[2.5rem] justify-center tabular-nums text-[#CBD5E1] font-normal">—</span>;
+    return <span className="inline-flex min-w-[2.5rem] justify-center tabular-nums text-[#475569] font-normal">—</span>;
   }
   return (
     <span
