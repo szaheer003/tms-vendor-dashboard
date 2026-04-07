@@ -7,7 +7,7 @@ if (pages && repo && !repo.endsWith(".github.io")) {
 }
 
 const nextConfig = {
-  ...(basePath ? { basePath } : {}),
+  ...(basePath ? { basePath, assetPrefix: `${basePath}/` } : {}),
   output: "export",
   images: { unoptimized: true },
   trailingSlash: true,
