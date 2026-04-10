@@ -1,20 +1,2 @@
 node_modules/
-dashboard-right-here.embedded.html
-TMS_Dashboard_Review.zip
-FIS-TMS-Dashboard-Source-Bundle.zip
-TMS-Dashboard-standalone.html
-TMS_RFP_Intelligence_Center_Review.html
-Dashboard-*.pdf
-DASHBOARD_STATE_EXPORT.md
-tsconfig.tsbuildinfo
-.next/
-out/
-*.pyc
-__pycache__/
-.env
-.env*.local
 .DS_Store
-Thumbs.db
-*.log
-Folder 1/_exl_converted.xlsx
-Folder 1/_tmp_read.xlsx

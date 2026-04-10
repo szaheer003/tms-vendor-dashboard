@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIS TMS RFP — Synergy Realization Comparison</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --text: #111827;
+      --text-secondary: #4b5563;
+      --text-tertiary: #6b7280;
+      --border: rgba(17, 24, 39, 0.35);
+      --row-alt: rgba(17, 24, 39, 0.03);
+      --swatch-bg: #ffffff;
+      --delta-pos-bg: rgba(5, 150, 105, 0.07);
+      --delta-pos-text: #047857;
+      --delta-neg-bg: rgba(220, 38, 38, 0.07);
+      --delta-neg-text: #b91c1c;
+      --annual-neg: #b91c1c;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #f3f4f6;
+        --text-secondary: #d1d5db;
+        --text-tertiary: #9ca3af;
+        --border: rgba(243, 244, 246, 0.25);
+        --row-alt: rgba(243, 244, 246, 0.04);
+        --swatch-bg: #111827;
+        --delta-pos-bg: rgba(52, 211, 153, 0.12);
+        --delta-pos-text: #6ee7b7;
+        --delta-neg-bg: rgba(248, 113, 113, 0.12);
+        --delta-neg-text: #fca5a5;
+        --annual-neg: #fca5a5;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: transparent;
+      padding: 16px;
+    }
+
+    .viz {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px 20px;
+      margin-bottom: 12px;
+      font-size: 11px;
+      color: var(--text-secondary);
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .legend-swatch {
+      width: 12px;
+      height: 3px;
+      border-radius: 0;
+      flex-shrink: 0;
+    }
+
+    .body {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(200px, 35%);
+      gap: 16px 20px;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .body {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .left-col {
+      min-width: 0;
+    }
+
+    @media (min-width: 901px) {
+      .left-col {
+        padding-top: 22px;
+      }
+    }
+
+    .chart-wrap {
+      position: relative;
+      width: 100%;
+      height: 300px;
+    }
+
+    .chart-wrap canvas {
+      display: block;
+    }
+
+    .delta-section {
+      margin-top: 8px;
+      width: 100%;
+      overflow-x: visible;
+    }
+
+    /* Same horizontal track as chart above (Chart.js scales canvas by DPR; % cols must match ratios, not backing-store px). */
+    .chart-delta-stack {
+      width: 100%;
+      min-width: 0;
+    }
+
+    .table-title {
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+
+    table.data {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      table-layout: fixed;
+      border: 0.5px solid var(--border);
+    }
+
+    table.data th,
+    table.data td {
+      border: 0.5px solid var(--border);
+      padding: 6px 8px;
+      text-align: right;
+      vertical-align: middle;
+    }
+
+    table.data th:first-child,
+    table.data td:first-child {
+      text-align: left;
+    }
+
+    table.data.delta-table th:not(:first-child),
+    table.data.delta-table td:not(:first-child) {
+      text-align: center;
+    }
+
+    .vendor-cell {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .delta-table th:first-child,
+    .delta-table td:first-child {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding-right: 10px;
+    }
+
+    .vendor-swatch {
+      width: 7px;
+      height: 7px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .annual-table thead th {
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      background: transparent;
+    }
+
+    .annual-table tbody td {
+      font-size: 12px;
+    }
+
+    .annual-table tbody tr:nth-child(even) td {
+      background: var(--row-alt);
+    }
+
+    .annual-table .bc-row td {
+      font-weight: 500;
+    }
+
+    .annual-table .bc-row td {
+      border-bottom: 2px solid var(--border);
+    }
+
+    .annual-val-pos {
+      color: var(--text);
+    }
+
+    .annual-val-neg {
+      color: var(--annual-neg);
+    }
+
+    .delta-table tbody tr:nth-child(even) td {
+      background: var(--row-alt);
+    }
+
+    .delta-table tbody tr:nth-child(even) td.delta-cell {
+      background: var(--delta-cell-bg, var(--row-alt));
+    }
+
+    .delta-table thead th {
+      font-size: 10px;
+      font-weight: 600;
+      text-align: center;
+      color: var(--text-secondary);
+      background: transparent;
+      vertical-align: bottom;
+      line-height: 1.25;
+      padding-top: 8px;
+      padding-bottom: 6px;
+    }
+
+    .delta-table thead th:not(:first-child) {
+      font-size: 12px;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .delta-table thead th:first-child {
+      text-align: left;
+    }
+
+    .delta-cell {
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      font-size: 11px;
+    }
+
+    .delta-pos {
+      --delta-cell-bg: var(--delta-pos-bg);
+      background: var(--delta-pos-bg) !important;
+      color: var(--delta-pos-text);
+    }
+
+    .delta-neg {
+      --delta-cell-bg: var(--delta-neg-bg);
+      background: var(--delta-neg-bg) !important;
+      color: var(--delta-neg-text);
+    }
+
+    .footnotes {
+      margin-top: 18px;
+      font-size: 11px;
+      color: var(--text-tertiary);
+      line-height: 1.5;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footnotes-title {
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin: 0 0 10px 0;
+      font-size: 11px;
+      letter-spacing: 0.02em;
+    }
+
+    .footnotes-list {
+      margin: 0;
+      padding-left: 1.35em;
+    }
+
+    .footnotes-list li {
+      margin-bottom: 10px;
+      padding-left: 0.25em;
+    }
+
+    .footnotes-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .right-col {
+      padding-top: 0;
+    }
+
+    .tabs {
+      width: 100%;
+    }
+
+    .tablist {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      margin-bottom: 14px;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .tab {
+      appearance: none;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 8px 16px;
+      margin: 0;
+      border: none;
+      border-bottom: 2px solid transparent;
+      background: transparent;
+      color: var(--text-secondary);
+      cursor: pointer;
+      margin-bottom: -0.5px;
+    }
+
+    .tab:hover {
+      color: var(--text);
+    }
+
+    .tab:focus-visible {
+      outline: 2px solid var(--text-secondary);
+      outline-offset: 2px;
+    }
+
+    .tab[aria-selected="true"] {
+      color: var(--text);
+      font-weight: 600;
+      border-bottom-color: var(--text);
+    }
+
+    .tab-panel-inner {
+      font-size: 12px;
+      line-height: 1.55;
+      color: var(--text-secondary);
+      max-width: 720px;
+    }
+
+    .tab-panel-inner p {
+      margin: 0 0 12px 0;
+    }
+
+    .tab-panel-inner p:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="viz" id="viz-root">
+    <div class="tabs">
+      <div class="tablist" role="tablist" aria-label="Document sections">
+        <button
+          type="button"
+          class="tab"
+          role="tab"
+          id="tab-synergy"
+          aria-controls="panel-synergy"
+          aria-selected="true"
+          tabindex="0"
+        >
+          Synergy comparison
+        </button>
+        <button
+          type="button"
+          class="tab"
+          role="tab"
+          id="tab-appendix"
+          aria-controls="panel-appendix"
+          aria-selected="false"
+          tabindex="-1"
+        >
+          Appendix
+        </button>
+      </div>
+
+      <div id="panel-synergy" role="tabpanel" aria-labelledby="tab-synergy">
+    <div class="legend" id="legend"></div>
+
+    <div class="body">
+      <div class="left-col">
+        <div class="chart-delta-stack" id="chart-delta-stack">
+        <div class="chart-wrap">
+          <canvas id="chart" height="300" aria-label="Quarterly savings trajectory"></canvas>
+        </div>
+        <div class="delta-section">
+          <div class="table-title">Quarterly delta vs business case ($M)</div>
+          <table class="data delta-table" id="delta-table">
+            <colgroup id="delta-colgroup"></colgroup>
+            <thead>
+              <tr id="delta-head-row">
+                <th scope="col"></th>
+                <th scope="col">Q4'26</th>
+                <th scope="col">Q1'27</th>
+                <th scope="col">Q2'27</th>
+                <th scope="col">Q3'27</th>
+                <th scope="col">Q4'27</th>
+                <th scope="col">Q1'28</th>
+                <th scope="col">Q2'28</th>
+                <th scope="col">Q3'28</th>
+                <th scope="col">Q4'28</th>
+              </tr>
+            </thead>
+            <tbody id="delta-body"></tbody>
+          </table>
+        </div>
+        </div>
+      </div>
+
+      <div class="right-col">
+        <div class="table-title">In-year savings ($M)</div>
+        <table class="data annual-table" id="annual-table"></table>
+      </div>
+    </div>
+
+    <div class="footnotes">
+      <p class="footnotes-title">Footnotes:</p>
+      <ol class="footnotes-list">
+        <li>
+          Savings represent reduction in total FIS outlay versus a flat $144.4M annual baseline (cost of service — existing clients, held constant). Quarterly baseline = $36.1M.
+        </li>
+        <li>
+          Total FIS outlay = vendor billing + FIS retained staff costs where disclosed. IBM includes ~$70M retained in Y1 and ~$11M in Y2. Cognizant includes ~$55M retained in Y1 and ~$6.5M in Y2. Remaining vendors do not separately disclose retained costs.
+        </li>
+        <li>
+          Calendar alignment: vendor Q1-Y1 = Q4-2026. FY27 = Q2Y1–Q1Y2. FY28 = Q2Y2–Q1Y3. Even quarterly distribution applied within vendor contract years per FIS guidance.
+        </li>
+        <li>
+          Business case quarterly values derived from Scenario B cost shrinkage model (digitization + productivity + offshoring levers applied to migrated client base).
+        </li>
+        <li>
+          All figures from revised submissions (April 7, 2026) except IBM (original, March 27 — no resubmission). Ubiquity reflects revised model assuming 70% NA/UK offshore transition in Y3. IBM proposal is explicitly non-binding.
+        </li>
+        <li>
+          COLA treatment varies: Cognizant inclusive (3–4%); Sutherland excluded (stated separately); all others excluded. Non-inclusive TCVs would increase $40–70M if normalized over 5 years.
+        </li>
+      </ol>
+    </div>
+      </div>
+
+      <div id="panel-appendix" role="tabpanel" aria-labelledby="tab-appendix" hidden>
+        <div class="tab-panel-inner">
+          <p>
+            Use this tab for supporting material (methodology detail, data extracts, or backup slides). Replace this placeholder with your content as needed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const LABELS = ["Q4'26", "Q1'27", "Q2'27", "Q3'27", "Q4'27", "Q1'28", "Q2'28", "Q3'28", "Q4'28"];
+
+      const LIGHT = {
+        businessCase: "#0f172a",
+        series: [
+          { key: "bc", label: "Business case", color: "#0f172a" },
+          { key: "genpact", label: "Genpact", color: "#059669" },
+          { key: "exl", label: "EXL", color: "#EA580C" },
+          { key: "ibm", label: "IBM", color: "#2563EB" },
+          { key: "cognizant", label: "Cognizant", color: "#7C3AED" },
+          { key: "sutherland", label: "Sutherland", color: "#6B7280" },
+          { key: "ubiquity", label: "Ubiquity", color: "#DC2626" },
+        ],
+      };
+
+      const DARK = {
+        businessCase: "#f8fafc",
+        series: [
+          { key: "bc", label: "Business case", color: "#f8fafc" },
+          { key: "genpact", label: "Genpact", color: "#34d399" },
+          { key: "exl", label: "EXL", color: "#fb923c" },
+          { key: "ibm", label: "IBM", color: "#60a5fa" },
+          { key: "cognizant", label: "Cognizant", color: "#a78bfa" },
+          { key: "sutherland", label: "Sutherland", color: "#9ca3af" },
+          { key: "ubiquity", label: "Ubiquity", color: "#f87171" },
+        ],
+      };
+
+      const QUARTERLY = {
+        bc: [5.1, 4.7, 5.8, 7.5, 9.6, 9.7, 9.9, 10.1, 10.6],
+        genpact: [-0.1, 0.7, 0.7, 0.7, 0.7, 12.3, 12.3, 12.3, 12.3],
+        exl: [2.1, 5.2, 5.2, 5.2, 5.2, 16.0, 16.0, 16.0, 16.0],
+        ibm: [1.8, 2.0, 2.0, 2.0, 2.0, 4.7, 4.7, 4.7, 4.7],
+        cognizant: [2.8, 3.2, 3.2, 3.2, 3.2, 5.4, 5.4, 5.4, 5.4],
+        sutherland: [-5.7, -3.9, -3.9, -3.9, -3.9, 4.3, 4.3, 4.3, 4.3],
+        ubiquity: [-1.2, -0.8, -0.8, -0.8, -0.8, 4.8, 4.8, 4.8, 4.8],
+      };
+
+      const ANNUAL = [
+        { key: "bc", short: "Business case", fy26: 5.2, fy27: 27.5, fy28: 40.2, isBC: true },
+        { key: "genpact", short: "Genpact", fy26: -0.4, fy27: 2.8, fy28: 49.1 },
+        { key: "exl", short: "EXL", fy26: 2.1, fy27: 20.9, fy28: 63.9 },
+        { key: "ibm", short: "IBM", fy26: 1.8, fy27: 8.0, fy28: 18.8 },
+        { key: "cognizant", short: "Cognizant", fy26: 2.8, fy27: 12.6, fy28: 21.4 },
+        { key: "sutherland", short: "Sutherland", fy26: -5.7, fy27: -15.6, fy28: 17.0 },
+        { key: "ubiquity", short: "Ubiquity", fy26: -1.2, fy27: -3.0, fy28: 19.0 },
+      ];
+
+      const DELTA = [
+        { vendor: "Genpact", key: "genpact", vals: [-5.2, -4.0, -5.1, -6.8, -8.9, 2.6, 2.4, 2.2, 1.7] },
+        { vendor: "EXL", key: "exl", vals: [-3.0, 0.5, -0.6, -2.3, -4.4, 6.3, 6.1, 5.9, 5.4] },
+        { vendor: "IBM", key: "ibm", vals: [-3.3, -2.7, -3.8, -5.5, -7.6, -5.0, -5.2, -5.4, -5.9] },
+        { vendor: "Cognizant", key: "cognizant", vals: [-2.3, -1.5, -2.6, -4.3, -6.4, -4.3, -4.5, -4.7, -5.2] },
+        { vendor: "Sutherland", key: "sutherland", vals: [-10.8, -8.6, -9.7, -11.4, -13.5, -5.4, -5.6, -5.8, -6.3] },
+        { vendor: "Ubiquity", key: "ubiquity", vals: [-6.3, -5.5, -6.6, -8.3, -10.4, -4.9, -5.1, -5.3, -5.8] },
+      ];
+
+      function isDarkMode() {
+        return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      }
+
+      function themePalette() {
+        return isDarkMode() ? DARK : LIGHT;
+      }
+
+      function formatYAxis(value) {
+        const v = Number(value);
+        if (!Number.isFinite(v)) return "";
+        const abs = Math.abs(v);
+        const s = abs % 1 === 0 ? abs.toFixed(0) : abs.toFixed(1);
+        if (v < 0) return "-$" + s + "M";
+        return "$" + s + "M";
+      }
+
+      function formatAnnualDisplay(n) {
+        if (!Number.isFinite(n)) return "";
+        const abs = Math.abs(n);
+        const s = abs.toFixed(1);
+        if (n < 0) return `($${s}M)`;
+        return `$${s}M`;
+      }
+
+      function formatDeltaCell(n) {
+        const sign = n >= 0 ? "+" : "-";
+        const abs = Math.abs(n);
+        const s = abs.toFixed(1);
+        return sign + s;
+      }
+
+      /** Build legend */
+      function renderLegend() {
+        const el = document.getElementById("legend");
+        const pal = themePalette();
+        el.innerHTML = pal.series
+          .map(
+            (s) =>
+              `<span class="legend-item"><span class="legend-swatch" style="background:${s.color}"></span>${s.label}</span>`
+          )
+          .join("");
+      }
+
+      /** Annual table */
+      function colorForKey(key) {
+        const pal = themePalette();
+        const m = pal.series.find((x) => x.key === key);
+        return m ? m.color : "#888";
+      }
+
+      function renderAnnualTable() {
+        const tbl = document.getElementById("annual-table");
+        const pal = themePalette();
+        const head = `
+          <thead>
+            <tr>
+              <th></th>
+              <th>FY26</th>
+              <th>FY27</th>
+              <th>FY28</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${ANNUAL.map((row) => {
+              const sw = colorForKey(row.key);
+              const rowClass = row.isBC ? "bc-row" : "";
+              const cells = [row.fy26, row.fy27, row.fy28]
+                .map((v) => {
+                  const neg = v < 0;
+                  const cls = neg ? "annual-val-neg" : "annual-val-pos";
+                  return `<td class="${cls}">${formatAnnualDisplay(v)}</td>`;
+                })
+                .join("");
+              return `
+                <tr class="${rowClass}">
+                  <td>
+                    <span class="vendor-cell">
+                      <span class="vendor-swatch" style="background:${sw}"></span>
+                      ${row.short}
+                    </span>
+                  </td>
+                  ${cells}
+                </tr>`;
+            }).join("")}
+          </tbody>`;
+        tbl.innerHTML = head;
+      }
+
+      /** Delta table structure (body); headers filled on align */
+      function renderDeltaBody() {
+        const body = document.getElementById("delta-body");
+        const pal = themePalette();
+        body.innerHTML = DELTA.map((row, ri) => {
+          const sw = colorForKey(row.key);
+          const tds = row.vals
+            .map((v, ci) => {
+              const pos = v >= 0;
+              const cls = pos ? "delta-pos" : "delta-neg";
+              return `<td class="delta-cell ${cls}">${formatDeltaCell(v)}</td>`;
+            })
+            .join("");
+          const trClass = ri % 2 === 1 ? "row-alt" : "";
+          return `<tr class="${trClass}">
+            <td><span class="vendor-cell"><span class="vendor-swatch" style="background:${sw}"></span>${row.vendor}</span></td>
+            ${tds}
+          </tr>`;
+        }).join("");
+      }
+
+      let chartInstance = null;
+
+      /** Minimum space for vendor names + swatch (must stay inside col 1, not under Q4'26). */
+      const MIN_VENDOR_GUTTER_PX = 128;
+
+      function xBandLeft(xScale, iStart) {
+        const c = xScale.getPixelForValue(iStart);
+        if (iStart === 0) {
+          const c1 = xScale.getPixelForValue(1);
+          return c - (c1 - c) / 2;
+        }
+        const c0 = xScale.getPixelForValue(iStart - 1);
+        return (c0 + c) / 2;
+      }
+
+      const chartPlugins = [
+        {
+          id: "fy27Band",
+          beforeDatasetsDraw(chart) {
+            const { ctx, chartArea, scales } = chart;
+            const x = scales.x;
+            if (!chartArea || !x) return;
+            const x0 = (x.getPixelForValue(0) + x.getPixelForValue(1)) / 2;
+            const x1 = (x.getPixelForValue(4) + x.getPixelForValue(5)) / 2;
+            ctx.save();
+            ctx.fillStyle = isDarkMode() ? "rgba(248, 250, 252, 0.02)" : "rgba(15, 23, 42, 0.02)";
+            ctx.fillRect(x0, chartArea.top, x1 - x0, chartArea.bottom - chartArea.top);
+            ctx.restore();
+          },
+        },
+        {
+          id: "yearLabels",
+          afterDraw(chart) {
+            const { ctx, chartArea, scales } = chart;
+            const x = scales.x;
+            if (!chartArea || !x) return;
+            ctx.save();
+            ctx.textBaseline = "bottom";
+            ctx.textAlign = "left";
+            ctx.font = '600 13px system-ui, -apple-system, "Segoe UI", sans-serif';
+            ctx.fillStyle = isDarkMode() ? "#e2e8f0" : "#000000";
+            const y = chartArea.top - 4;
+            const bands = [
+              { label: "FY26", iStart: 0 },
+              { label: "FY27", iStart: 1 },
+              { label: "FY28", iStart: 5 },
+            ];
+            bands.forEach((b) => {
+              const bandLeft = xBandLeft(x, b.iStart) + 6;
+              const xa = Math.max(bandLeft, chartArea.left + 10);
+              ctx.fillText(b.label, xa, y);
+            });
+            ctx.restore();
+          },
+        },
+        {
+          id: "zeroLine",
+          afterDatasetsDraw(chart) {
+            const { ctx, chartArea, scales } = chart;
+            const y = scales.y;
+            if (!chartArea || !y) return;
+            const y0 = y.getPixelForValue(0);
+            if (y0 < chartArea.top || y0 > chartArea.bottom) return;
+            ctx.save();
+            ctx.strokeStyle = isDarkMode() ? "rgba(243, 244, 246, 0.08)" : "rgba(17, 24, 39, 0.08)";
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(chartArea.left, y0);
+            ctx.lineTo(chartArea.right, y0);
+            ctx.stroke();
+            ctx.restore();
+          },
+        },
+        {
+          id: "deltaTableSync",
+          afterDraw(chart) {
+            const ca = chart.chartArea;
+            if (!ca) return;
+            const sig = chart.width + "|" + ca.left + "|" + ca.right;
+            if (chart.$deltaSig === sig) return;
+            chart.$deltaSig = sig;
+            requestAnimationFrame(() => alignDeltaColumns());
+          },
+        },
+      ];
+
+      function buildDatasets(pal) {
+        const hollow = {
+          pointRadius: 3.5,
+          pointHoverRadius: 3.5,
+          pointBackgroundColor: isDarkMode() ? "#111827" : "#ffffff",
+          pointBorderWidth: 2,
+        };
+
+        const vendorKeys = ["genpact", "exl", "ibm", "cognizant", "sutherland", "ubiquity"];
+        const out = [
+          {
+            label: "Business case",
+            data: QUARTERLY.bc,
+            borderColor: pal.businessCase,
+            backgroundColor: pal.businessCase,
+            borderWidth: 2.5,
+            tension: 0.15,
+            pointRadius: 0,
+            pointHoverRadius: 0,
+            order: 10,
+          },
+        ];
+        vendorKeys.forEach((k) => {
+          const meta = pal.series.find((s) => s.key === k);
+          out.push({
+            label: meta.label,
+            data: QUARTERLY[k],
+            borderColor: meta.color,
+            backgroundColor: meta.color,
+            borderWidth: 2,
+            tension: 0.15,
+            ...hollow,
+            pointBorderColor: meta.color,
+            order: 5,
+          });
+        });
+        return out;
+      }
+
+      function getChartOptions(pal) {
+        const gridColor = isDarkMode() ? "rgba(243, 244, 246, 0.04)" : "rgba(17, 24, 39, 0.04)";
+        return {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: { mode: "index", intersect: false },
+          layout: {
+            padding: {
+              left: 10,
+              right: 8,
+              top: 22,
+              bottom: 0,
+            },
+          },
+          animation: {
+            duration: 0,
+          },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label(ctx) {
+                  const v = ctx.parsed.y;
+                  const sign = v < 0 ? "-" : "";
+                  const abs = Math.abs(v);
+                  const s = abs % 1 === 0 ? abs.toFixed(0) : abs.toFixed(1);
+                  return `${ctx.dataset.label}: ${sign}$${s}M`;
+                },
+              },
+            },
+          },
+          scales: {
+            x: {
+              type: "category",
+              offset: true,
+              grid: { display: false, drawTicks: false },
+              ticks: { display: false },
+              border: { display: false },
+            },
+            y: {
+              title: {
+                display: true,
+                text: "Quarterly savings ($M)",
+                font: { size: 11, weight: "500" },
+                color: isDarkMode() ? "#d1d5db" : "#4b5563",
+              },
+              ticks: {
+                font: { size: 10 },
+                color: isDarkMode() ? "#9ca3af" : "#6b7280",
+                callback: (v) => formatYAxis(v),
+              },
+              grid: {
+                display: true,
+                drawTicks: false,
+                color: (ctx) => {
+                  if (ctx.tick && Number(ctx.tick.value) === 0) return "transparent";
+                  return gridColor;
+                },
+                lineWidth: 1,
+              },
+              border: { display: false },
+            },
+          },
+        };
+      }
+
+      function ensureMinVendorGutter(chart) {
+        let guard = 0;
+        while (guard < 10) {
+          guard += 1;
+          const ca = chart.chartArea;
+          if (!ca) return;
+          if (ca.left >= MIN_VENDOR_GUTTER_PX - 0.5) return;
+          const extra = MIN_VENDOR_GUTTER_PX - ca.left;
+          if (extra < 0.25) return;
+          const leftBefore = ca.left;
+          chart.options.layout = chart.options.layout || {};
+          chart.options.layout.padding = chart.options.layout.padding || {};
+          chart.options.layout.padding.left =
+            (chart.options.layout.padding.left || 0) + extra;
+          chart.$deltaSig = null;
+          chart.update("none");
+          const caAfter = chart.chartArea;
+          if (!caAfter || caAfter.left <= leftBefore + 0.25) return;
+        }
+      }
+
+      function alignDeltaColumns() {
+        if (!chartInstance) return;
+        const chart = chartInstance;
+        const x = chart.scales.x;
+        const ca = chart.chartArea;
+        if (!x || !ca) return;
+
+        ensureMinVendorGutter(chart);
+
+        const ca2 = chart.chartArea;
+        if (!ca2) return;
+
+        const W = chart.width;
+        const n = LABELS.length;
+
+        const labels = chart.data.labels || [];
+        const metaPts = chart.getDatasetMeta(1);
+        const xs = [];
+        for (let i = 0; i < n; i++) {
+          const el = metaPts && metaPts.data[i];
+          if (el && el.skip !== true && Number.isFinite(el.x)) {
+            xs[i] = el.x;
+          } else {
+            const lab = labels[i];
+            xs[i] =
+              lab !== undefined ? x.getPixelForValue(lab) : x.getPixelForValue(i);
+          }
+        }
+
+        const step0 = n > 1 ? xs[1] - xs[0] : 0;
+        const stepLast = n > 1 ? xs[n - 1] - xs[n - 2] : step0;
+
+        const boundary = new Array(n + 1);
+        boundary[0] = xs[0] - step0 / 2;
+        for (let i = 1; i < n; i++) {
+          boundary[i] = (xs[i - 1] + xs[i]) / 2;
+        }
+        boundary[n] = xs[n - 1] + stepLast / 2;
+
+        const spanEnd = boundary[n];
+
+        const cg = document.getElementById("delta-colgroup");
+        const hr = document.getElementById("delta-head-row");
+        cg.innerHTML = "";
+        const col0 = document.createElement("col");
+        col0.style.width = (boundary[0] / spanEnd) * 100 + "%";
+        cg.appendChild(col0);
+        for (let i = 0; i < n; i++) {
+          const c = document.createElement("col");
+          c.style.width = ((boundary[i + 1] - boundary[i]) / spanEnd) * 100 + "%";
+          cg.appendChild(c);
+        }
+
+        if (hr) {
+          const cells = hr.querySelectorAll("th");
+          if (cells.length === n + 1) {
+            for (let i = 0; i < n; i++) {
+              cells[i + 1].textContent = LABELS[i];
+            }
+          }
+        }
+
+        const tbl = document.getElementById("delta-table");
+        if (tbl) {
+          tbl.style.tableLayout = "fixed";
+          tbl.style.marginLeft = "0";
+          tbl.style.marginRight = "auto";
+          tbl.style.boxSizing = "border-box";
+          tbl.style.width = (spanEnd / W) * 100 + "%";
+          tbl.style.maxWidth = "100%";
+        }
+      }
+
+      function initChart() {
+        const canvas = document.getElementById("chart");
+        const pal = themePalette();
+        if (chartInstance) {
+          chartInstance.destroy();
+        }
+        chartInstance = new Chart(canvas, {
+          type: "line",
+          data: {
+            labels: LABELS,
+            datasets: buildDatasets(pal),
+          },
+          options: getChartOptions(pal),
+          plugins: chartPlugins,
+        });
+        chartInstance.$deltaSig = null;
+        chartInstance.update("none");
+        requestAnimationFrame(() => {
+          alignDeltaColumns();
+          requestAnimationFrame(() => alignDeltaColumns());
+        });
+      }
+
+      function onResize() {
+        if (chartInstance) {
+          chartInstance.resize();
+          alignDeltaColumns();
+        }
+      }
+
+      renderLegend();
+      renderAnnualTable();
+      renderDeltaBody();
+      initChart();
+
+      window.addEventListener("resize", onResize);
+      if (window.matchMedia) {
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+          renderLegend();
+          renderAnnualTable();
+          renderDeltaBody();
+          initChart();
+        });
+      }
+
+      const wrap = document.querySelector(".chart-wrap");
+      if (wrap && typeof ResizeObserver !== "undefined") {
+        const ro = new ResizeObserver(() => {
+          onResize();
+        });
+        ro.observe(wrap);
+      }
+
+      function initTabs() {
+        const tablist = document.querySelector('[role="tablist"]');
+        if (!tablist) return;
+        const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+
+        function selectTab(selected) {
+          tabs.forEach((tab) => {
+            const panelId = tab.getAttribute("aria-controls");
+            const panel = panelId ? document.getElementById(panelId) : null;
+            const isSelected = tab === selected;
+            tab.setAttribute("aria-selected", String(isSelected));
+            tab.tabIndex = isSelected ? 0 : -1;
+            if (panel) panel.hidden = !isSelected;
+          });
+          if (selected.getAttribute("aria-controls") === "panel-synergy" && chartInstance) {
+            requestAnimationFrame(() => {
+              chartInstance.resize();
+              alignDeltaColumns();
+            });
+          }
+        }
+
+        tabs.forEach((tab, i) => {
+          tab.addEventListener("click", () => selectTab(tab));
+          tab.addEventListener("keydown", (e) => {
+            if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+              e.preventDefault();
+              const dir = e.key === "ArrowRight" ? 1 : -1;
+              const next = (i + dir + tabs.length) % tabs.length;
+              tabs[next].focus();
+              selectTab(tabs[next]);
+            } else if (e.key === "Home") {
+              e.preventDefault();
+              tabs[0].focus();
+              selectTab(tabs[0]);
+            } else if (e.key === "End") {
+              e.preventDefault();
+              tabs[tabs.length - 1].focus();
+              selectTab(tabs[tabs.length - 1]);
+            }
+          });
+        });
+      }
+
+      initTabs();
+    })();
+  </script>
+</body>
+</html>
