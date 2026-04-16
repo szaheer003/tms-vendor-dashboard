@@ -256,7 +256,9 @@ async function sendMessage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ action: "start" }),
       });
+      if (!res.ok) throw new Error("Thread creation failed (" + res.status + ")");
       const data = await res.json();
+      if (data.error) throw new Error(data.error);
       chatThreadId = data.thread_id;
     }
 
@@ -268,7 +270,9 @@ async function sendMessage() {
     const data = await res.json();
 
     typing.remove();
-    if (data.reply) {
+    if (data.error) {
+      addMsg("Error: " + data.error, "bot");
+    } else if (data.reply) {
       const clean = data.reply.replace(/【[^】]*】/g, "");
       addMsg(clean, "bot");
     } else {
@@ -276,7 +280,8 @@ async function sendMessage() {
     }
   } catch (e) {
     typing.remove();
-    addMsg("Connection error. Please try again.", "bot");
+    addMsg("Error: " + (e.message || "Connection failed") + ". Please try again.", "bot");
+    console.error("Chat error:", e);
   }
 
   chatBusy = false;
