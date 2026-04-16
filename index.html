@@ -26,17 +26,44 @@
   .login-footer{text-align:center;font-size:10px;color:#94a3b8;margin-top:24px}
 
   /* ---------- Portal ---------- */
-  .portal{display:none;min-height:100vh}
-  .portal-nav{background:#1e293b;color:#fff;padding:16px 32px;display:flex;align-items:center;gap:24px}
-  .portal-brand{font-size:15px;font-weight:600;letter-spacing:-.2px;white-space:nowrap}
+  .portal{display:none;min-height:100vh;flex-direction:column}
+  .portal-nav{background:#1e293b;color:#fff;padding:0 32px;display:flex;align-items:stretch;gap:24px;height:48px}
+  .portal-brand{font-size:15px;font-weight:600;letter-spacing:-.2px;white-space:nowrap;display:flex;align-items:center}
   .portal-brand span{font-weight:400;color:#94a3b8}
-  .portal-links{display:flex;gap:4px;margin-left:auto}
-  .portal-link{padding:8px 16px;border-radius:6px;font-size:13px;font-weight:500;color:rgba(255,255,255,.7);text-decoration:none;cursor:pointer;transition:all .15s;border:none;background:none}
-  .portal-link:hover,.portal-link.active{color:#fff;background:rgba(255,255,255,.1)}
-  .portal-frame{width:100%;border:none;height:calc(100vh - 56px)}
+  .portal-links{display:flex;gap:6px;margin-left:auto;align-items:center}
+  .portal-link{padding:8px 20px;font-size:14px;font-weight:500;color:rgba(255,255,255,.7);text-decoration:none;cursor:pointer;transition:all .15s;border:none;background:none;display:flex;align-items:center;gap:7px;border-radius:6px}
+  .portal-link:hover{color:#fff;background:rgba(255,255,255,.1)}
+  .portal-link.active{color:#1e293b;background:#fff;font-weight:600}
+  .portal-link .badge{font-size:10px;background:rgba(255,255,255,.18);color:rgba(255,255,255,.7);padding:1px 7px;border-radius:10px;font-weight:600;line-height:1.4}
+  .portal-link.active .badge{background:rgba(30,41,59,.1);color:#475569}
+
+  /* ---------- Breadcrumb ---------- */
+  .breadcrumb-bar{background:#f8fafc;border-bottom:1px solid #e2e8f0;padding:7px 32px;display:flex;align-items:center;gap:6px;font-size:13px;color:#64748b;min-height:32px}
+  .breadcrumb-bar .bc-seg{color:#64748b;cursor:pointer;text-decoration:none;transition:color .15s}
+  .breadcrumb-bar .bc-seg:hover{color:#0f172a;text-decoration:underline}
+  .breadcrumb-bar .bc-sep{color:#94a3b8;margin:0 3px;user-select:none}
+  .breadcrumb-bar .bc-current{color:#3b82f6;font-weight:600;cursor:default}
+
+  /* ---------- Keyboard help ---------- */
+  .kb-trigger{width:28px;height:28px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:none;color:rgba(255,255,255,.5);font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;margin-left:8px;transition:all .15s;flex-shrink:0;align-self:center}
+  .kb-trigger:hover{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.4)}
+  .kb-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:10000;justify-content:center;align-items:center}
+  .kb-overlay.open{display:flex}
+  .kb-card{background:#fff;border-radius:16px;padding:28px 32px;max-width:420px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.2)}
+  .kb-card h3{font-size:16px;font-weight:700;margin:0 0 4px;color:#0f172a}
+  .kb-card p{font-size:12px;color:#64748b;margin:0 0 16px}
+  .kb-card table{width:100%;border-collapse:collapse}
+  .kb-card td{padding:6px 0;font-size:13px;color:#334155;border-bottom:1px solid #f1f5f9}
+  .kb-card td:first-child{font-weight:500;width:55%}
+  .kb-card kbd{display:inline-block;padding:2px 7px;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:4px;font-family:inherit;font-size:11px;font-weight:600;color:#334155;line-height:1.4}
+  .kb-card .kb-close{margin-top:16px;width:100%;padding:8px;border-radius:8px;background:#f1f5f9;border:1px solid #e2e8f0;font-size:13px;font-weight:500;cursor:pointer;color:#334155;transition:background .15s}
+  .kb-card .kb-close:hover{background:#e2e8f0}
+
+  .portal-frame{width:100%;border:none;flex:1;min-height:0}
+  .portal-content{display:flex;flex-direction:column;flex:1;min-height:0;overflow:hidden}
 
   /* ---------- Downloads ---------- */
-  .dl-page{padding:48px 32px;max-width:720px;margin:0 auto;display:none}
+  .dl-page{padding:48px 32px;max-width:720px;margin:0 auto;display:none;overflow-y:auto}
   .dl-page h2{font-size:20px;font-weight:600;margin-bottom:8px}
   .dl-page p{font-size:13px;color:#64748b;margin-bottom:24px}
   .dl-item{display:flex;align-items:center;gap:12px;padding:14px 16px;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:8px;text-decoration:none;color:#0f172a;transition:border-color .15s,box-shadow .15s}
@@ -99,14 +126,20 @@
   <nav class="portal-nav">
     <div class="portal-brand">TMS RFP Intelligence Center <span>&mdash; Vendor Evaluation</span></div>
     <div class="portal-links">
-      <button class="portal-link active" onclick="showTab('dash')">Dashboard</button>
-      <button class="portal-link" onclick="showTab('synergy')">Synergy Comparison</button>
-      <button class="portal-link" onclick="showTab('downloads')">Documents</button>
+      <button class="portal-link active" data-tab="dash" onclick="showTab('dash',this)">Dashboard</button>
+      <button class="portal-link" data-tab="synergy" onclick="showTab('synergy',this)">Synergy Comparison</button>
+      <button class="portal-link" data-tab="downloads" onclick="showTab('downloads',this)">Documents <span class="badge">5</span></button>
     </div>
+    <button class="kb-trigger" onclick="document.getElementById('kbOverlay').classList.add('open')" title="Keyboard shortcuts">?</button>
   </nav>
 
-  <iframe class="portal-frame" id="frameDash" src="dashboard.html"></iframe>
-  <iframe class="portal-frame" id="frameSynergy" src="about:blank" style="display:none"></iframe>
+  <div class="breadcrumb-bar" id="breadcrumbBar">
+    <span class="bc-current" id="bcRoot">Dashboard</span>
+  </div>
+
+  <div class="portal-content">
+    <iframe class="portal-frame" id="frameDash" src="dashboard.html"></iframe>
+    <iframe class="portal-frame" id="frameSynergy" src="about:blank" style="display:none"></iframe>
 
   <div class="dl-page" id="dlPage">
     <h2>Documents &amp; Downloads</h2>
@@ -141,6 +174,23 @@
       <div><div class="dl-name">RFP Project Timeline</div><div class="dl-meta">XLSX &middot; Milestone schedule</div></div>
       <div class="dl-arrow">&rarr;</div>
     </a>
+  </div>
+  </div>
+</div>
+
+<!-- ============ KEYBOARD SHORTCUTS ============ -->
+<div class="kb-overlay" id="kbOverlay" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="kb-card">
+    <h3>Keyboard Shortcuts</h3>
+    <p>Navigate the portal faster with these shortcuts.</p>
+    <table>
+      <tr><td>Portal tabs</td><td><kbd>Alt</kbd> + <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd></td></tr>
+      <tr><td>Assessment sub-tabs</td><td><kbd>Alt</kbd> + <kbd>S</kbd> <kbd>P</kbd> <kbd>E</kbd> <kbd>W</kbd></td></tr>
+      <tr><td>Next / prev vendor</td><td><kbd>[</kbd> &nbsp; <kbd>]</kbd></td></tr>
+      <tr><td>Back to top</td><td><kbd>T</kbd></td></tr>
+      <tr><td>Close chat / overlay</td><td><kbd>Esc</kbd></td></tr>
+    </table>
+    <button class="kb-close" onclick="document.getElementById('kbOverlay').classList.remove('open')">Got it</button>
   </div>
 </div>
 
@@ -177,7 +227,7 @@ async function sha256(t) {
 
 function unlock() {
   document.getElementById("loginWrap").style.display = "none";
-  document.getElementById("portal").style.display = "block";
+  document.getElementById("portal").style.display = "flex";
   document.getElementById("chatFab").style.display = "flex";
 }
 
@@ -201,18 +251,91 @@ document.getElementById("pw").addEventListener("input", function() {
   document.getElementById("loginErr").style.display = "none";
 });
 
-function showTab(tab) {
-  document.querySelectorAll(".portal-link").forEach(l => l.classList.remove("active"));
-  event.target.classList.add("active");
+var currentPortalTab = "dash";
 
-  document.getElementById("frameDash").style.display = tab === "dash" ? "block" : "none";
-  document.getElementById("frameSynergy").style.display = tab === "synergy" ? "block" : "none";
+function showTab(tab, btn) {
+  currentPortalTab = tab;
+  document.querySelectorAll(".portal-link").forEach(l => l.classList.remove("active"));
+  if (btn) btn.classList.add("active");
+  else document.querySelector('.portal-link[data-tab="'+tab+'"]').classList.add("active");
+
+  document.getElementById("frameDash").style.display = tab === "dash" ? "" : "none";
+  document.getElementById("frameSynergy").style.display = tab === "synergy" ? "" : "none";
   document.getElementById("dlPage").style.display = tab === "downloads" ? "block" : "none";
 
   if (tab === "synergy" && document.getElementById("frameSynergy").src === "about:blank") {
     document.getElementById("frameSynergy").src = "synergy.html";
   }
+
+  var names = {dash:"Dashboard",synergy:"Synergy Comparison",downloads:"Documents"};
+  updateBreadcrumb([names[tab]]);
 }
+
+function updateBreadcrumb(segments) {
+  var bar = document.getElementById("breadcrumbBar");
+  bar.innerHTML = "";
+  segments.forEach(function(s, i) {
+    if (i > 0) {
+      var sep = document.createElement("span");
+      sep.className = "bc-sep";
+      sep.textContent = "\u203A";
+      bar.appendChild(sep);
+    }
+    var el = document.createElement("span");
+    el.textContent = s;
+    el.className = (i === segments.length - 1) ? "bc-current" : "bc-seg";
+    if (i === 0 && segments.length > 1) {
+      el.onclick = function() {
+        showTab(currentPortalTab);
+        if (currentPortalTab === "dash") {
+          document.getElementById("frameDash").contentWindow.postMessage({type:"nav-reset"},"*");
+        }
+      };
+    }
+    bar.appendChild(el);
+  });
+}
+
+window.addEventListener("message", function(e) {
+  if (e.data && e.data.type === "breadcrumb-update") {
+    var segs = ["Dashboard"].concat(e.data.segments || []);
+    updateBreadcrumb(segs);
+  }
+});
+
+/* ---------- Keyboard shortcuts ---------- */
+document.addEventListener("keydown", function(e) {
+  if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+
+  if (e.key === "Escape") {
+    document.getElementById("kbOverlay").classList.remove("open");
+    if (chatOpen) toggleChat();
+    return;
+  }
+
+  if (e.altKey && e.key === "1") { e.preventDefault(); showTab("dash"); }
+  if (e.altKey && e.key === "2") { e.preventDefault(); showTab("synergy"); }
+  if (e.altKey && e.key === "3") { e.preventDefault(); showTab("downloads"); }
+
+  if (currentPortalTab === "dash" && e.altKey) {
+    var dashFrame = document.getElementById("frameDash").contentWindow;
+    var tabMap = {s:"summary",p:"pillar",e:"evaluation",w:"workshops"};
+    var k = e.key.toLowerCase();
+    if (tabMap[k]) { e.preventDefault(); dashFrame.postMessage({type:"switch-tab",tab:tabMap[k]},"*"); }
+  }
+
+  if (currentPortalTab === "dash" && (e.key === "[" || e.key === "]")) {
+    document.getElementById("frameDash").contentWindow.postMessage({type:"cycle-vendor",dir:e.key==="["?-1:1},"*");
+  }
+
+  if (e.key === "t" || e.key === "T") {
+    if (currentPortalTab === "dash") {
+      document.getElementById("frameDash").contentWindow.postMessage({type:"scroll-top"},"*");
+    } else if (currentPortalTab === "synergy") {
+      document.getElementById("frameSynergy").contentWindow.postMessage({type:"scroll-top"},"*");
+    }
+  }
+});
 
 /* ---------- Chat Widget ---------- */
 const CHAT_API = "https://tms-portal-chatbot.s-zaheer.workers.dev";
